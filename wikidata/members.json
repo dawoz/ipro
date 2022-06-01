@@ -1,0 +1,459 @@
+{
+    "Q1056857": [],
+    "Q649226": [],
+    "Q3615028": [],
+    "Q2703857": [],
+    "Q1093887": [],
+    "Q1619432": [],
+    "Q4927089": [],
+    "Q3665237": [],
+    "Q3703931": [],
+    "Q3748332": [
+        {
+            "member": {
+                "type": "uri",
+                "value": "http://www.wikidata.org/entity/Q3608534"
+            },
+            "discogsId": {
+                "type": "literal",
+                "value": "342427"
+            },
+            "memberLabel": {
+                "xml:lang": "en",
+                "type": "literal",
+                "value": "Alberto Radius"
+            },
+            "year": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+                "type": "literal",
+                "value": "1969"
+            }
+        },
+        {
+            "member": {
+                "type": "uri",
+                "value": "http://www.wikidata.org/entity/Q3756621"
+            },
+            "discogsId": {
+                "type": "literal",
+                "value": "1491545"
+            },
+            "memberLabel": {
+                "xml:lang": "en",
+                "type": "literal",
+                "value": "Gabriele Lorenzi"
+            },
+            "year": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+                "type": "literal",
+                "value": "1969"
+            }
+        },
+        {
+            "member": {
+                "type": "uri",
+                "value": "http://www.wikidata.org/entity/Q3993215"
+            },
+            "discogsId": {
+                "type": "literal",
+                "value": "368885"
+            },
+            "memberLabel": {
+                "xml:lang": "en",
+                "type": "literal",
+                "value": "Tony Cicco"
+            },
+            "year": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+                "type": "literal",
+                "value": "1969"
+            }
+        }
+    ],
+    "Q3758566": [],
+    "Q1317474": [],
+    "Q2690274": [],
+    "Q2619600": [],
+    "Q930625": [],
+    "Q767204": [],
+    "Q636623": [],
+    "Q1659482": [],
+    "Q3827566": [],
+    "Q1810029": [],
+    "Q2280261": [],
+    "Q2656349": [],
+    "Q979786": [],
+    "Q3884256": [],
+    "Q1055329": [],
+    "Q3903498": [],
+    "Q1242174": [
+        {
+            "member": {
+                "type": "uri",
+                "value": "http://www.wikidata.org/entity/Q1236257"
+            },
+            "discogsId": {
+                "type": "literal",
+                "value": "311510"
+            },
+            "memberLabel": {
+                "xml:lang": "en",
+                "type": "literal",
+                "value": "Riccardo Fogli"
+            },
+            "year": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+                "type": "literal",
+                "value": "1966"
+            }
+        },
+        {
+            "member": {
+                "type": "uri",
+                "value": "http://www.wikidata.org/entity/Q3712505"
+            },
+            "discogsId": {
+                "type": "literal",
+                "value": "351837"
+            },
+            "memberLabel": {
+                "xml:lang": "en",
+                "type": "literal",
+                "value": "Dodi Battaglia"
+            },
+            "year": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+                "type": "literal",
+                "value": "1968"
+            }
+        },
+        {
+            "member": {
+                "type": "uri",
+                "value": "http://www.wikidata.org/entity/Q3764228"
+            },
+            "discogsId": {
+                "type": "literal",
+                "value": "3634733"
+            },
+            "memberLabel": {
+                "xml:lang": "en",
+                "type": "literal",
+                "value": "Gilberto Faggioli"
+            },
+            "year": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+                "type": "literal",
+                "value": "1966"
+            }
+        },
+        {
+            "member": {
+                "type": "uri",
+                "value": "http://www.wikidata.org/entity/Q3848654"
+            },
+            "discogsId": {
+                "type": "literal",
+                "value": "3613982"
+            },
+            "memberLabel": {
+                "xml:lang": "en",
+                "type": "literal",
+                "value": "Mario Goretti"
+            },
+            "year": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+                "type": "literal",
+                "value": "1966"
+            }
+        },
+        {
+            "member": {
+                "type": "uri",
+                "value": "http://www.wikidata.org/entity/Q3852770"
+            },
+            "discogsId": {
+                "type": "literal",
+                "value": "2749361"
+            },
+            "memberLabel": {
+                "xml:lang": "en",
+                "type": "literal",
+                "value": "Mauro Bertoli"
+            },
+            "year": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+                "type": "literal",
+                "value": "1966"
+            }
+        },
+        {
+            "member": {
+                "type": "uri",
+                "value": "http://www.wikidata.org/entity/Q3931418"
+            },
+            "discogsId": {
+                "type": "literal",
+                "value": "208348"
+            },
+            "memberLabel": {
+                "xml:lang": "en",
+                "type": "literal",
+                "value": "Red Canzian"
+            },
+            "year": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+                "type": "literal",
+                "value": "1973"
+            }
+        },
+        {
+            "member": {
+                "type": "uri",
+                "value": "http://www.wikidata.org/entity/Q3939348"
+            },
+            "discogsId": {
+                "type": "literal",
+                "value": "678293"
+            },
+            "memberLabel": {
+                "xml:lang": "en",
+                "type": "literal",
+                "value": "Roby Facchinetti"
+            },
+            "year": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+                "type": "literal",
+                "value": "1966"
+            }
+        },
+        {
+            "member": {
+                "type": "uri",
+                "value": "http://www.wikidata.org/entity/Q3939348"
+            },
+            "discogsId": {
+                "type": "literal",
+                "value": "679160"
+            },
+            "memberLabel": {
+                "xml:lang": "en",
+                "type": "literal",
+                "value": "Roby Facchinetti"
+            },
+            "year": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+                "type": "literal",
+                "value": "1966"
+            }
+        },
+        {
+            "member": {
+                "type": "uri",
+                "value": "http://www.wikidata.org/entity/Q3972445"
+            },
+            "discogsId": {
+                "type": "literal",
+                "value": "971572"
+            },
+            "memberLabel": {
+                "xml:lang": "en",
+                "type": "literal",
+                "value": "Stefano D'Orazio"
+            },
+            "year": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+                "type": "literal",
+                "value": "1971"
+            }
+        },
+        {
+            "member": {
+                "type": "uri",
+                "value": "http://www.wikidata.org/entity/Q4007905"
+            },
+            "discogsId": {
+                "type": "literal",
+                "value": "678295"
+            },
+            "memberLabel": {
+                "xml:lang": "en",
+                "type": "literal",
+                "value": "Valerio Negrini"
+            },
+            "year": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+                "type": "literal",
+                "value": "1966"
+            }
+        },
+        {
+            "member": {
+                "type": "uri",
+                "value": "http://www.wikidata.org/entity/Q4007905"
+            },
+            "discogsId": {
+                "type": "literal",
+                "value": "2257947"
+            },
+            "memberLabel": {
+                "xml:lang": "en",
+                "type": "literal",
+                "value": "Valerio Negrini"
+            },
+            "year": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+                "type": "literal",
+                "value": "1966"
+            }
+        }
+    ],
+    "Q917450": [
+        {
+            "member": {
+                "type": "uri",
+                "value": "http://www.wikidata.org/entity/Q648912"
+            },
+            "discogsId": {
+                "type": "literal",
+                "value": "399360"
+            },
+            "memberLabel": {
+                "xml:lang": "en",
+                "type": "literal",
+                "value": "Flavio Premoli"
+            },
+            "year": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+                "type": "literal",
+                "value": "1971"
+            }
+        },
+        {
+            "member": {
+                "type": "uri",
+                "value": "http://www.wikidata.org/entity/Q683618"
+            },
+            "discogsId": {
+                "type": "literal",
+                "value": "302019"
+            },
+            "memberLabel": {
+                "xml:lang": "en",
+                "type": "literal",
+                "value": "Mauro Pagani"
+            },
+            "year": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+                "type": "literal",
+                "value": "1971"
+            }
+        },
+        {
+            "member": {
+                "type": "uri",
+                "value": "http://www.wikidata.org/entity/Q3638784"
+            },
+            "discogsId": {
+                "type": "literal",
+                "value": "765864"
+            },
+            "memberLabel": {
+                "xml:lang": "en",
+                "type": "literal",
+                "value": "Bernardo Lanzetti"
+            },
+            "year": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+                "type": "literal",
+                "value": "1974"
+            }
+        },
+        {
+            "member": {
+                "type": "uri",
+                "value": "http://www.wikidata.org/entity/Q3751459"
+            },
+            "discogsId": {
+                "type": "literal",
+                "value": "399361"
+            },
+            "memberLabel": {
+                "xml:lang": "en",
+                "type": "literal",
+                "value": "Franco Mussida"
+            },
+            "year": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+                "type": "literal",
+                "value": "1971"
+            }
+        },
+        {
+            "member": {
+                "type": "uri",
+                "value": "http://www.wikidata.org/entity/Q3752129"
+            },
+            "discogsId": {
+                "type": "literal",
+                "value": "399359"
+            },
+            "memberLabel": {
+                "xml:lang": "en",
+                "type": "literal",
+                "value": "Franz Di Cioccio"
+            },
+            "year": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+                "type": "literal",
+                "value": "1971"
+            }
+        },
+        {
+            "member": {
+                "type": "uri",
+                "value": "http://www.wikidata.org/entity/Q3897731"
+            },
+            "discogsId": {
+                "type": "literal",
+                "value": "628286"
+            },
+            "memberLabel": {
+                "xml:lang": "en",
+                "type": "literal",
+                "value": "Patrick Djivas"
+            },
+            "year": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+                "type": "literal",
+                "value": "1974"
+            }
+        },
+        {
+            "member": {
+                "type": "uri",
+                "value": "http://www.wikidata.org/entity/Q30124282"
+            },
+            "discogsId": {
+                "type": "literal",
+                "value": "598698"
+            },
+            "memberLabel": {
+                "xml:lang": "en",
+                "type": "literal",
+                "value": "Giorgio Piazza"
+            },
+            "year": {
+                "datatype": "http://www.w3.org/2001/XMLSchema#integer",
+                "type": "literal",
+                "value": "1971"
+            }
+        }
+    ],
+    "Q3927606": [],
+    "Q3928502": [],
+    "Q952750": [],
+    "Q3955084": [],
+    "Q4049288": [],
+    "Q3974546": []
+}

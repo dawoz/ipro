@@ -1,0 +1,818 @@
+[
+    {
+        "item": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q1056857"
+        },
+        "inizio": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "1971-01-01T00:00:00Z"
+        },
+        "discogsId": {
+            "type": "literal",
+            "value": "1136505"
+        },
+        "progarchivesId": {
+            "type": "literal",
+            "value": "5"
+        },
+        "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Acqua Fragile"
+        }
+    },
+    {
+        "item": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q649226"
+        },
+        "inizio": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "1970-01-01T00:00:00Z"
+        },
+        "discogsId": {
+            "type": "literal",
+            "value": "1157743"
+        },
+        "progarchivesId": {
+            "type": "literal",
+            "value": "469"
+        },
+        "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Alphataurus"
+        }
+    },
+    {
+        "item": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q3615028"
+        },
+        "inizio": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "1972-01-01T00:00:00Z"
+        },
+        "discogsId": {
+            "type": "literal",
+            "value": "788246"
+        },
+        "progarchivesId": {
+            "type": "literal",
+            "value": "526"
+        },
+        "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Analogy"
+        }
+    },
+    {
+        "item": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q2703857"
+        },
+        "inizio": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "1972-01-01T00:00:00Z"
+        },
+        "discogsId": {
+            "type": "literal",
+            "value": "313917"
+        },
+        "progarchivesId": {
+            "type": "literal",
+            "value": "26"
+        },
+        "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Area"
+        }
+    },
+    {
+        "item": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q1093887"
+        },
+        "inizio": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "1974-01-01T00:00:00Z"
+        },
+        "discogsId": {
+            "type": "literal",
+            "value": "1030927"
+        },
+        "progarchivesId": {
+            "type": "literal",
+            "value": "29"
+        },
+        "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Arti e Mestieri"
+        }
+    },
+    {
+        "item": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q1619432"
+        },
+        "inizio": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "1969-01-01T00:00:00Z"
+        },
+        "discogsId": {
+            "type": "literal",
+            "value": "353382"
+        },
+        "progarchivesId": {
+            "type": "literal",
+            "value": "36"
+        },
+        "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Banco del Mutuo Soccorso"
+        }
+    },
+    {
+        "item": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q4927089"
+        },
+        "inizio": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "1967-01-01T00:00:00Z"
+        },
+        "discogsId": {
+            "type": "literal",
+            "value": "1531176"
+        },
+        "progarchivesId": {
+            "type": "literal",
+            "value": "43"
+        },
+        "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Blocco Mentale"
+        }
+    },
+    {
+        "item": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q3665237"
+        },
+        "inizio": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "1972-01-01T00:00:00Z"
+        },
+        "discogsId": {
+            "type": "literal",
+            "value": "1184950"
+        },
+        "progarchivesId": {
+            "type": "literal",
+            "value": "568"
+        },
+        "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Cervello"
+        }
+    },
+    {
+        "item": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q3703931"
+        },
+        "inizio": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "1969-01-01T00:00:00Z"
+        },
+        "discogsId": {
+            "type": "literal",
+            "value": "1152654"
+        },
+        "progarchivesId": {
+            "type": "literal",
+            "value": "931"
+        },
+        "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "De De Lind"
+        }
+    },
+    {
+        "item": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q3748332"
+        },
+        "inizio": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "1969-01-01T00:00:00Z"
+        },
+        "discogsId": {
+            "type": "literal",
+            "value": "679575"
+        },
+        "progarchivesId": {
+            "type": "literal",
+            "value": "531"
+        },
+        "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Formula 3"
+        }
+    },
+    {
+        "item": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q3758566"
+        },
+        "inizio": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "1970-01-01T00:00:00Z"
+        },
+        "discogsId": {
+            "type": "literal",
+            "value": "1195278"
+        },
+        "progarchivesId": {
+            "type": "literal",
+            "value": "2396"
+        },
+        "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Garybaldi"
+        }
+    },
+    {
+        "item": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q1317474"
+        },
+        "inizio": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "1972-01-01T00:00:00Z"
+        },
+        "discogsId": {
+            "type": "literal",
+            "value": "98228"
+        },
+        "progarchivesId": {
+            "type": "literal",
+            "value": "130"
+        },
+        "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Goblin"
+        }
+    },
+    {
+        "item": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q2690274"
+        },
+        "inizio": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "1969-01-01T00:00:00Z"
+        },
+        "discogsId": {
+            "type": "literal",
+            "value": "1695607"
+        },
+        "progarchivesId": {
+            "type": "literal",
+            "value": "1474"
+        },
+        "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "I Teoremi"
+        }
+    },
+    {
+        "item": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q2619600"
+        },
+        "inizio": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "1966-01-01T00:00:00Z"
+        },
+        "progarchivesId": {
+            "type": "literal",
+            "value": "37"
+        },
+        "discogsId": {
+            "type": "literal",
+            "value": "1247423"
+        },
+        "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Il Balletto di Bronzo"
+        }
+    },
+    {
+        "item": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q930625"
+        },
+        "inizio": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "1974-01-01T00:00:00Z"
+        },
+        "discogsId": {
+            "type": "literal",
+            "value": "1043965"
+        },
+        "progarchivesId": {
+            "type": "literal",
+            "value": "52"
+        },
+        "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Il Castello di Atlante"
+        }
+    },
+    {
+        "item": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q767204"
+        },
+        "inizio": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "1970-01-01T00:00:00Z"
+        },
+        "discogsId": {
+            "type": "literal",
+            "value": "765763"
+        },
+        "progarchivesId": {
+            "type": "literal",
+            "value": "303"
+        },
+        "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Il Rovescio della Medaglia"
+        }
+    },
+    {
+        "item": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q636623"
+        },
+        "inizio": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "1969-01-01T00:00:00Z"
+        },
+        "discogsId": {
+            "type": "literal",
+            "value": "1039835"
+        },
+        "progarchivesId": {
+            "type": "literal",
+            "value": "172"
+        },
+        "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Jacula"
+        }
+    },
+    {
+        "item": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q1659482"
+        },
+        "inizio": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "1974-01-01T00:00:00Z"
+        },
+        "discogsId": {
+            "type": "literal",
+            "value": "1158138"
+        },
+        "progarchivesId": {
+            "type": "literal",
+            "value": "213"
+        },
+        "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "La Locanda delle Fate"
+        }
+    },
+    {
+        "item": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q3827566"
+        },
+        "inizio": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "1971-01-01T00:00:00Z"
+        },
+        "discogsId": {
+            "type": "literal",
+            "value": "1092322"
+        },
+        "progarchivesId": {
+            "type": "literal",
+            "value": "202"
+        },
+        "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Latte e Miele"
+        }
+    },
+    {
+        "item": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q1810029"
+        },
+        "inizio": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "1966-01-01T00:00:00Z"
+        },
+        "discogsId": {
+            "type": "literal",
+            "value": "359000"
+        },
+        "progarchivesId": {
+            "type": "literal",
+            "value": "278"
+        },
+        "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Le Orme"
+        }
+    },
+    {
+        "item": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q2280261"
+        },
+        "inizio": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "1973-01-01T00:00:00Z"
+        },
+        "discogsId": {
+            "type": "literal",
+            "value": "1209001"
+        },
+        "progarchivesId": {
+            "type": "literal",
+            "value": "239"
+        },
+        "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Maxophone"
+        }
+    },
+    {
+        "item": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q2656349"
+        },
+        "inizio": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "1973-01-01T00:00:00Z"
+        },
+        "discogsId": {
+            "type": "literal",
+            "value": "1565257"
+        },
+        "progarchivesId": {
+            "type": "literal",
+            "value": "577"
+        },
+        "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Murple"
+        }
+    },
+    {
+        "item": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q979786"
+        },
+        "inizio": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "1971-01-01T00:00:00Z"
+        },
+        "discogsId": {
+            "type": "literal",
+            "value": "1210730"
+        },
+        "progarchivesId": {
+            "type": "literal",
+            "value": "254"
+        },
+        "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Museo Rosenbach"
+        }
+    },
+    {
+        "item": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q3884256"
+        },
+        "inizio": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "1974-01-01T00:00:00Z"
+        },
+        "discogsId": {
+            "type": "literal",
+            "value": "1116199"
+        },
+        "progarchivesId": {
+            "type": "literal",
+            "value": "533"
+        },
+        "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Opus Avantra"
+        }
+    },
+    {
+        "item": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q1055329"
+        },
+        "inizio": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "1970-01-01T00:00:00Z"
+        },
+        "discogsId": {
+            "type": "literal",
+            "value": "836392"
+        },
+        "progarchivesId": {
+            "type": "literal",
+            "value": "276"
+        },
+        "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Osanna"
+        }
+    },
+    {
+        "item": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q3903498"
+        },
+        "inizio": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "1974-01-01T00:00:00Z"
+        },
+        "discogsId": {
+            "type": "literal",
+            "value": "685311"
+        },
+        "progarchivesId": {
+            "type": "literal",
+            "value": "594"
+        },
+        "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Pierrot Lunaire"
+        }
+    },
+    {
+        "item": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q1242174"
+        },
+        "inizio": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "1966-01-01T00:00:00Z"
+        },
+        "discogsId": {
+            "type": "literal",
+            "value": "380875"
+        },
+        "progarchivesId": {
+            "type": "literal",
+            "value": "3832"
+        },
+        "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Pooh"
+        }
+    },
+    {
+        "item": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q917450"
+        },
+        "inizio": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "1970-01-01T00:00:00Z"
+        },
+        "discogsId": {
+            "type": "literal",
+            "value": "281856"
+        },
+        "progarchivesId": {
+            "type": "literal",
+            "value": "289"
+        },
+        "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Premiata Forneria Marconi"
+        }
+    },
+    {
+        "item": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q3927606"
+        },
+        "inizio": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "1970-01-01T00:00:00Z"
+        },
+        "discogsId": {
+            "type": "literal",
+            "value": "1214437"
+        },
+        "progarchivesId": {
+            "type": "literal",
+            "value": "296"
+        },
+        "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Quella Vecchia Locanda"
+        }
+    },
+    {
+        "item": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q3928502"
+        },
+        "inizio": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "1971-01-01T00:00:00Z"
+        },
+        "discogsId": {
+            "type": "literal",
+            "value": "1214433"
+        },
+        "progarchivesId": {
+            "type": "literal",
+            "value": "535"
+        },
+        "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Raccomandata con Ricevuta di Ritorno"
+        }
+    },
+    {
+        "item": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q952750"
+        },
+        "inizio": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "1973-01-01T00:00:00Z"
+        },
+        "discogsId": {
+            "type": "literal",
+            "value": "1544055"
+        },
+        "progarchivesId": {
+            "type": "literal",
+            "value": "987"
+        },
+        "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Saint Just"
+        }
+    },
+    {
+        "item": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q3955084"
+        },
+        "inizio": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "1970-01-01T00:00:00Z"
+        },
+        "discogsId": {
+            "type": "literal",
+            "value": "1228989"
+        },
+        "progarchivesId": {
+            "type": "literal",
+            "value": "313"
+        },
+        "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Semiramis"
+        }
+    },
+    {
+        "item": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q4049288"
+        },
+        "inizio": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "1974-01-01T00:00:00Z"
+        },
+        "discogsId": {
+            "type": "literal",
+            "value": "1091356"
+        },
+        "progarchivesId": {
+            "type": "literal",
+            "value": "1008"
+        },
+        "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Sensations' Fix"
+        }
+    },
+    {
+        "item": {
+            "type": "uri",
+            "value": "http://www.wikidata.org/entity/Q3974546"
+        },
+        "inizio": {
+            "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+            "type": "literal",
+            "value": "1966-01-01T00:00:00Z"
+        },
+        "discogsId": {
+            "type": "literal",
+            "value": "282973"
+        },
+        "progarchivesId": {
+            "type": "literal",
+            "value": "2561"
+        },
+        "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Stormy Six"
+        }
+    }
+]
