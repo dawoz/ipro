@@ -1,113 +1,181 @@
-@prefix : <http://www.semanticweb.org/ipro#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://www.semanticweb.org/ipro> .
-
-<http://www.semanticweb.org/ipro> rdf:type owl:Ontology ;
-                                   owl:imports <http://www.ontologydesignpatterns.org/cp/owl/list.owl> .
-
-#################################################################
-#    Classes
-#################################################################
-
-###  http://www.semanticweb.org/ipro#Album
-:Album rdf:type owl:Class .
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/ipro#"
+     xml:base="http://www.semanticweb.org/ipro"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ipro">
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/list.owl"/>
+    </owl:Ontology>
+    
 
 
-###  http://www.semanticweb.org/ipro#Band
-:Band rdf:type owl:Class .
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
 
 
-###  http://www.semanticweb.org/ipro#Bass
-:Bass rdf:type owl:Class ;
-      rdfs:subClassOf :MusicalInstrument .
+    <!-- http://www.semanticweb.org/ipro#Album -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ipro#Album"/>
+    
 
 
-###  http://www.semanticweb.org/ipro#Bassist
-:Bassist rdf:type owl:Class ;
-         rdfs:subClassOf :Musician .
+    <!-- http://www.semanticweb.org/ipro#Band -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ipro#Band"/>
+    
 
 
-###  http://www.semanticweb.org/ipro#Discography
-:Discography rdf:type owl:Class .
+    <!-- http://www.semanticweb.org/ipro#Bass -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ipro#Bass">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ipro#MusicalInstrument"/>
+    </owl:Class>
+    
 
 
-###  http://www.semanticweb.org/ipro#Drummer
-:Drummer rdf:type owl:Class ;
-         rdfs:subClassOf :Musician .
+    <!-- http://www.semanticweb.org/ipro#Bassist -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ipro#Bassist">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ipro#Musician"/>
+    </owl:Class>
+    
 
 
-###  http://www.semanticweb.org/ipro#Genre
-:Genre rdf:type owl:Class .
+    <!-- http://www.semanticweb.org/ipro#Discography -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ipro#Discography"/>
+    
 
 
-###  http://www.semanticweb.org/ipro#Guitar
-:Guitar rdf:type owl:Class ;
-        rdfs:subClassOf :MusicalInstrument .
+    <!-- http://www.semanticweb.org/ipro#Drummer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ipro#Drummer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ipro#Musician"/>
+    </owl:Class>
+    
 
 
-###  http://www.semanticweb.org/ipro#Guitarist
-:Guitarist rdf:type owl:Class ;
-           rdfs:subClassOf :Musician .
+    <!-- http://www.semanticweb.org/ipro#Genre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ipro#Genre"/>
+    
 
 
-###  http://www.semanticweb.org/ipro#Keyboard
-:Keyboard rdf:type owl:Class ;
-          rdfs:subClassOf :MusicalInstrument .
+    <!-- http://www.semanticweb.org/ipro#Guitar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ipro#Guitar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ipro#MusicalInstrument"/>
+    </owl:Class>
+    
 
 
-###  http://www.semanticweb.org/ipro#Keyboardist
-:Keyboardist rdf:type owl:Class ;
-             rdfs:subClassOf :Musician .
+    <!-- http://www.semanticweb.org/ipro#Guitarist -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ipro#Guitarist">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ipro#Musician"/>
+    </owl:Class>
+    
 
 
-###  http://www.semanticweb.org/ipro#MusicalInstrument
-:MusicalInstrument rdf:type owl:Class .
+    <!-- http://www.semanticweb.org/ipro#Keyboard -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ipro#Keyboard">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ipro#MusicalInstrument"/>
+    </owl:Class>
+    
 
 
-###  http://www.semanticweb.org/ipro#Musician
-:Musician rdf:type owl:Class .
+    <!-- http://www.semanticweb.org/ipro#Keyboardist -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ipro#Keyboardist">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ipro#Musician"/>
+    </owl:Class>
+    
 
 
-###  http://www.semanticweb.org/ipro#Organ
-:Organ rdf:type owl:Class ;
-       rdfs:subClassOf :Keyboard .
+    <!-- http://www.semanticweb.org/ipro#MusicalInstrument -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ipro#MusicalInstrument"/>
+    
 
 
-###  http://www.semanticweb.org/ipro#Participation
-:Participation rdf:type owl:Class .
+    <!-- http://www.semanticweb.org/ipro#Musician -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ipro#Musician"/>
+    
 
 
-###  http://www.semanticweb.org/ipro#Percussions
-:Percussions rdf:type owl:Class ;
-             rdfs:subClassOf :MusicalInstrument .
+    <!-- http://www.semanticweb.org/ipro#Organ -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ipro#Organ">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ipro#Keyboard"/>
+    </owl:Class>
+    
 
 
-###  http://www.semanticweb.org/ipro#Piano
-:Piano rdf:type owl:Class ;
-       rdfs:subClassOf :Keyboard .
+    <!-- http://www.semanticweb.org/ipro#Participation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ipro#Participation"/>
+    
 
 
-###  http://www.semanticweb.org/ipro#Singer
-:Singer rdf:type owl:Class ;
-        rdfs:subClassOf :Musician .
+    <!-- http://www.semanticweb.org/ipro#Percussions -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ipro#Percussions">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ipro#MusicalInstrument"/>
+    </owl:Class>
+    
 
 
-###  http://www.semanticweb.org/ipro#Song
-:Song rdf:type owl:Class .
+    <!-- http://www.semanticweb.org/ipro#Piano -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ipro#Piano">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ipro#Keyboard"/>
+    </owl:Class>
+    
 
 
-###  http://www.semanticweb.org/ipro#Synthesizer
-:Synthesizer rdf:type owl:Class ;
-             rdfs:subClassOf :Keyboard .
+    <!-- http://www.semanticweb.org/ipro#Singer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ipro#Singer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ipro#Musician"/>
+    </owl:Class>
+    
 
 
-###  http://www.semanticweb.org/ipro#Vocals
-:Vocals rdf:type owl:Class ;
-        rdfs:subClassOf :MusicalInstrument .
+    <!-- http://www.semanticweb.org/ipro#Song -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ipro#Song"/>
+    
 
 
-###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
+    <!-- http://www.semanticweb.org/ipro#Synthesizer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ipro#Synthesizer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ipro#Keyboard"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ipro#Vocals -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ipro#Vocals">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ipro#MusicalInstrument"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
