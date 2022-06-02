@@ -2,7 +2,8 @@
     "5": {
         "24": {
             "Gino Campanini": [
-                "acoustic & electric guitars",
+                "acoustic guitar",
+                "electric guitar",
                 "vocals"
             ],
             "Piero Canavera": [
@@ -61,11 +62,12 @@
                 "lead vocals"
             ],
             "Martin Thurn": [
-                "electric & 12-string acoustic  guitars",
+                "electric guitar",
+                "12-string acoustic guitar",
                 "flute",
                 "bongos"
             ],
-            "Hermann-J\u00fcrgen Nienhaus": [
+            "Hermann-Jürgen Nienhaus": [
                 "drums"
             ]
         }
@@ -84,7 +86,8 @@
                 "EMS synthesizer"
             ],
             "Giulio Capiozzo": [
-                "drums & percussion"
+                "drums",
+                "percussion"
             ],
             "Patrizio Fariselli": [
                 "piano",
@@ -107,7 +110,8 @@
                 "percussion"
             ],
             "Patrizio Fariselli": [
-                "electric & acoustic pianos",
+                "electric piano",
+                "acoustic piano",
                 "bass clarinet",
                 "percussion",
                 "synths"
@@ -117,10 +121,12 @@
                 "synths"
             ],
             "Giulio Capiozzo": [
-                "drums & percussion"
+                "drums",
+                "percussion"
             ],
             "Ares Tavolazzi": [
-                "electric & acoustic basses",
+                "electric bass",
+                "acoustic basse",
                 "trombone",
                 "pocket trumpet"
             ]
@@ -132,16 +138,20 @@
                 "bass"
             ],
             "Furio Chirico": [
-                "drums & percussion"
+                "drums",
+                "percussion"
             ],
             "Luigi \"Gigi\" Venegoni": [
-                "electric & acoustic guitars",
+                "electric guitar",
+                "acoustic guitar",
                 "ARP 2600 synthesizer",
                 "co-producer"
             ],
             "Beppe Crovella": [
-                "acoustic & electric pianos",
-                "ARP 2600 & Eminent synths",
+                "acoustic piano",
+                "electric piano",
+                "ARP 2600 synth",
+                "Eminent synth",
                 "Mellotron",
                 "Hammond organ"
             ],
@@ -151,8 +161,10 @@
                 "percussion"
             ],
             "Arturo Vitale": [
-                "soprano & baritone saxophones",
-                "clarinet & bass clarinet",
+                "soprano saxophone",
+                "baritone saxophone",
+                "clarinet",
+                "bass clarinet",
                 "vibraphone"
             ]
         },
@@ -161,7 +173,8 @@
                 "vocals"
             ],
             "Beppe Crovella": [
-                "acoustic & electric pianos",
+                "acoustic piano",
+                "electric piano",
                 "synths",
                 "spinet",
                 "celesta",
@@ -185,8 +198,10 @@
                 "percussion"
             ],
             "Arturo Vitale": [
-                "soprano & baritone saxes",
-                "clarinet & bass clarinet",
+                "soprano sax",
+                "baritone sax",
+                "clarinet",
+                "bass clarinet",
                 "vibes",
                 "clavinet",
                 "melodica",
@@ -209,7 +224,8 @@
                 "timpani"
             ],
             "Marcello Todaro": [
-                "electric & acoustic guitars"
+                "electric guitar",
+                "acoustic guitar"
             ],
             "Francesco Di Giacomo": [
                 "lead vocals"
@@ -234,7 +250,8 @@
                 "timpani"
             ],
             "Marcello Todaro": [
-                "electric & acoustic guitars",
+                "electric guitar",
+                "acoustric guitar",
                 "vocals"
             ],
             "Gianni Nocenzi": [
@@ -255,14 +272,16 @@
                 "acoustic guitar"
             ],
             "Gianni Nocenzi": [
-                "electric & acoustic pianos"
+                "electric piano",
+                "acoustic piano"
             ],
             "Pier Luigi Calderoni": [
                 "drums",
                 "percussion"
             ],
             "Marcello Todaro": [
-                "electric & acoustic guitars"
+                "electric guitar",
+                "acoustic guitar"
             ],
             "Francesco Di Giacomo": [
                 "lead vocals"
@@ -278,12 +297,14 @@
         "2809": {
             "Antonio Spagnolo": [
                 "bass",
-                "6- & 12-string acoustic guitars",
+                "acoustic guitar",
+                "12-string acoustic guitar",
                 "recorder",
                 "vocals"
             ],
             "Giulio D'Ambrosio": [
-                "electric saxophone (contralto & tenor)",
+                "constralto electric saxophone",
+                "tenor electric saxophone",
                 "flute",
                 "vocals"
             ],
@@ -365,7 +386,6 @@
             ],
             "Bambi Fossatti": [
                 "guitars",
-                "guitar effects",
                 "vocals"
             ],
             "Maurizio Cassinelli": [
@@ -494,7 +514,8 @@
             ],
             "Luis Enriquez Bacalov": [
                 "arrangements",
-                "director & producer"
+                "director",
+                "producer"
             ],
             "Enzo Vita": [
                 "guitars"
@@ -525,7 +546,9 @@
     "202": {
         "787": {
             "Marcello Giancarlo Dellacasa": [
-                "acoustic, Classic & electric guitars",
+                "acoustic guitar",
+                "classical guitar",
+                "electric guitar",
                 "violin",
                 "bass",
                 "lead vocals"
@@ -559,7 +582,8 @@
                 "keyboards"
             ],
             "Marcello Giancarlo Dellacasa": [
-                "guitar & vocals"
+                "guitar",
+                "vocals"
             ]
         },
         "788": {
@@ -665,7 +689,8 @@
             "Aldo Tagliapietra": [
                 "vocals",
                 "bass",
-                "electric & 12-string acoustic guitars"
+                "electric guitar",
+                "12-string acoustic guitar"
             ],
             "Michi Dei Rossi": [
                 "drums",
@@ -751,7 +776,8 @@
             "Leonardo Schiavone": [
                 "clarinet",
                 "flute",
-                "alto & tenor saxes"
+                "alto sax",
+                "tenor sax"
             ],
             "Alberto Ravasini": [
                 "lead and backing vocals",
@@ -790,7 +816,8 @@
                 "gong"
             ],
             "Pier Carlo Zanco": [
-                "lead & backing  vocals",
+                "lead vocals",
+                "backing vocals",
                 "organ",
                 "piano",
                 "Eminent",
@@ -803,8 +830,11 @@
                 "triangle"
             ],
             "Giuseppe \"Pino\" Santamaria": [
-                "lead & backing  vocals",
-                "electric, acoustic & 12-string guitars"
+                "lead vocals",
+                "backing vocals",
+                "electric guitar",
+                "acoustic guitar",
+                "12-string acoustic guitar"
             ]
         }
     },
@@ -840,10 +870,12 @@
             "Elio D'anna": [
                 "flute",
                 "piccolo",
-                "tenor & baritone saxes"
+                "tenor sax",
+                "baritone sax"
             ],
             "Danilo Rustici": [
-                "lead & 12-string guitars",
+                "lead guitar",
+                "12-string acoustic guitars",
                 "pipe organ",
                 "audio oscillator"
             ],
@@ -881,14 +913,19 @@
                 "backing vocals"
             ],
             "Elio D'Anna": [
-                "baritone & soprano saxes",
-                "tenor & contralto electric saxes",
+                "baritone sax",
+                "soprano sax",
+                "tenor electric sax",
+                "contralto electric sax",
                 "flute",
                 "piccolo",
                 "backing vocals"
             ],
             "Danilo Rustici": [
-                "acoustic, steel, 12-string & electric guitars",
+                "acoustic guitar",
+                "steel guitar",
+                "12-string acoustic guitar",
+                "electric guitar",
                 "Vox organ",
                 "backing vocals"
             ]
@@ -906,7 +943,10 @@
                 "percussion"
             ],
             "Vincenzo Caporaletti": [
-                "acoustic, classical & electric & 12 string guitars",
+                "acoustic guitar",
+                "classical guitar",
+                "electric guitar",
+                "12-string acoustic guitar",
                 "bass",
                 "drums",
                 "flute"
@@ -940,7 +980,7 @@
             "Mauro Bertoli": [
                 "guitar",
                 "voice",
-                "Balalaika"
+                "balalaika"
             ],
             "Roby Facchinetti": [
                 "keyboards",
@@ -1103,7 +1143,9 @@
                 "vocals"
             ],
             "Franco Mussida": [
-                "electric, acoustic & 12-string guitars",
+                "electric guitar",
+                "acoustic guitar",
+                "12-string acoustic guitar",
                 "mandocello",
                 "lead vocals"
             ],
@@ -1129,7 +1171,8 @@
             ],
             "Flavio Premoli": [
                 "lead vocals",
-                "Hammond & Pari organs",
+                "Hammond organ",
+                "Pari organ",
                 "MiniMoog synthesizer",
                 "Mellotron",
                 "harpsichord",
@@ -1144,7 +1187,8 @@
             ],
             "Franco Mussida": [
                 "lead vocals",
-                "electric & acoustic guitars",
+                "electric guitar",
+                "acoustric guitar",
                 "12-string guitar",
                 "mandocello",
                 "theorbo"
@@ -1157,7 +1201,9 @@
         },
         "42899": {
             "Franco Mussida": [
-                "acoustic, electric & 12-string guitars",
+                "acoustic guitar",
+                "electric guitar",
+                "12-string acoustic guitar",
                 "vocals",
                 "orchestration"
             ],
@@ -1177,7 +1223,8 @@
             ],
             "Flavio Premoli": [
                 "lead vocals",
-                "Hammond & Pari organs",
+                "Hammond organ",
+                "Pari organ",
                 "MiniMoog synthesizer",
                 "Mellotron",
                 "harpsichord",
@@ -1192,7 +1239,8 @@
             ],
             "Franco Mussida": [
                 "lead vocals",
-                "electric & acoustic guitars",
+                "electric guitar",
+                "acoustric guitar",
                 "12-string guitar",
                 "mandocello",
                 "theorbo"
@@ -1257,7 +1305,8 @@
     "296": {
         "1137": {
             "Donald Lax": [
-                "electric & acoustic violins"
+                "electric violin",
+                "violin"
             ],
             "Romualdo Coletta": [
                 "bass",
@@ -1282,7 +1331,9 @@
                 "vocals"
             ],
             "Raimondo Maria Cocco": [
-                "electric, acoustic & 12 string guitars",
+                "electric guitar",
+                "acoustic guitar",
+                "12-string acoustic guitar",
                 "vocals"
             ]
         }
@@ -1315,8 +1366,7 @@
         "1214": {
             "Marcello Reddavide": [
                 "bass guitar",
-                "bells",
-                "Fx"
+                "bells"
             ],
             "Maurizio Zarrillo": [
                 "grand piano",
@@ -1327,13 +1377,15 @@
                 "sistro"
             ],
             "Michele Zarrillo": [
-                "electric & acoustic guitars",
+                "electric guitar",
+                "acoustric guitar",
                 "vocals",
                 "composer"
             ],
             "Giampiero Artegiani": [
                 "synthesizer",
-                "Classical & 12-string guitars"
+                "classical guitar",
+                "12-string acoustic guitar"
             ],
             "Paolo Faenza": [
                 "drums",
@@ -1377,7 +1429,10 @@
                 "vocals"
             ],
             "Franco Fabbri": [
-                "electric, acoustic, 9-string & 12-string guitars",
+                "electric guitar",
+                "acoustic guitar",
+                "9-string guitar",
+                "12-string acoustic guitar",
                 "sitar",
                 "flute",
                 "harmonica",
@@ -1386,7 +1441,8 @@
                 "vocals"
             ],
             "Luca Piscicelli": [
-                "electric & 9-string guitars",
+                "9-string guitar",
+                "electric guitar",
                 "tambourine",
                 "cymbal",
                 "vocals"
