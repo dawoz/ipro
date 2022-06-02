@@ -17,7 +17,7 @@
                 "vocals"
             ],
             "Bernardo Lanzetti": [
-                "lead vocals",
+                "vocals",
                 "guitar"
             ],
             "Franz Dondi": [
@@ -59,7 +59,7 @@
                 "bass"
             ],
             "Jutta Nienhaus": [
-                "lead vocals"
+                "vocals"
             ],
             "Martin Thurn": [
                 "electric guitar",
@@ -87,7 +87,7 @@
             ],
             "Giulio Capiozzo": [
                 "drums",
-                "percussion"
+                "percussions"
             ],
             "Patrizio Fariselli": [
                 "piano",
@@ -100,33 +100,33 @@
                 "organ",
                 "harpsichord",
                 "steel drums",
-                "percussion"
+                "percussions"
             ]
         },
         "105": {
             "Demetrio Stratos": [
                 "vocals",
                 "organ",
-                "percussion"
+                "percussions"
             ],
             "Patrizio Fariselli": [
                 "electric piano",
                 "acoustic piano",
                 "bass clarinet",
-                "percussion",
-                "synths"
+                "percussions",
+                "synthesizer"
             ],
             "Paolo Tofani": [
                 "electric guitar",
-                "synths"
+                "synthesizer"
             ],
             "Giulio Capiozzo": [
                 "drums",
-                "percussion"
+                "percussions"
             ],
             "Ares Tavolazzi": [
                 "electric bass",
-                "acoustic basse",
+                "acoustic bass",
                 "trombone",
                 "pocket trumpet"
             ]
@@ -139,7 +139,7 @@
             ],
             "Furio Chirico": [
                 "drums",
-                "percussion"
+                "percussions"
             ],
             "Luigi \"Gigi\" Venegoni": [
                 "electric guitar",
@@ -150,15 +150,15 @@
             "Beppe Crovella": [
                 "acoustic piano",
                 "electric piano",
-                "ARP 2600 synth",
-                "Eminent synth",
+                "ARP 2600 synthesizer",
+                "Eminent synthesizer",
                 "Mellotron",
                 "Hammond organ"
             ],
             "Giovanni Vigliar": [
                 "violin",
                 "vocals",
-                "percussion"
+                "percussions"
             ],
             "Arturo Vitale": [
                 "soprano saxophone",
@@ -175,7 +175,7 @@
             "Beppe Crovella": [
                 "acoustic piano",
                 "electric piano",
-                "synths",
+                "synthesizer",
                 "spinet",
                 "celesta",
                 "clavinet",
@@ -186,20 +186,20 @@
             ],
             "Luigi \"Gigi\" Venegoni": [
                 "guitar",
-                "ARP synth"
+                "ARP synthesizer"
             ],
             "Furio Chirico": [
                 "drums",
-                "percussion"
+                "percussions"
             ],
             "Giovanni Vigliar": [
                 "violin",
                 "vocals",
-                "percussion"
+                "percussions"
             ],
             "Arturo Vitale": [
-                "soprano sax",
-                "baritone sax",
+                "soprano saxophone",
+                "baritone saxophone",
                 "clarinet",
                 "bass clarinet",
                 "vibes",
@@ -228,11 +228,11 @@
                 "acoustic guitar"
             ],
             "Francesco Di Giacomo": [
-                "lead vocals"
+                "vocals"
             ],
             "Vittorio Nocenzi": [
                 "Hammond organ",
-                "Moog synthesizers",
+                "Moog synthesizer",
                 "harpsichord",
                 "vocals"
             ]
@@ -251,7 +251,7 @@
             ],
             "Marcello Todaro": [
                 "electric guitar",
-                "acoustric guitar",
+                "acoustic guitar",
                 "vocals"
             ],
             "Gianni Nocenzi": [
@@ -260,7 +260,7 @@
                 "vocals"
             ],
             "Francesco Di Giacomo": [
-                "lead vocals"
+                "vocals"
             ],
             "Renato D'Angelo": [
                 "bass"
@@ -277,19 +277,19 @@
             ],
             "Pier Luigi Calderoni": [
                 "drums",
-                "percussion"
+                "percussions"
             ],
             "Marcello Todaro": [
                 "electric guitar",
                 "acoustic guitar"
             ],
             "Francesco Di Giacomo": [
-                "lead vocals"
+                "vocals"
             ],
             "Vittorio Nocenzi": [
                 "organ",
                 "spinet",
-                "synths"
+                "synthesizer"
             ]
         }
     },
@@ -309,14 +309,14 @@
                 "vocals"
             ],
             "Corrado Rustici": [
-                "lead guitar",
+                "guitar",
                 "recorder",
                 "flute",
                 "vibraphone",
                 "vocals"
             ],
             "Gianluigi Di Franco": [
-                "lead vocals",
+                "vocals",
                 "flute",
                 "small percussion"
             ],
@@ -329,13 +329,13 @@
     "531": {
         "2681": {
             "Alberto Radius": [
-                "guitars",
+                "guitar",
                 "bass",
                 "vocals"
             ],
             "Tony Cicco": [
                 "drums",
-                "percussion",
+                "percussions",
                 "vocals"
             ],
             "Gabriele Lorenzi": [
@@ -346,13 +346,13 @@
         },
         "2684": {
             "Alberto Radius": [
-                "guitars",
+                "guitar",
                 "bass",
                 "vocals"
             ],
             "Tony Cicco": [
                 "drums",
-                "percussion",
+                "percussions",
                 "vocals"
             ],
             "Gabriele Lorenzi": [
@@ -365,7 +365,7 @@
     "2396": {
         "11000": {
             "Bambi Fossatti": [
-                "guitars",
+                "guitar",
                 "vocals"
             ],
             "Lio Marchi": [
@@ -385,7 +385,7 @@
                 "vocals"
             ],
             "Bambi Fossatti": [
-                "guitars",
+                "guitar",
                 "vocals"
             ],
             "Maurizio Cassinelli": [
@@ -414,10 +414,10 @@
     "1474": {
         "6934": {
             "Vincenzo Massetti (Lord Enzo)": [
-                "vocal"
+                "vocals"
             ],
             "Claudio Mastracci": [
-                "drum"
+                "drums"
             ],
             "Mario Schilir\u0148": [
                 "guitar"
@@ -477,7 +477,7 @@
                 "bass"
             ],
             "Enzo Vita": [
-                "guitars"
+                "guitar"
             ]
         },
         "1180": {
@@ -492,7 +492,7 @@
                 "bass"
             ],
             "Enzo Vita": [
-                "guitars"
+                "guitar"
             ]
         },
         "1181": {
@@ -501,13 +501,16 @@
             ],
             "Franco Di Sabbatino": [
                 "keyboards",
-                "Hammond B",
+                "Hammond organ",
                 "harmonium",
-                "synths (Eminent, VCS, ARP, Moog)"
+                "Eminent synthesizer",
+                "VCS synthesizer",
+                "ARP synthesizer",
+                "Moog synthesizer"
             ],
             "Pino Ballarini": [
                 "vocals",
-                "percussion"
+                "percussions"
             ],
             "Stefano Urso": [
                 "bass"
@@ -518,7 +521,7 @@
                 "producer"
             ],
             "Enzo Vita": [
-                "guitars"
+                "guitar"
             ]
         }
     },
@@ -531,13 +534,13 @@
                 "vocals"
             ],
             "Antonio Bartoccetti": [
-                "guitars",
+                "guitar",
                 "bass",
                 "vocals",
                 "producer"
             ],
             "Vittoria Lo Turco": [
-                "lead vocals",
+                "vocals",
                 "violin",
                 "flute"
             ]
@@ -551,7 +554,7 @@
                 "electric guitar",
                 "violin",
                 "bass",
-                "lead vocals"
+                "vocals"
             ],
             "Alfio Vitanza": [
                 "drums",
@@ -595,10 +598,10 @@
                 "vocals"
             ],
             "Marcello Giancarlo Dellacasa": [
-                "guitars",
+                "guitar",
                 "violin",
                 "bass",
-                "lead vocals"
+                "vocals"
             ]
         }
     },
@@ -641,7 +644,7 @@
         },
         "2300": {
             "Aldo Tagliapietra": [
-                "lead vocals",
+                "vocals",
                 "acoustic guitar",
                 "flute",
                 "celesta"
@@ -663,7 +666,7 @@
                 "backing vocals"
             ],
             "Nino Smeraldi": [
-                "lead guitar",
+                "guitar",
                 "sarangi",
                 "backing vocals",
                 "arrangements"
@@ -671,7 +674,7 @@
         },
         "2301": {
             "Antonio Pagliuca": [
-                "Hammond",
+                "Hammond organ",
                 "electric piano",
                 "audio generator"
             ],
@@ -695,7 +698,7 @@
             "Michi Dei Rossi": [
                 "drums",
                 "bells",
-                "percussion"
+                "percussions"
             ],
             "Antonio Pagliuca": [
                 "organ",
@@ -709,7 +712,7 @@
         "2302": {
             "Michi Dei Rossi": [
                 "drums",
-                "percussion"
+                "percussions"
             ],
             "Aldo Tagliapietra": [
                 "vocals",
@@ -745,7 +748,7 @@
             ],
             "Michi Dei Rossi": [
                 "drums",
-                "percussion"
+                "percussions"
             ],
             "Antonio Pagliuca": [
                 "keyboards"
@@ -755,11 +758,11 @@
             "Aldo Tagliapietra": [
                 "bass",
                 "acoustic guitar",
-                "lead vocals"
+                "vocals"
             ],
             "Michi Dei Rossi": [
                 "drums",
-                "percussion"
+                "percussions"
             ],
             "Tolo Marton": [
                 "electric guitar",
@@ -776,11 +779,12 @@
             "Leonardo Schiavone": [
                 "clarinet",
                 "flute",
-                "alto sax",
-                "tenor sax"
+                "alto saxophone",
+                "tenor saxophone"
             ],
             "Alberto Ravasini": [
-                "lead and backing vocals",
+                "vocals",
+                "backing vocals",
                 "bass",
                 "acoustic guitar",
                 "recorder"
@@ -789,16 +793,17 @@
                 "piano",
                 "electric piano",
                 "organ",
-                "lead and backing vocals"
+                "vocals",
+                "backing vocals"
             ],
             "Maurizio Bianchini": [
                 "horn",
                 "trumpet",
-                "percussion",
-                "vibraphone."
+                "percussions",
+                "vibraphone"
             ],
             "Roberto Giuliani": [
-                "electric guitars",
+                "electric guitar",
                 "piano",
                 "backing vocals"
             ],
@@ -816,11 +821,11 @@
                 "gong"
             ],
             "Pier Carlo Zanco": [
-                "lead vocals",
+                "vocals",
                 "backing vocals",
                 "organ",
                 "piano",
-                "Eminent",
+                "Eminent synthesizer",
                 "synthesizer",
                 "bowed contrabass"
             ],
@@ -830,7 +835,7 @@
                 "triangle"
             ],
             "Giuseppe \"Pino\" Santamaria": [
-                "lead vocals",
+                "vocals",
                 "backing vocals",
                 "electric guitar",
                 "acoustic guitar",
@@ -870,12 +875,12 @@
             "Elio D'anna": [
                 "flute",
                 "piccolo",
-                "tenor sax",
-                "baritone sax"
+                "tenor saxophone",
+                "baritone saxophone"
             ],
             "Danilo Rustici": [
-                "lead guitar",
-                "12-string acoustic guitars",
+                "guitar",
+                "12-string acoustic guitar",
                 "pipe organ",
                 "audio oscillator"
             ],
@@ -884,14 +889,14 @@
             ],
             "Lino Vairetti": [
                 "vocals",
-                "12-string guitar",
+                "12-string acoustic guitar",
                 "harmonica",
                 "Hammond organ",
                 "synthesizer"
             ],
             "Massimo Guarino": [
                 "drums",
-                "percussion"
+                "percussions"
             ]
         },
         "1030": {
@@ -900,23 +905,23 @@
                 "guitar"
             ],
             "Lino Vairetti": [
-                "lead vocals",
-                "12-string guitar",
-                "ARP 2600 synth",
+                "vocals",
+                "12-string acoustic guitar",
+                "ARP 2600 synthesizer",
                 "Mellotron"
             ],
             "Massimo Guarino": [
                 "drums",
                 "vibraphone",
                 "bells",
-                "percussion",
+                "percussions",
                 "backing vocals"
             ],
             "Elio D'Anna": [
-                "baritone sax",
-                "soprano sax",
-                "tenor electric sax",
-                "contralto electric sax",
+                "baritone saxophone",
+                "soprano saxophone",
+                "tenor electric saxophone",
+                "contralto electric saxophone",
                 "flute",
                 "piccolo",
                 "backing vocals"
@@ -938,9 +943,9 @@
                 "organ",
                 "vocals",
                 "spinet",
-                "Eminent",
+                "Eminent synthesizer",
                 "celesta",
-                "percussion"
+                "percussions"
             ],
             "Vincenzo Caporaletti": [
                 "acoustic guitar",
@@ -967,62 +972,62 @@
             "Valerio Negrini": [
                 "drums",
                 "percussions",
-                "voices"
+                "vocals"
             ],
             "Mario Goretti": [
                 "guitar",
-                "voice"
+                "vocals"
             ],
             "Riccardo Fogli": [
                 "bass",
-                "voice"
+                "vocals"
             ],
             "Mauro Bertoli": [
                 "guitar",
-                "voice",
+                "vocals",
                 "balalaika"
             ],
             "Roby Facchinetti": [
                 "keyboards",
-                "voice"
+                "vocals"
             ]
         },
         "21919": {
             "Riccardo Fogli": [
                 "bass",
-                "voice"
+                "vocals"
             ],
             "Valerio Negrini": [
                 "drums",
                 "percussions",
-                "voices"
+                "vocals"
             ],
             "Mario Goretti": [
                 "guitar",
-                "voice"
+                "vocals"
             ],
             "Roby Facchinetti": [
                 "keyboards",
-                "voice"
+                "vocals"
             ]
         },
         "20979": {
             "Valerio Negrini": [
                 "drums",
-                "voice"
+                "vocals"
             ],
             "Dody Battaglia": [
                 "guitar",
-                "voice"
+                "vocals"
             ],
             "Riccardo Fogli": [
                 "bass",
-                "voice"
+                "vocals"
             ],
             "Roby Facchinetti": [
-                "Hammond",
+                "Hammond organ",
                 "keyboards",
-                "voices"
+                "vocals"
             ]
         },
         "31403": {
@@ -1049,21 +1054,21 @@
             "Stefano D'Orazio": [
                 "vocals",
                 "drums",
-                "percussion"
+                "percussions"
             ],
             "Riccardo Fogli": [
-                "lead vocals",
+                "vocals",
                 "vocals",
                 "bass"
             ],
             "Roby Facchinetti": [
-                "lead vocals",
+                "vocals",
                 "vocals",
                 "piano",
                 "keyboards"
             ],
             "Dodi Battaglia": [
-                "lead vocals",
+                "vocals",
                 "vocals",
                 "guitar"
             ]
@@ -1089,7 +1094,7 @@
         "31422": {
             "Red Canzian": [
                 "vocals",
-                "bass from 1973"
+                "bass"
             ],
             "Roby Facchinetti": [
                 "vocals",
@@ -1098,11 +1103,13 @@
             ],
             "Valerio Negrini": [
                 "vocals",
-                "drums and percussion until 1971"
+                "drums",
+                "percussions"
             ],
             "Stefano D'Orazio": [
                 "vocals",
-                "drums and percussion from 1972"
+                "drums",
+                "percussions"
             ],
             "Dodi Battaglia": [
                 "vocals",
@@ -1110,22 +1117,26 @@
             ],
             "Riccardo Fogli": [
                 "vocals",
-                "bass until 1972"
+                "bass"
             ]
         },
         "19102": {
             "Roby Facchinetti": [
                 "vocals",
-                "piano and keyboards"
+                "piano",
+                "keyboards"
             ],
             "Dodi Battaglia": [
-                "vocals and guitars"
+                "vocals",
+                "guitar"
             ],
             "Red Canzian": [
-                "vocals and bass guitar"
+                "vocals",
+                "bass"
             ],
             "Stefano D'Orazio": [
-                "drums and percussions"
+                "drums",
+                "percussions"
             ]
         },
         "18990": {}
@@ -1138,7 +1149,7 @@
             ],
             "Franz Di Cioccio": [
                 "drums",
-                "percussion",
+                "percussions",
                 "Moog synthesizer",
                 "vocals"
             ],
@@ -1147,15 +1158,15 @@
                 "acoustic guitar",
                 "12-string acoustic guitar",
                 "mandocello",
-                "lead vocals"
+                "vocals"
             ],
             "Flavio Premoli": [
                 "organ",
-                "pianos (piano a puntine?)",
+                "piano",
                 "Mellotron",
                 "harpsichord",
                 "MiniMoog synthesizer",
-                "lead vocals"
+                "vocals"
             ],
             "Mauro Pagani": [
                 "flute",
@@ -1170,7 +1181,7 @@
                 "backing vocals"
             ],
             "Flavio Premoli": [
-                "lead vocals",
+                "vocals",
                 "Hammond organ",
                 "Pari organ",
                 "MiniMoog synthesizer",
@@ -1181,21 +1192,22 @@
                 "tubular bells"
             ],
             "Mauro Pagani": [
-                "flutes (contralto, piccolo)",
+                "contralto flute",
+                "piccolo",
                 "violin",
                 "backing vocals"
             ],
             "Franco Mussida": [
-                "lead vocals",
+                "vocals",
                 "electric guitar",
-                "acoustric guitar",
-                "12-string guitar",
+                "acoustic guitar",
+                "12-string acoustic guitar",
                 "mandocello",
                 "theorbo"
             ],
             "Franz Di Cioccio": [
                 "drums",
-                "percussion",
+                "percussions",
                 "backing vocals"
             ]
         },
@@ -1209,7 +1221,7 @@
             ],
             "Franz Di Cioccio": [
                 "drums",
-                "percussion",
+                "percussions",
                 "vocals"
             ],
             "Patrick Djivas": [
@@ -1222,7 +1234,7 @@
                 "backing vocals"
             ],
             "Flavio Premoli": [
-                "lead vocals",
+                "vocals",
                 "Hammond organ",
                 "Pari organ",
                 "MiniMoog synthesizer",
@@ -1233,21 +1245,22 @@
                 "tubular bells"
             ],
             "Mauro Pagani": [
-                "flutes (contralto, piccolo)",
+                "contralto flute",
+                "piccolo",
                 "violin",
                 "backing vocals"
             ],
             "Franco Mussida": [
-                "lead vocals",
+                "vocals",
                 "electric guitar",
-                "acoustric guitar",
-                "12-string guitar",
+                "acoustic guitar",
+                "12-string acoustic guitar",
                 "mandocello",
                 "theorbo"
             ],
             "Franz Di Cioccio": [
                 "drums",
-                "percussion",
+                "percussions",
                 "backing vocals"
             ]
         },
@@ -1259,16 +1272,16 @@
             ],
             "Franz Di Cioccio": [
                 "drums",
-                "percussion",
+                "percussions",
                 "vocals"
             ],
             "Franco Mussida": [
-                "guitars",
-                "lead vocals"
+                "guitar",
+                "vocals"
             ],
             "Flavio Premoli": [
                 "keyboards",
-                "lead vocals"
+                "vocals"
             ],
             "Jan Patrick Djivas": [
                 "bass",
@@ -1278,14 +1291,14 @@
         "47772": {},
         "2064": {
             "Bernardo Lanzetti": [
-                "lead vocals"
+                "vocals"
             ],
             "Mauro Pagani": [
                 "flute",
                 "violin"
             ],
             "Franco Mussida": [
-                "guitars",
+                "guitar",
                 "vocals"
             ],
             "Jan Patrick Djivas": [
@@ -1293,7 +1306,7 @@
             ],
             "Franz Di Cioccio": [
                 "drums",
-                "percussion",
+                "percussions",
                 "vocals"
             ],
             "Flavio Premoli": [
@@ -1314,10 +1327,10 @@
             ],
             "Patrick Traina": [
                 "drums",
-                "percussion"
+                "percussions"
             ],
             "Giorgio Giorgi": [
-                "lead vocals",
+                "vocals",
                 "flute",
                 "piccolo"
             ],
@@ -1326,7 +1339,7 @@
                 "organ",
                 "Mellotron",
                 "Moog synthesizer",
-                "electronic  zither",
+                "electronic zither",
                 "spinet",
                 "vocals"
             ],
@@ -1365,7 +1378,7 @@
     "313": {
         "1214": {
             "Marcello Reddavide": [
-                "bass guitar",
+                "bass",
                 "bells"
             ],
             "Maurizio Zarrillo": [
@@ -1378,7 +1391,7 @@
             ],
             "Michele Zarrillo": [
                 "electric guitar",
-                "acoustric guitar",
+                "acoustic guitar",
                 "vocals",
                 "composer"
             ],
@@ -1389,7 +1402,7 @@
             ],
             "Paolo Faenza": [
                 "drums",
-                "percussion",
+                "percussions",
                 "vibraphone",
                 "Fx"
             ]
@@ -1399,9 +1412,9 @@
         "6935": {},
         "5220": {
             "Franco Falsini": [
-                "guitars",
+                "guitar",
                 "keyboards",
-                "synthesizers"
+                "synthesizer"
             ],
             "Richard Ursillo": [
                 "bass",
@@ -1437,14 +1450,14 @@
                 "flute",
                 "harmonica",
                 "Mellotron",
-                "cymbal",
+                "cymbals",
                 "vocals"
             ],
             "Luca Piscicelli": [
                 "9-string guitar",
                 "electric guitar",
                 "tambourine",
-                "cymbal",
+                "cymbals",
                 "vocals"
             ]
         },
