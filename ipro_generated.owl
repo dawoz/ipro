@@ -1,0 +1,2062 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://www.semanticweb.org/ipro"
+         xmlns="http://www.semanticweb.org/ipro#">
+
+<owl:Ontology rdf:about="http://www.semanticweb.org/ipro">
+  <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/list.owl"/>
+</owl:Ontology>
+
+<owl:ObjectProperty rdf:about="#discography">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Band"/>
+  <rdfs:range rdf:resource="#Discography"/>
+  <owl:inverseOf rdf:resource="#discographyOf"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#discographyOf">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Discography"/>
+  <rdfs:range rdf:resource="#Band"/>
+  <owl:inverseOf rdf:resource="#discography"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#containsAlbum">
+  <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#hasItem"/>
+  <rdfs:domain rdf:resource="#Discography"/>
+  <rdfs:range rdf:resource="#Album"/>
+  <owl:inverseOf rdf:resource="#albumOf"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#albumOf">
+  <owl:inverseOf rdf:resource="#containsAlbum"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#previousAlbum">
+  <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/list.owl#previousItem"/>
+  <rdfs:domain rdf:resource="#Album"/>
+  <rdfs:range rdf:resource="#Album"/>
+  <owl:inverseOf rdf:resource="#nextAlbum"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#nextAlbum">
+  <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/list.owl#nextItem"/>
+  <rdfs:domain rdf:resource="#Album"/>
+  <rdfs:range rdf:resource="#Album"/>
+  <owl:inverseOf rdf:resource="#previousAlbum"/>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="#wikidataIri">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Band"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#discogsId">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Band"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#progarchivesId">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Band"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#activeSinceYear">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Band"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#imageUrl">
+  <rdfs:domain rdf:resource="#Band"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#releaseYear">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:domain rdf:resource="#Album"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="#Album">
+  <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/list.owl#List"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Band"/>
+
+<owl:Class rdf:about="#Bass">
+  <rdfs:subClassOf rdf:resource="#MusicalInstrument"/>
+</owl:Class>
+
+<owl:Class rdf:about="#MusicalInstrument"/>
+
+<owl:Class rdf:about="#Bassist">
+  <rdfs:subClassOf rdf:resource="#Musician"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Musician"/>
+
+<owl:Class rdf:about="#Discography">
+  <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/list.owl#List"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Drummer">
+  <rdfs:subClassOf rdf:resource="#Musician"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Genre"/>
+
+<owl:Class rdf:about="#Guitar">
+  <rdfs:subClassOf rdf:resource="#MusicalInstrument"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Guitarist">
+  <rdfs:subClassOf rdf:resource="#Musician"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Keyboard">
+  <rdfs:subClassOf rdf:resource="#MusicalInstrument"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Keyboardist">
+  <rdfs:subClassOf rdf:resource="#Musician"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Organ">
+  <rdfs:subClassOf rdf:resource="#Keyboard"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Participation"/>
+
+<owl:Class rdf:about="#Percussions">
+  <rdfs:subClassOf rdf:resource="#MusicalInstrument"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Piano">
+  <rdfs:subClassOf rdf:resource="#Keyboard"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Singer">
+  <rdfs:subClassOf rdf:resource="#Musician"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Song"/>
+
+<owl:Class rdf:about="#Synthesizer">
+  <rdfs:subClassOf rdf:resource="#Keyboard"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Vocals">
+  <rdfs:subClassOf rdf:resource="#MusicalInstrument"/>
+</owl:Class>
+
+<Band rdf:about="#Acqua_Fragile">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <discography rdf:resource="#Acqua_Fragile_discography"/>
+  <wikidataIri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.wikidata.org/entity/Q1056857</wikidataIri>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1136505</discogsId>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5</progarchivesId>
+  <rdfs:comment xml:lang="en">Founded in Parma, Italy in 1971 - Disbanded in 1975 - Reformed 2004-2006 and in 2017 as "Acqua Fragile Project".
+They are perhaps best known for the band that were to supply PFM's English singing vocalist Bernado Lanzetti, making his debut with them on Chocolate Kings.
+Lanzetti with guitarist Gino Campanini and drummer Piero Canavera had played together in Gli Immortali. Joined on keyboards by Maurizio Mori and bassist Franz Dondi, formerly of I Moschettieri, who released a single in 1967, they shortly changed their name to ACQUA FRAGILE.
+It was to be two years before their eponymous debut album saw the light of day, due to difficulty in finding a record company that would allow them to release it with English sung lyrics. Musically they bore a resemblance to GENESIS and GENTLE GIANT, with harmony vocals not unlike CROSBY, STILLS, NASH AND YOUNG, no doubt influenced by the time Lanzetti spent in the USA. Lanzetti's vocals have a similar feel to Roger Chapman of FAMILY and the album is skilfully played by the already at the time, well versed players. The plan to sing in English backfired as it wasn't well received in Italy and didn't receive a release abroad. Undeterred, their second album Mass Media Stars, released in 1974 saw the band treading similar musical territory and did receive a release in the USA.
+Mori quit and was replaced by ex-THE TRIP keyboardist Joe Vescovi and shortly after a bigger blow came when Lanzetti left for PFM. The band soldiered on for a while longer bringing in former I TOP 4 and I DIK DIK man Roberto Facini. Lanzetti remained with PFM until 1980 followed by a successful solo career. He is now a member of MANGALA VALLIS. Canavera and Dondi went on to play with ROCKY'S FILJ and the ACQUA FRAGILE name has recently been reborn as the ACQUA FRAGILE PROJECT by Dondi. He is the only original member participating in the project.</rdfs:comment>
+  <rdfs:label xml:lang="en">Acqua Fragile</rdfs:label>
+  <activeSinceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1971</activeSinceYear>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/MpxhtEsg2xyg41bTtCv8fdMRdpjPLCPPaX701Z6tEOU/rs:fit/g:sm/q:90/h:468/w:494/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTExMzY1/MDUtMTI0MTA0MzA3/NS5qcGVn.jpeg</imageUrl>
+</Band>
+
+<Discography rdf:about="#Acqua_Fragile_discography">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <containsAlbum rdf:resource="#Acqua_Fragile_album"/>
+  <containsAlbum rdf:resource="#MassMedia_Stars_album"/>
+</Discography>
+
+<Band rdf:about="#Alphataurus">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <discography rdf:resource="#Alphataurus_discography"/>
+  <wikidataIri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.wikidata.org/entity/Q649226</wikidataIri>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1157743</discogsId>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">469</progarchivesId>
+  <rdfs:comment xml:lang="en">Formed in 1970 in Milan, Italy - Disbanded in 1973 - Reformed in 2010.
+Alphataurus is one of those legendary RPI bands who are obscure in the annals of general progressive rock, but much appreciated by Italian prog fanatics who venture beyond the more well-known groups. Not much is known about the group from Milan who sprang on to the scene with a great album before vanishing in typical RPI fashion. A second album was partially recorded and later released by Mellow in the '90s as part of their archival projects. Our original site Bio summed them up like this:
+"Expressive Heavy prog band from the classic early 70's Italian prog scene, very similar to MUSEO ROSENBACH and IL BALLETO DI BRONZO. Just like their contemporary 'sister' bands they mix very well the heavy parts with soft melodic passages, with exquisite contrasting strong voice. The keyboards are superb and their long thematic developments alone would merit an interest in their albums. They released two albums, the first one "Alphataurus" considered by many as a masterpiece of the 70's Italian scene. They are an unparallel heavy prog classic to my ears."
+They did mix well the light and heavier sections and sometimes even a bluesy, jazzy, or spacey edge. I believe they probably had both English and Italian influences with the former being perhaps VDGG or even Deep Purple. I would say if you enjoy the heavier side of Italian, such as De De Lind, JET, or Museo Rosenbach, you will need to check out Alphataurus. Tragically the band split in 1974 while working on their second album, leaving it unfinished. It was released posthumously but was not even close to finished. Drummer Giorgio Santandrea went on to work briefly in Crystals, and Pietro Pellegrini collaborated with both Riccardo Zappa and PFM.</rdfs:comment>
+  <rdfs:label xml:lang="en">Alphataurus</rdfs:label>
+  <activeSinceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1970</activeSinceYear>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/_4vev5OOeOkYYXWRDa6jqBXZHrfDx2cwU2_F73Jj-bc/rs:fit/g:sm/q:90/h:431/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTExNTc3/NDMtMTQzMjU4NjQ2/NS05MDQ2LmpwZWc.jpeg</imageUrl>
+</Band>
+
+<Discography rdf:about="#Alphataurus_discography">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <containsAlbum rdf:resource="#Alphataurus_album"/>
+</Discography>
+
+<Band rdf:about="#Analogy">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <discography rdf:resource="#Analogy_discography"/>
+  <wikidataIri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.wikidata.org/entity/Q3615028</wikidataIri>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">788246</discogsId>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">526</progarchivesId>
+  <rdfs:comment xml:lang="en">Founded in Varese, italy in 1972 - Disbanded in 1974 - Reunited intermittently between 2010-2016.
+In 1968 German Martin Thurn (guitar) went to an international school in Varese (North Italy) where he founded a band named SONS OF GIOVE. Other members were Wolfgang Schoene, Thomas Schmidt (later PELL MELL) and Jutta Nienhaus. Renamed to JOICE (due to a misprint later YOICE) the band went on in 1970 with drummer Hermann-Jürgen Nienhaus (brother of Jutta) and Mauro Rattaggi (bass), the only italian member of the band. After a lot of gigs in the south of Swiss and North Italy they were able to buy some professional equipment and in 1971 JOICE got a contract with an italian label. During a festival in Arona a spontanous collaboration happened with keyboarder Nikola Pankoff whilst playing a free interpretation of Pink Floyd's "Atom Heart Mother". Pankoff became a band member afterwards. Their first release was the Single "Sold Out/God's Own Land", two songs written by Thurn. At the end of the year Rattaggi had to join the army and left the band. Schoene changed to the bass.
+The recordings for their first LP started early 1972 in Milan and they finally renamed to ANALOGY corresponding to the title of their most important song. Soon some trouble occured about the sleeve pictures. The band wanted an artwork illustrated by Pankoff but the label demanded on some nude photos which had been taken for the former single production. Rattaggi was covered by the blue vertical bar which includes the band logo. The songs of their debut are gradually developed with a more psychedelic and experimental style provided with a dark atmosphere. ANALOGY's distinctions were Jutta Nienhaus' unique vocals, Thurn's and Pankoff's impressive instrumental skills on guitar and Hammond organ. In Italy the band now could reach some attention and appreciation. They played at a Rock festival in Rome with 30.000 spectators, appeared during some RAI radio sessions and could also be seen on TV. But ANALOGY remained practically unknown outside of Italy though.
+In September 1972 Pankoff left the band because of some disagreements about the musical direction. 1973 it came to a new collaboration with flute player Rocco Abate, member of the Milano Scala Orchestra, who was searching for new experiences. Martin Thurn and Wolfgang Schoene composed a 30 minute set of thematically-linked musical pieces simply entitled "The Suite". In this work the classical music of the Renaissance-period was combined with Progressive Rock. ANALOGY played this several times live and received good reviews. The band had successful performances together with ATOMIC ROOSTER and CURVED AIR but nevertheless problems with the money were growing. Additionally Rocco Abate's issues increased to perform his obligations. So in November 1973 ANALOGY had the last live performance and disbanded at the end of the year.
+Afterwards Martin Thurn, Jutta Nienhaus and her brother looked forward to a longer cooperation with Franco Battiato. Jutta Nienhaus appeared on the 1973 release Sulle Corde Di Aries. Some months later their plans failed because Battiato's interests changed to more synthesizer based music. They went on tour with Dario Fo's Collettivo Teatrale La Comune and during one performance in Milan they happened to be arrested and sent to jail for two days. After this experience they left the project and in summer 1974 the original JOICE line-up joined in a new project with JUMBO keyboarder Sergio Conte which was not very successful. So Martin Thurn and Jutta Nienhaus went to England where they had several other collaborations during the next years. The second ANALOGY album "The Suite" based on their live performances in 1973 with more Prog Folk impressions. It was completed and recorded in 1980 along with members of their subsequent band EARTHBOUND. 1994/95 they finally reworked some ANALOGY songs together with Mauro Rattaggi and released "25 Years Later" including the early JOICE songs in two different versions.
+ANALOGY is well worth a listen with eclectic songs alternating between Psych, Kraut and Folk!</rdfs:comment>
+  <rdfs:label xml:lang="en">Analogy</rdfs:label>
+  <activeSinceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</activeSinceYear>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/pvCBkmSSXyPAJmH-1iOJUMfyajikqKgAq1oOnqIh1fc/rs:fit/g:sm/q:90/h:648/w:320/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc4ODI0/Ni0xMjIzMDU4NTcy/LmpwZWc.jpeg</imageUrl>
+</Band>
+
+<Discography rdf:about="#Analogy_discography">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <containsAlbum rdf:resource="#Analogy_album"/>
+</Discography>
+
+<Band rdf:about="#Area">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <discography rdf:resource="#Area_discography"/>
+  <wikidataIri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.wikidata.org/entity/Q2703857</wikidataIri>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">313917</discogsId>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26</progarchivesId>
+  <rdfs:comment xml:lang="en">Formed in 1972 in Italy - Disbanded in 1983 - Reformed from 1993 to 2000 - Active again since 2009.
+Undoubtedly one of the more adventurous, AREA were also a very important band on the seventies Italian prog scene, their first three albums in particular come highly recommended and essential listening to anyone discovering the RPI genre.
+The band formed in 1972 stabilizing with a line-up of superb musicians for their debut album featuring ex I RIBELLI vocalist , ex I CALIFFI guitarist Paulo Tofani, bassist Patrick Djivas (later to join PFM), drummer Giulio Capiozzo, keyboardist Patrizio Fariselli and on sax, flute and clarinet Victor Busnello. "Arbeit Macht Frei" (work will make your free) was released on Cramps records in 1973 and is a very accomplished debut by anyone's standards featuring an exciting blend jazz, rock and prog with Arabian and Greek (Stratos was Greek) influences along with a touch of the Avant. The bands lyrics show a politically left wing stance and Stratos was already displaying his inventive vocal style, using it as an instrument much of the time rather than in the traditional sense, something he would develop to further extremes on future albums (including solo work).
+By 1974, when their second album "Caution Radiation Area" was released, Djivas had jumped ship for PFM being replaced by Ares Tavolazzi and Busnello also left but was not replaced. It's a harder listen than the debut leaning more towards the avant with a heavier emphasis on free jazz, once again the musicianship is exemplary and features some incredibly powerful moments. In comparison "Crac!" released in 1975 whilst still displaying the same inventive mix of styles was more accessible and is an ideal early port of call to the uninitiated. That year also saw the release of their first live album "Are(A)zione".
+Two further studio albums followed where the band continued to expand their musical palette, "Maledetti" released in 1976 where the band used a host of other musicians to help out and "1978 Gli Dei Se Ne Vanno, Gli Arrabbiati Restano". By this point Tofani had left the band. It would also prove to be the last album to feature Stratos who sadly died of cancer in 1979 at the age of only 35.
+The three remaining musicians attempted to continue bringing in some outside help in the brass department for the all instrumental album "Tic &amp;amp; Tac". Clearly Stratos was a talent too big to replace. Drummer Capiozzo continued in the eighties with a band called AREA II, but was the only original member, leaning more towards the pure jazz elements. He was reunited with Fariselli for one more AREA album, "Chernobyl 7991" released in 1996.
+Whilst certainly not typical of the RPI genre AREA nevertheless remain an outstanding example of the inventive Italian prog scene. Not for the faint-hearted but for those looking for something more adventurous will find AREA a highly rewarding listening experience.</rdfs:comment>
+  <rdfs:label xml:lang="en">Area </rdfs:label>
+  <activeSinceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</activeSinceYear>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/2V7Gb8uVJbSFvJZFHrLf8vLTyS2MYhF-stSUyXFmr-w/rs:fit/g:sm/q:90/h:449/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTMxMzkx/Ny0xNDk4ODU4Mzgy/LTcyMTcuanBlZw.jpeg</imageUrl>
+</Band>
+
+<Discography rdf:about="#Area_discography">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <containsAlbum rdf:resource="#Arbeit_Macht_Frei_Il_Lavoro_Rende_Liberi_album"/>
+  <containsAlbum rdf:resource="#LInternazionale_album"/>
+  <containsAlbum rdf:resource="#Caution_Radiation_Area_album"/>
+  <containsAlbum rdf:resource="#AreAzione_album"/>
+  <containsAlbum rdf:resource="#Crac_album"/>
+</Discography>
+
+<Band rdf:about="#Arti_e_Mestieri">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <discography rdf:resource="#Arti_e_Mestieri_discography"/>
+  <wikidataIri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.wikidata.org/entity/Q1093887</wikidataIri>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1030927</discogsId>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">29</progarchivesId>
+  <rdfs:comment xml:lang="en">Formed in 1974 in Turin, Italy - Still active as of 2017.
+Outstanding fusion band from Italy. All the power delivered by the insane drumming of Furio CHIRICO is counterpointted by the beautiful violin passages, as well as the killer guitar work. On their early albums, ARTI e MESTIERI made a dynamic, complex and elaborately crafted rock, folk, and fusion blend, that featured much violin and keyboards.
+ARTI &amp;amp; MESTIERI, considered one of the most influent cult bands in the italian and european prog scene will astonish the audience confirming, 25 years after its release, that "TILT" is still a milestone for two generations of fans. Both albums that came out on CD, "Tilt" and "Giro Di Valzer Per Domani", are real masterpieces of the genre. A real must for all fusion lovers!</rdfs:comment>
+  <rdfs:label xml:lang="en">Arti &amp; Mestieri</rdfs:label>
+  <activeSinceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1974</activeSinceYear>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/hfFVHaoEUo4gcrWHEAOO_uO4-oeQlQWglVryGu7DJC4/rs:fit/g:sm/q:90/h:210/w:307/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzA5/MjctMTI5NTk3ODUw/OC5qcGVn.jpeg</imageUrl>
+</Band>
+
+<Discography rdf:about="#Arti_e_Mestieri_discography">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <containsAlbum rdf:resource="#Tilt__Immagini_Per_Un_Orecchio_album"/>
+  <containsAlbum rdf:resource="#Giro_Di_Valzer_Per_Domani_album"/>
+</Discography>
+
+<Band rdf:about="#Banco_del_Mutuo_Soccorso">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <discography rdf:resource="#Banco_del_Mutuo_Soccorso_discography"/>
+  <wikidataIri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.wikidata.org/entity/Q1619432</wikidataIri>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">353382</discogsId>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">36</progarchivesId>
+  <rdfs:comment xml:lang="en">Founded in Rome, Italy in 1969 - Between 1997-2018 active playing Live - Reformed in 2016.
+One of the most important progressive rock bands to come from Italy, BANCO DEL MUTUO SOCCORSO, along with LE ORME and PFM are regarded as the big three of the RPI genre. This is not only because of their longevity and the level of success they achieved in their own country, but also because each were able to make considerable inroads abroad, something which didn't happen for most of their contemporaries.
+Despite not releasing their first album until 1972, the band actually formed in 1969, their sound centering around the virtuoso dual keyboard work of the Nocenzi brothers, Gianni and Vittorio. The early line-up fluctuated with various members coming and going before any recorded output was released, including drummers Franco Pontecorvi and Mario Achilli, bassist Fabrizio Falco and guitarists Gianfranco Coletta (ex CHETRO &amp;amp; CO) and Claudio Falco. This early incarnation of the band did, however, record some material but this wouldn't surface until 1989 (see the "Donna Plautilla" album).
+Joining the Nocenzi brothers for a more stable line-up in time for their first album was ex-FIORI DI CAMPO guitarist Marcello Todaro and three members of LE ESPERIENZE, vocalist Francesco Di Giacomo, drummer Pier Luigi Calderoni and bassist Renato D'Angelo. Their eponymous first album was a remarkably mature piece of inventive symphonic progressive rock with classical influences, featuring excellent musicianship and the emotionally charged vocal delivery of Di Giacomo. This was quickly followed up by the equally highly regarded "Darwin" and "Io Sono Nato Libero," forming a trio of albums that are essential listening for anyone with even the most casual interest in the RPI genre.
+A change of guitarist followed shortly after the recording of "Io Sono Nato Libero," when Todaro left and joined CRYSTALS and was replaced by Rodolfo Maltese, formerly of HOMO SAPIENS. Around this time the band attempted to make inroads outside their native Italy and released the English sung "Banco" on ELP'S Manticore label. In reality this was largely a compilation, as it consisted of re-recorded songs from their first three albums with the exception of one track. To promote this they toured the USA and UK with limited success. "Banco" was followed in 1976 by the film soundtrack album "Garofano Rosso," and in the same year two versions of the same album, one Italian and one English, "Come In Un'Ultima Cena" and "As In A Last Supper" were released. 1978 saw the release of another all instrumental album ".Di Terra", this time incorporating the use of an orchestra.
+"Canto Di Primavera" saw bassist D'Angelo being replaced by Gianni Colaiacomo, and after this the band entered a period that is probably of little interest to prog fans, moving in a more commercial pop direction. In 1983 Gianni Nocenzi was to leave the band, and the following years saw the coming and going of a number of musicians through a series of critically slated albums, at least amongst the prog community.
+Signs that the band may be returning to their prog roots came in 1991 when the band re-recorded their acclaimed first album and "Darwin". The lightweight pop/rock of "Banco 13", released in 1994 showed however that it was a little early to celebrate. No studio albums have appeared since 1996 but the band continued with sporadic live activity and released a number of live albums. Perhaps the most interesting of these is "Seguendo Le Tracce", which captures a stunning concert from 1975, reminding us how great this band can be. The most recent of these live albums is ''Quaranta'', a 2010 recording previously released as part of the Prog Exhibition box set. The then line-up comprised of vocalist Francesco Di Giacomo, on keyboards Vittorio Nocenzi, guitarists Rodolfo Maltese and Filippo Marcheggiani, drummer Maurizio Masi, bassist Tiziano Ricci and on sax, flute and clarinet Alessandro Papotto (PERIFERIA DEL MONDO). Sadly, Francesco Di Giacomo died following a road traffic accident on 21st February, 2014.
+BANCO DEL MUTUO SOCCORSO, particularly the first three albums, is an essential early port of call for anyone looking to discover the RPI genre.</rdfs:comment>
+  <rdfs:label xml:lang="en">Banco Del Mutuo Soccorso</rdfs:label>
+  <activeSinceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1969</activeSinceYear>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/ypXZKeMt7ZODMcj-43On9_2jhdbcmi0j0m9OJfYi1gc/rs:fit/g:sm/q:90/h:323/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM1MzM4/Mi0xMjUzODE0MDI0/LmpwZWc.jpeg</imageUrl>
+</Band>
+
+<Discography rdf:about="#Banco_del_Mutuo_Soccorso_discography">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <containsAlbum rdf:resource="#Darwin_album"/>
+  <containsAlbum rdf:resource="#Banco_Del_Mutuo_Soccorso_album"/>
+  <containsAlbum rdf:resource="#Non_Mi_Rompete__La_Citt_Sottile_album"/>
+  <containsAlbum rdf:resource="#Io_Sono_Nato_Libero_album"/>
+  <containsAlbum rdf:resource="#Banco_album"/>
+</Discography>
+
+<Band rdf:about="#Blocco_Mentale">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <discography rdf:resource="#Blocco_Mentale_discography"/>
+  <wikidataIri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.wikidata.org/entity/Q4927089</wikidataIri>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1531176</discogsId>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">43</progarchivesId>
+  <rdfs:comment xml:lang="en">Blocco Mentale was an Italian prog band from Lazio that was formed in 1972 by Bernardo "Dino" Finocchi (vocals, sax, flute), Aldo Angeletti (vocals, bass), Gigi Bianchi "Roso" (guitar, vocals), Filippo Lazzari (keyboards, vocals, harmonica) and Michele Arena (drums, vocals). In 1973 they released an interesting album called "Πoa" (that in Greek means grass), featuring naives lyrics dealing with ecological subjects, in a style that could remind of bands like Le Orme, New Trolls and PFM. Despite the good quality, the album was not successful at all and, after the release of a last single, Blocco Mentale disbanded. Later they reformed with another name, Limousine, playing in a more commercial and conventional way. Blocco Mentale's debut work is really worth listen to and the band would have deserved definitively more credit. [Andrea Parentin]
+Their album is slightly longer than most vintage RPI at 40 minutes and deals with nature and the creeping realization that man was altering the environment in ways that would eventually lead to destruction. The group released another single after this album but then quickly folded which is a real shame. A message from the band in the liner notes states Eventually the band would reform under another name Limousine and have some modest success with a more commercial sound. That band folded when keyboardist Lazarri, dealing with depression, attempted suicide. He died in 1991 in a car accident while heading to a gig in Rome. Like so many other quality one-shot Italian bands, drummer Michele Arena said the label signed them up upon hearing them play and then never provided any support or promotion once the album was pressed. </rdfs:comment>
+  <rdfs:label xml:lang="en">Blocco Mentale</rdfs:label>
+  <activeSinceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1967</activeSinceYear>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/7v1wQHB9MUsgm7LOqO7RkzUcmy8uqIoB6uKrk0o2w-Y/rs:fit/g:sm/q:90/h:290/w:534/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1MzEx/NzYtMTQ0MjE5NDc3/NC04MjM3LmpwZWc.jpeg</imageUrl>
+</Band>
+
+<Discography rdf:about="#Blocco_Mentale_discography">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <containsAlbum rdf:resource="#_album"/>
+</Discography>
+
+<Band rdf:about="#Cervello">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <discography rdf:resource="#Cervello_discography"/>
+  <wikidataIri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.wikidata.org/entity/Q3665237</wikidataIri>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1184950</discogsId>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">568</progarchivesId>
+  <rdfs:comment xml:lang="en">Founded in Naples, Italy in 1970 - Disbanded in 1974.
+CERVELLO are another example of a seventies Italian prog band who only managed to release one album. They quickly appeared at a number of festivals including the Palermo Pop Festival. The line-up consisted of Gianluigi Di Franco on vocals and flute, Corrado Rustici on guitar and flute, Remigio Esposito on drums and vibes, Antonio Spagnolo on bass and violin and Giulio D'Ambrosio on sax and flute. They had a connection with OSANNA as Rustici was the brother of Danilo Rustici, their guitarist.
+As well as family ties CERVELLO also occupied similar musical territory to OSANNA. A high standard of musicianship is present on "Melos" and they should appeal to fans that enjoy the wilder excesses of RPI, not only OSANNA but the likes IL BALETTO DI BRONZO and RACCOMANDATA CON RICEVUTA DI RITORNO. They combine a fairly eclectic blend of musical styles ranging from acoustic folk, occasional avant moments to more bombastic instrumental workouts. The excellent guitar work of Rustici display's a John McLaughlin influence at times. Notable is the absence of keyboards, in their place sax and flute playing a more prominent role.
+Unfortunately the band was short lived and split up in 1974 with Rustici joining OSANNA and then NOVA before embarking on a solo career including production work. Vocalist Gianluigi Di Franco, who sadly died in 2005, collaborated with Toni Esposito on "Kalimba De Luna" and "As You As" before embarking on music therapy work.
+"Melos" remains essential listening for anyone seriously exploring the Italian prog scene and is rated highly by many fans of the genre.</rdfs:comment>
+  <rdfs:label xml:lang="en">Cervello</rdfs:label>
+  <activeSinceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</activeSinceYear>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/EKvyMh-rc5L-vLmMaooVuJyffxdgxgc1YDcMcMLzdnk/rs:fit/g:sm/q:90/h:646/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTExODQ5/NTAtMTQyMjg5NzQ1/Ny0yMjA2LmpwZWc.jpeg</imageUrl>
+</Band>
+
+<Discography rdf:about="#Cervello_discography">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <containsAlbum rdf:resource="#Melos_album"/>
+</Discography>
+
+<Band rdf:about="#De_De_Lind">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <discography rdf:resource="#De_De_Lind_discography"/>
+  <wikidataIri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.wikidata.org/entity/Q3703931</wikidataIri>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1152654</discogsId>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">931</progarchivesId>
+  <rdfs:comment xml:lang="en">A true rarity on an unusual label for the Italian prog (Mercury), and for sure one of the longest LP names ever conceived, Io non so da dove vengo e non so dove mai andr“, uomo Ķ il nome che mi han dato is generally considered as one of the top albums in this style. A perfect record, very well played and sung by this band based in Milan.
+They began their career in 1969, the odd name coming from a popular Playboy model of the early 60's, and only released three singles in their five years career, the first two closer to the Italian beat of the time, while the third had a good rockier B-side in Torneremo ancora. though still far from their LP sound.
+The group was a sextet in the picture on the cover of the 1969 single, reduced to a five-piece in the second, a year later.
+The album came in 1973, the vocal parts are short but very well made by singer Paradiso, leaving plenty of room to acoustic atmospheres and the sudden assaults of guitarist Vitolli and flute/sax/keyboards player Trama, and the seven tracks on the album are all highly regarding, with a mention for Smarrimento with a sweet flute introduction, a furious guitar/flute interplay followed by the acoustic guitar based vocal parts that leads to a powerful guitar-driven end.
+After the album release De De Lind played at 1973 Rassegna di Musica Popolare held in Rome, and at Be-In festival in Naples, with new drummer Fabio Rizzato.
+Singer Vito Paradiso had a short solo career in 1978-80, while the rest of the band has totally disappeared.
+Before forming De De Lind drummer Rebajoli had played with New Dada and I Nuovi Angeli, with which he returned after leaving this group.</rdfs:comment>
+  <rdfs:label xml:lang="en">De De Lind</rdfs:label>
+  <activeSinceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1969</activeSinceYear>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/1UayLdZlHL7Th0Y2VDk7noqhNEBzobd8C-WwS7RtUpw/rs:fit/g:sm/q:90/h:295/w:283/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTExNTI2/NTQtMTI3NTA3NjIw/MC5qcGVn.jpeg</imageUrl>
+</Band>
+
+<Discography rdf:about="#De_De_Lind_discography">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <containsAlbum rdf:resource="#Io_Non_So_Da_Dove_Vengo_E_Non_So_Dove_Mai_Andr_Uomo__Il_Nome_Che_Mi_Han_Dato_album"/>
+</Discography>
+
+<Band rdf:about="#Formula_3">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <discography rdf:resource="#Formula_3_discography"/>
+  <wikidataIri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.wikidata.org/entity/Q3748332</wikidataIri>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">679575</discogsId>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">531</progarchivesId>
+  <rdfs:comment xml:lang="en">FORMULA 3 were one of Italy's first and most popular psychedelic prog rock band of its time. This band was a trio made up of Alberto Radius on guitar, vocals and bass, Gabriele Lorenzi on keyboards and bass, and Toni Cicco on drums and vocals. The melodies still have that unique Italian-Mediterranean tunefulness, but their voicings are unique. Musically these guys are somewhere in the DEEP PURPLE school with heavy emphasis on guitar and keyboard interplay. In the end they combined to write and record perhaps my favourite Italian Psych rock album ("La Grande Casa") of all time.
+They put out four early albums which are all different in style. "Dies Irae" their first album is greatly overhadowed by their later releases, but let me say that you must start with this album. The second album, the eponymous FORMULA 3, appears to be a collection of singles, although the first track runs eleven minutes in length and in fact only two of the tracks were released as singles.
+Probably the only one worthy of high praise is their third "Sognando E Risognando" a highly inventive album who's styles are very diverse. "La Grande Casa" is possibly their best release, and should appeal to those who enjoy PFM, Le ORME, and Il VOLO. To be fair, "Sognando E Risognando" is supposed to be more progressive than this, earlier albums more psychedelic.</rdfs:comment>
+  <rdfs:label xml:lang="en">Formula 3</rdfs:label>
+  <activeSinceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1969</activeSinceYear>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/RYKBWgG_6bA-E38sBtxS3qP2XKonn_rqWf55xODFR6M/rs:fit/g:sm/q:90/h:215/w:349/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY3OTU3/NS0xMzIyMTYwMzc4/LmpwZWc.jpeg</imageUrl>
+</Band>
+
+<Discography rdf:about="#Formula_3_discography">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <containsAlbum rdf:resource="#Questo_Folle_Sentimento_album"/>
+  <containsAlbum rdf:resource="#Sole_Giallo_Sole_Nero_album"/>
+  <containsAlbum rdf:resource="#Nananan_album"/>
+  <containsAlbum rdf:resource="#Dies_Irae_album"/>
+  <containsAlbum rdf:resource="#Nessuno_Nessuno__Eppur_Mi_Son_Scordato_Di_Te_album"/>
+  <containsAlbum rdf:resource="#La_Folle_Corsa_album"/>
+  <containsAlbum rdf:resource="#Formula_3_album"/>
+  <containsAlbum rdf:resource="#Sognando_E_Risognando_album"/>
+  <containsAlbum rdf:resource="#La_Ciliegia_Non__Di_Plastica_album"/>
+  <containsAlbum rdf:resource="#Rapsodia_Di_Radius__Bambina_Sbagliata_album"/>
+  <containsAlbum rdf:resource="#La_Grande_Casa_album"/>
+</Discography>
+
+<Band rdf:about="#Garybaldi">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <discography rdf:resource="#Garybaldi_discography"/>
+  <wikidataIri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.wikidata.org/entity/Q3758566</wikidataIri>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1195278</discogsId>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2396</progarchivesId>
+  <rdfs:comment xml:lang="en">The Gleemen quartet from Genoa is rather a typical for Italian prog groups, generally avoiding the heavily slanted symphonic influences most of their countrymen were choosing and were relying on a heavy guitar-based sound and were often hard rocking. Their first album (1970) is still regarded nowadays as a gem from collectors all over the world, although it will surprise progheads a bit with its very 60's sound and major Hendrix influences, and absolutely stupendous artwork.
+Having changed their name to a more Italian sounding name (Garybaldi being some hero of the late XIXth century in Liguria and neighbouring French Provence), they proceeded to record two further album with the same heavily slanted Hendrix influences even if the keyboards are also a good part of the sound). The first one sports an astounding and complex artwork by future Italian comix superstar Guido Crepax. Sidelong tracks are a common feature in those albums and they are self-indulgent, either.
+Fosastti then disbanded the group, and with drummer/singer Cassinelli went on to form La Bambibanda E Melodia that released one record late 74. Guitarist Fossati has reformed the group (although he was the only original member) during the late 80's but the general sound was much bluesier and released one album.
+Somehow their short career is almost parallel to Flea/Etna group (they also changed their name while retaining the same line-up), developing the same kind of unusual (for Italy) guitarey hard prog during the same years.</rdfs:comment>
+  <rdfs:label xml:lang="en">Garybaldi</rdfs:label>
+  <activeSinceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1970</activeSinceYear>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/NiRi-B6N5edfm1xryfbqtgQ6TBF24sMNo6Sx3S-_agg/rs:fit/g:sm/q:90/h:305/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTExOTUy/NzgtMTYxNTYxNDM0/OS02MDQ1LmpwZWc.jpeg</imageUrl>
+</Band>
+
+<Discography rdf:about="#Garybaldi_discography">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <containsAlbum rdf:resource="#Nuda_album"/>
+  <containsAlbum rdf:resource="#Astrolabio_album"/>
+</Discography>
+
+<Band rdf:about="#Goblin">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <discography rdf:resource="#Goblin_discography"/>
+  <wikidataIri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.wikidata.org/entity/Q1317474</wikidataIri>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">98228</discogsId>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">130</progarchivesId>
+  <rdfs:comment xml:lang="en">Founded in Rome, Italy in 1972 - Disbanded in 1982 - Regrouped in 2000, 2005 and 2009 - Reformed in 2010 as "NEW GOBLIN" and since 2013 also as "Claudio Simonetti's GOBLIN".
+Symphonic band from Italy who adapted their music to the movie industry, mainly horror movies from the 70's. The outstanding keyboard work performed by Claudio Simonetti is a trademark of GOBLIN. Most of their stuff is really heavy and moody, with a Floydian progressive feel, and generally pretty good.
+Beginning with their first "Profundo Rosso" GOBLIN were obviously better suited to soundtrack music than as a studio offering and the majority of their work was in this vein. Their excellent second "Roller" is a very nice album of traditional symphonic progressive rock from the Italian group. Newcomers to the group will want to investigate their heralded soundtrack albums first, particularly "Profondo Rosso" and "Suspiria". The "essential" GOBLIN works. Highly recommended for fans of soundtrack music.
+The band is again active with more releases and touring.</rdfs:comment>
+  <rdfs:label xml:lang="en">Goblin</rdfs:label>
+  <activeSinceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</activeSinceYear>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/shdMrkmINjJEus0Kx2U-zgqs1fstq4EyX8zsln3zCYo/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTk4MjI4/LTE2MjIzNzU2MTQt/MTgyNS5wbmc.jpeg</imageUrl>
+</Band>
+
+<Discography rdf:about="#Goblin_discography">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <containsAlbum rdf:resource="#Profondo_Rosso__Skys_MotorBike_album"/>
+  <containsAlbum rdf:resource="#Profondo_Rosso_Colonna_Sonora_Originale_Del_Film_album"/>
+  <containsAlbum rdf:resource="#Profondo_Rosso__album"/>
+</Discography>
+
+<Band rdf:about="#I_Teoremi">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <discography rdf:resource="#I_Teoremi_discography"/>
+  <wikidataIri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.wikidata.org/entity/Q2690274</wikidataIri>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1695607</discogsId>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1474</progarchivesId>
+  <rdfs:comment xml:lang="en">I TEOREMI was an Italian group that released one album in hard rock style in the beginning of the seventies. The line-up of the group was: Aldo Bellanova (bass), Mario Schiliro (electric guitar), Claudio Mastracci (drums) and Tito Gallo (vocals). Before the album the group had already released a single with a different vocalist Vincenzo Massetti. After the album the group members disappeared from the music scene except for the bassist Aldo Bellanova who later joined SAMADHI and recorded their only album with them.
+The only album was released in 1972, the first really great year for Italian progressive. The music in this album is more like LED ZEPPELIN style hard rock but the overall sound is more progressive due to the imaginative rhythm section. The music highlights the electric guitar but it is actually the bassist that steals the show. The keyboards (piano) are featured in only one of the tracks. The vocals suit the music very well and are perhaps the strongest point besides the bassist. Not a very progressive album in the true meaning of the word but a good album nevertheless.
+I TEOREMI is recommended for listeners who like progressive with a prominent hard rock sound.</rdfs:comment>
+  <rdfs:label xml:lang="en">I Teoremi</rdfs:label>
+  <activeSinceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1969</activeSinceYear>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/EGMDd5nMqD16xEeMWfQ1kLaGYvbhsdsMp0mAlEgMjwI/rs:fit/g:sm/q:90/h:402/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2OTU2/MDctMTMwNTE4OTQx/NC5qcGVn.jpeg</imageUrl>
+</Band>
+
+<Discography rdf:about="#I_Teoremi_discography">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <containsAlbum rdf:resource="#I_Teoremi_album"/>
+  <containsAlbum rdf:resource="#Sognare__Tutte_Le_Cose_album"/>
+</Discography>
+
+<Band rdf:about="#Il_Balletto_di_Bronzo">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <discography rdf:resource="#Il_Balletto_di_Bronzo_discography"/>
+  <wikidataIri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.wikidata.org/entity/Q2619600</wikidataIri>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1247423</discogsId>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">37</progarchivesId>
+  <rdfs:comment xml:lang="en">Founded in Naples, Italy in 1969 (before as Battitori Selvaggi) - Disbanded in 1973 - Reformed in 1996.
+IL BALLETTO DI BRONZO formed with a line-up consisting of Lino Ajello (guitar), Giancarlo Stinga (drums), Marco Cecioni (guitar/vocals) and Michele Cupaiuolo (bass) using initially the name BATTITORI SELVAGGI. Despite avoiding the fate of many other Italian progressive bands of releasing one album and splitting up (they managed two) they still suffered from a lack of interest, the reason cited by some that they were too advanced for the time, which ultimately led to a split in 1973.
+Their recording career started with the single "Neve Calda" in 1969 followed the following year by the album "Sirio 2222". Not really displaying much in the way of progressive rock at this stage the album was more in the psychedelic/blues rock vein with one foot still firmly in the sixties. 1971 saw a change of line-up with Cecione and Cupaiuolo leaving. They were replaced by on keyboards/vocals, Gianni Leone, who was in the original line-up of CITTA FRONTALE and bassist Vito Manzari, formerly of QUELLE STRANE COSE CHE, a band from Rome who despite doing some recording for RCA never managed to release anything. The addition of keyboards to the band's sound was to prove an inspired move and change the dynamics of their sound drastically. Their second album "Ys", which over time has become to be regarded as a classic by many RPI fans, was a much more sophisticated affair. Bearing no resemblance to "Sirio 2222" it saw a move towards symphonic prog with a very busy playing style containing elements of jazz and classical influences. An English language version was also prepared but didn't see a release until 1992.
+After the split in 1973 one more release in the form of a single titled "La Tua Casa Comoda" saw the light of day, but only featured Stinga and Leone from the "Ys" line-up. Leone went on to a solo career as LEO NERO and released two albums. Many years later he returned with a new line-up of IL BALLETTO DI BRONZO where he was the only member of the seventies incarnation. He was joined by bassist Romolo Amichi and drummer Ugo Vantini and they released the live album "Trys" in 1999. More live shows with yet another rhythm section featuring drummer Adolfo Ramundo and bassist Marco Capozi later resulted in a DVD being released in 2008 titled "Live In Rome."
+On the strength of "Ys" alone IL BALLETTO DI BRONZO are regarded as one of the more important and pioneering bands of the Italian prog scene. While it won't necessarily be to every RPI fans taste, it should be at least heard.</rdfs:comment>
+  <rdfs:label xml:lang="en">Il Balletto Di Bronzo</rdfs:label>
+  <activeSinceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1966</activeSinceYear>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/mIFpFByUV7sWBR3vfc6Jvxf7lqi2FvY6I37HL-86_54/rs:fit/g:sm/q:90/h:305/w:320/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyNDc0/MjMtMTUwODkxMjAz/Ny0zOTczLmpwZWc.jpeg</imageUrl>
+</Band>
+
+<Discography rdf:about="#Il_Balletto_di_Bronzo_discography">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <containsAlbum rdf:resource="#Neve_Calda__album"/>
+  <containsAlbum rdf:resource="#Sirio_2222_album"/>
+  <containsAlbum rdf:resource="#Si_Mama_Mama__Meditazione_album"/>
+  <containsAlbum rdf:resource="#Nieve_Calida_album"/>
+  <containsAlbum rdf:resource="#Ys_album"/>
+  <containsAlbum rdf:resource="#La_Tua_Casa_Comoda__Donna_Vittoria_album"/>
+</Discography>
+
+<Band rdf:about="#Il_Castello_di_Atlante">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <discography rdf:resource="#Il_Castello_di_Atlante_discography"/>
+  <wikidataIri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.wikidata.org/entity/Q930625</wikidataIri>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1043965</discogsId>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">52</progarchivesId>
+  <rdfs:comment xml:lang="en">Founded in Vercelli, Italy in 1974 - Still active as of 2019.
+IL CASTELLO DI ATLANTE came together in 1974 when Dino Fiore asked his childhood friend Paulo Ferrarotti to form a band. Their name is taken from a magician called Atlante in Ludovico Ariosto's Romance epic ''L'Orlando Furioso''. They have undergone relatively few changes over the years with the line-up having remained more-or-less the same since 1982. After meeting the band at a concert in 1983, Beppe Crovolla suggested that they work together and in 1990 he invited them to contribute to his New Prog '90 project. When they recorded their first album with Crovolla, the band consisted of Paulo Ferrarotti (drums, vocals), Dino Fiore (bass), Massimo Di Lauro (violin, keyboards), Aldo Bergamini (guitar, keyboards, vocals) and Roberto Giordano (keyboards, vocals). Fiore quit unexpectedly in 2000 and was replaced by Roberto Franco Fava, although Fiore has since returned. IL CASTELLO DI ATLANTE'S music may not be the most complex or original, but it is highly emotional and beautiful. The Italian lyrics are full of allegories and metaphors, while the music is built around keyboards and choral effects, with violin flourishes and soaring emotive guitar solos. Due to the presence of the violin, comparisons with QUELLA VECCHIA LOCANDA are perhaps inevitable although GENESIS would seem to be the band's main influence.
+For their first album "Sono Io Il Signore Delle Terre A Nord" (1992) they were able to draw on 16 years worth of material and although it sold well the band's later works are generally of higher quality. Their second studio album "L'Ippogrifo" (1995) is their most laid-back work and is perhaps a bit one-paced. It features a combination of new material and reworked old songs, but overall it lacks the freshness of the debut. "Come Il Seguitare Delle Stagioni" (2000) was the first album to consist of entirely new material. It's a beautiful album that acts as a fine showcase for Di Lauro's expressive violin. In 2003 the band contributed to a conceptual CD based on the Finnish epic poem ''Kalevala''. The song they recorded for this project appears alongside some other fine material on the synthesizer-laden ''Quintessenza'' (2004). Their most recent album ''Capitolo 7 - Tra Le Antiche Mura'' is generally accepted as their masterpiece. It's based on a literary concept with each song presented as a book, and was selected by the jury of the Italian Prog Awards as one of the best Italian prog albums in 2009.
+Until 2000 the band had not performed outside of Italy, but in 2005 they took part in the Baja Prog Festival in Mexico. They have subsequently performed in France and Holland, and there are plans to release a DVD later this year of their 2008 Japan Tour. All of their CDs are currently available with the exception of ''L'Ippogrifo''. In addition to its CD release, ''Come Il Seguitare Delle Stagioni'' was also brought out in vinyl, minus one track due to running time constraints; the vinyl version is now considered a rarity. IL CASTELLO DI ATLANTE is a band in the best tradition of classic Italian symphonic progressive rock, with songs that are romantic, melodic and grounded in Italian folk music. Recommended to fans of PFM, LOCANDA DELLE FATE and CAMEL.</rdfs:comment>
+  <rdfs:label xml:lang="en">Il Castello Di Atlante</rdfs:label>
+  <activeSinceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1974</activeSinceYear>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/lMOQm4faoPMEwraNw8ogGLd8Qj9Nwj8etOGWVmcXmJU/rs:fit/g:sm/q:90/h:195/w:450/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwNDM5/NjUtMTI4MzI4NDE2/OS5qcGVn.jpeg</imageUrl>
+</Band>
+
+<Discography rdf:about="#Il_Castello_di_Atlante_discography">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Discography>
+
+<Band rdf:about="#Il_Rovescio_della_Medaglia">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <discography rdf:resource="#Il_Rovescio_della_Medaglia_discography"/>
+  <wikidataIri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.wikidata.org/entity/Q767204</wikidataIri>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">765763</discogsId>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">303</progarchivesId>
+  <rdfs:comment xml:lang="en">Founded in Rome, Italy in 1970 - Disbanded in 1977 - Reformed in 1993.
+Italian seventies progressive rock band playing dynamic prog with many rhythm changes. Their first album called "La Bibbia" is a concept work based on the early parts of the Bible. They used a classical orchestra on "Contaminazione", a classical rock album based on the life and works of Bach. Very kayboards oriented in the vein of ELP, heavy guitars and a tight rhythm section, much variation: this is great stuff!</rdfs:comment>
+  <rdfs:label xml:lang="en">Il Rovescio Della Medaglia</rdfs:label>
+  <activeSinceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1970</activeSinceYear>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/Ttk67bDT0RCsPU96B6nFVqBGNSXpQTFvcuSlo5E1ZxE/rs:fit/g:sm/q:90/h:481/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTc2NTc2/My0xMzcwNzU2NDY2/LTc4OTMuanBlZw.jpeg</imageUrl>
+</Band>
+
+<Discography rdf:about="#Il_Rovescio_della_Medaglia_discography">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <containsAlbum rdf:resource="#La_Bibbia_album"/>
+  <containsAlbum rdf:resource="#Io_Come_Io_album"/>
+  <containsAlbum rdf:resource="#Contaminazione_album"/>
+</Discography>
+
+<Band rdf:about="#Jacula">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <discography rdf:resource="#Jacula_discography"/>
+  <wikidataIri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.wikidata.org/entity/Q636623</wikidataIri>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1039835</discogsId>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">172</progarchivesId>
+  <rdfs:comment xml:lang="en">Founded in Milan, Italy in 1968 - Disbanded in 1972 - Reformed in 2011.
+In Milan in 1968 the composer Antonio Bartoccetti founded the group JACULA, with a view to transform into music a series of theological-philosophical and esoteric observations. Jacula released the albums "In Cauda Semper Stat Venenum", "Tardo Pede in Magiam Versus" and "Pre Viam". The project would end in 1972, then evolve into "Antonius Rex" and more album would follow under that name. Antonius Rex is still active having release a great album in 2006 and another coming in 2009.</rdfs:comment>
+  <rdfs:label xml:lang="en">Jacula</rdfs:label>
+  <activeSinceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1969</activeSinceYear>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/8YZjPYLmBgYHnYUEPJ_ZsdhG6_Q9_mcrY92h7b-asBM/rs:fit/g:sm/q:90/h:323/w:328/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwMzk4/MzUtMTM5NDU1MzI0/Ny00ODU2LmpwZWc.jpeg</imageUrl>
+</Band>
+
+<Discography rdf:about="#Jacula_discography">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <containsAlbum rdf:resource="#Tardo_Pede_In_Magiam_Versus_album"/>
+</Discography>
+
+<Band rdf:about="#La_Locanda_delle_Fate">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <discography rdf:resource="#La_Locanda_delle_Fate_discography"/>
+  <wikidataIri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.wikidata.org/entity/Q1659482</wikidataIri>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1158138</discogsId>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">213</progarchivesId>
+  <rdfs:comment xml:lang="en">Founded in Asti, Italy in 1977 - Disbanded in 1980 - Reunited in 1999 and later regrouped from 2010 - 2017.
+Another great entry from Italy. Intricate and complex, melodic and enjoyable. The style is a symphonic rock with arrangements and developments that make the most out of a rich and varied instrumentation. The delicate melodic work, shared by vocals, keyboards, guitars and flute, is supported by dynamic rhythms to create a sound that alternates from acoustic to electric. As good as the best BANCO DEL MUTUO SOCCORSO.
+Fans of lush, complex symphonic progressive rock will adore "Forse Le Lucciole Non Si Amano Piu". This cd is sort of a final fulfillment of the potential of the symphonic progressive rock style, but this one is up there with BANCO's "Io Sono Nato Libero" and METAMORFOSI's "Inferno" as one of my favorite progressive rock albums ever. A masterpiece!!!</rdfs:comment>
+  <rdfs:label xml:lang="en">Locanda Delle Fate</rdfs:label>
+  <activeSinceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1974</activeSinceYear>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/3SgUPNmFLS4EwoMr1Dj0gA2s-tRGY4bqqUsTfcmELgg/rs:fit/g:sm/q:90/h:200/w:319/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTExNTgx/MzgtMTI3NTA2NzYx/MC5qcGVn.jpeg</imageUrl>
+</Band>
+
+<Discography rdf:about="#La_Locanda_delle_Fate_discography">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Discography>
+
+<Band rdf:about="#Latte_e_Miele">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <discography rdf:resource="#Latte_e_Miele_discography"/>
+  <wikidataIri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.wikidata.org/entity/Q3827566</wikidataIri>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1092322</discogsId>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">202</progarchivesId>
+  <rdfs:comment xml:lang="en">Founded in Genova, Italy in 1971 - Reformed in 1976 - Disbanded in 1980 - Regrouped in 2008.
+This young three-piece was one of the Italian bands with the strongest classical influences. They were formed by guitarist Dellacasa, that had collaborated with I GIGANTI in their « Terra In Bocca », with the drummer Vitanza only 16 year old! A keyboards trio in the same style as ELP or Le ORME in Italy, their first album was « Passio secundum Mattheum », with Bach-inspired music and lyrics on the Gospel. An ambitious work, it has its moments but can be boring at times. The band members had a good technique but their keyboard/bass/drums formula was repetitive and mixed with a melodic voice with a result that's not too convincing.
+A second album, « Papillon », came the following year in a similar style, but the production was much better. The album contains two side-long tracks with the Beethoven's derived Patetica on most of side two being a nice example of their style. An english version of it was also recorded but only saw the light in 1992 on CD.
+The band had a good live activity, and even supported VAN DER GRAAF GENERATOR in one of their italian tours. A good 1974 registrazione live was made available by Mellow with their « Latte e Miele Live CD ». After a couple of singles in 1974, the last of which was melodic and far from the albums' level, the group disbanded, and was reformed in 1976 by drummer Vitanza with three new recruits. The new line-up released an album for Magma, « Aquile E Scoiattoli », a very good album, maybe their best and most original work, containing a rendition of Beethoven and the nice Pavana, also released as a single (but curiously this appeared on Grog label).
+The band kept playing until 1980 with an always more commercial sound but the singles released were not successful. Their last single from 1980, « Ritagli Di Luce », even took them to the Sanremo Italian song contest. An album recorded in 1979 was not released until it was released on CD by Mellow in 1992. Called « Vampyrs », and played by the three-piece line-up of Gori, Poltini and Vitanza, it's mostly pop-rock and not comparable with the band's previous works.
+Drummer Alfio Vitanza has collaborated with Vittorio De Scalzi in a revised NEW TROLLS' line-up at the end of the 90's and is still playing nowadays with the recent De Scalzi's New Trolls incarnation called « La Storia dei New Trolls ». He is planning to reform the original LATTE E MIELE three-piece line-up for a one-off CD.
+A commercial single released on Grog in 1976 by LM Special was in fact by LATTE E MIELE in disguise.</rdfs:comment>
+  <rdfs:label xml:lang="en">Latte E Miele</rdfs:label>
+  <activeSinceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1971</activeSinceYear>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/klhG256FTg2A1UkQXTLNyYU3cpeJrK70DNILsKpbUD0/rs:fit/g:sm/q:90/h:445/w:430/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwOTIz/MjItMTIyOTg4Mzc3/NC5qcGVn.jpeg</imageUrl>
+</Band>
+
+<Discography rdf:about="#Latte_e_Miele_discography">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <containsAlbum rdf:resource="#Passio_Secundum_Mattheum_album"/>
+  <containsAlbum rdf:resource="#Rimani_Nella_Mia_Vita_album"/>
+  <containsAlbum rdf:resource="#Getzemani__Il_Re_Dei_Giudei_album"/>
+  <containsAlbum rdf:resource="#Papillon_album"/>
+</Discography>
+
+<Band rdf:about="#Le_Orme">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <discography rdf:resource="#Le_Orme_discography"/>
+  <wikidataIri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.wikidata.org/entity/Q1810029</wikidataIri>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">359000</discogsId>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">278</progarchivesId>
+  <rdfs:comment xml:lang="en">Founded in Marghera, Venice, Italy in 1966 - Hiatus from 1982-1986 - Still active as of 2019.
+Excellent early-70's Italian progressive trio (still around today) with classical stylings, featuring keyboards to the fore and a unique dreamy/powerful style. Le ORME was one of the three major Italian groups, the other two being PFM and BANCO. This band is usually considered as the Italian EMERSON, LAKE &amp;amp; PALMER and even BANCO DEL MUTUO SOCCORSO by the Italian singing. Its music is based upon organ developments and soli reminding Seventies groups which works are essentially built upon keyboards parts.
+The band's truly classic period begins with their third next releases. "Uomo Di Pezza" (1972) is one of Le Orme's definitive Italian progressive rock albums. Although there is definitely an significant EMERSON, LAKE &amp;amp; PALMER influence here, as in the bombastic Moog and Hammond workouts countered by mellow balladry. It's not quite as integrated a feel as would characterize their next two albums, "Felona E Sonora" and "Contrappunti", though its fantastic nonetheless, and one of Le ORME's three essential albums. "Collage" and especially "Florian" offer a music tinged with classical music. "Felona E Sonora" (1973) is probably one of my top favorite Italian progressive rock albums. "Contrappunti" (1974) is another fantastic Le ORME album, and really the close of their classic trilogy. This album would effectively close out the band's streak of success.
+"In Concerto" is an excellent live album from 1974 with many unreleased tracks. "Piccola Rapsodia Dell' Ape" is more recent, an excellent mixing of Progressive and Italian baroque music. "Collage" and especially "Florian" offer a music tinged with classical music. In 1993 the Japanese progrock label Crime Records released the 2-CD "Live Orme" with live-material from '75-'77. A far more captivating document than "In Concerto" from '74.
+Their story goes on. After "Piccola Rapsodia Dell' Ape" (1980), in 1982 the band decides to break up. In 1986 they rejoin only for concerts but in 1990 a further work is issued ("Orme"). In 1992 Tony Pagliuca leaves the band, replaced by Michele Bon. That year they obtain the title of best Live-Act band seen in Italy. They never give up symphonic prog and their further works show it clearly. In spite of the success obtained by their live performances, in 1996 they publish a suite ("Il fiume"). After obtaining a great success at the Los Angeles PROG FEST and at the PROG EAST in Quebec, they commit themselves to the new work which will be finished in 2001 ("Elementi"). This latter, together with "Il fiume", will be part of a trilogy completed, in 2004, by "L'infinito". The trilogy, a mix of songs and instrumental pieces, tells about the mankind through the 4 elements of the universe. In 2005 they are invited at the NEARFEST concert in Pennsylvania. Their music may well be considered as a continuous commitment in PROG ROCK: over the last 42 years they never gave up their passion. They also tried to convey PROG Rock to the people by participating to song contests such as Festival di Sanremo, a very popular TV music happening in Italy. LE ORME is one of the few foreign bands who have been produced by a British label. The Famous Charisma Label issued "Felona e Sorona" in English, lyrics by Peter Hammil, after their tour in England in 1973.</rdfs:comment>
+  <rdfs:label xml:lang="en">Le Orme</rdfs:label>
+  <activeSinceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1966</activeSinceYear>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/jiPMWApS6S-Ws0L3uR9hD_a-oq53ElSNrFhOsTXhWFY/rs:fit/g:sm/q:90/h:381/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM1OTAw/MC0xNDU0OTczMzE3/LTIyODMuanBlZw.jpeg</imageUrl>
+</Band>
+
+<Discography rdf:about="#Le_Orme_discography">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <containsAlbum rdf:resource="#Fiori_E_Colori_album"/>
+  <containsAlbum rdf:resource="#Milano_1968__I_Miei_Sogni_album"/>
+  <containsAlbum rdf:resource="#Senti_LEstate_Che_Torna_album"/>
+  <containsAlbum rdf:resource="#Ad_Gloriam_album"/>
+  <containsAlbum rdf:resource="#Irene__Casa_Mia_album"/>
+  <containsAlbum rdf:resource="#LAurora_Delle_Orme_album"/>
+  <containsAlbum rdf:resource="#Fiori_Di_Giglio_album"/>
+  <containsAlbum rdf:resource="#LAurora__Finita_La_Scuola_album"/>
+  <containsAlbum rdf:resource="#Sguardo_Verso_Il_Cielo__Cemento_Armato_album"/>
+  <containsAlbum rdf:resource="#Collage_album"/>
+  <containsAlbum rdf:resource="#Uomo_Di_Pezza_album"/>
+  <containsAlbum rdf:resource="#Felona_E_Sorona_album"/>
+  <containsAlbum rdf:resource="#Felona_album"/>
+  <containsAlbum rdf:resource="#In_Concerto_album"/>
+  <containsAlbum rdf:resource="#Contrappunti_album"/>
+  <containsAlbum rdf:resource="#Smogmagica_album"/>
+</Discography>
+
+<Band rdf:about="#Maxophone">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <discography rdf:resource="#Maxophone_discography"/>
+  <wikidataIri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.wikidata.org/entity/Q2280261</wikidataIri>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1209001</discogsId>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">239</progarchivesId>
+  <rdfs:comment xml:lang="en">Founded in Milan, Italy in 1973 - Duisbanded in 1977 - Reformed in 2008.
+Although less popular than other mainstream Italian prog rock groups, MAXOPHONE achieved a late cult status among prog rock fan because of their well crafted music, solid musical expertise and precisely cut arrangements. A well coordinated six piece ensemble, MAXOPHONE sits in the prog rock arena covering the gap between the clattering edge of groups like KING CRIMSON, the folky roots of JETHRO TULL and the more elaborated Canterbury sound. MAXOPHONE had a twin-fold soul: half of the members had classic music background while the other half had a solid rock background. This weird combination appears clearly in some songs were very non-rock instruments, such as horn, clarinet, trumpet and vibraphone are used in very balanced way together with Fripp-esque guitars and electrical piano. After one year rehearsal work, in 1975, MAXOPHONE issued their only LP record, the homonymous MAXOPHONE, which aged pretty well, sounding fresh today as 30 year ago.
+Although MAXOPHONE may sometime blink an eye to melodic rock, they never forget to surprise the listener, nicely standing repeated listening. Their music shows surfacing influences from Greg LAKE, Robert FRIPP, ELP, KING CRIMSON, GENTLE GIANT, NATIONAL HEALTH, PFM, BANCO and Yes among the others. Their most renown feature is to change the music mood from pastoral to rock to classical within the same song without losing listening momentum. After the publication of the homonymous LP, they recorded a pop pier single, whose side A and B songs are both included as bonus tracks in the CD version of MAXOPHONE.
+A clear must for all Italian prog rock lovers.</rdfs:comment>
+  <rdfs:label xml:lang="en">Maxophone</rdfs:label>
+  <activeSinceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</activeSinceYear>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/und_ofJUWDRd6_CPB_bXGsO3Qz8MJmTL_8MmZAUxfGY/rs:fit/g:sm/q:90/h:302/w:474/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyMDkw/MDEtMTI3MDQxOTcx/Mi5qcGVn.jpeg</imageUrl>
+</Band>
+
+<Discography rdf:about="#Maxophone_discography">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <containsAlbum rdf:resource="#Maxophone_album"/>
+</Discography>
+
+<Band rdf:about="#Murple">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <discography rdf:resource="#Murple_discography"/>
+  <wikidataIri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.wikidata.org/entity/Q2656349</wikidataIri>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1565257</discogsId>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">577</progarchivesId>
+  <rdfs:comment xml:lang="en">Founded in Rome, Italy in 1971 - Disbanded in 1975 - Regrouped in 2007.
+MURPLE was one of those bands that only made one album and then disappeared. Typically symphonic Italian progressive, as always quite inspired by classical music. On their release, this four-piece group from Rome plays a long suite divided on the two sides, based on the story of a penguin. The music is very good, with classical inspirations especially in the keyboards playing and nice guitar parts. I really don't find any bands that would make a good comparison, indeed I urge you to buy this album about the penguin MURPLE and his long strange journey. You will for sure find some very nice moments here. A CLASSIC AND FIRST QUALITY OPUS.</rdfs:comment>
+  <rdfs:label xml:lang="en">Murple</rdfs:label>
+  <activeSinceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</activeSinceYear>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/QqS2MNrtKAXS-aHyTTtGrDSKLUCJ7Y-imr7c9A9pX8Y/rs:fit/g:sm/q:90/h:463/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1NjUy/NTctMTYzMTI3NTA1/Ni02NjUxLmpwZWc.jpeg</imageUrl>
+</Band>
+
+<Discography rdf:about="#Murple_discography">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <containsAlbum rdf:resource="#Io_Sono_Murple_album"/>
+</Discography>
+
+<Band rdf:about="#Museo_Rosenbach">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <discography rdf:resource="#Museo_Rosenbach_discography"/>
+  <wikidataIri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.wikidata.org/entity/Q979786</wikidataIri>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1210730</discogsId>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">254</progarchivesId>
+  <rdfs:comment xml:lang="en">Founded in Bordighera, Italy in 1971 - Disbanded in 1974 - Reformed in 1999 - Activity unknown since 2017.
+This is a one-shot-band including Pit Corradi (keyboards), Giancarlo Golzi (drums), Enzo Merogno (guitar/vocals), Alberto Moreno (bas/piano) and singer Stefano Galifi. In '73 they released "Zarathustra" (about Nietzsche's superman), this album is still considered as one of the masterpieces in the world of progrock. And it's one of the most sought after "collector items". In '92 the CD's "Rare and Unreleased" and "Live" '72 were released, both interesting but with inferior sound quality. A new line-up with the drummer and the bass player who made the album "Exit" in 2000.
+The album "Zarathustra" starts with the magnificent titletrack (five parts, almost 21 minutes). The foundation is a beautiful theme (like in "Firth of Fifth" from GENESIS) that returns in different climates (from dreamy to heavy and bombastic) and with different colouring of the instruments. The interplay between the electric guitar, keyboards (Hammond organ, synthesizer and piano), rhythm-section (propulsive and perfectly timed drumming) and strong and expressive Italian vocals is very captivating. It all creates a constant tension, topped by majestic eruptions of the Mellotron. The omni-presence of this instrument gives the titletrack the same thrilling impact as it does on the early albums from KING CRIMSON and GENESIS! The other three (shorter) tracks sound flowing and powerful with a lot of Hammond organ and guitarplay with echoes from Steve HACKETT. ESSENTIAL!
+A long anticipated return called "Barbarica" arrives in April 2013.</rdfs:comment>
+  <rdfs:label xml:lang="en">Museo Rosenbach</rdfs:label>
+  <activeSinceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1971</activeSinceYear>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/7F7h_kGKupRfjk9FQEyKGgkz0-HrLOlX4KdmvHN8yrY/rs:fit/g:sm/q:90/h:370/w:198/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyMTA3/MzAtMTMyNDc0Nzc5/MS5qcGVn.jpeg</imageUrl>
+</Band>
+
+<Discography rdf:about="#Museo_Rosenbach_discography">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <containsAlbum rdf:resource="#Zarathustra_album"/>
+</Discography>
+
+<Band rdf:about="#Opus_Avantra">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <discography rdf:resource="#Opus_Avantra_discography"/>
+  <wikidataIri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.wikidata.org/entity/Q3884256</wikidataIri>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1116199</discogsId>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">533</progarchivesId>
+  <rdfs:comment xml:lang="en">OPUS AVANTRA comprises three parts: OPUS (opera - work) AVAN (avanguardia - vanguard) and TRA (tradition - tradition). Their style blends elements of progressive, classical, opera, jazz and just plain general weirdness, using keyboards, bass, drums, violins, cellos, clarinet, flutes and other instruments. They were highly influential in the progressive avant-garde scene of the time.
+"Introspezione" also referred to as "Donella Del Monaco" has all kinds of classical influences including contempory classic. Beautiful operatic voice which I like very much. The second album ("Lord Cromwell") is more difficult, almost avant garde but contempory and old classical music inspired too. It takes time to fully appreciate this album but it's worth to give it that time. "Strata" has beautiful vocal passages, some difficult piano pieces but very interesting too! The fourth album "Lyrics" is somewhat overshadowed being less difficult, less intense, with more minimal of ideas, but still coming forth from the first aproach. Still they are one of the all time best Italian bands. If you're up to it, start with "Introspezzione".</rdfs:comment>
+  <rdfs:label xml:lang="en">Opus Avantra</rdfs:label>
+  <activeSinceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1974</activeSinceYear>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/X7vwYHZ9LxaU9PJKxjxS8ItYexEHc991ktM8_BYHCTw/rs:fit/g:sm/q:90/h:300/w:236/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTExMTYx/OTktMTIxNjA4NDY4/MS5qcGVn.jpeg</imageUrl>
+</Band>
+
+<Discography rdf:about="#Opus_Avantra_discography">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <containsAlbum rdf:resource="#Opus_Avantra_Donella_Del_Monaco_album"/>
+  <containsAlbum rdf:resource="#Lord_Cromwell_Plays_Suite_For_Seven_Vices_album"/>
+  <containsAlbum rdf:resource="#Allemanda_album"/>
+</Discography>
+
+<Band rdf:about="#Osanna">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <discography rdf:resource="#Osanna_discography"/>
+  <wikidataIri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.wikidata.org/entity/Q1055329</wikidataIri>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">836392</discogsId>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">276</progarchivesId>
+  <rdfs:comment xml:lang="en">Founded in Naples, Italy in 1971 - Disbanded in 1979 - Reformed in 1999.
+OSANNA is classic seventies Italian prog. The basis of their sound is original heavy guitar rock often in combination with amazing flute solos. Additionally, more spacey, Pink Floydian parts and quiet interludes with acoustic guitar and flute can be heard as well. There are plenty of mood changes and surprises that make this music very dynamic and interesting.
+Their first three are masterpieces in their own right. The superb "L'Uomo" in which heavy rock and spacey jazz are only a few of the styles included, the soundtrack "Milano Calibro 9" and their best "Palepoli" which is so bizarre and complex, beginners may be too dazzled by the array of styles presented. "Palepoli" covers a wide range of styles, moods, and tempo variations, and OSANNA handle these diverse modes of playing superbly. This eponymus masterpiece can be compared to BANCO DEL SOCCORSO or PREMIATA FORNERIA MARCONI An ultimate classic!</rdfs:comment>
+  <rdfs:label xml:lang="en">Osanna</rdfs:label>
+  <activeSinceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1970</activeSinceYear>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/PiDcY_WB8jPJ1GhLz365CL2ycex4M8FtkdB7YDI6h-g/rs:fit/g:sm/q:90/h:399/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTgzNjM5/Mi0xMjc0Mzg1NTQ4/LmpwZWc.jpeg</imageUrl>
+</Band>
+
+<Discography rdf:about="#Osanna_discography">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <containsAlbum rdf:resource="#LUomo_album"/>
+  <containsAlbum rdf:resource="#LUomo__Valzer_Dei_Fiori_album"/>
+  <containsAlbum rdf:resource="#Preludio_Tema_Variazioni_Canzona_album"/>
+  <containsAlbum rdf:resource="#Palepoli_album"/>
+  <containsAlbum rdf:resource="#Canzona_There_Will_Be_Time__Haum_album"/>
+  <containsAlbum rdf:resource="#Landscape_Of_Life_album"/>
+</Discography>
+
+<Band rdf:about="#Pierrot_Lunaire">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <discography rdf:resource="#Pierrot_Lunaire_discography"/>
+  <wikidataIri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.wikidata.org/entity/Q3903498</wikidataIri>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">685311</discogsId>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">594</progarchivesId>
+  <rdfs:comment xml:lang="en">An original mix of soft progressive and avantgarde atmospheres is the distinctive sound of PIERROT LUNAIRE, highly regarded among foreign collectors though not particularly representative. Still, over the course of their two albums, this band draw from a broad set of influences as diverse as FAUST, PFM and DEBUSSY for their eclectic, unpredictable sound.
+PIERROT LUNAIRE's first album contains really beautiful instrumentation. The second ("Gudrun") is one of the most adventurous records of Italian progressive, and it is one of my favourite albums of all time too. "Gudrun" is one of those masterpieces where only one classification seems appropriate: extraordinary music. In any case, PIERROT LUNAIRE's two albums are a must for adventurous listeners.</rdfs:comment>
+  <rdfs:label xml:lang="en">Pierrot Lunaire</rdfs:label>
+  <activeSinceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1974</activeSinceYear>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/3BCm4BT_vOHO3vm72qoL_B8K6CtrkKCpbvfx3PZOc-0/rs:fit/g:sm/q:90/h:450/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTY4NTMx/MS0xNTk5NTk3MTIz/LTI0ODkuanBlZw.jpeg</imageUrl>
+</Band>
+
+<Discography rdf:about="#Pierrot_Lunaire_discography">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <containsAlbum rdf:resource="#Pierrot_Lunaire_album"/>
+</Discography>
+
+<Band rdf:about="#Pooh">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <discography rdf:resource="#Pooh_discography"/>
+  <wikidataIri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.wikidata.org/entity/Q1242174</wikidataIri>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">380875</discogsId>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3832</progarchivesId>
+  <rdfs:comment xml:lang="en">I Pooh, or Pooh for short, are like the Rolling Stones of Italian popular music. One of music's longest continuously running acts, they formed in Bologna in 1964. Like other groups of the 'beat' generation their music consisted of American and English pop covers sung in Italian. The original band was composed of # Valerio Negrini (Drums)
+Bob Gillot (Keyboards), Gilberto Faggioli ( Bass Guitar ), Mario Goretti (Guitar), and Mauro Bertoli (Guitar). As the 60's wore down and the Italian music scene began to find it's own voice Pooh gravitated toward a more... melodic pop. The group had some line-up changes during these years with the the definitive Pooh line up taking form. Roby Facchinetti (voice and keyboards) joined in 1966 replacing Gillot. Red Canzian (voice and electric bass joined 1973 replacing Riccardo Fogli who had replaced Faggioli in 1966. In 1967 , Mauro Bertoli left the group. In September 1968, Dodi Battaglia (voice and guitars) joined the group, when Mario Goretti left the band. Finally in 1971, following Valerio's departure, the band recruited Stefano D'Orazio, the drummer of the Naufraghi. The line-up of Facchinetti, Battaglia, D'Orazio, and Canzianhas been together since 1973 with exception of some albums in the early to mid 70's staying in the vein of pop music.
+Much of the Pooh's music is not really of interest of proggresive rock fans. However there was a period when even the most successful of the purveyors of melodic pop where drawn in the progressive rock boom that swept all of Italy in the early 70's. The Pooh's detour into prog was brought on by the addition of Canzian who had a keen interest in progressive rock and had been guitarist of Capsicum Red before taking over the bass chair in Pooh. Pooh released a series of albums in the 70's that are of keen interest to those who have a deep interest in progressive rock. In fact.... some of their albums have been hailed as 'masterpieces' OF Italian progressive rock and for years were HIGHLY sought after by collectors of Italian progressive rock recordings of the 70's in the dark days before many of the albums were available again for us relatively easily. Albums such as Opera Prima, Parsifal, and Un po' del nostro tempo migliore are where the prog fan's should look first.
+The group well is recommended for completionsts of Italian progressive rock and those who like their prog on the .... melodic and orchestrated side. I have these albums and find them to be an interesting listen and are quite highly recommended.
+Why this artist must be listed in www.progarchives.com :
+accepted into PR. Pooh is not a prog act... but put out albums that are musts in the complete Italian prog collection. Also shows the wide ranging impact of Rock Progressivo Italiano on Italian music in the 1970's.</rdfs:comment>
+  <rdfs:label xml:lang="en">Pooh</rdfs:label>
+  <activeSinceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1966</activeSinceYear>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/-YuDlQLmqScNF1ct3W1prP1MgyGwR4W5X8FPf0uqguk/rs:fit/g:sm/q:90/h:600/w:473/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM4MDg3/NS0xMTQ0MTEwODcw/LmpwZWc.jpeg</imageUrl>
+</Band>
+
+<Discography rdf:about="#Pooh_discography">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <containsAlbum rdf:resource="#Brennero_66__Per_Quelli_Come_Noi_album"/>
+  <containsAlbum rdf:resource="#Vieni_Fuori_Keep_On_Running__LUomo_Di_Ieri_album"/>
+  <containsAlbum rdf:resource="#Per_Quelli_Come_Noi_album"/>
+  <containsAlbum rdf:resource="#Bikini_Beat__Quello_Che_Non_Sai_album"/>
+  <containsAlbum rdf:resource="#Nel_Buio__Cose_Di_Questo_Mondo_album"/>
+  <containsAlbum rdf:resource="#Piccola_Katy__Love_Me_Two_Times_album"/>
+  <containsAlbum rdf:resource="#In_Silenzio__Piccola_Katy_album"/>
+  <containsAlbum rdf:resource="#Contrasto_album"/>
+  <containsAlbum rdf:resource="#Mary_Ann_album"/>
+  <containsAlbum rdf:resource="#Memorie_album"/>
+  <containsAlbum rdf:resource="#Good_Bye_Madama_Buttefly_album"/>
+  <containsAlbum rdf:resource="#Tanta_Voglia_Di_Lei__Tutto_Alle_Tre_album"/>
+  <containsAlbum rdf:resource="#Opera_Prima_album"/>
+  <containsAlbum rdf:resource="#Pensiero__A_Un_Minuto_DallAmore_album"/>
+  <containsAlbum rdf:resource="#Noi_Due_Nel_Mondo_E_NellAnima__Nascer_Con_Te_album"/>
+  <containsAlbum rdf:resource="#Alessandra_album"/>
+  <containsAlbum rdf:resource="#Cosa_Si_Pu_Dire_Di_Te_album"/>
+  <containsAlbum rdf:resource="#Tu_Y_Yo_En_El_Mas_Alla_album"/>
+  <containsAlbum rdf:resource="#Tantos_Deseos_De_Ti_album"/>
+  <containsAlbum rdf:resource="#Ill_Close_The_Door_Behind_Me_album"/>
+  <containsAlbum rdf:resource="#Pensamiento__Tantos_Deseos_De_Ti__Tutto_Alle_Tre__Terra_Desolata__Che_Favola_Sei_album"/>
+  <containsAlbum rdf:resource="#Pensiero__Quando_Una_Lei_Va_Via_album"/>
+  <containsAlbum rdf:resource="#Io_E_Te_Per_Altri_Giorni_album"/>
+  <containsAlbum rdf:resource="#I_Pooh_album"/>
+  <containsAlbum rdf:resource="#Revised_album"/>
+  <containsAlbum rdf:resource="#Parsifal_album"/>
+  <containsAlbum rdf:resource="#19711974_album"/>
+  <containsAlbum rdf:resource="#Per_Te_Qualcosa_Ancora_album"/>
+  <containsAlbum rdf:resource="#Se_Sai_Se_Puoi_Se_Vuoi_album"/>
+  <containsAlbum rdf:resource="#Forse_Ancora_Poesia_album"/>
+  <containsAlbum rdf:resource="#Ninna_Nanna_album"/>
+  <containsAlbum rdf:resource="#Un_Po_Del_Nostro_Tempo_Migliore_album"/>
+  <containsAlbum rdf:resource="#Mediterraneo_album"/>
+  <containsAlbum rdf:resource="#La_Solita_Storia_album"/>
+</Discography>
+
+<Band rdf:about="#Premiata_Forneria_Marconi">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <discography rdf:resource="#Premiata_Forneria_Marconi_discography"/>
+  <wikidataIri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.wikidata.org/entity/Q917450</wikidataIri>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">281856</discogsId>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">289</progarchivesId>
+  <rdfs:comment xml:lang="en">Formed in Milan, Italy, in 1970 - Still active (after many changes and a hiatus between 1987 and 1997) as of 2017.
+The pioneer of Italian Progressive groups, PREMIATA FORNERIA MARCONI (PFM for short) is one of the leaders of the 70s prog movement. PFM developed a style which is uniquely Italian while maintaining links with the rest of the prog world. A lyrical, romantic and delicate music, full of fineness. A great melodic and instrumental richness, somptuous compositions and arrangements. Sometimes compared with the early KING CRIMSON, the group had its own musical personality, with its elegant music.
+"Per Un Amico" ("Photos of Ghosts") and "L'Isola Di Niente" as well as their first, "Storia Di Un Minuto" are all virtual classics of progressive music, obviously influenced by early KING CRIMSON and GENESIS yet sounding nothing like them. The instrumentation is superb with fluid guitar, highly original synthesizer sounds, beautiful violin and flute, and ethereal vocals that are so important to the music, that replacing them with English vocals becomes a detriment. "The World Became The World" is another English-language album, but this time with the same music, so it's not as bad as "Photos Of Ghosts".
+"Marconi Bakery" is a compilation of music from the first three Italian albums. "Jet Lag", from 1977, had much of the original PFM spirit with a jazz inclination, akin to groups such as ARTI + MESTIERI, though somewhat more low-key. "Suonare Suonare" came out in 1980, and saw PFM turning back toward their original sound, from the style of "Passpartu". On "PFM - Live In Japan 2002 (Tokyo)" the band plays classic tunes from the Seventies. A must for all prog fans...!</rdfs:comment>
+  <rdfs:label xml:lang="en">Premiata Forneria Marconi</rdfs:label>
+  <activeSinceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1970</activeSinceYear>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/xVeSntT5X_FZq_LvfIgFIpp_WNztXt9bCkWudmeGegM/rs:fit/g:sm/q:90/h:300/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4MTg1/Ni0xNTQ1NjEzNjMw/LTc0MzMuanBlZw.jpeg</imageUrl>
+</Band>
+
+<Discography rdf:about="#Premiata_Forneria_Marconi_discography">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <containsAlbum rdf:resource="#La_Carrozza_Di_Hans__Impressioni_Di_Settembre_album"/>
+  <containsAlbum rdf:resource="#Storia_Di_Un_Minuto_album"/>
+  <containsAlbum rdf:resource="#Per_Un_Amico_album"/>
+  <containsAlbum rdf:resource="#Celebration_album"/>
+  <containsAlbum rdf:resource="#Photos_Of_Ghosts_album"/>
+  <containsAlbum rdf:resource="#Dolcissima_Maria__Via_Lumire_album"/>
+  <containsAlbum rdf:resource="#Four_Holes_In_The_Ground__The_World_Became_The_World_album"/>
+  <containsAlbum rdf:resource="#Live_In_USA_album"/>
+  <containsAlbum rdf:resource="#The_World_Became_The_World__La_Carrozza_Di_Hans_Live_album"/>
+  <containsAlbum rdf:resource="#LIsola_Di_Niente_album"/>
+  <containsAlbum rdf:resource="#The_World_Became_The_World_album"/>
+  <containsAlbum rdf:resource="#Celebration__Mr_Nine_Till_Five_album"/>
+  <containsAlbum rdf:resource="#Chocolate_Kings_album"/>
+  <containsAlbum rdf:resource="#Chocolate_Kings__Harlequin_album"/>
+</Discography>
+
+<Band rdf:about="#Quella_Vecchia_Locanda">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <discography rdf:resource="#Quella_Vecchia_Locanda_discography"/>
+  <wikidataIri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.wikidata.org/entity/Q3927606</wikidataIri>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1214437</discogsId>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">296</progarchivesId>
+  <rdfs:comment xml:lang="en">Founded in Rome, Italy in 1970 - Disbanded in 1974.
+QUELLA VECCHIA LOCANDA is a great Italian prog band of the historic scene, formed in Rome in the early seventies. QVL plays a complex music with a lot of instrumental combinations, beautiful melodies and a very high sophistication. Close to KING CRIMSON.
+QVL released two albums which are both considered essential releases from that particular scene. The first album is still regarded as a classic in its field, with an original fusion of classical influences and the use of flute and electric violin in evidence. QVL was fairly typical of the style, especially on their second album, "Il Tempo Della Goia", which ranks as one of the finest examples of classical, pastoral Italian symphonic along the lines of PFM, CELESTE, ALUSA FALLAX or LOCANDA DELLE FATE. The group sadly disbanded soon after the second album, leaving us with two more italian progressive gems, both with beautiful covers. Two of the most looked records of Italy!!!</rdfs:comment>
+  <rdfs:label xml:lang="en">Quella Vecchia Locanda</rdfs:label>
+  <activeSinceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1970</activeSinceYear>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/5oa7QHF0YZzwuItmNymZHTkfk1aCj_r5rCI0ribjkGo/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyMTQ0/MzctMTU1MzU2MDU0/NC0xOTQ1LnBuZw.jpeg</imageUrl>
+</Band>
+
+<Discography rdf:about="#Quella_Vecchia_Locanda_discography">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <containsAlbum rdf:resource="#Quella_Vecchia_Locanda_album"/>
+  <containsAlbum rdf:resource="#Il_Tempo_Della_Gioia_album"/>
+</Discography>
+
+<Band rdf:about="#Raccomandata_con_Ricevuta_di_Ritorno">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <discography rdf:resource="#Raccomandata_con_Ricevuta_di_Ritorno_discography"/>
+  <wikidataIri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.wikidata.org/entity/Q3928502</wikidataIri>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1214433</discogsId>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">535</progarchivesId>
+  <rdfs:comment xml:lang="en">RACCOMANDATA CON RICEVUTA DI RITORNO (often shortened to RRR) formed in Rome, making their live debut in 1972. Like so many progressive bands in Italy in the seventies, they released one album and split up until an unexpected reformation in 2010.
+Vocalist/guitarist, Luciano Regoli had played with IL RITRATTO DI DORIAN GRAY, and drummer Francesco "Froggio" Francica and flute/sax player Damaso Grassi spent some time in PANNA FREDDA. Their live debut was at the Villa Pamphili pop festival, and they became regulars on the festival circuit between 1972 and 73 until splitting up due to little interest in their album, "Per... Un Mondo Di Cristallo." Regoli and guitarist Nanni Civitenga then helped form SAMADHI. Francica, Grassi and keyboardist Stefano Piermarioli--without bassist Manlio Zacchia--recruited additional players (Roberto Gardin on guitar, Gianni Colaiacono on bass, Massimo Balla on sax and Mandrake playing percussion) and continued a while longer using the band name in a more jazz orientated direction. Unfortunately there is no recorded output of this line up. Francica would also play on "Fiaba," the second album from PROCESSION and later with KALEIDON. Regoli was later to drop out of music and became an artist.
+"Per... Un Mondo Di Cristallo" was released in 1972 and like many great RPI albums drew its sound from many contrasting styles. This includes hard rock, jazz, classical, melodic pastoral and even eastern influences. There is a generous usage of flute, sax, keyboard (especially organ), and acoustic and electric guitar. Both the music and the subject matter (an astronaut who returns after a long voyage, discouraged by the horrible earthly scenes he observes from a cliff) call to mind the more adventurous RPI bands such as OSANNA, SEMIRAMIS and IL BALLETTO DI BRONZO, although not quite to their level in either quality or edginess. Still, this album is certainly one of the essential albums that should be found in any RPI collection.
+In 2010 RRR unexpectedly reformed and released the acclaimed album "Il Pittore Volante." Musically it contains many of the musical elements that made their debut but with a more refined sound and some of the wilder elements smoothed over for a more accessible sound to a large extent. Joining Regoli, Civitenga and Gardin is drummer Walter Martino (IL RITRATTO DI DORIAN GRAY, GOBLIN and LIBRA). Some RPI heavyweight guests also appear, including Claudio Simonetti (GOBLIN) and Lino Vairetti (OSANNA).</rdfs:comment>
+  <rdfs:label xml:lang="en">Raccomandata Ricevuta Ritorno</rdfs:label>
+  <activeSinceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1971</activeSinceYear>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/_y8K_bsqgZPI7z3LptcBJHBJPMxWROxsj7bK2xmPi4c/rs:fit/g:sm/q:90/h:510/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyMTQ0/MzMtMTUxMjAxMDcx/Ni0zMjY0LmpwZWc.jpeg</imageUrl>
+</Band>
+
+<Discography rdf:about="#Raccomandata_con_Ricevuta_di_Ritorno_discography">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <containsAlbum rdf:resource="#PerUn_Mondo_Di_Cristallo_album"/>
+</Discography>
+
+<Band rdf:about="#Saint_Just">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <discography rdf:resource="#Saint_Just_discography"/>
+  <wikidataIri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.wikidata.org/entity/Q952750</wikidataIri>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1544055</discogsId>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">987</progarchivesId>
+  <rdfs:comment xml:lang="en">SAINT JUST was a seventies Italian progressive group but not really reminiscent of the typical Italian sound. Influences from folk, psychedelic and classical can be heard in their music. The most remarkable instrument in their music is the vocals of Jane Sorrenti that float above the music. Her vocal delivery is definitely an acquired taste. The group released only two albums and the line-up is very different in these two albums. In the 1st album there were only three official members of which the saxophonist Robert Fix was not included in the 2nd album. For their 2nd album the remaining members Jane Sorrenti and Antonio Verde (classical guitar, bass) added electric guitarists Tito Rinesi and Andrea Faccenda as well as a drummer Fulvio Maras.
+The first self-titled album, released in 1973, is more acoustic than the predecessor "La Casa del Lago", released in 1974, which is more in the classic Italian tradition and therefore more easily accessible. Both albums are considered very good.</rdfs:comment>
+  <rdfs:label xml:lang="en">Saint Just</rdfs:label>
+  <activeSinceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</activeSinceYear>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/yxKzDNie3pQiEXCIvgajjHA8dTo0ewSLaa2TP6TKDZI/rs:fit/g:sm/q:90/h:266/w:386/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1NDQw/NTUtMTI4NzI0Mjkx/My5qcGVn.jpeg</imageUrl>
+</Band>
+
+<Discography rdf:about="#Saint_Just_discography">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <containsAlbum rdf:resource="#Saint_Just_album"/>
+  <containsAlbum rdf:resource="#La_Casa_Del_Lago_album"/>
+</Discography>
+
+<Band rdf:about="#Semiramis">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <discography rdf:resource="#Semiramis_discography"/>
+  <wikidataIri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.wikidata.org/entity/Q3955084</wikidataIri>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1228989</discogsId>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">313</progarchivesId>
+  <rdfs:comment xml:lang="en">Founded in Rome, Italy in 1970 - Disbanded in 1974 - Regrouped between 2014-2017.
+SEMIRAMIS is one of the many "one-shot" bands of the 70's Italy. Their only album is one of my favorite albums of the 70's Italian art rock. Combining elements of Italian folk, heavy progressive passages (especially in the middle of the album), Baroque church music, jazz, classical, and a good dose of insanity. "Dedicato A Frazz" pounds every sense, challenges every synapse in a flurry of ideas. There are more symphonic, keyboard-led parts as well where SEMIRAMIS may sound closer YES, GENESIS or BANCO. A fantastic album...!</rdfs:comment>
+  <rdfs:label xml:lang="en">Semiramis </rdfs:label>
+  <activeSinceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1970</activeSinceYear>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/0VqxWvAt9ZCytJFoCTLq60_FpEbt8UjuMxYlqCIYWso/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEyMjg5/ODktMTQ2MzQ5MjYz/Ni00OTU1LmpwZWc.jpeg</imageUrl>
+</Band>
+
+<Discography rdf:about="#Semiramis_discography">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <containsAlbum rdf:resource="#Dedicato_A_Frazz_album"/>
+</Discography>
+
+<Band rdf:about="#Sensations_Fix">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <discography rdf:resource="#Sensations_Fix_discography"/>
+  <wikidataIri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.wikidata.org/entity/Q4049288</wikidataIri>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1091356</discogsId>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1008</progarchivesId>
+  <rdfs:comment xml:lang="en">Founded in Florence, Italy in 1974 - Disbanded in 1979 - Regrouped in the 2000's.
+The founding members include Italians on guitar and Richard Ursillo on bass (formerly of CAMPO DI MARTE), and American Keith Edwards on drums. The trio was based in Florence and produced and released their own albums, releasing three in 1974 (the promotional self-titled debut, "Fragments of Light" and "Portable Madness"). In 1976 keyboardist Stephen Head joined, and the group released "Finest Finger", which included more vocal parts, shorter songs, and more accessible sounds. The direction of the band continued toward a more commercial approach with subsequent releases. By 1979, the band, now known as SHERIFF and based in the United States, had been joined by second guitarist Frank Filfoyt, and bassist Gary Falwell had replaced Richard Ursillo. This incarnation was very short-lived, releasing one album and playing live only once, before the band broke up for good. The posthumous release "Antidote" contains unreleased recordings from the late 1970s.
+Although Italian, the band is philosophically linked to the Krautrock movement, with almost entirely instrumental, groove-oriented atmospheric music. Bassist Gary Falwell, who played the version of SENSATIONS' FIX known as SHERIFF, describes the approach and technique of leader FRANCO FALSINI:
+"Franco was unlike any guitarist I'd ever played with. He would not play--at all--anything other than what we would create. Once I asked him a question about a chord. Was he doing E Major or G Major. He said, 'I'll make this sound, you find the sound you like to go with it.' It was all about creating--stretching sounds and notes--not about chord structure so much." (From the band's Facebook site)
+The first four albums are highly recommended to fans of Krautrock and to RPI fans with an adventurous sense. Also recommended is FALSINI's solo album/soundtrack, "Cold Nose," from 1975.</rdfs:comment>
+  <rdfs:label xml:lang="en">Sensations' Fix</rdfs:label>
+  <activeSinceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1974</activeSinceYear>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/kh4PNrvNm9nR6EguV-DTfNcPRkAQCzaD6O9Ah7WcjSc/rs:fit/g:sm/q:90/h:439/w:558/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTEwOTEz/NTYtMTU1MDI1OTE4/OC03MzIzLmpwZWc.jpeg</imageUrl>
+</Band>
+
+<Discography rdf:about="#Sensations_Fix_discography">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <containsAlbum rdf:resource="#Sensations_Fix_album"/>
+  <containsAlbum rdf:resource="#Fragments_Of_Light_album"/>
+  <containsAlbum rdf:resource="#Portable_Madness_album"/>
+</Discography>
+
+<Band rdf:about="#Stormy_Six">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <discography rdf:resource="#Stormy_Six_discography"/>
+  <wikidataIri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.wikidata.org/entity/Q3974546</wikidataIri>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">282973</discogsId>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2561</progarchivesId>
+  <rdfs:comment xml:lang="en">Founded in Milan in 1965, they performed and recorded until 1983.
+STORMY SIX from Milan, Italy was one of the original bands in the RIO movement and appeared in the famous on March 12th 1978 in the New London Theatre in London. However, as opposed to the other bands appearing with them, they did not start out their musical career as a RIO sounding band.
+STORMY SIX began its life in the mid 60's as a folk group with psych influences and left wing tendencies, composing protest songs. This has been the case in their first 3 albums, "Le idee di oggi per la musica di domani" (1969), "L'unitŕ" (1972) and "Guarda giů dalla pianura" (1974). In their 4th album, "Un biglietto del tram" from 1975 the complexity and experimentalism start to show. It was to be only in their 6th album, "L'apprendista" from 1977, that the RIO sound would reach its climax. The following "Macchina Maccheronica" (1980) is even a more complex and continues in the pathway of its predecessor. Both these albums are what won this band a place in the RIO genre. With the next final studio album, "Al Volo" from 1982 they introduced an electronic and poppish sound in their music.
+Their last output was when they reunited for a concert and released it as a live CD in 1993 called "Un concerto". For RIO fans, the recommended albums are the two "L'apprendista" and "Macchina Maccheronica" and, to a lesser extent, "Un biglietto del tram".
+Stormy Six is one of the founders of RIO musical genre and on of the original five bands to appear in the RIO Festival on 12/3/1978.</rdfs:comment>
+  <rdfs:label xml:lang="en">Stormy Six</rdfs:label>
+  <activeSinceYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1966</activeSinceYear>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/7AeH8HaZ-C83kZTlzMGZ3D94udRtv_Hezxt8FnO7CtE/rs:fit/g:sm/q:90/h:366/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTI4Mjk3/My0xMjc1MDI1NjE3/LmpwZWc.jpeg</imageUrl>
+</Band>
+
+<Discography rdf:about="#Stormy_Six_discography">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <containsAlbum rdf:resource="#Le_Idee_Di_Oggi_Per_La_Musica_Di_Domani_album"/>
+  <containsAlbum rdf:resource="#Alice_Nel_Vento_album"/>
+  <containsAlbum rdf:resource="#Sotto_Il_Bamb_album"/>
+  <containsAlbum rdf:resource="#LUnit_album"/>
+  <containsAlbum rdf:resource="#Guarda_Gi_Dalla_Pianura_album"/>
+  <containsAlbum rdf:resource="#Un_Biglietto_Del_Tram_album"/>
+</Discography>
+
+<Album rdf:about="#Acqua_Fragile_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#MassMedia_Stars_album"/>
+  <rdfs:label xml:lang="en">Acqua Fragile</rdfs:label>
+  <rdfs:comment xml:lang="en">Acqua Fragile is the first album of Acqua Fragile released in 1973</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</releaseYear>
+</Album>
+
+<Album rdf:about="#MassMedia_Stars_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label xml:lang="en">Mass-Media Stars</rdfs:label>
+  <rdfs:comment xml:lang="en">Mass-Media Stars is the second album of Acqua Fragile released in 1974</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1974</releaseYear>
+</Album>
+
+<Album rdf:about="#Alphataurus_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label xml:lang="en">Alphataurus</rdfs:label>
+  <rdfs:comment xml:lang="en">Alphataurus is the first album of Alphataurus released in 1973</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</releaseYear>
+</Album>
+
+<Album rdf:about="#Analogy_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label xml:lang="en">Analogy</rdfs:label>
+  <rdfs:comment xml:lang="en">Analogy is the first album of Analogy released in 1972</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</releaseYear>
+</Album>
+
+<Album rdf:about="#Arbeit_Macht_Frei_Il_Lavoro_Rende_Liberi_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#LInternazionale_album"/>
+  <rdfs:label xml:lang="en">Arbeit Macht Frei (Il Lavoro Rende Liberi)</rdfs:label>
+  <rdfs:comment xml:lang="en">Arbeit Macht Frei (Il Lavoro Rende Liberi) is the first album of Area  released in 1973</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</releaseYear>
+</Album>
+
+<Album rdf:about="#LInternazionale_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Caution_Radiation_Area_album"/>
+  <rdfs:label xml:lang="en">L'Internazionale</rdfs:label>
+  <rdfs:comment xml:lang="en">L'Internazionale is the second album of Area  released in 1974</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1974</releaseYear>
+</Album>
+
+<Album rdf:about="#Caution_Radiation_Area_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#AreAzione_album"/>
+  <rdfs:label xml:lang="en">Caution Radiation Area</rdfs:label>
+  <rdfs:comment xml:lang="en">Caution Radiation Area is the third album of Area  released in 1974</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1974</releaseYear>
+</Album>
+
+<Album rdf:about="#AreAzione_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Crac_album"/>
+  <rdfs:label xml:lang="en">Are(A)zione</rdfs:label>
+  <rdfs:comment xml:lang="en">Are(A)zione is the fourth album of Area  released in 1975</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1975</releaseYear>
+</Album>
+
+<Album rdf:about="#Crac_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label xml:lang="en">Crac!</rdfs:label>
+  <rdfs:comment xml:lang="en">Crac! is the fifth album of Area  released in 1975</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1975</releaseYear>
+</Album>
+
+<Album rdf:about="#Tilt__Immagini_Per_Un_Orecchio_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Giro_Di_Valzer_Per_Domani_album"/>
+  <rdfs:label xml:lang="en">Tilt - Immagini Per Un Orecchio</rdfs:label>
+  <rdfs:comment xml:lang="en">Tilt - Immagini Per Un Orecchio is the first album of Arti &amp; Mestieri released in 1974</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1974</releaseYear>
+</Album>
+
+<Album rdf:about="#Giro_Di_Valzer_Per_Domani_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label xml:lang="en">Giro Di Valzer Per Domani</rdfs:label>
+  <rdfs:comment xml:lang="en">Giro Di Valzer Per Domani is the second album of Arti &amp; Mestieri released in 1975</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1975</releaseYear>
+</Album>
+
+<Album rdf:about="#Darwin_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Banco_Del_Mutuo_Soccorso_album"/>
+  <rdfs:label xml:lang="en">Darwin!</rdfs:label>
+  <rdfs:comment xml:lang="en">Darwin! is the first album of Banco Del Mutuo Soccorso released in 1972</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</releaseYear>
+</Album>
+
+<Album rdf:about="#Banco_Del_Mutuo_Soccorso_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Non_Mi_Rompete__La_Citt_Sottile_album"/>
+  <rdfs:label xml:lang="en">Banco Del Mutuo Soccorso</rdfs:label>
+  <rdfs:comment xml:lang="en">Banco Del Mutuo Soccorso is the second album of Banco Del Mutuo Soccorso released in 1972</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</releaseYear>
+</Album>
+
+<Album rdf:about="#Non_Mi_Rompete__La_Citt_Sottile_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Io_Sono_Nato_Libero_album"/>
+  <rdfs:label xml:lang="en">Non Mi Rompete / La Città Sottile</rdfs:label>
+  <rdfs:comment xml:lang="en">Non Mi Rompete / La Città Sottile is the third album of Banco Del Mutuo Soccorso released in 1973</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</releaseYear>
+</Album>
+
+<Album rdf:about="#Io_Sono_Nato_Libero_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Banco_album"/>
+  <rdfs:label xml:lang="en">Io Sono Nato Libero</rdfs:label>
+  <rdfs:comment xml:lang="en">Io Sono Nato Libero is the fourth album of Banco Del Mutuo Soccorso released in 1973</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</releaseYear>
+</Album>
+
+<Album rdf:about="#Banco_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label xml:lang="en">Banco</rdfs:label>
+  <rdfs:comment xml:lang="en">Banco is the fifth album of Banco Del Mutuo Soccorso released in 1975</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1975</releaseYear>
+</Album>
+
+<Album rdf:about="#_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label xml:lang="en">Ποα</rdfs:label>
+  <rdfs:comment xml:lang="en">Ποα is the first album of Blocco Mentale released in 1973</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</releaseYear>
+</Album>
+
+<Album rdf:about="#Melos_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label xml:lang="en">Melos</rdfs:label>
+  <rdfs:comment xml:lang="en">Melos is the first album of Cervello released in 1973</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</releaseYear>
+</Album>
+
+<Album rdf:about="#Io_Non_So_Da_Dove_Vengo_E_Non_So_Dove_Mai_Andr_Uomo__Il_Nome_Che_Mi_Han_Dato_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label xml:lang="en">Io Non So Da Dove Vengo E Non So Dove Mai Andrò. Uomo È Il Nome Che Mi Han Dato</rdfs:label>
+  <rdfs:comment xml:lang="en">Io Non So Da Dove Vengo E Non So Dove Mai Andrò. Uomo È Il Nome Che Mi Han Dato is the first album of De De Lind released in 1972</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</releaseYear>
+</Album>
+
+<Album rdf:about="#Questo_Folle_Sentimento_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Sole_Giallo_Sole_Nero_album"/>
+  <rdfs:label xml:lang="en">Questo Folle Sentimento</rdfs:label>
+  <rdfs:comment xml:lang="en">Questo Folle Sentimento is the first album of Formula 3 released in 1969</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1969</releaseYear>
+</Album>
+
+<Album rdf:about="#Sole_Giallo_Sole_Nero_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Nananan_album"/>
+  <rdfs:label xml:lang="en">Sole Giallo, Sole Nero</rdfs:label>
+  <rdfs:comment xml:lang="en">Sole Giallo, Sole Nero is the second album of Formula 3 released in 1970</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1970</releaseYear>
+</Album>
+
+<Album rdf:about="#Nananan_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Dies_Irae_album"/>
+  <rdfs:label xml:lang="en">Nanananò</rdfs:label>
+  <rdfs:comment xml:lang="en">Nanananò is the third album of Formula 3 released in 1970</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1970</releaseYear>
+</Album>
+
+<Album rdf:about="#Dies_Irae_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Nessuno_Nessuno__Eppur_Mi_Son_Scordato_Di_Te_album"/>
+  <rdfs:label xml:lang="en">Dies Irae</rdfs:label>
+  <rdfs:comment xml:lang="en">Dies Irae is the fourth album of Formula 3 released in 1970</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1970</releaseYear>
+</Album>
+
+<Album rdf:about="#Nessuno_Nessuno__Eppur_Mi_Son_Scordato_Di_Te_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#La_Folle_Corsa_album"/>
+  <rdfs:label xml:lang="en">Nessuno Nessuno / Eppur Mi Son Scordato Di Te</rdfs:label>
+  <rdfs:comment xml:lang="en">Nessuno Nessuno / Eppur Mi Son Scordato Di Te is the fifth album of Formula 3 released in 1971</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1971</releaseYear>
+</Album>
+
+<Album rdf:about="#La_Folle_Corsa_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Formula_3_album"/>
+  <rdfs:label xml:lang="en">La Folle Corsa</rdfs:label>
+  <rdfs:comment xml:lang="en">La Folle Corsa is the sixth album of Formula 3 released in 1971</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1971</releaseYear>
+</Album>
+
+<Album rdf:about="#Formula_3_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Sognando_E_Risognando_album"/>
+  <rdfs:label xml:lang="en">Formula 3</rdfs:label>
+  <rdfs:comment xml:lang="en">Formula 3 is the seventh album of Formula 3 released in 1971</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1971</releaseYear>
+</Album>
+
+<Album rdf:about="#Sognando_E_Risognando_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#La_Ciliegia_Non__Di_Plastica_album"/>
+  <rdfs:label xml:lang="en">Sognando E Risognando</rdfs:label>
+  <rdfs:comment xml:lang="en">Sognando E Risognando is the ninth album of Formula 3 released in 1972</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</releaseYear>
+</Album>
+
+<Album rdf:about="#La_Ciliegia_Non__Di_Plastica_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Rapsodia_Di_Radius__Bambina_Sbagliata_album"/>
+  <rdfs:label xml:lang="en">La Ciliegia Non È Di Plastica</rdfs:label>
+  <rdfs:comment xml:lang="en">La Ciliegia Non È Di Plastica is the tenth album of Formula 3 released in 1973</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</releaseYear>
+</Album>
+
+<Album rdf:about="#Rapsodia_Di_Radius__Bambina_Sbagliata_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#La_Grande_Casa_album"/>
+  <rdfs:label xml:lang="en">Rapsodia Di Radius / Bambina Sbagliata</rdfs:label>
+  <rdfs:comment xml:lang="en">Rapsodia Di Radius / Bambina Sbagliata is the eleventh album of Formula 3 released in 1973</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</releaseYear>
+</Album>
+
+<Album rdf:about="#La_Grande_Casa_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label xml:lang="en">La Grande Casa</rdfs:label>
+  <rdfs:comment xml:lang="en">La Grande Casa is the twelfth album of Formula 3 released in 1973</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</releaseYear>
+</Album>
+
+<Album rdf:about="#Nuda_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Astrolabio_album"/>
+  <rdfs:label xml:lang="en">Nuda</rdfs:label>
+  <rdfs:comment xml:lang="en">Nuda is the first album of Garybaldi released in 1972</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</releaseYear>
+</Album>
+
+<Album rdf:about="#Astrolabio_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label xml:lang="en">Astrolabio</rdfs:label>
+  <rdfs:comment xml:lang="en">Astrolabio is the second album of Garybaldi released in 1973</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</releaseYear>
+</Album>
+
+<Album rdf:about="#Profondo_Rosso__Skys_MotorBike_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Profondo_Rosso_Colonna_Sonora_Originale_Del_Film_album"/>
+  <rdfs:label xml:lang="en">Profondo Rosso / Sky's Motor-Bike</rdfs:label>
+  <rdfs:comment xml:lang="en">Profondo Rosso / Sky's Motor-Bike is the first album of Goblin released in 1975</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1975</releaseYear>
+</Album>
+
+<Album rdf:about="#Profondo_Rosso_Colonna_Sonora_Originale_Del_Film_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Profondo_Rosso__album"/>
+  <rdfs:label xml:lang="en">Profondo Rosso (Colonna Sonora Originale Del Film)</rdfs:label>
+  <rdfs:comment xml:lang="en">Profondo Rosso (Colonna Sonora Originale Del Film) is the second album of Goblin released in 1975</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1975</releaseYear>
+</Album>
+
+<Album rdf:about="#Profondo_Rosso__album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label xml:lang="en">Profondo Rosso </rdfs:label>
+  <rdfs:comment xml:lang="en">Profondo Rosso  is the third album of Goblin released in 1975</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1975</releaseYear>
+</Album>
+
+<Album rdf:about="#I_Teoremi_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Sognare__Tutte_Le_Cose_album"/>
+  <rdfs:label xml:lang="en">I Teoremi</rdfs:label>
+  <rdfs:comment xml:lang="en">I Teoremi is the first album of I Teoremi released in 1972</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</releaseYear>
+</Album>
+
+<Album rdf:about="#Sognare__Tutte_Le_Cose_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label xml:lang="en">Sognare / Tutte Le Cose</rdfs:label>
+  <rdfs:comment xml:lang="en">Sognare / Tutte Le Cose is the second album of I Teoremi released in 1972</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</releaseYear>
+</Album>
+
+<Album rdf:about="#Neve_Calda__album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Sirio_2222_album"/>
+  <rdfs:label xml:lang="en">Neve Calda </rdfs:label>
+  <rdfs:comment xml:lang="en">Neve Calda  is the first album of Il Balletto Di Bronzo released in 1969</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1969</releaseYear>
+</Album>
+
+<Album rdf:about="#Sirio_2222_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Si_Mama_Mama__Meditazione_album"/>
+  <rdfs:label xml:lang="en">Sirio 2222</rdfs:label>
+  <rdfs:comment xml:lang="en">Sirio 2222 is the second album of Il Balletto Di Bronzo released in 1970</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1970</releaseYear>
+</Album>
+
+<Album rdf:about="#Si_Mama_Mama__Meditazione_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Nieve_Calida_album"/>
+  <rdfs:label xml:lang="en">Si, Mama Mama / Meditazione</rdfs:label>
+  <rdfs:comment xml:lang="en">Si, Mama Mama / Meditazione is the third album of Il Balletto Di Bronzo released in 1970</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1970</releaseYear>
+</Album>
+
+<Album rdf:about="#Nieve_Calida_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Ys_album"/>
+  <rdfs:label xml:lang="en">Nieve Calida</rdfs:label>
+  <rdfs:comment xml:lang="en">Nieve Calida is the fourth album of Il Balletto Di Bronzo released in 1971</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1971</releaseYear>
+</Album>
+
+<Album rdf:about="#Ys_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#La_Tua_Casa_Comoda__Donna_Vittoria_album"/>
+  <rdfs:label xml:lang="en">Ys</rdfs:label>
+  <rdfs:comment xml:lang="en">Ys is the fifth album of Il Balletto Di Bronzo released in 1972</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</releaseYear>
+</Album>
+
+<Album rdf:about="#La_Tua_Casa_Comoda__Donna_Vittoria_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label xml:lang="en">La Tua Casa Comoda / Donna Vittoria</rdfs:label>
+  <rdfs:comment xml:lang="en">La Tua Casa Comoda / Donna Vittoria is the sixth album of Il Balletto Di Bronzo released in 1973</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</releaseYear>
+</Album>
+
+<Album rdf:about="#La_Bibbia_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Io_Come_Io_album"/>
+  <rdfs:label xml:lang="en">La Bibbia</rdfs:label>
+  <rdfs:comment xml:lang="en">La Bibbia is the first album of Il Rovescio Della Medaglia released in 1971</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1971</releaseYear>
+</Album>
+
+<Album rdf:about="#Io_Come_Io_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Contaminazione_album"/>
+  <rdfs:label xml:lang="en">Io Come Io</rdfs:label>
+  <rdfs:comment xml:lang="en">Io Come Io is the second album of Il Rovescio Della Medaglia released in 1972</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</releaseYear>
+</Album>
+
+<Album rdf:about="#Contaminazione_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label xml:lang="en">Contaminazione</rdfs:label>
+  <rdfs:comment xml:lang="en">Contaminazione is the third album of Il Rovescio Della Medaglia released in 1973</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</releaseYear>
+</Album>
+
+<Album rdf:about="#Tardo_Pede_In_Magiam_Versus_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label xml:lang="en">Tardo Pede In Magiam Versus</rdfs:label>
+  <rdfs:comment xml:lang="en">Tardo Pede In Magiam Versus is the first album of Jacula released in 1972</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</releaseYear>
+</Album>
+
+<Album rdf:about="#Passio_Secundum_Mattheum_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Rimani_Nella_Mia_Vita_album"/>
+  <rdfs:label xml:lang="en">Passio Secundum Mattheum</rdfs:label>
+  <rdfs:comment xml:lang="en">Passio Secundum Mattheum is the first album of Latte E Miele released in 1972</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</releaseYear>
+</Album>
+
+<Album rdf:about="#Rimani_Nella_Mia_Vita_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Getzemani__Il_Re_Dei_Giudei_album"/>
+  <rdfs:label xml:lang="en">Rimani Nella Mia Vita</rdfs:label>
+  <rdfs:comment xml:lang="en">Rimani Nella Mia Vita is the second album of Latte E Miele released in 1973</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</releaseYear>
+</Album>
+
+<Album rdf:about="#Getzemani__Il_Re_Dei_Giudei_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Papillon_album"/>
+  <rdfs:label xml:lang="en">Getzemani / Il Re Dei Giudei</rdfs:label>
+  <rdfs:comment xml:lang="en">Getzemani / Il Re Dei Giudei is the third album of Latte E Miele released in 1973</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</releaseYear>
+</Album>
+
+<Album rdf:about="#Papillon_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label xml:lang="en">Papillon</rdfs:label>
+  <rdfs:comment xml:lang="en">Papillon is the fourth album of Latte E Miele released in 1973</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</releaseYear>
+</Album>
+
+<Album rdf:about="#Fiori_E_Colori_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Milano_1968__I_Miei_Sogni_album"/>
+  <rdfs:label xml:lang="en">Fiori E Colori</rdfs:label>
+  <rdfs:comment xml:lang="en">Fiori E Colori is the first album of Le Orme released in 1968</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1968</releaseYear>
+</Album>
+
+<Album rdf:about="#Milano_1968__I_Miei_Sogni_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Senti_LEstate_Che_Torna_album"/>
+  <rdfs:label xml:lang="en">Milano 1968 / I Miei Sogni</rdfs:label>
+  <rdfs:comment xml:lang="en">Milano 1968 / I Miei Sogni is the second album of Le Orme released in 1968</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1968</releaseYear>
+</Album>
+
+<Album rdf:about="#Senti_LEstate_Che_Torna_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Ad_Gloriam_album"/>
+  <rdfs:label xml:lang="en">Senti L'Estate Che Torna</rdfs:label>
+  <rdfs:comment xml:lang="en">Senti L'Estate Che Torna is the third album of Le Orme released in 1968</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1968</releaseYear>
+</Album>
+
+<Album rdf:about="#Ad_Gloriam_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Irene__Casa_Mia_album"/>
+  <rdfs:label xml:lang="en">Ad Gloriam</rdfs:label>
+  <rdfs:comment xml:lang="en">Ad Gloriam is the fourth album of Le Orme released in 1969</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1969</releaseYear>
+</Album>
+
+<Album rdf:about="#Irene__Casa_Mia_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#LAurora_Delle_Orme_album"/>
+  <rdfs:label xml:lang="en">Irene / Casa Mia</rdfs:label>
+  <rdfs:comment xml:lang="en">Irene / Casa Mia is the fifth album of Le Orme released in 1969</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1969</releaseYear>
+</Album>
+
+<Album rdf:about="#LAurora_Delle_Orme_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Fiori_Di_Giglio_album"/>
+  <rdfs:label xml:lang="en">"L'Aurora" Delle Orme</rdfs:label>
+  <rdfs:comment xml:lang="en">"L'Aurora" Delle Orme is the sixth album of Le Orme released in 1970</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1970</releaseYear>
+</Album>
+
+<Album rdf:about="#Fiori_Di_Giglio_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#LAurora__Finita_La_Scuola_album"/>
+  <rdfs:label xml:lang="en">Fiori Di Giglio</rdfs:label>
+  <rdfs:comment xml:lang="en">Fiori Di Giglio is the seventh album of Le Orme released in 1970</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1970</releaseYear>
+</Album>
+
+<Album rdf:about="#LAurora__Finita_La_Scuola_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Sguardo_Verso_Il_Cielo__Cemento_Armato_album"/>
+  <rdfs:label xml:lang="en">L'Aurora / Finita La Scuola</rdfs:label>
+  <rdfs:comment xml:lang="en">L'Aurora / Finita La Scuola is the eighth album of Le Orme released in 1970</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1970</releaseYear>
+</Album>
+
+<Album rdf:about="#Sguardo_Verso_Il_Cielo__Cemento_Armato_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Collage_album"/>
+  <rdfs:label xml:lang="en">Sguardo Verso Il Cielo / Cemento Armato</rdfs:label>
+  <rdfs:comment xml:lang="en">Sguardo Verso Il Cielo / Cemento Armato is the ninth album of Le Orme released in 1971</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1971</releaseYear>
+</Album>
+
+<Album rdf:about="#Collage_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Uomo_Di_Pezza_album"/>
+  <rdfs:label xml:lang="en">Collage</rdfs:label>
+  <rdfs:comment xml:lang="en">Collage is the tenth album of Le Orme released in 1971</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1971</releaseYear>
+</Album>
+
+<Album rdf:about="#Uomo_Di_Pezza_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Felona_E_Sorona_album"/>
+  <rdfs:label xml:lang="en">Uomo Di Pezza</rdfs:label>
+  <rdfs:comment xml:lang="en">Uomo Di Pezza is the eleventh album of Le Orme released in 1972</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</releaseYear>
+</Album>
+
+<Album rdf:about="#Felona_E_Sorona_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Felona_album"/>
+  <rdfs:label xml:lang="en">Felona E Sorona</rdfs:label>
+  <rdfs:comment xml:lang="en">Felona E Sorona is the twelfth album of Le Orme released in 1973</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</releaseYear>
+</Album>
+
+<Album rdf:about="#Felona_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#In_Concerto_album"/>
+  <rdfs:label xml:lang="en">Felona</rdfs:label>
+  <rdfs:comment xml:lang="en">Felona is the thirteenth album of Le Orme released in 1973</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</releaseYear>
+</Album>
+
+<Album rdf:about="#In_Concerto_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Contrappunti_album"/>
+  <rdfs:label xml:lang="en">In Concerto</rdfs:label>
+  <rdfs:comment xml:lang="en">In Concerto is the fourteenth album of Le Orme released in 1974</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1974</releaseYear>
+</Album>
+
+<Album rdf:about="#Contrappunti_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Smogmagica_album"/>
+  <rdfs:label xml:lang="en">Contrappunti</rdfs:label>
+  <rdfs:comment xml:lang="en">Contrappunti is the fifteenth album of Le Orme released in 1974</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1974</releaseYear>
+</Album>
+
+<Album rdf:about="#Smogmagica_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label xml:lang="en">Smogmagica</rdfs:label>
+  <rdfs:comment xml:lang="en">Smogmagica is the sixteenth album of Le Orme released in 1975</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1975</releaseYear>
+</Album>
+
+<Album rdf:about="#Maxophone_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label xml:lang="en">Maxophone</rdfs:label>
+  <rdfs:comment xml:lang="en">Maxophone is the first album of Maxophone released in 1975</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1975</releaseYear>
+</Album>
+
+<Album rdf:about="#Io_Sono_Murple_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label xml:lang="en">Io Sono Murple</rdfs:label>
+  <rdfs:comment xml:lang="en">Io Sono Murple is the first album of Murple released in 1974</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1974</releaseYear>
+</Album>
+
+<Album rdf:about="#Zarathustra_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label xml:lang="en">Zarathustra</rdfs:label>
+  <rdfs:comment xml:lang="en">Zarathustra is the first album of Museo Rosenbach released in 1973</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</releaseYear>
+</Album>
+
+<Album rdf:about="#Opus_Avantra_Donella_Del_Monaco_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Lord_Cromwell_Plays_Suite_For_Seven_Vices_album"/>
+  <rdfs:label xml:lang="en">Opus Avantra Donella Del Monaco</rdfs:label>
+  <rdfs:comment xml:lang="en">Opus Avantra Donella Del Monaco is the first album of Opus Avantra released in 1974</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1974</releaseYear>
+</Album>
+
+<Album rdf:about="#Lord_Cromwell_Plays_Suite_For_Seven_Vices_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Allemanda_album"/>
+  <rdfs:label xml:lang="en">Lord Cromwell Plays Suite For Seven Vices</rdfs:label>
+  <rdfs:comment xml:lang="en">Lord Cromwell Plays Suite For Seven Vices is the second album of Opus Avantra released in 1975</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1975</releaseYear>
+</Album>
+
+<Album rdf:about="#Allemanda_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label xml:lang="en">Allemanda</rdfs:label>
+  <rdfs:comment xml:lang="en">Allemanda is the third album of Opus Avantra released in 1975</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1975</releaseYear>
+</Album>
+
+<Album rdf:about="#LUomo_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#LUomo__Valzer_Dei_Fiori_album"/>
+  <rdfs:label xml:lang="en">L'Uomo</rdfs:label>
+  <rdfs:comment xml:lang="en">L'Uomo is the first album of Osanna released in 1971</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1971</releaseYear>
+</Album>
+
+<Album rdf:about="#LUomo__Valzer_Dei_Fiori_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Preludio_Tema_Variazioni_Canzona_album"/>
+  <rdfs:label xml:lang="en">L'Uomo / Valzer Dei Fiori</rdfs:label>
+  <rdfs:comment xml:lang="en">L'Uomo / Valzer Dei Fiori is the second album of Osanna released in 1972</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</releaseYear>
+</Album>
+
+<Album rdf:about="#Preludio_Tema_Variazioni_Canzona_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Palepoli_album"/>
+  <rdfs:label xml:lang="en">Preludio Tema Variazioni Canzona</rdfs:label>
+  <rdfs:comment xml:lang="en">Preludio Tema Variazioni Canzona is the third album of Osanna released in 1972</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</releaseYear>
+</Album>
+
+<Album rdf:about="#Palepoli_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Canzona_There_Will_Be_Time__Haum_album"/>
+  <rdfs:label xml:lang="en">Palepoli</rdfs:label>
+  <rdfs:comment xml:lang="en">Palepoli is the fourth album of Osanna released in 1972</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</releaseYear>
+</Album>
+
+<Album rdf:about="#Canzona_There_Will_Be_Time__Haum_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Landscape_Of_Life_album"/>
+  <rdfs:label xml:lang="en">Canzona (There Will Be Time) / Haum!</rdfs:label>
+  <rdfs:comment xml:lang="en">Canzona (There Will Be Time) / Haum! is the fifth album of Osanna released in 1972</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</releaseYear>
+</Album>
+
+<Album rdf:about="#Landscape_Of_Life_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label xml:lang="en">Landscape Of Life</rdfs:label>
+  <rdfs:comment xml:lang="en">Landscape Of Life is the sixth album of Osanna released in 1974</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1974</releaseYear>
+</Album>
+
+<Album rdf:about="#Pierrot_Lunaire_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label xml:lang="en">Pierrot Lunaire</rdfs:label>
+  <rdfs:comment xml:lang="en">Pierrot Lunaire is the first album of Pierrot Lunaire released in 1974</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1974</releaseYear>
+</Album>
+
+<Album rdf:about="#Brennero_66__Per_Quelli_Come_Noi_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Vieni_Fuori_Keep_On_Running__LUomo_Di_Ieri_album"/>
+  <rdfs:label xml:lang="en">Brennero 66 / Per Quelli Come Noi</rdfs:label>
+  <rdfs:comment xml:lang="en">Brennero 66 / Per Quelli Come Noi is the first album of Pooh released in 1966</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1966</releaseYear>
+</Album>
+
+<Album rdf:about="#Vieni_Fuori_Keep_On_Running__LUomo_Di_Ieri_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Per_Quelli_Come_Noi_album"/>
+  <rdfs:label xml:lang="en">Vieni Fuori (Keep On Running) / L'Uomo Di Ieri</rdfs:label>
+  <rdfs:comment xml:lang="en">Vieni Fuori (Keep On Running) / L'Uomo Di Ieri is the second album of Pooh released in 1966</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1966</releaseYear>
+</Album>
+
+<Album rdf:about="#Per_Quelli_Come_Noi_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Bikini_Beat__Quello_Che_Non_Sai_album"/>
+  <rdfs:label xml:lang="en">Per Quelli Come Noi</rdfs:label>
+  <rdfs:comment xml:lang="en">Per Quelli Come Noi is the third album of Pooh released in 1966</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1966</releaseYear>
+</Album>
+
+<Album rdf:about="#Bikini_Beat__Quello_Che_Non_Sai_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Nel_Buio__Cose_Di_Questo_Mondo_album"/>
+  <rdfs:label xml:lang="en">Bikini Beat / Quello Che Non Sai</rdfs:label>
+  <rdfs:comment xml:lang="en">Bikini Beat / Quello Che Non Sai is the fourth album of Pooh released in 1966</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1966</releaseYear>
+</Album>
+
+<Album rdf:about="#Nel_Buio__Cose_Di_Questo_Mondo_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Piccola_Katy__Love_Me_Two_Times_album"/>
+  <rdfs:label xml:lang="en">Nel Buio / Cose Di Questo Mondo</rdfs:label>
+  <rdfs:comment xml:lang="en">Nel Buio / Cose Di Questo Mondo is the fifth album of Pooh released in 1967</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1967</releaseYear>
+</Album>
+
+<Album rdf:about="#Piccola_Katy__Love_Me_Two_Times_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#In_Silenzio__Piccola_Katy_album"/>
+  <rdfs:label xml:lang="en">Piccola Katy / Love Me Two Times</rdfs:label>
+  <rdfs:comment xml:lang="en">Piccola Katy / Love Me Two Times is the sixth album of Pooh released in 1968</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1968</releaseYear>
+</Album>
+
+<Album rdf:about="#In_Silenzio__Piccola_Katy_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Contrasto_album"/>
+  <rdfs:label xml:lang="en">In Silenzio / Piccola Katy</rdfs:label>
+  <rdfs:comment xml:lang="en">In Silenzio / Piccola Katy is the seventh album of Pooh released in 1968</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1968</releaseYear>
+</Album>
+
+<Album rdf:about="#Contrasto_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Mary_Ann_album"/>
+  <rdfs:label xml:lang="en">Contrasto</rdfs:label>
+  <rdfs:comment xml:lang="en">Contrasto is the eighth album of Pooh released in 1968</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1968</releaseYear>
+</Album>
+
+<Album rdf:about="#Mary_Ann_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Memorie_album"/>
+  <rdfs:label xml:lang="en">Mary Ann</rdfs:label>
+  <rdfs:comment xml:lang="en">Mary Ann is the ninth album of Pooh released in 1969</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1969</releaseYear>
+</Album>
+
+<Album rdf:about="#Memorie_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Good_Bye_Madama_Buttefly_album"/>
+  <rdfs:label xml:lang="en">Memorie</rdfs:label>
+  <rdfs:comment xml:lang="en">Memorie is the tenth album of Pooh released in 1969</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1969</releaseYear>
+</Album>
+
+<Album rdf:about="#Good_Bye_Madama_Buttefly_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Tanta_Voglia_Di_Lei__Tutto_Alle_Tre_album"/>
+  <rdfs:label xml:lang="en">Good Bye Madama Buttefly</rdfs:label>
+  <rdfs:comment xml:lang="en">Good Bye Madama Buttefly is the eleventh album of Pooh released in 1969</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1969</releaseYear>
+</Album>
+
+<Album rdf:about="#Tanta_Voglia_Di_Lei__Tutto_Alle_Tre_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Opera_Prima_album"/>
+  <rdfs:label xml:lang="en">Tanta Voglia Di Lei / Tutto Alle Tre</rdfs:label>
+  <rdfs:comment xml:lang="en">Tanta Voglia Di Lei / Tutto Alle Tre is the twelfth album of Pooh released in 1971</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1971</releaseYear>
+</Album>
+
+<Album rdf:about="#Opera_Prima_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Pensiero__A_Un_Minuto_DallAmore_album"/>
+  <rdfs:label xml:lang="en">Opera Prima</rdfs:label>
+  <rdfs:comment xml:lang="en">Opera Prima is the thirteenth album of Pooh released in 1971</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1971</releaseYear>
+</Album>
+
+<Album rdf:about="#Pensiero__A_Un_Minuto_DallAmore_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Noi_Due_Nel_Mondo_E_NellAnima__Nascer_Con_Te_album"/>
+  <rdfs:label xml:lang="en">Pensiero / A Un Minuto Dall'Amore</rdfs:label>
+  <rdfs:comment xml:lang="en">Pensiero / A Un Minuto Dall'Amore is the fourteenth album of Pooh released in 1971</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1971</releaseYear>
+</Album>
+
+<Album rdf:about="#Noi_Due_Nel_Mondo_E_NellAnima__Nascer_Con_Te_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Alessandra_album"/>
+  <rdfs:label xml:lang="en">Noi Due Nel Mondo E Nell'Anima / Nascerò Con Te</rdfs:label>
+  <rdfs:comment xml:lang="en">Noi Due Nel Mondo E Nell'Anima / Nascerò Con Te is the fifteenth album of Pooh released in 1972</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</releaseYear>
+</Album>
+
+<Album rdf:about="#Alessandra_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Cosa_Si_Pu_Dire_Di_Te_album"/>
+  <rdfs:label xml:lang="en">Alessandra</rdfs:label>
+  <rdfs:comment xml:lang="en">Alessandra is the sixteenth album of Pooh released in 1972</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</releaseYear>
+</Album>
+
+<Album rdf:about="#Cosa_Si_Pu_Dire_Di_Te_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Tu_Y_Yo_En_El_Mas_Alla_album"/>
+  <rdfs:label xml:lang="en">Cosa Si Può Dire Di Te?</rdfs:label>
+  <rdfs:comment xml:lang="en">Cosa Si Può Dire Di Te? is the seventeenth album of Pooh released in 1972</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</releaseYear>
+</Album>
+
+<Album rdf:about="#Tu_Y_Yo_En_El_Mas_Alla_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Tantos_Deseos_De_Ti_album"/>
+  <rdfs:label xml:lang="en">Tu Y Yo En El Mas Alla</rdfs:label>
+  <rdfs:comment xml:lang="en">Tu Y Yo En El Mas Alla is the eighteenth album of Pooh released in 1972</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</releaseYear>
+</Album>
+
+<Album rdf:about="#Tantos_Deseos_De_Ti_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Ill_Close_The_Door_Behind_Me_album"/>
+  <rdfs:label xml:lang="en">Tantos Deseos De Ti</rdfs:label>
+  <rdfs:comment xml:lang="en">Tantos Deseos De Ti is the nineteenth album of Pooh released in 1972</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</releaseYear>
+</Album>
+
+<Album rdf:about="#Ill_Close_The_Door_Behind_Me_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Pensamiento__Tantos_Deseos_De_Ti__Tutto_Alle_Tre__Terra_Desolata__Che_Favola_Sei_album"/>
+  <rdfs:label xml:lang="en">I'll Close The Door Behind Me</rdfs:label>
+  <rdfs:comment xml:lang="en">I'll Close The Door Behind Me is the twentieth album of Pooh released in 1972</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</releaseYear>
+</Album>
+
+<Album rdf:about="#Pensamiento__Tantos_Deseos_De_Ti__Tutto_Alle_Tre__Terra_Desolata__Che_Favola_Sei_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Pensiero__Quando_Una_Lei_Va_Via_album"/>
+  <rdfs:label xml:lang="en">Pensamiento / Tantos Deseos De Ti / Tutto Alle Tre / Terra Desolata / Che Favola Sei</rdfs:label>
+  <rdfs:comment xml:lang="en">Pensamiento / Tantos Deseos De Ti / Tutto Alle Tre / Terra Desolata / Che Favola Sei is the twenty-first album of Pooh released in 1973</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</releaseYear>
+</Album>
+
+<Album rdf:about="#Pensiero__Quando_Una_Lei_Va_Via_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Io_E_Te_Per_Altri_Giorni_album"/>
+  <rdfs:label xml:lang="en">Pensiero / Quando Una Lei Va Via</rdfs:label>
+  <rdfs:comment xml:lang="en">Pensiero / Quando Una Lei Va Via is the twenty-second album of Pooh released in 1973</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</releaseYear>
+</Album>
+
+<Album rdf:about="#Io_E_Te_Per_Altri_Giorni_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#I_Pooh_album"/>
+  <rdfs:label xml:lang="en">Io E Te Per Altri Giorni</rdfs:label>
+  <rdfs:comment xml:lang="en">Io E Te Per Altri Giorni is the twenty-third album of Pooh released in 1973</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</releaseYear>
+</Album>
+
+<Album rdf:about="#I_Pooh_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Revised_album"/>
+  <rdfs:label xml:lang="en">I Pooh</rdfs:label>
+  <rdfs:comment xml:lang="en">I Pooh is the twenty-fourth album of Pooh released in 1973</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</releaseYear>
+</Album>
+
+<Album rdf:about="#Revised_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Parsifal_album"/>
+  <rdfs:label xml:lang="en">Revised</rdfs:label>
+  <rdfs:comment xml:lang="en">Revised is the twenty-fifth album of Pooh released in 1973</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</releaseYear>
+</Album>
+
+<Album rdf:about="#Parsifal_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#19711974_album"/>
+  <rdfs:label xml:lang="en">Parsifal</rdfs:label>
+  <rdfs:comment xml:lang="en">Parsifal is the twenty-sixth album of Pooh released in 1973</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</releaseYear>
+</Album>
+
+<Album rdf:about="#19711974_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Per_Te_Qualcosa_Ancora_album"/>
+  <rdfs:label xml:lang="en">1971-1974</rdfs:label>
+  <rdfs:comment xml:lang="en">1971-1974 is the twenty-seventh album of Pooh released in 1974</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1974</releaseYear>
+</Album>
+
+<Album rdf:about="#Per_Te_Qualcosa_Ancora_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Se_Sai_Se_Puoi_Se_Vuoi_album"/>
+  <rdfs:label xml:lang="en">Per Te Qualcosa Ancora</rdfs:label>
+  <rdfs:comment xml:lang="en">Per Te Qualcosa Ancora is the twenty-eighth album of Pooh released in 1974</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1974</releaseYear>
+</Album>
+
+<Album rdf:about="#Se_Sai_Se_Puoi_Se_Vuoi_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Forse_Ancora_Poesia_album"/>
+  <rdfs:label xml:lang="en">Se Sai Se Puoi Se Vuoi</rdfs:label>
+  <rdfs:comment xml:lang="en">Se Sai Se Puoi Se Vuoi is the twenty-ninth album of Pooh released in 1974</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1974</releaseYear>
+</Album>
+
+<Album rdf:about="#Forse_Ancora_Poesia_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Ninna_Nanna_album"/>
+  <rdfs:label xml:lang="en">Forse Ancora Poesia</rdfs:label>
+  <rdfs:comment xml:lang="en">Forse Ancora Poesia is the thirtieth album of Pooh released in 1975</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1975</releaseYear>
+</Album>
+
+<Album rdf:about="#Ninna_Nanna_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Un_Po_Del_Nostro_Tempo_Migliore_album"/>
+  <rdfs:label xml:lang="en">Ninna Nanna</rdfs:label>
+  <rdfs:comment xml:lang="en">Ninna Nanna is the thirty-first album of Pooh released in 1975</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1975</releaseYear>
+</Album>
+
+<Album rdf:about="#Un_Po_Del_Nostro_Tempo_Migliore_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Mediterraneo_album"/>
+  <rdfs:label xml:lang="en">Un Po' Del Nostro Tempo Migliore</rdfs:label>
+  <rdfs:comment xml:lang="en">Un Po' Del Nostro Tempo Migliore is the thirty-second album of Pooh released in 1975</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1975</releaseYear>
+</Album>
+
+<Album rdf:about="#Mediterraneo_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#La_Solita_Storia_album"/>
+  <rdfs:label xml:lang="en">Mediterraneo</rdfs:label>
+  <rdfs:comment xml:lang="en">Mediterraneo is the thirty-third album of Pooh released in 1975</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1975</releaseYear>
+</Album>
+
+<Album rdf:about="#La_Solita_Storia_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label xml:lang="en">La Solita Storia</rdfs:label>
+  <rdfs:comment xml:lang="en">La Solita Storia is the thirty-fourth album of Pooh released in 1975</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1975</releaseYear>
+</Album>
+
+<Album rdf:about="#La_Carrozza_Di_Hans__Impressioni_Di_Settembre_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Storia_Di_Un_Minuto_album"/>
+  <rdfs:label xml:lang="en">La Carrozza Di Hans / Impressioni Di Settembre</rdfs:label>
+  <rdfs:comment xml:lang="en">La Carrozza Di Hans / Impressioni Di Settembre is the first album of Premiata Forneria Marconi released in 1971</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1971</releaseYear>
+</Album>
+
+<Album rdf:about="#Storia_Di_Un_Minuto_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Per_Un_Amico_album"/>
+  <rdfs:label xml:lang="en">Storia Di Un Minuto</rdfs:label>
+  <rdfs:comment xml:lang="en">Storia Di Un Minuto is the second album of Premiata Forneria Marconi released in 1972</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</releaseYear>
+</Album>
+
+<Album rdf:about="#Per_Un_Amico_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Celebration_album"/>
+  <rdfs:label xml:lang="en">Per Un Amico</rdfs:label>
+  <rdfs:comment xml:lang="en">Per Un Amico is the third album of Premiata Forneria Marconi released in 1972</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</releaseYear>
+</Album>
+
+<Album rdf:about="#Celebration_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Photos_Of_Ghosts_album"/>
+  <rdfs:label xml:lang="en">Celebration</rdfs:label>
+  <rdfs:comment xml:lang="en">Celebration is the fourth album of Premiata Forneria Marconi released in 1973</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</releaseYear>
+</Album>
+
+<Album rdf:about="#Photos_Of_Ghosts_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Dolcissima_Maria__Via_Lumire_album"/>
+  <rdfs:label xml:lang="en">Photos Of Ghosts</rdfs:label>
+  <rdfs:comment xml:lang="en">Photos Of Ghosts is the fifth album of Premiata Forneria Marconi released in 1973</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</releaseYear>
+</Album>
+
+<Album rdf:about="#Dolcissima_Maria__Via_Lumire_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Four_Holes_In_The_Ground__The_World_Became_The_World_album"/>
+  <rdfs:label xml:lang="en">Dolcissima Maria / Via Lumière</rdfs:label>
+  <rdfs:comment xml:lang="en">Dolcissima Maria / Via Lumière is the sixth album of Premiata Forneria Marconi released in 1974</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1974</releaseYear>
+</Album>
+
+<Album rdf:about="#Four_Holes_In_The_Ground__The_World_Became_The_World_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Live_In_USA_album"/>
+  <rdfs:label xml:lang="en">Four Holes In The Ground / The World Became The World</rdfs:label>
+  <rdfs:comment xml:lang="en">Four Holes In The Ground / The World Became The World is the seventh album of Premiata Forneria Marconi released in 1974</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1974</releaseYear>
+</Album>
+
+<Album rdf:about="#Live_In_USA_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#The_World_Became_The_World__La_Carrozza_Di_Hans_Live_album"/>
+  <rdfs:label xml:lang="en">Live In U.S.A.</rdfs:label>
+  <rdfs:comment xml:lang="en">Live In U.S.A. is the eighth album of Premiata Forneria Marconi released in 1974</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1974</releaseYear>
+</Album>
+
+<Album rdf:about="#The_World_Became_The_World__La_Carrozza_Di_Hans_Live_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#LIsola_Di_Niente_album"/>
+  <rdfs:label xml:lang="en">The World Became The World / La Carrozza Di Hans (Live)</rdfs:label>
+  <rdfs:comment xml:lang="en">The World Became The World / La Carrozza Di Hans (Live) is the ninth album of Premiata Forneria Marconi released in 1974</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1974</releaseYear>
+</Album>
+
+<Album rdf:about="#LIsola_Di_Niente_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#The_World_Became_The_World_album"/>
+  <rdfs:label xml:lang="en">L'Isola Di Niente</rdfs:label>
+  <rdfs:comment xml:lang="en">L'Isola Di Niente is the tenth album of Premiata Forneria Marconi released in 1974</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1974</releaseYear>
+</Album>
+
+<Album rdf:about="#The_World_Became_The_World_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Celebration__Mr_Nine_Till_Five_album"/>
+  <rdfs:label xml:lang="en">The World Became The World</rdfs:label>
+  <rdfs:comment xml:lang="en">The World Became The World is the eleventh album of Premiata Forneria Marconi released in 1974</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1974</releaseYear>
+</Album>
+
+<Album rdf:about="#Celebration__Mr_Nine_Till_Five_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Chocolate_Kings_album"/>
+  <rdfs:label xml:lang="en">Celebration / Mr Nine Till Five</rdfs:label>
+  <rdfs:comment xml:lang="en">Celebration / Mr Nine Till Five is the twelfth album of Premiata Forneria Marconi released in 1975</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1975</releaseYear>
+</Album>
+
+<Album rdf:about="#Chocolate_Kings_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Chocolate_Kings__Harlequin_album"/>
+  <rdfs:label xml:lang="en">Chocolate Kings</rdfs:label>
+  <rdfs:comment xml:lang="en">Chocolate Kings is the thirteenth album of Premiata Forneria Marconi released in 1975</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1975</releaseYear>
+</Album>
+
+<Album rdf:about="#Chocolate_Kings__Harlequin_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label xml:lang="en">Chocolate Kings / Harlequin</rdfs:label>
+  <rdfs:comment xml:lang="en">Chocolate Kings / Harlequin is the fourteenth album of Premiata Forneria Marconi released in 1975</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1975</releaseYear>
+</Album>
+
+<Album rdf:about="#Quella_Vecchia_Locanda_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Il_Tempo_Della_Gioia_album"/>
+  <rdfs:label xml:lang="en">Quella Vecchia Locanda</rdfs:label>
+  <rdfs:comment xml:lang="en">Quella Vecchia Locanda is the first album of Quella Vecchia Locanda released in 1972</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</releaseYear>
+</Album>
+
+<Album rdf:about="#Il_Tempo_Della_Gioia_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label xml:lang="en">Il Tempo Della Gioia</rdfs:label>
+  <rdfs:comment xml:lang="en">Il Tempo Della Gioia is the second album of Quella Vecchia Locanda released in 1974</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1974</releaseYear>
+</Album>
+
+<Album rdf:about="#PerUn_Mondo_Di_Cristallo_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label xml:lang="en">Per....Un Mondo Di Cristallo</rdfs:label>
+  <rdfs:comment xml:lang="en">Per....Un Mondo Di Cristallo is the first album of Raccomandata Ricevuta Ritorno released in 1972</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</releaseYear>
+</Album>
+
+<Album rdf:about="#Saint_Just_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#La_Casa_Del_Lago_album"/>
+  <rdfs:label xml:lang="en">Saint Just</rdfs:label>
+  <rdfs:comment xml:lang="en">Saint Just is the first album of Saint Just released in 1973</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</releaseYear>
+</Album>
+
+<Album rdf:about="#La_Casa_Del_Lago_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label xml:lang="en">La Casa Del Lago</rdfs:label>
+  <rdfs:comment xml:lang="en">La Casa Del Lago is the second album of Saint Just released in 1974</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1974</releaseYear>
+</Album>
+
+<Album rdf:about="#Dedicato_A_Frazz_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label xml:lang="en">Dedicato A Frazz</rdfs:label>
+  <rdfs:comment xml:lang="en">Dedicato A Frazz is the first album of Semiramis  released in 1973</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</releaseYear>
+</Album>
+
+<Album rdf:about="#Sensations_Fix_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Fragments_Of_Light_album"/>
+  <rdfs:label xml:lang="en">Sensation's Fix</rdfs:label>
+  <rdfs:comment xml:lang="en">Sensation's Fix is the first album of Sensations' Fix released in 1974</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1974</releaseYear>
+</Album>
+
+<Album rdf:about="#Fragments_Of_Light_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Portable_Madness_album"/>
+  <rdfs:label xml:lang="en">Fragments Of Light</rdfs:label>
+  <rdfs:comment xml:lang="en">Fragments Of Light is the second album of Sensations' Fix released in 1974</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1974</releaseYear>
+</Album>
+
+<Album rdf:about="#Portable_Madness_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label xml:lang="en">Portable Madness</rdfs:label>
+  <rdfs:comment xml:lang="en">Portable Madness is the third album of Sensations' Fix released in 1974</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1974</releaseYear>
+</Album>
+
+<Album rdf:about="#Le_Idee_Di_Oggi_Per_La_Musica_Di_Domani_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Alice_Nel_Vento_album"/>
+  <rdfs:label xml:lang="en">Le Idee Di Oggi Per La Musica Di Domani</rdfs:label>
+  <rdfs:comment xml:lang="en">Le Idee Di Oggi Per La Musica Di Domani is the first album of Stormy Six released in 1969</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1969</releaseYear>
+</Album>
+
+<Album rdf:about="#Alice_Nel_Vento_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Sotto_Il_Bamb_album"/>
+  <rdfs:label xml:lang="en">Alice Nel Vento</rdfs:label>
+  <rdfs:comment xml:lang="en">Alice Nel Vento is the second album of Stormy Six released in 1970</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1970</releaseYear>
+</Album>
+
+<Album rdf:about="#Sotto_Il_Bamb_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#LUnit_album"/>
+  <rdfs:label xml:lang="en">Sotto Il Bam-bù</rdfs:label>
+  <rdfs:comment xml:lang="en">Sotto Il Bam-bù is the third album of Stormy Six released in 1972</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</releaseYear>
+</Album>
+
+<Album rdf:about="#LUnit_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Guarda_Gi_Dalla_Pianura_album"/>
+  <rdfs:label xml:lang="en">L'Unità</rdfs:label>
+  <rdfs:comment xml:lang="en">L'Unità is the fourth album of Stormy Six released in 1972</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</releaseYear>
+</Album>
+
+<Album rdf:about="#Guarda_Gi_Dalla_Pianura_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nextAlbum rdf:resource="#Un_Biglietto_Del_Tram_album"/>
+  <rdfs:label xml:lang="en">Guarda Giù Dalla Pianura</rdfs:label>
+  <rdfs:comment xml:lang="en">Guarda Giù Dalla Pianura is the fifth album of Stormy Six released in 1974</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1974</releaseYear>
+</Album>
+
+<Album rdf:about="#Un_Biglietto_Del_Tram_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label xml:lang="en">Un Biglietto Del Tram</rdfs:label>
+  <rdfs:comment xml:lang="en">Un Biglietto Del Tram is the sixth album of Stormy Six released in 1975</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1975</releaseYear>
+</Album>
+
+
+</rdf:RDF>
