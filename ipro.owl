@@ -26,7 +26,9 @@
 
     <!-- http://www.semanticweb.org/ipro#Album -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ipro#Album"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/ipro#Album">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/list.owl#List"/>
+    </owl:Class>
     
 
 
@@ -54,7 +56,9 @@
 
     <!-- http://www.semanticweb.org/ipro#Discography -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ipro#Discography"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/ipro#Discography">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/list.owl#List"/>
+    </owl:Class>
     
 
 

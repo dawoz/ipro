@@ -14,7 +14,8 @@
 #################################################################
 
 ###  http://www.semanticweb.org/ipro#Album
-:Album rdf:type owl:Class .
+:Album rdf:type owl:Class ;
+       rdfs:subClassOf <http://www.ontologydesignpatterns.org/cp/owl/list.owl#List> .
 
 
 ###  http://www.semanticweb.org/ipro#Band
@@ -32,7 +33,8 @@
 
 
 ###  http://www.semanticweb.org/ipro#Discography
-:Discography rdf:type owl:Class .
+:Discography rdf:type owl:Class ;
+             rdfs:subClassOf <http://www.ontologydesignpatterns.org/cp/owl/list.owl#List> .
 
 
 ###  http://www.semanticweb.org/ipro#Drummer
