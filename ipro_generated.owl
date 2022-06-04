@@ -45,6 +45,7 @@
 
 <owl:ObjectProperty rdf:about="#previousRelease">
   <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/list.owl#previousItem"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
   <rdfs:domain rdf:resource="#Release"/>
   <rdfs:range rdf:resource="#Release"/>
   <owl:inverseOf rdf:resource="#nextRelease"/>
@@ -52,6 +53,7 @@
 
 <owl:ObjectProperty rdf:about="#nextRelease">
   <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/list.owl#nextItem"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
   <rdfs:domain rdf:resource="#Release"/>
   <rdfs:range rdf:resource="#Release"/>
   <owl:inverseOf rdf:resource="#previousRelease"/>
@@ -891,14 +893,9 @@ The pioneer of Italian Progressive groups, PREMIATA FORNERIA MARCONI (PFM for sh
   <containsRelease rdf:resource="#Celebration_release"/>
   <containsRelease rdf:resource="#Photos_Of_Ghosts_release"/>
   <containsRelease rdf:resource="#Dolcissima_Maria_Via_Lumiere_release"/>
-  <containsRelease rdf:resource="#Four_Holes_In_The_Ground_The_World_Became_The_World_release"/>
-  <containsRelease rdf:resource="#Live_In_USA_release"/>
-  <containsRelease rdf:resource="#The_World_Became_The_World_La_Carrozza_Di_Hans_Live_release"/>
   <containsRelease rdf:resource="#L_Isola_Di_Niente_release"/>
   <containsRelease rdf:resource="#The_World_Became_The_World_release"/>
-  <containsRelease rdf:resource="#Celebration_Mr_Nine_Till_Five_release"/>
   <containsRelease rdf:resource="#Chocolate_Kings_release"/>
-  <containsRelease rdf:resource="#Chocolate_Kings_Harlequin_release"/>
   <containsRelease rdf:resource="#Prime_Impressioni_release"/>
   <rdfs:label xml:lang="en">Discography of Premiata Forneria Marconi</rdfs:label>
   <rdfs:comment xml:lang="en">Discography of Italian progressive rock band Premiata Forneria Marconi</rdfs:comment>
@@ -2882,16 +2879,16 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 <Release rdf:about="#Celebration_release">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <ofAlbum rdf:resource="#Celebration_album"/>
-  <nextRelease rdf:resource="#Prime_Impressioni_release"/>
+  <nextRelease rdf:resource="#Photos_Of_Ghosts_release"/>
   <rdfs:label xml:lang="en">Celebration studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Celebration studio release is the fifteenth release of Premiata Forneria Marconi, published in 1976</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1976</releaseYear>
+  <rdfs:comment xml:lang="en">Celebration studio release is the fourth release of Premiata Forneria Marconi, published in 1973</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</releaseYear>
 </Release>
 
 <Album rdf:about="#Celebration_album">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Celebration</rdfs:label>
-  <rdfs:comment xml:lang="en">Celebration is the fifteenth album of Premiata Forneria Marconi released in 1976</rdfs:comment>
+  <rdfs:comment xml:lang="en">Celebration is the fourth album of Premiata Forneria Marconi released in 1973</rdfs:comment>
 </Album>
 
 <Release rdf:about="#Photos_Of_Ghosts_release">
@@ -2912,7 +2909,7 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 <Release rdf:about="#Dolcissima_Maria_Via_Lumiere_release">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <ofAlbum rdf:resource="#Dolcissima_Maria_Via_Lumiere_album"/>
-  <nextRelease rdf:resource="#Four_Holes_In_The_Ground_The_World_Became_The_World_release"/>
+  <nextRelease rdf:resource="#L_Isola_Di_Niente_release"/>
   <rdfs:label xml:lang="en">Dolcissima Maria / Via Lumière studio release</rdfs:label>
   <rdfs:comment xml:lang="en">Dolcissima Maria / Via Lumière studio release is the sixth release of Premiata Forneria Marconi, published in 1974</rdfs:comment>
   <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1974</releaseYear>
@@ -2924,138 +2921,63 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <rdfs:comment xml:lang="en">Dolcissima Maria / Via Lumière is the sixth album of Premiata Forneria Marconi released in 1974</rdfs:comment>
 </Album>
 
-<Release rdf:about="#Four_Holes_In_The_Ground_The_World_Became_The_World_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#Four_Holes_In_The_Ground_The_World_Became_The_World_album"/>
-  <nextRelease rdf:resource="#Live_In_USA_release"/>
-  <rdfs:label xml:lang="en">Four Holes In The Ground / The World Became The World studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Four Holes In The Ground / The World Became The World studio release is the seventh release of Premiata Forneria Marconi, published in 1974</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1974</releaseYear>
-</Release>
-
-<Album rdf:about="#Four_Holes_In_The_Ground_The_World_Became_The_World_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">Four Holes In The Ground / The World Became The World</rdfs:label>
-  <rdfs:comment xml:lang="en">Four Holes In The Ground / The World Became The World is the seventh album of Premiata Forneria Marconi released in 1974</rdfs:comment>
-</Album>
-
-<Release rdf:about="#Live_In_USA_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#Live_In_USA_album"/>
-  <nextRelease rdf:resource="#The_World_Became_The_World_La_Carrozza_Di_Hans_Live_release"/>
-  <rdfs:label xml:lang="en">Live In U.S.A. studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Live In U.S.A. studio release is the eighth release of Premiata Forneria Marconi, published in 1974</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1974</releaseYear>
-</Release>
-
-<Album rdf:about="#Live_In_USA_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">Live In U.S.A.</rdfs:label>
-  <rdfs:comment xml:lang="en">Live In U.S.A. is the eighth album of Premiata Forneria Marconi released in 1974</rdfs:comment>
-</Album>
-
-<Release rdf:about="#The_World_Became_The_World_La_Carrozza_Di_Hans_Live_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#The_World_Became_The_World_La_Carrozza_Di_Hans_Live_album"/>
-  <nextRelease rdf:resource="#L_Isola_Di_Niente_release"/>
-  <rdfs:label xml:lang="en">The World Became The World / La Carrozza Di Hans (Live) studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">The World Became The World / La Carrozza Di Hans (Live) studio release is the ninth release of Premiata Forneria Marconi, published in 1974</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1974</releaseYear>
-</Release>
-
-<Album rdf:about="#The_World_Became_The_World_La_Carrozza_Di_Hans_Live_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">The World Became The World / La Carrozza Di Hans (Live)</rdfs:label>
-  <rdfs:comment xml:lang="en">The World Became The World / La Carrozza Di Hans (Live) is the ninth album of Premiata Forneria Marconi released in 1974</rdfs:comment>
-</Album>
-
 <Release rdf:about="#L_Isola_Di_Niente_release">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <ofAlbum rdf:resource="#L_Isola_Di_Niente_album"/>
   <nextRelease rdf:resource="#The_World_Became_The_World_release"/>
   <rdfs:label xml:lang="en">L'Isola Di Niente studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">L'Isola Di Niente studio release is the tenth release of Premiata Forneria Marconi, published in 1974</rdfs:comment>
+  <rdfs:comment xml:lang="en">L'Isola Di Niente studio release is the seventh release of Premiata Forneria Marconi, published in 1974</rdfs:comment>
   <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1974</releaseYear>
 </Release>
 
 <Album rdf:about="#L_Isola_Di_Niente_album">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">L'Isola Di Niente</rdfs:label>
-  <rdfs:comment xml:lang="en">L'Isola Di Niente is the tenth album of Premiata Forneria Marconi released in 1974</rdfs:comment>
+  <rdfs:comment xml:lang="en">L'Isola Di Niente is the seventh album of Premiata Forneria Marconi released in 1974</rdfs:comment>
 </Album>
 
 <Release rdf:about="#The_World_Became_The_World_release">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <ofAlbum rdf:resource="#The_World_Became_The_World_album"/>
-  <nextRelease rdf:resource="#Celebration_Mr_Nine_Till_Five_release"/>
+  <nextRelease rdf:resource="#Chocolate_Kings_release"/>
   <rdfs:label xml:lang="en">The World Became The World studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">The World Became The World studio release is the eleventh release of Premiata Forneria Marconi, published in 1974</rdfs:comment>
+  <rdfs:comment xml:lang="en">The World Became The World studio release is the eighth release of Premiata Forneria Marconi, published in 1974</rdfs:comment>
   <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1974</releaseYear>
 </Release>
 
 <Album rdf:about="#The_World_Became_The_World_album">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">The World Became The World</rdfs:label>
-  <rdfs:comment xml:lang="en">The World Became The World is the eleventh album of Premiata Forneria Marconi released in 1974</rdfs:comment>
-</Album>
-
-<Release rdf:about="#Celebration_Mr_Nine_Till_Five_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#Celebration_Mr_Nine_Till_Five_album"/>
-  <nextRelease rdf:resource="#Chocolate_Kings_release"/>
-  <rdfs:label xml:lang="en">Celebration / Mr Nine Till Five studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Celebration / Mr Nine Till Five studio release is the twelfth release of Premiata Forneria Marconi, published in 1975</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1975</releaseYear>
-</Release>
-
-<Album rdf:about="#Celebration_Mr_Nine_Till_Five_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">Celebration / Mr Nine Till Five</rdfs:label>
-  <rdfs:comment xml:lang="en">Celebration / Mr Nine Till Five is the twelfth album of Premiata Forneria Marconi released in 1975</rdfs:comment>
+  <rdfs:comment xml:lang="en">The World Became The World is the eighth album of Premiata Forneria Marconi released in 1974</rdfs:comment>
 </Album>
 
 <Release rdf:about="#Chocolate_Kings_release">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <ofAlbum rdf:resource="#Chocolate_Kings_album"/>
-  <nextRelease rdf:resource="#Chocolate_Kings_Harlequin_release"/>
+  <nextRelease rdf:resource="#Prime_Impressioni_release"/>
   <rdfs:label xml:lang="en">Chocolate Kings studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Chocolate Kings studio release is the thirteenth release of Premiata Forneria Marconi, published in 1975</rdfs:comment>
+  <rdfs:comment xml:lang="en">Chocolate Kings studio release is the ninth release of Premiata Forneria Marconi, published in 1975</rdfs:comment>
   <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1975</releaseYear>
 </Release>
 
 <Album rdf:about="#Chocolate_Kings_album">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Chocolate Kings</rdfs:label>
-  <rdfs:comment xml:lang="en">Chocolate Kings is the thirteenth album of Premiata Forneria Marconi released in 1975</rdfs:comment>
-</Album>
-
-<Release rdf:about="#Chocolate_Kings_Harlequin_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#Chocolate_Kings_Harlequin_album"/>
-  <nextRelease rdf:resource="#Celebration_release"/>
-  <rdfs:label xml:lang="en">Chocolate Kings / Harlequin studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Chocolate Kings / Harlequin studio release is the fourteenth release of Premiata Forneria Marconi, published in 1975</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1975</releaseYear>
-</Release>
-
-<Album rdf:about="#Chocolate_Kings_Harlequin_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">Chocolate Kings / Harlequin</rdfs:label>
-  <rdfs:comment xml:lang="en">Chocolate Kings / Harlequin is the fourteenth album of Premiata Forneria Marconi released in 1975</rdfs:comment>
+  <rdfs:comment xml:lang="en">Chocolate Kings is the ninth album of Premiata Forneria Marconi released in 1975</rdfs:comment>
 </Album>
 
 <Release rdf:about="#Prime_Impressioni_release">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <ofAlbum rdf:resource="#Prime_Impressioni_album"/>
   <rdfs:label xml:lang="en">Prime Impressioni studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Prime Impressioni studio release is the sixteenth release of Premiata Forneria Marconi, published in 1976</rdfs:comment>
+  <rdfs:comment xml:lang="en">Prime Impressioni studio release is the tenth release of Premiata Forneria Marconi, published in 1976</rdfs:comment>
   <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1976</releaseYear>
 </Release>
 
 <Album rdf:about="#Prime_Impressioni_album">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Prime Impressioni</rdfs:label>
-  <rdfs:comment xml:lang="en">Prime Impressioni is the sixteenth album of Premiata Forneria Marconi released in 1976</rdfs:comment>
+  <rdfs:comment xml:lang="en">Prime Impressioni is the tenth album of Premiata Forneria Marconi released in 1976</rdfs:comment>
 </Album>
 
 <Release rdf:about="#Quella_Vecchia_Locanda_release">
