@@ -10,6 +10,19 @@
                                    owl:imports <http://www.ontologydesignpatterns.org/cp/owl/list.owl> .
 
 #################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/ipro#ofAlbum
+:ofAlbum rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/cp/owl/bag.owl#itemContent> ;
+         rdf:type owl:FunctionalProperty ,
+                  owl:InverseFunctionalProperty ;
+         rdfs:domain :Release ;
+         rdfs:range :Album .
+
+
+#################################################################
 #    Classes
 #################################################################
 
@@ -93,13 +106,19 @@
        rdfs:subClassOf :Keyboard .
 
 
+###  http://www.semanticweb.org/ipro#Release
+:Release rdf:type owl:Class ;
+         rdfs:subClassOf <http://www.ontologydesignpatterns.org/cp/owl/list.owl#ListItem> .
+
+
 ###  http://www.semanticweb.org/ipro#Singer
 :Singer rdf:type owl:Class ;
         rdfs:subClassOf :Musician .
 
 
 ###  http://www.semanticweb.org/ipro#Song
-:Song rdf:type owl:Class .
+:Song rdf:type owl:Class ;
+      rdfs:subClassOf <http://www.ontologydesignpatterns.org/cp/owl/list.owl#ListItem> .
 
 
 ###  http://www.semanticweb.org/ipro#Synthesizer
