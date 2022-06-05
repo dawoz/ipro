@@ -61,19 +61,27 @@
 
 <owl:DatatypeProperty rdf:about="#wikidataIri">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-  <rdfs:domain rdf:resource="#Band"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+  <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
   <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
 </owl:DatatypeProperty>
 
 <owl:DatatypeProperty rdf:about="#discogsId">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-  <rdfs:domain rdf:resource="#Band"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+  <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
   <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
 </owl:DatatypeProperty>
 
 <owl:DatatypeProperty rdf:about="#progarchivesId">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-  <rdfs:domain rdf:resource="#Band"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+  <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#imageUrl">
+  <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
   <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
 </owl:DatatypeProperty>
 
@@ -81,11 +89,6 @@
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
   <rdfs:domain rdf:resource="#Band"/>
   <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-</owl:DatatypeProperty>
-
-<owl:DatatypeProperty rdf:about="#imageUrl">
-  <rdfs:domain rdf:resource="#Band"/>
-  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
 </owl:DatatypeProperty>
 
 <owl:DatatypeProperty rdf:about="#releaseYear">
@@ -269,9 +272,7 @@ Whilst certainly not typical of the RPI genre AREA nevertheless remain an outsta
 <Discography rdf:about="#Area_discography">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <containsRelease rdf:resource="#Arbeit_Macht_Frei_Il_Lavoro_Rende_Liberi_release"/>
-  <containsRelease rdf:resource="#L_Internazionale_release"/>
   <containsRelease rdf:resource="#Caution_Radiation_Area_release"/>
-  <containsRelease rdf:resource="#AreAzione_release"/>
   <containsRelease rdf:resource="#Crac_release"/>
   <containsRelease rdf:resource="#Maledetti_Maudits_release"/>
   <rdfs:label xml:lang="en">Discography of Area</rdfs:label>
@@ -321,13 +322,12 @@ BANCO DEL MUTUO SOCCORSO, particularly the first three albums, is an essential e
 
 <Discography rdf:about="#Banco_del_Mutuo_Soccorso_discography">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <containsRelease rdf:resource="#Darwin_release"/>
   <containsRelease rdf:resource="#Banco_Del_Mutuo_Soccorso_release"/>
-  <containsRelease rdf:resource="#Non_Mi_Rompete_La_Citta_Sottile_release"/>
+  <containsRelease rdf:resource="#Darwin_release"/>
   <containsRelease rdf:resource="#Io_Sono_Nato_Libero_release"/>
-  <containsRelease rdf:resource="#Banco_release"/>
   <containsRelease rdf:resource="#Garofano_Rosso_Colonna_Sonora_Originale_Del_Film_release"/>
   <containsRelease rdf:resource="#Come_In_Un_Ultima_Cena_release"/>
+  <containsRelease rdf:resource="#As_In_A_Last_Supper_release"/>
   <rdfs:label xml:lang="en">Discography of Banco Del Mutuo Soccorso</rdfs:label>
   <rdfs:comment xml:lang="en">Discography of Italian progressive rock band Banco Del Mutuo Soccorso</rdfs:comment>
 </Discography>
@@ -416,16 +416,9 @@ Probably the only one worthy of high praise is their third "Sognando E Risognand
 
 <Discography rdf:about="#Formula_3_discography">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <containsRelease rdf:resource="#Questo_Folle_Sentimento_release"/>
-  <containsRelease rdf:resource="#Sole_Giallo_Sole_Nero_release"/>
-  <containsRelease rdf:resource="#Nananano_release"/>
   <containsRelease rdf:resource="#Dies_Irae_release"/>
-  <containsRelease rdf:resource="#Nessuno_Nessuno_Eppur_Mi_Son_Scordato_Di_Te_release"/>
-  <containsRelease rdf:resource="#La_Folle_Corsa_release"/>
   <containsRelease rdf:resource="#Formula_3_release"/>
   <containsRelease rdf:resource="#Sognando_E_Risognando_release"/>
-  <containsRelease rdf:resource="#La_Ciliegia_Non_E_Di_Plastica_release"/>
-  <containsRelease rdf:resource="#Rapsodia_Di_Radius_Bambina_Sbagliata_release"/>
   <containsRelease rdf:resource="#La_Grande_Casa_release"/>
   <rdfs:label xml:lang="en">Discography of Formula 3</rdfs:label>
   <rdfs:comment xml:lang="en">Discography of Italian progressive rock band Formula 3</rdfs:comment>
@@ -473,8 +466,6 @@ The band is again active with more releases and touring.</rdfs:comment>
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <containsRelease rdf:resource="#Profondo_Rosso_Colonna_Sonora_Originale_Del_Film_release"/>
   <containsRelease rdf:resource="#Roller_release"/>
-  <containsRelease rdf:resource="#Suspiria_Musiche_Dalla_Colonna_Sonora_Originale_Del_Film_release"/>
-  <containsRelease rdf:resource="#Chi_release"/>
   <rdfs:label xml:lang="en">Discography of Goblin</rdfs:label>
   <rdfs:comment xml:lang="en">Discography of Italian progressive rock band Goblin</rdfs:comment>
 </Discography>
@@ -496,7 +487,6 @@ I TEOREMI is recommended for listeners who like progressive with a prominent har
 <Discography rdf:about="#I_Teoremi_discography">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <containsRelease rdf:resource="#I_Teoremi_release"/>
-  <containsRelease rdf:resource="#Sognare_Tutte_Le_Cose_release"/>
   <rdfs:label xml:lang="en">Discography of I Teoremi</rdfs:label>
   <rdfs:comment xml:lang="en">Discography of Italian progressive rock band I Teoremi</rdfs:comment>
 </Discography>
@@ -519,12 +509,8 @@ On the strength of "Ys" alone IL BALLETTO DI BRONZO are regarded as one of the m
 
 <Discography rdf:about="#Il_Balletto_di_Bronzo_discography">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <containsRelease rdf:resource="#Neve_Calda__release"/>
   <containsRelease rdf:resource="#Sirio_2222_release"/>
-  <containsRelease rdf:resource="#Si_Mama_Mama_Meditazione_release"/>
-  <containsRelease rdf:resource="#Nieve_Calida_release"/>
   <containsRelease rdf:resource="#Ys_release"/>
-  <containsRelease rdf:resource="#La_Tua_Casa_Comoda_Donna_Vittoria_release"/>
   <rdfs:label xml:lang="en">Discography of Il Balletto Di Bronzo</rdfs:label>
   <rdfs:comment xml:lang="en">Discography of Italian progressive rock band Il Balletto Di Bronzo</rdfs:comment>
 </Discography>
@@ -568,6 +554,7 @@ Italian seventies progressive rock band playing dynamic prog with many rhythm ch
   <containsRelease rdf:resource="#La_Bibbia_release"/>
   <containsRelease rdf:resource="#Io_Come_Io_release"/>
   <containsRelease rdf:resource="#Contaminazione_release"/>
+  <containsRelease rdf:resource="#Contamination_release"/>
   <rdfs:label xml:lang="en">Discography of Il Rovescio Della Medaglia</rdfs:label>
   <rdfs:comment xml:lang="en">Discography of Italian progressive rock band Il Rovescio Della Medaglia</rdfs:comment>
 </Discography>
@@ -633,8 +620,6 @@ A commercial single released on Grog in 1976 by LM Special was in fact by LATTE 
 <Discography rdf:about="#Latte_e_Miele_discography">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <containsRelease rdf:resource="#Passio_Secundum_Mattheum_release"/>
-  <containsRelease rdf:resource="#Rimani_Nella_Mia_Vita_release"/>
-  <containsRelease rdf:resource="#Getzemani_Il_Re_Dei_Giudei_release"/>
   <containsRelease rdf:resource="#Papillon_release"/>
   <containsRelease rdf:resource="#Aquile_E_Scoiattoli_release"/>
   <rdfs:label xml:lang="en">Discography of Latte E Miele</rdfs:label>
@@ -659,23 +644,12 @@ Their story goes on. After "Piccola Rapsodia Dell' Ape" (1980), in 1982 the band
 
 <Discography rdf:about="#Le_Orme_discography">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <containsRelease rdf:resource="#Fiori_E_Colori_release"/>
-  <containsRelease rdf:resource="#Milano_1968_I_Miei_Sogni_release"/>
-  <containsRelease rdf:resource="#Senti_L_Estate_Che_Torna_release"/>
   <containsRelease rdf:resource="#Ad_Gloriam_release"/>
-  <containsRelease rdf:resource="#Irene_Casa_Mia_release"/>
-  <containsRelease rdf:resource="#L_Aurora_Delle_Orme_release"/>
-  <containsRelease rdf:resource="#Fiori_Di_Giglio_release"/>
-  <containsRelease rdf:resource="#L_Aurora_Finita_La_Scuola_release"/>
-  <containsRelease rdf:resource="#Sguardo_Verso_Il_Cielo_Cemento_Armato_release"/>
   <containsRelease rdf:resource="#Collage_release"/>
   <containsRelease rdf:resource="#Uomo_Di_Pezza_release"/>
   <containsRelease rdf:resource="#Felona_E_Sorona_release"/>
-  <containsRelease rdf:resource="#Felona_release"/>
-  <containsRelease rdf:resource="#In_Concerto_release"/>
   <containsRelease rdf:resource="#Contrappunti_release"/>
   <containsRelease rdf:resource="#Smogmagica_release"/>
-  <containsRelease rdf:resource="#Canzone_D_Amore_release"/>
   <containsRelease rdf:resource="#Verita_Nascoste_release"/>
   <rdfs:label xml:lang="en">Discography of Le Orme</rdfs:label>
   <rdfs:comment xml:lang="en">Discography of Italian progressive rock band Le Orme</rdfs:comment>
@@ -762,7 +736,6 @@ A long anticipated return called "Barbarica" arrives in April 2013.</rdfs:commen
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <containsRelease rdf:resource="#Opus_Avantra_Donella_Del_Monaco_release"/>
   <containsRelease rdf:resource="#Lord_Cromwell_Plays_Suite_For_Seven_Vices_release"/>
-  <containsRelease rdf:resource="#Allemanda_release"/>
   <rdfs:label xml:lang="en">Discography of Opus Avantra</rdfs:label>
   <rdfs:comment xml:lang="en">Discography of Italian progressive rock band Opus Avantra</rdfs:comment>
 </Discography>
@@ -784,7 +757,6 @@ Their first three are masterpieces in their own right. The superb "L'Uomo" in wh
 <Discography rdf:about="#Osanna_discography">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <containsRelease rdf:resource="#L_Uomo_release"/>
-  <containsRelease rdf:resource="#L_Uomo_Valzer_Dei_Fiori_release"/>
   <containsRelease rdf:resource="#Preludio_Tema_Variazioni_Canzona_release"/>
   <containsRelease rdf:resource="#Palepoli_release"/>
   <containsRelease rdf:resource="#Landscape_Of_Life_release"/>
@@ -808,6 +780,7 @@ PIERROT LUNAIRE's first album contains really beautiful instrumentation. The sec
 <Discography rdf:about="#Pierrot_Lunaire_discography">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <containsRelease rdf:resource="#Pierrot_Lunaire_release"/>
+  <containsRelease rdf:resource="#Gudrun_release"/>
   <rdfs:label xml:lang="en">Discography of Pierrot Lunaire</rdfs:label>
   <rdfs:comment xml:lang="en">Discography of Italian progressive rock band Pierrot Lunaire</rdfs:comment>
 </Discography>
@@ -832,39 +805,13 @@ accepted into PR. Pooh is not a prog act... but put out albums that are musts in
 <Discography rdf:about="#Pooh_discography">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <containsRelease rdf:resource="#Brennero_66_Per_Quelli_Come_Noi_release"/>
-  <containsRelease rdf:resource="#Vieni_Fuori_Keep_On_Running_L_Uomo_Di_Ieri_release"/>
-  <containsRelease rdf:resource="#Per_Quelli_Come_Noi_release"/>
-  <containsRelease rdf:resource="#Bikini_Beat_Quello_Che_Non_Sai_release"/>
-  <containsRelease rdf:resource="#Nel_Buio_Cose_Di_Questo_Mondo_release"/>
-  <containsRelease rdf:resource="#In_Silenzio_Piccola_Katy_release"/>
-  <containsRelease rdf:resource="#Contrasto_release"/>
-  <containsRelease rdf:resource="#Mary_Ann_release"/>
   <containsRelease rdf:resource="#Memorie_release"/>
-  <containsRelease rdf:resource="#Good_Bye_Madama_Buttefly_release"/>
-  <containsRelease rdf:resource="#Tanta_Voglia_Di_Lei_Tutto_Alle_Tre_release"/>
+  <containsRelease rdf:resource="#Contrasto_release"/>
   <containsRelease rdf:resource="#Opera_Prima_release"/>
-  <containsRelease rdf:resource="#Pensiero_A_Un_Minuto_Dall_Amore_release"/>
-  <containsRelease rdf:resource="#Noi_Due_Nel_Mondo_E_Nell_Anima_Nascero_Con_Te_release"/>
   <containsRelease rdf:resource="#Alessandra_release"/>
-  <containsRelease rdf:resource="#Cosa_Si_Puo_Dire_Di_Te_release"/>
-  <containsRelease rdf:resource="#Tu_Y_Yo_En_El_Mas_Alla_release"/>
-  <containsRelease rdf:resource="#Tantos_Deseos_De_Ti_release"/>
-  <containsRelease rdf:resource="#I_ll_Close_The_Door_Behind_Me_release"/>
-  <containsRelease rdf:resource="#Pensamiento_Tantos_Deseos_De_Ti_Tutto_Alle_Tre_Terra_Desolata_Che_Favola_Sei_release"/>
-  <containsRelease rdf:resource="#Pensiero_Quando_Una_Lei_Va_Via_release"/>
-  <containsRelease rdf:resource="#Io_E_Te_Per_Altri_Giorni_release"/>
-  <containsRelease rdf:resource="#I_Pooh_release"/>
-  <containsRelease rdf:resource="#Revised_release"/>
   <containsRelease rdf:resource="#Parsifal_release"/>
-  <containsRelease rdf:resource="#1971_1974_release"/>
-  <containsRelease rdf:resource="#Per_Te_Qualcosa_Ancora_release"/>
-  <containsRelease rdf:resource="#Se_Sai_Se_Puoi_Se_Vuoi_release"/>
-  <containsRelease rdf:resource="#Forse_Ancora_Poesia_release"/>
-  <containsRelease rdf:resource="#Ninna_Nanna_release"/>
   <containsRelease rdf:resource="#Un_Po_Del_Nostro_Tempo_Migliore_release"/>
-  <containsRelease rdf:resource="#Mediterraneo_release"/>
-  <containsRelease rdf:resource="#La_Solita_Storia_release"/>
-  <containsRelease rdf:resource="#Linda_release"/>
+  <containsRelease rdf:resource="#Forse_Ancora_Poesia_release"/>
   <containsRelease rdf:resource="#Poohlover_release"/>
   <rdfs:label xml:lang="en">Discography of Pooh</rdfs:label>
   <rdfs:comment xml:lang="en">Discography of Italian progressive rock band Pooh</rdfs:comment>
@@ -887,16 +834,13 @@ The pioneer of Italian Progressive groups, PREMIATA FORNERIA MARCONI (PFM for sh
 
 <Discography rdf:about="#Premiata_Forneria_Marconi_discography">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <containsRelease rdf:resource="#La_Carrozza_Di_Hans_Impressioni_Di_Settembre_release"/>
+  <containsRelease rdf:resource="#Quelli_release"/>
   <containsRelease rdf:resource="#Storia_Di_Un_Minuto_release"/>
   <containsRelease rdf:resource="#Per_Un_Amico_release"/>
-  <containsRelease rdf:resource="#Celebration_release"/>
   <containsRelease rdf:resource="#Photos_Of_Ghosts_release"/>
-  <containsRelease rdf:resource="#Dolcissima_Maria_Via_Lumiere_release"/>
   <containsRelease rdf:resource="#L_Isola_Di_Niente_release"/>
   <containsRelease rdf:resource="#The_World_Became_The_World_release"/>
   <containsRelease rdf:resource="#Chocolate_Kings_release"/>
-  <containsRelease rdf:resource="#Prime_Impressioni_release"/>
   <rdfs:label xml:lang="en">Discography of Premiata Forneria Marconi</rdfs:label>
   <rdfs:comment xml:lang="en">Discography of Italian progressive rock band Premiata Forneria Marconi</rdfs:comment>
 </Discography>
@@ -1031,8 +975,6 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 <Discography rdf:about="#Stormy_Six_discography">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <containsRelease rdf:resource="#Le_Idee_Di_Oggi_Per_La_Musica_Di_Domani_release"/>
-  <containsRelease rdf:resource="#Alice_Nel_Vento_release"/>
-  <containsRelease rdf:resource="#Sotto_Il_Bam_bu_release"/>
   <containsRelease rdf:resource="#L_Unita_release"/>
   <containsRelease rdf:resource="#Guarda_Giu_Dalla_Pianura_release"/>
   <containsRelease rdf:resource="#Un_Biglietto_Del_Tram_release"/>
@@ -1054,6 +996,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Acqua Fragile</rdfs:label>
   <rdfs:comment xml:lang="en">Acqua Fragile is the first album of Acqua Fragile released in 1973</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">24</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25457</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/tF7R6Kw1AqJ2SCzeBrOD2h8R_g6TRM3J4yBxjBNkUc0/rs:fit/g:sm/q:90/h:505/w:502/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMzMDIz/MjgtMTM4NTE5NTg5/MS0xNTM5LmpwZWc.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#Mass_Media_Stars_release">
@@ -1068,6 +1013,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Mass-Media Stars</rdfs:label>
   <rdfs:comment xml:lang="en">Mass-Media Stars is the second album of Acqua Fragile released in 1974</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25460</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/GWK7LsYPG4e2K4omrRQvdJeQ7j3WbDuLbmSuKhiiF6Y/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMzNTgy/ODctMTM5NjE5OTMx/MS03MDY5LmpwZWc.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#Alphataurus_release">
@@ -1082,6 +1030,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Alphataurus</rdfs:label>
   <rdfs:comment xml:lang="en">Alphataurus is the first album of Alphataurus released in 1973</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2463</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12660</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/KRa77QD8bVyGpyjG7Ug1Fvql4UD4gbskIUQazUREvqk/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIxNTI1/NzItMTU2MDEzMzQz/OS02OTg0LmpwZWc.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#Analogy_release">
@@ -1096,12 +1047,15 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Analogy</rdfs:label>
   <rdfs:comment xml:lang="en">Analogy is the first album of Analogy released in 1972</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2624</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">30426</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/Hn4FMsWCJg07REdGWS6dS8t2Nsc13UvKgJAnJTtmA1Y/rs:fit/g:sm/q:90/h:412/w:412/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTQzMzU2/MDEtMTQ2Nzc0NjIz/My05MTEwLnBuZw.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#Arbeit_Macht_Frei_Il_Lavoro_Rende_Liberi_release">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <ofAlbum rdf:resource="#Arbeit_Macht_Frei_Il_Lavoro_Rende_Liberi_album"/>
-  <nextRelease rdf:resource="#L_Internazionale_release"/>
+  <nextRelease rdf:resource="#Caution_Radiation_Area_release"/>
   <rdfs:label xml:lang="en">Arbeit Macht Frei (Il Lavoro Rende Liberi) studio release</rdfs:label>
   <rdfs:comment xml:lang="en">Arbeit Macht Frei (Il Lavoro Rende Liberi) studio release is the first release of Area, published in 1973</rdfs:comment>
   <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</releaseYear>
@@ -1111,51 +1065,27 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Arbeit Macht Frei (Il Lavoro Rende Liberi)</rdfs:label>
   <rdfs:comment xml:lang="en">Arbeit Macht Frei (Il Lavoro Rende Liberi) is the first album of Area released in 1973</rdfs:comment>
-</Album>
-
-<Release rdf:about="#L_Internazionale_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#L_Internazionale_album"/>
-  <nextRelease rdf:resource="#Caution_Radiation_Area_release"/>
-  <rdfs:label xml:lang="en">L'Internazionale studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">L'Internazionale studio release is the second release of Area, published in 1974</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1974</releaseYear>
-</Release>
-
-<Album rdf:about="#L_Internazionale_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">L'Internazionale</rdfs:label>
-  <rdfs:comment xml:lang="en">L'Internazionale is the second album of Area released in 1974</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">102</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2508</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/xpmn7RVHvJe7zbIWSXeqPyArX1TYJh_m4ZoTHsQnCt4/rs:fit/g:sm/q:90/h:598/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE3MjE2/OTgtMTQyMDE5OTIx/MC01MTA1LmpwZWc.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#Caution_Radiation_Area_release">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <ofAlbum rdf:resource="#Caution_Radiation_Area_album"/>
-  <nextRelease rdf:resource="#AreAzione_release"/>
+  <nextRelease rdf:resource="#Crac_release"/>
   <rdfs:label xml:lang="en">Caution Radiation Area studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Caution Radiation Area studio release is the third release of Area, published in 1974</rdfs:comment>
+  <rdfs:comment xml:lang="en">Caution Radiation Area studio release is the second release of Area, published in 1974</rdfs:comment>
   <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1974</releaseYear>
 </Release>
 
 <Album rdf:about="#Caution_Radiation_Area_album">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Caution Radiation Area</rdfs:label>
-  <rdfs:comment xml:lang="en">Caution Radiation Area is the third album of Area released in 1974</rdfs:comment>
-</Album>
-
-<Release rdf:about="#AreAzione_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#AreAzione_album"/>
-  <nextRelease rdf:resource="#Crac_release"/>
-  <rdfs:label xml:lang="en">Are(A)zione studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Are(A)zione studio release is the fourth release of Area, published in 1975</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1975</releaseYear>
-</Release>
-
-<Album rdf:about="#AreAzione_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">Are(A)zione</rdfs:label>
-  <rdfs:comment xml:lang="en">Are(A)zione is the fourth album of Area released in 1975</rdfs:comment>
+  <rdfs:comment xml:lang="en">Caution Radiation Area is the second album of Area released in 1974</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">104</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2539</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/JVVCELif1reu3qgsXBF6z7qCbyqjGbGYXJ_PutSfRiA/rs:fit/g:sm/q:90/h:596/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTQ4OTk2/OTEtMTQyMDE5OTQ0/MC04MzQ2LmpwZWc.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#Crac_release">
@@ -1163,28 +1093,34 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <ofAlbum rdf:resource="#Crac_album"/>
   <nextRelease rdf:resource="#Maledetti_Maudits_release"/>
   <rdfs:label xml:lang="en">Crac! studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Crac! studio release is the fifth release of Area, published in 1975</rdfs:comment>
+  <rdfs:comment xml:lang="en">Crac! studio release is the third release of Area, published in 1975</rdfs:comment>
   <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1975</releaseYear>
 </Release>
 
 <Album rdf:about="#Crac_album">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Crac!</rdfs:label>
-  <rdfs:comment xml:lang="en">Crac! is the fifth album of Area released in 1975</rdfs:comment>
+  <rdfs:comment xml:lang="en">Crac! is the third album of Area released in 1975</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">103</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2558</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/Xz2jHW22a9TGMj_RQ4IryeqarjvlPuYvxgKnoSxqPYg/rs:fit/g:sm/q:90/h:595/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTQ4OTk2/OTgtMTM4MTM5NTgx/NC00MDI0LmpwZWc.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#Maledetti_Maudits_release">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <ofAlbum rdf:resource="#Maledetti_Maudits_album"/>
   <rdfs:label xml:lang="en">Maledetti (Maudits) studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Maledetti (Maudits) studio release is the sixth release of Area, published in 1976</rdfs:comment>
+  <rdfs:comment xml:lang="en">Maledetti (Maudits) studio release is the fourth release of Area, published in 1976</rdfs:comment>
   <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1976</releaseYear>
 </Release>
 
 <Album rdf:about="#Maledetti_Maudits_album">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Maledetti (Maudits)</rdfs:label>
-  <rdfs:comment xml:lang="en">Maledetti (Maudits) is the sixth album of Area released in 1976</rdfs:comment>
+  <rdfs:comment xml:lang="en">Maledetti (Maudits) is the fourth album of Area released in 1976</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">107</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2569</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></imageUrl>
 </Album>
 
 <Release rdf:about="#Tilt_Immagini_Per_Un_Orecchio_release">
@@ -1200,6 +1136,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Tilt - Immagini Per Un Orecchio</rdfs:label>
   <rdfs:comment xml:lang="en">Tilt - Immagini Per Un Orecchio is the first album of Arti &amp; Mestieri released in 1974</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">128</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">216579</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/NKP1NQB5ivM8Rg0RXOHGwDlP4IWy2U8J_D9EYN17i6s/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE1NjEz/MjAxLTE1OTQ1NTQ2/NzEtODA2MC5qcGVn.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#Giro_Di_Valzer_Per_Domani_release">
@@ -1214,81 +1153,63 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Giro Di Valzer Per Domani</rdfs:label>
   <rdfs:comment xml:lang="en">Giro Di Valzer Per Domani is the second album of Arti &amp; Mestieri released in 1975</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">129</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26157</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/v1d0wRaC8P8h0AW3yu37tYMgyO5KbC3IP4GlHoHjqbk/rs:fit/g:sm/q:90/h:471/w:470/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIxMTMz/NjEtMTMzNDU4NzQ2/Ni5qcGVn.jpeg</imageUrl>
+</Album>
+
+<Release rdf:about="#Banco_Del_Mutuo_Soccorso_release">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <ofAlbum rdf:resource="#Banco_Del_Mutuo_Soccorso_album"/>
+  <nextRelease rdf:resource="#Garofano_Rosso_Colonna_Sonora_Originale_Del_Film_release"/>
+  <rdfs:label xml:lang="en">Banco Del Mutuo Soccorso studio release</rdfs:label>
+  <rdfs:comment xml:lang="en">Banco Del Mutuo Soccorso studio release is the fourth release of Banco Del Mutuo Soccorso, published in 1975</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1975</releaseYear>
+</Release>
+
+<Album rdf:about="#Banco_Del_Mutuo_Soccorso_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label xml:lang="en">Banco Del Mutuo Soccorso</rdfs:label>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/1Ks4FL97YVpHltNqJHjU8roNGcZaW7XF6J7g1BI7ec4/rs:fit/g:sm/q:90/h:500/w:418/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI5ODkz/MDAtMTMxMjU2MTg0/Ni5qcGVn.jpeg</imageUrl>
+  <rdfs:comment xml:lang="en">Banco Del Mutuo Soccorso is the fourth album of Banco Del Mutuo Soccorso released in 1975</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1803</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">35157</discogsId>
 </Album>
 
 <Release rdf:about="#Darwin_release">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <ofAlbum rdf:resource="#Darwin_album"/>
-  <nextRelease rdf:resource="#Banco_Del_Mutuo_Soccorso_release"/>
+  <nextRelease rdf:resource="#Io_Sono_Nato_Libero_release"/>
   <rdfs:label xml:lang="en">Darwin! studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Darwin! studio release is the first release of Banco Del Mutuo Soccorso, published in 1972</rdfs:comment>
+  <rdfs:comment xml:lang="en">Darwin! studio release is the second release of Banco Del Mutuo Soccorso, published in 1972</rdfs:comment>
   <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</releaseYear>
 </Release>
 
 <Album rdf:about="#Darwin_album">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Darwin!</rdfs:label>
-  <rdfs:comment xml:lang="en">Darwin! is the first album of Banco Del Mutuo Soccorso released in 1972</rdfs:comment>
-</Album>
-
-<Release rdf:about="#Banco_Del_Mutuo_Soccorso_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#Banco_Del_Mutuo_Soccorso_album"/>
-  <nextRelease rdf:resource="#Non_Mi_Rompete_La_Citta_Sottile_release"/>
-  <rdfs:label xml:lang="en">Banco Del Mutuo Soccorso studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Banco Del Mutuo Soccorso studio release is the second release of Banco Del Mutuo Soccorso, published in 1972</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</releaseYear>
-</Release>
-
-<Album rdf:about="#Banco_Del_Mutuo_Soccorso_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">Banco Del Mutuo Soccorso</rdfs:label>
-  <rdfs:comment xml:lang="en">Banco Del Mutuo Soccorso is the second album of Banco Del Mutuo Soccorso released in 1972</rdfs:comment>
-</Album>
-
-<Release rdf:about="#Non_Mi_Rompete_La_Citta_Sottile_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#Non_Mi_Rompete_La_Citta_Sottile_album"/>
-  <nextRelease rdf:resource="#Io_Sono_Nato_Libero_release"/>
-  <rdfs:label xml:lang="en">Non Mi Rompete / La Città Sottile studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Non Mi Rompete / La Città Sottile studio release is the third release of Banco Del Mutuo Soccorso, published in 1973</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</releaseYear>
-</Release>
-
-<Album rdf:about="#Non_Mi_Rompete_La_Citta_Sottile_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">Non Mi Rompete / La Città Sottile</rdfs:label>
-  <rdfs:comment xml:lang="en">Non Mi Rompete / La Città Sottile is the third album of Banco Del Mutuo Soccorso released in 1973</rdfs:comment>
+  <rdfs:comment xml:lang="en">Darwin! is the second album of Banco Del Mutuo Soccorso released in 1972</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1801</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">35137</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/44idWPa8eRFXsnbT35Gsyj_YQKSpCFgNLWCJ3wpo11o/rs:fit/g:sm/q:90/h:596/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE0ODc2/MzctMTUyODU2MDEy/My02NTgyLmpwZWc.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#Io_Sono_Nato_Libero_release">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <ofAlbum rdf:resource="#Io_Sono_Nato_Libero_album"/>
-  <nextRelease rdf:resource="#Banco_release"/>
+  <nextRelease rdf:resource="#Banco_Del_Mutuo_Soccorso_release"/>
   <rdfs:label xml:lang="en">Io Sono Nato Libero studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Io Sono Nato Libero studio release is the fourth release of Banco Del Mutuo Soccorso, published in 1973</rdfs:comment>
+  <rdfs:comment xml:lang="en">Io Sono Nato Libero studio release is the third release of Banco Del Mutuo Soccorso, published in 1973</rdfs:comment>
   <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</releaseYear>
 </Release>
 
 <Album rdf:about="#Io_Sono_Nato_Libero_album">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Io Sono Nato Libero</rdfs:label>
-  <rdfs:comment xml:lang="en">Io Sono Nato Libero is the fourth album of Banco Del Mutuo Soccorso released in 1973</rdfs:comment>
-</Album>
-
-<Release rdf:about="#Banco_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#Banco_album"/>
-  <nextRelease rdf:resource="#Garofano_Rosso_Colonna_Sonora_Originale_Del_Film_release"/>
-  <rdfs:label xml:lang="en">Banco studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Banco studio release is the fifth release of Banco Del Mutuo Soccorso, published in 1975</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1975</releaseYear>
-</Release>
-
-<Album rdf:about="#Banco_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">Banco</rdfs:label>
-  <rdfs:comment xml:lang="en">Banco is the fifth album of Banco Del Mutuo Soccorso released in 1975</rdfs:comment>
+  <rdfs:comment xml:lang="en">Io Sono Nato Libero is the third album of Banco Del Mutuo Soccorso released in 1973</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">170</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">35145</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/nM6vsXCsscgReQsp3o5utvzSwVjaacNUbn-P3Cg_yLw/rs:fit/g:sm/q:90/h:494/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE0ODc4/MDktMTQ0ODExNzM2/Mi01NTkyLmpwZWc.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#Garofano_Rosso_Colonna_Sonora_Originale_Del_Film_release">
@@ -1296,28 +1217,52 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <ofAlbum rdf:resource="#Garofano_Rosso_Colonna_Sonora_Originale_Del_Film_album"/>
   <nextRelease rdf:resource="#Come_In_Un_Ultima_Cena_release"/>
   <rdfs:label xml:lang="en">Garofano Rosso (Colonna Sonora Originale Del Film) studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Garofano Rosso (Colonna Sonora Originale Del Film) studio release is the sixth release of Banco Del Mutuo Soccorso, published in 1976</rdfs:comment>
+  <rdfs:comment xml:lang="en">Garofano Rosso (Colonna Sonora Originale Del Film) studio release is the fifth release of Banco Del Mutuo Soccorso, published in 1976</rdfs:comment>
   <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1976</releaseYear>
 </Release>
 
 <Album rdf:about="#Garofano_Rosso_Colonna_Sonora_Originale_Del_Film_album">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Garofano Rosso (Colonna Sonora Originale Del Film)</rdfs:label>
-  <rdfs:comment xml:lang="en">Garofano Rosso (Colonna Sonora Originale Del Film) is the sixth album of Banco Del Mutuo Soccorso released in 1976</rdfs:comment>
+  <rdfs:comment xml:lang="en">Garofano Rosso (Colonna Sonora Originale Del Film) is the fifth album of Banco Del Mutuo Soccorso released in 1976</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1804</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">35148</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></imageUrl>
 </Album>
 
 <Release rdf:about="#Come_In_Un_Ultima_Cena_release">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <ofAlbum rdf:resource="#Come_In_Un_Ultima_Cena_album"/>
+  <nextRelease rdf:resource="#As_In_A_Last_Supper_release"/>
   <rdfs:label xml:lang="en">Come In Un'Ultima Cena studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Come In Un'Ultima Cena studio release is the seventh release of Banco Del Mutuo Soccorso, published in 1976</rdfs:comment>
+  <rdfs:comment xml:lang="en">Come In Un'Ultima Cena studio release is the sixth release of Banco Del Mutuo Soccorso, published in 1976</rdfs:comment>
   <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1976</releaseYear>
 </Release>
 
 <Album rdf:about="#Come_In_Un_Ultima_Cena_album">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Come In Un'Ultima Cena</rdfs:label>
-  <rdfs:comment xml:lang="en">Come In Un'Ultima Cena is the seventh album of Banco Del Mutuo Soccorso released in 1976</rdfs:comment>
+  <rdfs:comment xml:lang="en">Come In Un'Ultima Cena is the sixth album of Banco Del Mutuo Soccorso released in 1976</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1799</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">35174</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></imageUrl>
+</Album>
+
+<Release rdf:about="#As_In_A_Last_Supper_release">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <ofAlbum rdf:resource="#As_In_A_Last_Supper_album"/>
+  <rdfs:label xml:lang="en">As In A Last Supper studio release</rdfs:label>
+  <rdfs:comment xml:lang="en">As In A Last Supper studio release is the seventh release of Banco Del Mutuo Soccorso, published in 1976</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1976</releaseYear>
+</Release>
+
+<Album rdf:about="#As_In_A_Last_Supper_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label xml:lang="en">As In A Last Supper</rdfs:label>
+  <rdfs:comment xml:lang="en">As In A Last Supper is the seventh album of Banco Del Mutuo Soccorso released in 1976</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11442</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1854966</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></imageUrl>
 </Album>
 
 <Release rdf:about="#Poa_release">
@@ -1332,6 +1277,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Ποα</rdfs:label>
   <rdfs:comment xml:lang="en">Ποα is the first album of Blocco Mentale released in 1973</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">174</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">484234</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/cpZUfIHpoYKA28TVTkpBzkHBL6RrT-_fo_5DGNSIRgo/rs:fit/g:sm/q:90/h:417/w:430/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM5NzMz/OTctMTM1MTAyNzc5/NC0xMzg4LmpwZWc.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#Melos_release">
@@ -1346,110 +1294,44 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Melos</rdfs:label>
   <rdfs:comment xml:lang="en">Melos is the first album of Cervello released in 1973</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2809</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">341481</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/0xD6FjTDXnU2ryuipe0ksPLguPMGv0un7KwvSCe-R14/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI4ODcx/NzAtMTQ4Mjc4OTE5/MS0zNDgxLnBuZw.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#Io_Non_So_Da_Dove_Vengo_E_Non_So_Dove_Mai_Andro_Uomo_E_Il_Nome_Che_Mi_Han_Dato_release">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <ofAlbum rdf:resource="#Io_Non_So_Da_Dove_Vengo_E_Non_So_Dove_Mai_Andro_Uomo_E_Il_Nome_Che_Mi_Han_Dato_album"/>
   <rdfs:label xml:lang="en">Io Non So Da Dove Vengo E Non So Dove Mai Andrò. Uomo È Il Nome Che Mi Han Dato studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Io Non So Da Dove Vengo E Non So Dove Mai Andrò. Uomo È Il Nome Che Mi Han Dato studio release is the first release of De De Lind, published in 1972</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</releaseYear>
+  <rdfs:comment xml:lang="en">Io Non So Da Dove Vengo E Non So Dove Mai Andrò. Uomo È Il Nome Che Mi Han Dato studio release is the first release of De De Lind, published in 1973</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</releaseYear>
 </Release>
 
 <Album rdf:about="#Io_Non_So_Da_Dove_Vengo_E_Non_So_Dove_Mai_Andro_Uomo_E_Il_Nome_Che_Mi_Han_Dato_album">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Io Non So Da Dove Vengo E Non So Dove Mai Andrò. Uomo È Il Nome Che Mi Han Dato</rdfs:label>
-  <rdfs:comment xml:lang="en">Io Non So Da Dove Vengo E Non So Dove Mai Andrò. Uomo È Il Nome Che Mi Han Dato is the first album of De De Lind released in 1972</rdfs:comment>
-</Album>
-
-<Release rdf:about="#Questo_Folle_Sentimento_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#Questo_Folle_Sentimento_album"/>
-  <nextRelease rdf:resource="#Sole_Giallo_Sole_Nero_release"/>
-  <rdfs:label xml:lang="en">Questo Folle Sentimento studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Questo Folle Sentimento studio release is the first release of Formula 3, published in 1969</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1969</releaseYear>
-</Release>
-
-<Album rdf:about="#Questo_Folle_Sentimento_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">Questo Folle Sentimento</rdfs:label>
-  <rdfs:comment xml:lang="en">Questo Folle Sentimento is the first album of Formula 3 released in 1969</rdfs:comment>
-</Album>
-
-<Release rdf:about="#Sole_Giallo_Sole_Nero_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#Sole_Giallo_Sole_Nero_album"/>
-  <nextRelease rdf:resource="#Nananano_release"/>
-  <rdfs:label xml:lang="en">Sole Giallo, Sole Nero studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Sole Giallo, Sole Nero studio release is the second release of Formula 3, published in 1970</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1970</releaseYear>
-</Release>
-
-<Album rdf:about="#Sole_Giallo_Sole_Nero_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">Sole Giallo, Sole Nero</rdfs:label>
-  <rdfs:comment xml:lang="en">Sole Giallo, Sole Nero is the second album of Formula 3 released in 1970</rdfs:comment>
-</Album>
-
-<Release rdf:about="#Nananano_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#Nananano_album"/>
-  <nextRelease rdf:resource="#Dies_Irae_release"/>
-  <rdfs:label xml:lang="en">Nanananò studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Nanananò studio release is the third release of Formula 3, published in 1970</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1970</releaseYear>
-</Release>
-
-<Album rdf:about="#Nananano_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">Nanananò</rdfs:label>
-  <rdfs:comment xml:lang="en">Nanananò is the third album of Formula 3 released in 1970</rdfs:comment>
+  <rdfs:comment xml:lang="en">Io Non So Da Dove Vengo E Non So Dove Mai Andrò. Uomo È Il Nome Che Mi Han Dato is the first album of De De Lind released in 1973</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4990</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">210876</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/d6jptRlHLRsCiX_tX2m6AQtDpviR88HgyF063nlMUqY/rs:fit/g:sm/q:90/h:500/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTQwNzQ1/MzgtMTM1NDM3OTYz/OC0yOTExLmpwZWc.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#Dies_Irae_release">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <ofAlbum rdf:resource="#Dies_Irae_album"/>
-  <nextRelease rdf:resource="#Nessuno_Nessuno_Eppur_Mi_Son_Scordato_Di_Te_release"/>
+  <nextRelease rdf:resource="#Formula_3_release"/>
   <rdfs:label xml:lang="en">Dies Irae studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Dies Irae studio release is the fourth release of Formula 3, published in 1970</rdfs:comment>
+  <rdfs:comment xml:lang="en">Dies Irae studio release is the first release of Formula 3, published in 1970</rdfs:comment>
   <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1970</releaseYear>
 </Release>
 
 <Album rdf:about="#Dies_Irae_album">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Dies Irae</rdfs:label>
-  <rdfs:comment xml:lang="en">Dies Irae is the fourth album of Formula 3 released in 1970</rdfs:comment>
-</Album>
-
-<Release rdf:about="#Nessuno_Nessuno_Eppur_Mi_Son_Scordato_Di_Te_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#Nessuno_Nessuno_Eppur_Mi_Son_Scordato_Di_Te_album"/>
-  <nextRelease rdf:resource="#La_Folle_Corsa_release"/>
-  <rdfs:label xml:lang="en">Nessuno Nessuno / Eppur Mi Son Scordato Di Te studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Nessuno Nessuno / Eppur Mi Son Scordato Di Te studio release is the fifth release of Formula 3, published in 1971</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1971</releaseYear>
-</Release>
-
-<Album rdf:about="#Nessuno_Nessuno_Eppur_Mi_Son_Scordato_Di_Te_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">Nessuno Nessuno / Eppur Mi Son Scordato Di Te</rdfs:label>
-  <rdfs:comment xml:lang="en">Nessuno Nessuno / Eppur Mi Son Scordato Di Te is the fifth album of Formula 3 released in 1971</rdfs:comment>
-</Album>
-
-<Release rdf:about="#La_Folle_Corsa_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#La_Folle_Corsa_album"/>
-  <nextRelease rdf:resource="#Formula_3_release"/>
-  <rdfs:label xml:lang="en">La Folle Corsa studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">La Folle Corsa studio release is the sixth release of Formula 3, published in 1971</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1971</releaseYear>
-</Release>
-
-<Album rdf:about="#La_Folle_Corsa_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">La Folle Corsa</rdfs:label>
-  <rdfs:comment xml:lang="en">La Folle Corsa is the sixth album of Formula 3 released in 1971</rdfs:comment>
+  <rdfs:comment xml:lang="en">Dies Irae is the first album of Formula 3 released in 1970</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2681</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">290901</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/kwWRdPb7LoQCPNNrEWTvvISx0XNqRubdvhPhoRTrNO0/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTkyMzMy/MS0xNDY1NzQ5MDAx/LTE0NjIuanBlZw.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#Formula_3_release">
@@ -1457,73 +1339,52 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <ofAlbum rdf:resource="#Formula_3_album"/>
   <nextRelease rdf:resource="#Sognando_E_Risognando_release"/>
   <rdfs:label xml:lang="en">Formula 3 studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Formula 3 studio release is the seventh release of Formula 3, published in 1971</rdfs:comment>
+  <rdfs:comment xml:lang="en">Formula 3 studio release is the second release of Formula 3, published in 1971</rdfs:comment>
   <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1971</releaseYear>
 </Release>
 
 <Album rdf:about="#Formula_3_album">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Formula 3</rdfs:label>
-  <rdfs:comment xml:lang="en">Formula 3 is the seventh album of Formula 3 released in 1971</rdfs:comment>
+  <rdfs:comment xml:lang="en">Formula 3 is the second album of Formula 3 released in 1971</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2682</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25466</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/frAxKSssMtRFAWIkXVGkb9p-ykxQiE7mu1nFn2DjJKQ/rs:fit/g:sm/q:90/h:515/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTk4NDYx/NC0xMjAxODAzNjEx/LmpwZWc.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#Sognando_E_Risognando_release">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <ofAlbum rdf:resource="#Sognando_E_Risognando_album"/>
-  <nextRelease rdf:resource="#La_Ciliegia_Non_E_Di_Plastica_release"/>
+  <nextRelease rdf:resource="#La_Grande_Casa_release"/>
   <rdfs:label xml:lang="en">Sognando E Risognando studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Sognando E Risognando studio release is the ninth release of Formula 3, published in 1972</rdfs:comment>
+  <rdfs:comment xml:lang="en">Sognando E Risognando studio release is the third release of Formula 3, published in 1972</rdfs:comment>
   <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</releaseYear>
 </Release>
 
 <Album rdf:about="#Sognando_E_Risognando_album">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Sognando E Risognando</rdfs:label>
-  <rdfs:comment xml:lang="en">Sognando E Risognando is the ninth album of Formula 3 released in 1972</rdfs:comment>
-</Album>
-
-<Release rdf:about="#La_Ciliegia_Non_E_Di_Plastica_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#La_Ciliegia_Non_E_Di_Plastica_album"/>
-  <nextRelease rdf:resource="#Rapsodia_Di_Radius_Bambina_Sbagliata_release"/>
-  <rdfs:label xml:lang="en">La Ciliegia Non È Di Plastica studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">La Ciliegia Non È Di Plastica studio release is the tenth release of Formula 3, published in 1973</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</releaseYear>
-</Release>
-
-<Album rdf:about="#La_Ciliegia_Non_E_Di_Plastica_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">La Ciliegia Non È Di Plastica</rdfs:label>
-  <rdfs:comment xml:lang="en">La Ciliegia Non È Di Plastica is the tenth album of Formula 3 released in 1973</rdfs:comment>
-</Album>
-
-<Release rdf:about="#Rapsodia_Di_Radius_Bambina_Sbagliata_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#Rapsodia_Di_Radius_Bambina_Sbagliata_album"/>
-  <nextRelease rdf:resource="#La_Grande_Casa_release"/>
-  <rdfs:label xml:lang="en">Rapsodia Di Radius / Bambina Sbagliata studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Rapsodia Di Radius / Bambina Sbagliata studio release is the eleventh release of Formula 3, published in 1973</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</releaseYear>
-</Release>
-
-<Album rdf:about="#Rapsodia_Di_Radius_Bambina_Sbagliata_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">Rapsodia Di Radius / Bambina Sbagliata</rdfs:label>
-  <rdfs:comment xml:lang="en">Rapsodia Di Radius / Bambina Sbagliata is the eleventh album of Formula 3 released in 1973</rdfs:comment>
+  <rdfs:comment xml:lang="en">Sognando E Risognando is the third album of Formula 3 released in 1972</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2683</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">226662</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/AACyyeXntpWFBKyZVHP5cAxV9zR-fvA2kADOfivhWD4/rs:fit/g:sm/q:90/h:600/w:568/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTQwMTYx/NzktMTQwMDg2NDc2/MC0xMDIxLmpwZWc.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#La_Grande_Casa_release">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <ofAlbum rdf:resource="#La_Grande_Casa_album"/>
   <rdfs:label xml:lang="en">La Grande Casa studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">La Grande Casa studio release is the twelfth release of Formula 3, published in 1973</rdfs:comment>
+  <rdfs:comment xml:lang="en">La Grande Casa studio release is the fourth release of Formula 3, published in 1973</rdfs:comment>
   <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</releaseYear>
 </Release>
 
 <Album rdf:about="#La_Grande_Casa_album">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">La Grande Casa</rdfs:label>
-  <rdfs:comment xml:lang="en">La Grande Casa is the twelfth album of Formula 3 released in 1973</rdfs:comment>
+  <rdfs:comment xml:lang="en">La Grande Casa is the fourth album of Formula 3 released in 1973</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2684</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25470</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/rFRKD1eM7-F4rgSRp7ydYOoZSgFE3FCHCJ_V5cA-H0M/rs:fit/g:sm/q:90/h:300/w:287/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE3NDE3/ODUtMTQ3Nzk0MDg3/Ni0xMjE0LmpwZWc.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#Nuda_release">
@@ -1539,20 +1400,26 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Nuda</rdfs:label>
   <rdfs:comment xml:lang="en">Nuda is the first album of Garybaldi released in 1972</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11000</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">305945</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/t6GKLDt4yW1IA4YirkSD6ch0Z-lm-WkfXeYsV19xCus/rs:fit/g:sm/q:90/h:450/w:450/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyNjg4/NzYtMTI3NDM1OTY2/MS5qcGVn.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#Astrolabio_release">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <ofAlbum rdf:resource="#Astrolabio_album"/>
   <rdfs:label xml:lang="en">Astrolabio studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Astrolabio studio release is the second release of Garybaldi, published in 1973</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</releaseYear>
+  <rdfs:comment xml:lang="en">Astrolabio studio release is the second release of Garybaldi, published in 1972</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</releaseYear>
 </Release>
 
 <Album rdf:about="#Astrolabio_album">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Astrolabio</rdfs:label>
-  <rdfs:comment xml:lang="en">Astrolabio is the second album of Garybaldi released in 1973</rdfs:comment>
+  <rdfs:comment xml:lang="en">Astrolabio is the second album of Garybaldi released in 1972</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11001</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">210415</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/Jp6EfHmSnZPmltW48QCC-v3Gn-u-QDOmeL-O13dI1hI/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyODM3/OTUtMTM5NjIwMDI0/NS04ODg2LmpwZWc.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#Profondo_Rosso_Colonna_Sonora_Originale_Del_Film_release">
@@ -1568,12 +1435,14 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Profondo Rosso (Colonna Sonora Originale Del Film)</rdfs:label>
   <rdfs:comment xml:lang="en">Profondo Rosso (Colonna Sonora Originale Del Film) is the first album of Goblin released in 1975</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">454</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14156</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/RjRQXy0J_pLa15pwREe5eWxRDVA7I6qpX7scrpCRyLE/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI0ODAw/My0xNjAzNzE2ODI3/LTI4MjguanBlZw.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#Roller_release">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <ofAlbum rdf:resource="#Roller_album"/>
-  <nextRelease rdf:resource="#Suspiria_Musiche_Dalla_Colonna_Sonora_Originale_Del_Film_release"/>
   <rdfs:label xml:lang="en">Roller studio release</rdfs:label>
   <rdfs:comment xml:lang="en">Roller studio release is the second release of Goblin, published in 1976</rdfs:comment>
   <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1976</releaseYear>
@@ -1583,41 +1452,14 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Roller</rdfs:label>
   <rdfs:comment xml:lang="en">Roller is the second album of Goblin released in 1976</rdfs:comment>
-</Album>
-
-<Release rdf:about="#Suspiria_Musiche_Dalla_Colonna_Sonora_Originale_Del_Film_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#Suspiria_Musiche_Dalla_Colonna_Sonora_Originale_Del_Film_album"/>
-  <nextRelease rdf:resource="#Chi_release"/>
-  <rdfs:label xml:lang="en">Suspiria (Musiche Dalla Colonna Sonora Originale Del Film) studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Suspiria (Musiche Dalla Colonna Sonora Originale Del Film) studio release is the third release of Goblin, published in 1976</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1976</releaseYear>
-</Release>
-
-<Album rdf:about="#Suspiria_Musiche_Dalla_Colonna_Sonora_Originale_Del_Film_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">Suspiria (Musiche Dalla Colonna Sonora Originale Del Film)</rdfs:label>
-  <rdfs:comment xml:lang="en">Suspiria (Musiche Dalla Colonna Sonora Originale Del Film) is the third album of Goblin released in 1976</rdfs:comment>
-</Album>
-
-<Release rdf:about="#Chi_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#Chi_album"/>
-  <rdfs:label xml:lang="en">Chi? studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Chi? studio release is the fourth release of Goblin, published in 1976</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1976</releaseYear>
-</Release>
-
-<Album rdf:about="#Chi_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">Chi?</rdfs:label>
-  <rdfs:comment xml:lang="en">Chi? is the fourth album of Goblin released in 1976</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">455</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14165</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></imageUrl>
 </Album>
 
 <Release rdf:about="#I_Teoremi_release">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <ofAlbum rdf:resource="#I_Teoremi_album"/>
-  <nextRelease rdf:resource="#Sognare_Tutte_Le_Cose_release"/>
   <rdfs:label xml:lang="en">I Teoremi studio release</rdfs:label>
   <rdfs:comment xml:lang="en">I Teoremi studio release is the first release of I Teoremi, published in 1972</rdfs:comment>
   <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</releaseYear>
@@ -1627,109 +1469,44 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">I Teoremi</rdfs:label>
   <rdfs:comment xml:lang="en">I Teoremi is the first album of I Teoremi released in 1972</rdfs:comment>
-</Album>
-
-<Release rdf:about="#Sognare_Tutte_Le_Cose_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#Sognare_Tutte_Le_Cose_album"/>
-  <rdfs:label xml:lang="en">Sognare / Tutte Le Cose studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Sognare / Tutte Le Cose studio release is the second release of I Teoremi, published in 1972</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</releaseYear>
-</Release>
-
-<Album rdf:about="#Sognare_Tutte_Le_Cose_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">Sognare / Tutte Le Cose</rdfs:label>
-  <rdfs:comment xml:lang="en">Sognare / Tutte Le Cose is the second album of I Teoremi released in 1972</rdfs:comment>
-</Album>
-
-<Release rdf:about="#Neve_Calda__release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#Neve_Calda__album"/>
-  <nextRelease rdf:resource="#Sirio_2222_release"/>
-  <rdfs:label xml:lang="en">Neve Calda  studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Neve Calda  studio release is the first release of Il Balletto Di Bronzo, published in 1969</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1969</releaseYear>
-</Release>
-
-<Album rdf:about="#Neve_Calda__album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">Neve Calda </rdfs:label>
-  <rdfs:comment xml:lang="en">Neve Calda  is the first album of Il Balletto Di Bronzo released in 1969</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6934</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">335233</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/ciPvCJ8XmHfZCq8ODmDz_q7Vf7k3Z8vKtOIBLgCeeUc/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTg2MDAx/NjYtMTU0MjExMzQy/NC0zOTE5LmpwZWc.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#Sirio_2222_release">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <ofAlbum rdf:resource="#Sirio_2222_album"/>
-  <nextRelease rdf:resource="#Si_Mama_Mama_Meditazione_release"/>
+  <nextRelease rdf:resource="#Ys_release"/>
   <rdfs:label xml:lang="en">Sirio 2222 studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Sirio 2222 studio release is the second release of Il Balletto Di Bronzo, published in 1970</rdfs:comment>
+  <rdfs:comment xml:lang="en">Sirio 2222 studio release is the first release of Il Balletto Di Bronzo, published in 1970</rdfs:comment>
   <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1970</releaseYear>
 </Release>
 
 <Album rdf:about="#Sirio_2222_album">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Sirio 2222</rdfs:label>
-  <rdfs:comment xml:lang="en">Sirio 2222 is the second album of Il Balletto Di Bronzo released in 1970</rdfs:comment>
-</Album>
-
-<Release rdf:about="#Si_Mama_Mama_Meditazione_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#Si_Mama_Mama_Meditazione_album"/>
-  <nextRelease rdf:resource="#Nieve_Calida_release"/>
-  <rdfs:label xml:lang="en">Si, Mama Mama / Meditazione studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Si, Mama Mama / Meditazione studio release is the third release of Il Balletto Di Bronzo, published in 1970</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1970</releaseYear>
-</Release>
-
-<Album rdf:about="#Si_Mama_Mama_Meditazione_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">Si, Mama Mama / Meditazione</rdfs:label>
-  <rdfs:comment xml:lang="en">Si, Mama Mama / Meditazione is the third album of Il Balletto Di Bronzo released in 1970</rdfs:comment>
-</Album>
-
-<Release rdf:about="#Nieve_Calida_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#Nieve_Calida_album"/>
-  <nextRelease rdf:resource="#Ys_release"/>
-  <rdfs:label xml:lang="en">Nieve Calida studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Nieve Calida studio release is the fourth release of Il Balletto Di Bronzo, published in 1971</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1971</releaseYear>
-</Release>
-
-<Album rdf:about="#Nieve_Calida_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">Nieve Calida</rdfs:label>
-  <rdfs:comment xml:lang="en">Nieve Calida is the fourth album of Il Balletto Di Bronzo released in 1971</rdfs:comment>
+  <rdfs:comment xml:lang="en">Sirio 2222 is the first album of Il Balletto Di Bronzo released in 1970</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">154</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25475</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/0GAFkkoRaggs4k7wxZb3LQNuTagl2YuvI7x7EUz-3dA/rs:fit/g:sm/q:90/h:598/w:598/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM1MjUx/OTMtMTMzMzg4Njgw/MS5qcGVn.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#Ys_release">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <ofAlbum rdf:resource="#Ys_album"/>
-  <nextRelease rdf:resource="#La_Tua_Casa_Comoda_Donna_Vittoria_release"/>
   <rdfs:label xml:lang="en">Ys studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Ys studio release is the fifth release of Il Balletto Di Bronzo, published in 1972</rdfs:comment>
+  <rdfs:comment xml:lang="en">Ys studio release is the second release of Il Balletto Di Bronzo, published in 1972</rdfs:comment>
   <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</releaseYear>
 </Release>
 
 <Album rdf:about="#Ys_album">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Ys</rdfs:label>
-  <rdfs:comment xml:lang="en">Ys is the fifth album of Il Balletto Di Bronzo released in 1972</rdfs:comment>
-</Album>
-
-<Release rdf:about="#La_Tua_Casa_Comoda_Donna_Vittoria_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#La_Tua_Casa_Comoda_Donna_Vittoria_album"/>
-  <rdfs:label xml:lang="en">La Tua Casa Comoda / Donna Vittoria studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">La Tua Casa Comoda / Donna Vittoria studio release is the sixth release of Il Balletto Di Bronzo, published in 1973</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</releaseYear>
-</Release>
-
-<Album rdf:about="#La_Tua_Casa_Comoda_Donna_Vittoria_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">La Tua Casa Comoda / Donna Vittoria</rdfs:label>
-  <rdfs:comment xml:lang="en">La Tua Casa Comoda / Donna Vittoria is the sixth album of Il Balletto Di Bronzo released in 1973</rdfs:comment>
+  <rdfs:comment xml:lang="en">Ys is the second album of Il Balletto Di Bronzo released in 1972</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">155</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25473</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/tR1Au7_h_mlr5C_hpD846p-RYEEuememVLR36IykuW0/rs:fit/g:sm/q:90/h:499/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEyNDkw/MzY1LTE1MzYzMjQz/NjktNTE2My5qcGVn.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#La_Bibbia_release">
@@ -1745,6 +1522,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">La Bibbia</rdfs:label>
   <rdfs:comment xml:lang="en">La Bibbia is the first album of Il Rovescio Della Medaglia released in 1971</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1179</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">345297</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/mZkL_-eWMfF4CPj4EvbWR83LV3E_eeTen-T_ffx7hWA/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI5MzM0/OTYtMTMwODQ3NDMz/MC5qcGVn.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#Io_Come_Io_release">
@@ -1760,11 +1540,15 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Io Come Io</rdfs:label>
   <rdfs:comment xml:lang="en">Io Come Io is the second album of Il Rovescio Della Medaglia released in 1972</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1180</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">160588</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/rwpRpZq_euK6hJpR-N3WQ1ueem95lBsFMpuv_oz6M3I/rs:fit/g:sm/q:90/h:500/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIxOTMw/MzMtMTUzMzY0Mzg1/NC03MjkzLmpwZWc.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#Contaminazione_release">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <ofAlbum rdf:resource="#Contaminazione_album"/>
+  <nextRelease rdf:resource="#Contamination_release"/>
   <rdfs:label xml:lang="en">Contaminazione studio release</rdfs:label>
   <rdfs:comment xml:lang="en">Contaminazione studio release is the third release of Il Rovescio Della Medaglia, published in 1973</rdfs:comment>
   <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</releaseYear>
@@ -1774,6 +1558,26 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Contaminazione</rdfs:label>
   <rdfs:comment xml:lang="en">Contaminazione is the third album of Il Rovescio Della Medaglia released in 1973</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1181</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25451</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/xuYNR26sgh4_-pHqeETs0wBfjqF42d65PjRw9qiTdSs/rs:fit/g:sm/q:90/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIwOTcy/MTktMTUxODE1NDk0/MC02NDgyLmpwZWc.jpeg</imageUrl>
+</Album>
+
+<Release rdf:about="#Contamination_release">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <ofAlbum rdf:resource="#Contamination_album"/>
+  <rdfs:label xml:lang="en">Contamination studio release</rdfs:label>
+  <rdfs:comment xml:lang="en">Contamination studio release is the fourth release of Il Rovescio Della Medaglia, published in 1975</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1975</releaseYear>
+</Release>
+
+<Album rdf:about="#Contamination_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label xml:lang="en">Contamination</rdfs:label>
+  <rdfs:comment xml:lang="en">Contamination is the fourth album of Il Rovescio Della Medaglia released in 1975</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1182</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4020875</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></imageUrl>
 </Album>
 
 <Release rdf:about="#Tardo_Pede_In_Magiam_Versus_release">
@@ -1788,12 +1592,15 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Tardo Pede In Magiam Versus</rdfs:label>
   <rdfs:comment xml:lang="en">Tardo Pede In Magiam Versus is the first album of Jacula released in 1972</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">641</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">210440</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/PS9zgZM3TjcLydhKZ5-A59Jtzk2hz9fA3faik_bc5hU/rs:fit/g:sm/q:90/h:300/w:297/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTQyOTU2/NDUtMTM2Mjc2MTI1/Ni01MjUxLmpwZWc.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#Passio_Secundum_Mattheum_release">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <ofAlbum rdf:resource="#Passio_Secundum_Mattheum_album"/>
-  <nextRelease rdf:resource="#Rimani_Nella_Mia_Vita_release"/>
+  <nextRelease rdf:resource="#Papillon_release"/>
   <rdfs:label xml:lang="en">Passio Secundum Mattheum studio release</rdfs:label>
   <rdfs:comment xml:lang="en">Passio Secundum Mattheum studio release is the first release of Latte E Miele, published in 1972</rdfs:comment>
   <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</releaseYear>
@@ -1803,36 +1610,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Passio Secundum Mattheum</rdfs:label>
   <rdfs:comment xml:lang="en">Passio Secundum Mattheum is the first album of Latte E Miele released in 1972</rdfs:comment>
-</Album>
-
-<Release rdf:about="#Rimani_Nella_Mia_Vita_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#Rimani_Nella_Mia_Vita_album"/>
-  <nextRelease rdf:resource="#Getzemani_Il_Re_Dei_Giudei_release"/>
-  <rdfs:label xml:lang="en">Rimani Nella Mia Vita studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Rimani Nella Mia Vita studio release is the second release of Latte E Miele, published in 1973</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</releaseYear>
-</Release>
-
-<Album rdf:about="#Rimani_Nella_Mia_Vita_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">Rimani Nella Mia Vita</rdfs:label>
-  <rdfs:comment xml:lang="en">Rimani Nella Mia Vita is the second album of Latte E Miele released in 1973</rdfs:comment>
-</Album>
-
-<Release rdf:about="#Getzemani_Il_Re_Dei_Giudei_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#Getzemani_Il_Re_Dei_Giudei_album"/>
-  <nextRelease rdf:resource="#Papillon_release"/>
-  <rdfs:label xml:lang="en">Getzemani / Il Re Dei Giudei studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Getzemani / Il Re Dei Giudei studio release is the third release of Latte E Miele, published in 1973</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</releaseYear>
-</Release>
-
-<Album rdf:about="#Getzemani_Il_Re_Dei_Giudei_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">Getzemani / Il Re Dei Giudei</rdfs:label>
-  <rdfs:comment xml:lang="en">Getzemani / Il Re Dei Giudei is the third album of Latte E Miele released in 1973</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">787</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">293504</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/_Vq0IGlmFfGsQjYHWU1kzGyDudPXhIO_EZNq5LNJ32Y/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI1MTk3/OTUtMTU2MTU0NzEx/Mi05NzU1LmpwZWc.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#Papillon_release">
@@ -1840,163 +1620,52 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <ofAlbum rdf:resource="#Papillon_album"/>
   <nextRelease rdf:resource="#Aquile_E_Scoiattoli_release"/>
   <rdfs:label xml:lang="en">Papillon studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Papillon studio release is the fourth release of Latte E Miele, published in 1973</rdfs:comment>
+  <rdfs:comment xml:lang="en">Papillon studio release is the second release of Latte E Miele, published in 1973</rdfs:comment>
   <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</releaseYear>
 </Release>
 
 <Album rdf:about="#Papillon_album">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Papillon</rdfs:label>
-  <rdfs:comment xml:lang="en">Papillon is the fourth album of Latte E Miele released in 1973</rdfs:comment>
+  <rdfs:comment xml:lang="en">Papillon is the second album of Latte E Miele released in 1973</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">788</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">250397</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/AW6TwrZweAmviOgIzKDc_k00J-99NAIca0B7kUr8I5Y/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMxMjk0/NTUtMTU2MTU0ODg4/NS04MjkyLmpwZWc.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#Aquile_E_Scoiattoli_release">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <ofAlbum rdf:resource="#Aquile_E_Scoiattoli_album"/>
   <rdfs:label xml:lang="en">Aquile E Scoiattoli studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Aquile E Scoiattoli studio release is the fifth release of Latte E Miele, published in 1976</rdfs:comment>
+  <rdfs:comment xml:lang="en">Aquile E Scoiattoli studio release is the third release of Latte E Miele, published in 1976</rdfs:comment>
   <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1976</releaseYear>
 </Release>
 
 <Album rdf:about="#Aquile_E_Scoiattoli_album">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Aquile E Scoiattoli</rdfs:label>
-  <rdfs:comment xml:lang="en">Aquile E Scoiattoli is the fifth album of Latte E Miele released in 1976</rdfs:comment>
-</Album>
-
-<Release rdf:about="#Fiori_E_Colori_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#Fiori_E_Colori_album"/>
-  <nextRelease rdf:resource="#Milano_1968_I_Miei_Sogni_release"/>
-  <rdfs:label xml:lang="en">Fiori E Colori studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Fiori E Colori studio release is the first release of Le Orme, published in 1968</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1968</releaseYear>
-</Release>
-
-<Album rdf:about="#Fiori_E_Colori_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">Fiori E Colori</rdfs:label>
-  <rdfs:comment xml:lang="en">Fiori E Colori is the first album of Le Orme released in 1968</rdfs:comment>
-</Album>
-
-<Release rdf:about="#Milano_1968_I_Miei_Sogni_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#Milano_1968_I_Miei_Sogni_album"/>
-  <nextRelease rdf:resource="#Senti_L_Estate_Che_Torna_release"/>
-  <rdfs:label xml:lang="en">Milano 1968 / I Miei Sogni studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Milano 1968 / I Miei Sogni studio release is the second release of Le Orme, published in 1968</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1968</releaseYear>
-</Release>
-
-<Album rdf:about="#Milano_1968_I_Miei_Sogni_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">Milano 1968 / I Miei Sogni</rdfs:label>
-  <rdfs:comment xml:lang="en">Milano 1968 / I Miei Sogni is the second album of Le Orme released in 1968</rdfs:comment>
-</Album>
-
-<Release rdf:about="#Senti_L_Estate_Che_Torna_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#Senti_L_Estate_Che_Torna_album"/>
-  <nextRelease rdf:resource="#Ad_Gloriam_release"/>
-  <rdfs:label xml:lang="en">Senti L'Estate Che Torna studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Senti L'Estate Che Torna studio release is the third release of Le Orme, published in 1968</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1968</releaseYear>
-</Release>
-
-<Album rdf:about="#Senti_L_Estate_Che_Torna_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">Senti L'Estate Che Torna</rdfs:label>
-  <rdfs:comment xml:lang="en">Senti L'Estate Che Torna is the third album of Le Orme released in 1968</rdfs:comment>
+  <rdfs:comment xml:lang="en">Aquile E Scoiattoli is the third album of Latte E Miele released in 1976</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">789</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">357960</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></imageUrl>
 </Album>
 
 <Release rdf:about="#Ad_Gloriam_release">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <ofAlbum rdf:resource="#Ad_Gloriam_album"/>
-  <nextRelease rdf:resource="#Irene_Casa_Mia_release"/>
+  <nextRelease rdf:resource="#Collage_release"/>
   <rdfs:label xml:lang="en">Ad Gloriam studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Ad Gloriam studio release is the fourth release of Le Orme, published in 1969</rdfs:comment>
+  <rdfs:comment xml:lang="en">Ad Gloriam studio release is the first release of Le Orme, published in 1969</rdfs:comment>
   <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1969</releaseYear>
 </Release>
 
 <Album rdf:about="#Ad_Gloriam_album">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Ad Gloriam</rdfs:label>
-  <rdfs:comment xml:lang="en">Ad Gloriam is the fourth album of Le Orme released in 1969</rdfs:comment>
-</Album>
-
-<Release rdf:about="#Irene_Casa_Mia_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#Irene_Casa_Mia_album"/>
-  <nextRelease rdf:resource="#L_Aurora_Delle_Orme_release"/>
-  <rdfs:label xml:lang="en">Irene / Casa Mia studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Irene / Casa Mia studio release is the fifth release of Le Orme, published in 1969</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1969</releaseYear>
-</Release>
-
-<Album rdf:about="#Irene_Casa_Mia_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">Irene / Casa Mia</rdfs:label>
-  <rdfs:comment xml:lang="en">Irene / Casa Mia is the fifth album of Le Orme released in 1969</rdfs:comment>
-</Album>
-
-<Release rdf:about="#L_Aurora_Delle_Orme_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#L_Aurora_Delle_Orme_album"/>
-  <nextRelease rdf:resource="#Fiori_Di_Giglio_release"/>
-  <rdfs:label xml:lang="en">"L'Aurora" Delle Orme studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">"L'Aurora" Delle Orme studio release is the sixth release of Le Orme, published in 1970</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1970</releaseYear>
-</Release>
-
-<Album rdf:about="#L_Aurora_Delle_Orme_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">"L'Aurora" Delle Orme</rdfs:label>
-  <rdfs:comment xml:lang="en">"L'Aurora" Delle Orme is the sixth album of Le Orme released in 1970</rdfs:comment>
-</Album>
-
-<Release rdf:about="#Fiori_Di_Giglio_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#Fiori_Di_Giglio_album"/>
-  <nextRelease rdf:resource="#L_Aurora_Finita_La_Scuola_release"/>
-  <rdfs:label xml:lang="en">Fiori Di Giglio studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Fiori Di Giglio studio release is the seventh release of Le Orme, published in 1970</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1970</releaseYear>
-</Release>
-
-<Album rdf:about="#Fiori_Di_Giglio_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">Fiori Di Giglio</rdfs:label>
-  <rdfs:comment xml:lang="en">Fiori Di Giglio is the seventh album of Le Orme released in 1970</rdfs:comment>
-</Album>
-
-<Release rdf:about="#L_Aurora_Finita_La_Scuola_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#L_Aurora_Finita_La_Scuola_album"/>
-  <nextRelease rdf:resource="#Sguardo_Verso_Il_Cielo_Cemento_Armato_release"/>
-  <rdfs:label xml:lang="en">L'Aurora / Finita La Scuola studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">L'Aurora / Finita La Scuola studio release is the eighth release of Le Orme, published in 1970</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1970</releaseYear>
-</Release>
-
-<Album rdf:about="#L_Aurora_Finita_La_Scuola_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">L'Aurora / Finita La Scuola</rdfs:label>
-  <rdfs:comment xml:lang="en">L'Aurora / Finita La Scuola is the eighth album of Le Orme released in 1970</rdfs:comment>
-</Album>
-
-<Release rdf:about="#Sguardo_Verso_Il_Cielo_Cemento_Armato_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#Sguardo_Verso_Il_Cielo_Cemento_Armato_album"/>
-  <nextRelease rdf:resource="#Collage_release"/>
-  <rdfs:label xml:lang="en">Sguardo Verso Il Cielo / Cemento Armato studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Sguardo Verso Il Cielo / Cemento Armato studio release is the ninth release of Le Orme, published in 1971</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1971</releaseYear>
-</Release>
-
-<Album rdf:about="#Sguardo_Verso_Il_Cielo_Cemento_Armato_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">Sguardo Verso Il Cielo / Cemento Armato</rdfs:label>
-  <rdfs:comment xml:lang="en">Sguardo Verso Il Cielo / Cemento Armato is the ninth album of Le Orme released in 1971</rdfs:comment>
+  <rdfs:comment xml:lang="en">Ad Gloriam is the first album of Le Orme released in 1969</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2300</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">286243</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/Wj213HAKNEEuxVslywXiTgNUUniexaNcC0i6dpq5fy0/rs:fit/g:sm/q:90/h:465/w:484/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI3MzMx/MjUtMTI5ODU2NjY5/Ni5qcGVn.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#Collage_release">
@@ -2004,14 +1673,17 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <ofAlbum rdf:resource="#Collage_album"/>
   <nextRelease rdf:resource="#Uomo_Di_Pezza_release"/>
   <rdfs:label xml:lang="en">Collage studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Collage studio release is the tenth release of Le Orme, published in 1971</rdfs:comment>
+  <rdfs:comment xml:lang="en">Collage studio release is the second release of Le Orme, published in 1971</rdfs:comment>
   <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1971</releaseYear>
 </Release>
 
 <Album rdf:about="#Collage_album">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Collage</rdfs:label>
-  <rdfs:comment xml:lang="en">Collage is the tenth album of Le Orme released in 1971</rdfs:comment>
+  <rdfs:comment xml:lang="en">Collage is the second album of Le Orme released in 1971</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2301</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9077</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/o_5-Au1xmf8Yr9ayKFI5iz3cGMnA0mrPR9M-s2vuVos/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEyOTAy/ODAtMTUwMjQ2MzI0/MC05NTQ5LmpwZWc.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#Uomo_Di_Pezza_release">
@@ -2019,59 +1691,35 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <ofAlbum rdf:resource="#Uomo_Di_Pezza_album"/>
   <nextRelease rdf:resource="#Felona_E_Sorona_release"/>
   <rdfs:label xml:lang="en">Uomo Di Pezza studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Uomo Di Pezza studio release is the eleventh release of Le Orme, published in 1972</rdfs:comment>
+  <rdfs:comment xml:lang="en">Uomo Di Pezza studio release is the third release of Le Orme, published in 1972</rdfs:comment>
   <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</releaseYear>
 </Release>
 
 <Album rdf:about="#Uomo_Di_Pezza_album">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Uomo Di Pezza</rdfs:label>
-  <rdfs:comment xml:lang="en">Uomo Di Pezza is the eleventh album of Le Orme released in 1972</rdfs:comment>
+  <rdfs:comment xml:lang="en">Uomo Di Pezza is the third album of Le Orme released in 1972</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2297</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9083</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/gCAjBXVnjt-Y0H5R8Pq9sZHBfLoYOwtiAHZ2M-u06HQ/rs:fit/g:sm/q:90/h:604/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIxNTQ4/MzktMTQ5Njc0NjA2/My01ODIxLmpwZWc.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#Felona_E_Sorona_release">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <ofAlbum rdf:resource="#Felona_E_Sorona_album"/>
-  <nextRelease rdf:resource="#Felona_release"/>
+  <nextRelease rdf:resource="#Contrappunti_release"/>
   <rdfs:label xml:lang="en">Felona E Sorona studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Felona E Sorona studio release is the twelfth release of Le Orme, published in 1973</rdfs:comment>
+  <rdfs:comment xml:lang="en">Felona E Sorona studio release is the fifth release of Le Orme, published in 1973</rdfs:comment>
   <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</releaseYear>
 </Release>
 
 <Album rdf:about="#Felona_E_Sorona_album">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Felona E Sorona</rdfs:label>
-  <rdfs:comment xml:lang="en">Felona E Sorona is the twelfth album of Le Orme released in 1973</rdfs:comment>
-</Album>
-
-<Release rdf:about="#Felona_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#Felona_album"/>
-  <nextRelease rdf:resource="#In_Concerto_release"/>
-  <rdfs:label xml:lang="en">Felona studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Felona studio release is the thirteenth release of Le Orme, published in 1973</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</releaseYear>
-</Release>
-
-<Album rdf:about="#Felona_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">Felona</rdfs:label>
-  <rdfs:comment xml:lang="en">Felona is the thirteenth album of Le Orme released in 1973</rdfs:comment>
-</Album>
-
-<Release rdf:about="#In_Concerto_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#In_Concerto_album"/>
-  <nextRelease rdf:resource="#Contrappunti_release"/>
-  <rdfs:label xml:lang="en">In Concerto studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">In Concerto studio release is the fourteenth release of Le Orme, published in 1974</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1974</releaseYear>
-</Release>
-
-<Album rdf:about="#In_Concerto_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">In Concerto</rdfs:label>
-  <rdfs:comment xml:lang="en">In Concerto is the fourteenth album of Le Orme released in 1974</rdfs:comment>
+  <rdfs:comment xml:lang="en">Felona E Sorona is the fifth album of Le Orme released in 1973</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12203</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7528365</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></imageUrl>
 </Album>
 
 <Release rdf:about="#Contrappunti_release">
@@ -2079,72 +1727,70 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <ofAlbum rdf:resource="#Contrappunti_album"/>
   <nextRelease rdf:resource="#Smogmagica_release"/>
   <rdfs:label xml:lang="en">Contrappunti studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Contrappunti studio release is the fifteenth release of Le Orme, published in 1974</rdfs:comment>
+  <rdfs:comment xml:lang="en">Contrappunti studio release is the sixth release of Le Orme, published in 1974</rdfs:comment>
   <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1974</releaseYear>
 </Release>
 
 <Album rdf:about="#Contrappunti_album">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Contrappunti</rdfs:label>
-  <rdfs:comment xml:lang="en">Contrappunti is the fifteenth album of Le Orme released in 1974</rdfs:comment>
+  <rdfs:comment xml:lang="en">Contrappunti is the sixth album of Le Orme released in 1974</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2304</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9080</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/a58QE4unijA-wMy1s29IzpjtsAFBdlz96IueNb5ysmw/rs:fit/g:sm/q:90/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTExNjk2/MDEtMTQyMjM4MzI5/Ny0xOTg1LmpwZWc.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#Smogmagica_release">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <ofAlbum rdf:resource="#Smogmagica_album"/>
-  <nextRelease rdf:resource="#Canzone_D_Amore_release"/>
+  <nextRelease rdf:resource="#Verita_Nascoste_release"/>
   <rdfs:label xml:lang="en">Smogmagica studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Smogmagica studio release is the sixteenth release of Le Orme, published in 1975</rdfs:comment>
+  <rdfs:comment xml:lang="en">Smogmagica studio release is the seventh release of Le Orme, published in 1975</rdfs:comment>
   <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1975</releaseYear>
 </Release>
 
 <Album rdf:about="#Smogmagica_album">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Smogmagica</rdfs:label>
-  <rdfs:comment xml:lang="en">Smogmagica is the sixteenth album of Le Orme released in 1975</rdfs:comment>
-</Album>
-
-<Release rdf:about="#Canzone_D_Amore_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#Canzone_D_Amore_album"/>
-  <nextRelease rdf:resource="#Verita_Nascoste_release"/>
-  <rdfs:label xml:lang="en">Canzone D'Amore studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Canzone D'Amore studio release is the seventeenth release of Le Orme, published in 1976</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1976</releaseYear>
-</Release>
-
-<Album rdf:about="#Canzone_D_Amore_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">Canzone D'Amore</rdfs:label>
-  <rdfs:comment xml:lang="en">Canzone D'Amore is the seventeenth album of Le Orme released in 1976</rdfs:comment>
+  <rdfs:comment xml:lang="en">Smogmagica is the seventh album of Le Orme released in 1975</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2313</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">488596</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/kxgYY2Wva1t-TTr_DsVr1T-GX7sr7X1eZxvCIF1qqFo/rs:fit/g:sm/q:90/h:598/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTk5Njg3/My0xNDIyNTQ1MjY2/LTYzMjUuanBlZw.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#Verita_Nascoste_release">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <ofAlbum rdf:resource="#Verita_Nascoste_album"/>
   <rdfs:label xml:lang="en">Verità Nascoste studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Verità Nascoste studio release is the eighteenth release of Le Orme, published in 1976</rdfs:comment>
+  <rdfs:comment xml:lang="en">Verità Nascoste studio release is the eighth release of Le Orme, published in 1976</rdfs:comment>
   <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1976</releaseYear>
 </Release>
 
 <Album rdf:about="#Verita_Nascoste_album">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Verità Nascoste</rdfs:label>
-  <rdfs:comment xml:lang="en">Verità Nascoste is the eighteenth album of Le Orme released in 1976</rdfs:comment>
+  <rdfs:comment xml:lang="en">Verità Nascoste is the eighth album of Le Orme released in 1976</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2305</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">184941</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></imageUrl>
 </Album>
 
 <Release rdf:about="#Maxophone_release">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <ofAlbum rdf:resource="#Maxophone_album"/>
+  <nextRelease rdf:resource="#Maxophone_release"/>
   <rdfs:label xml:lang="en">Maxophone studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Maxophone studio release is the first release of Maxophone, published in 1975</rdfs:comment>
+  <rdfs:comment xml:lang="en">Maxophone studio release is the second release of Maxophone, published in 1975</rdfs:comment>
   <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1975</releaseYear>
 </Release>
 
 <Album rdf:about="#Maxophone_album">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Maxophone</rdfs:label>
-  <rdfs:comment xml:lang="en">Maxophone is the first album of Maxophone released in 1975</rdfs:comment>
+  <rdfs:comment xml:lang="en">Maxophone is the second album of Maxophone released in 1975</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">923</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1872143</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></imageUrl>
 </Album>
 
 <Release rdf:about="#Io_Sono_Murple_release">
@@ -2159,6 +1805,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Io Sono Murple</rdfs:label>
   <rdfs:comment xml:lang="en">Io Sono Murple is the first album of Murple released in 1974</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2825</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">445958</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/RKe55xcRO9K6LluGJC14NOMWJyN22TpTukkBg76p6DM/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM2NzIx/NzAtMTM5NjUyOTMx/NC04ODQyLmpwZWc.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#Zarathustra_release">
@@ -2173,6 +1822,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Zarathustra</rdfs:label>
   <rdfs:comment xml:lang="en">Zarathustra is the first album of Museo Rosenbach released in 1973</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">967</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4477</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/5rn5f6mMso1rgxkyRxhlcGQ6SaikMicbGz6nNHBSAmc/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI2OTkw/NzUtMTU3MjgyNDAw/NC01OTM5LmpwZWc.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#Opus_Avantra_Donella_Del_Monaco_release">
@@ -2188,12 +1840,14 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Opus Avantra Donella Del Monaco</rdfs:label>
   <rdfs:comment xml:lang="en">Opus Avantra Donella Del Monaco is the first album of Opus Avantra released in 1974</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2691</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3675</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/7KPxZq9rtvGjf5EmsK5-DclZGyl4B8_txdb6rzGyHcg/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE5MTc3/NDAtMTU4MzAwMzI4/NS0xNTc0LmpwZWc.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#Lord_Cromwell_Plays_Suite_For_Seven_Vices_release">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <ofAlbum rdf:resource="#Lord_Cromwell_Plays_Suite_For_Seven_Vices_album"/>
-  <nextRelease rdf:resource="#Allemanda_release"/>
   <rdfs:label xml:lang="en">Lord Cromwell Plays Suite For Seven Vices studio release</rdfs:label>
   <rdfs:comment xml:lang="en">Lord Cromwell Plays Suite For Seven Vices studio release is the second release of Opus Avantra, published in 1975</rdfs:comment>
   <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1975</releaseYear>
@@ -2203,26 +1857,15 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Lord Cromwell Plays Suite For Seven Vices</rdfs:label>
   <rdfs:comment xml:lang="en">Lord Cromwell Plays Suite For Seven Vices is the second album of Opus Avantra released in 1975</rdfs:comment>
-</Album>
-
-<Release rdf:about="#Allemanda_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#Allemanda_album"/>
-  <rdfs:label xml:lang="en">Allemanda studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Allemanda studio release is the third release of Opus Avantra, published in 1975</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1975</releaseYear>
-</Release>
-
-<Album rdf:about="#Allemanda_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">Allemanda</rdfs:label>
-  <rdfs:comment xml:lang="en">Allemanda is the third album of Opus Avantra released in 1975</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2692</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">177328</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/tmCiWB1kQOjiFl-isTs-S2qlwLke-eXa7SEEEs3SkxA/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI4OTQ4/MjQtMTQ4NTE1MDg0/Mi0zODA5LmpwZWc.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#L_Uomo_release">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <ofAlbum rdf:resource="#L_Uomo_album"/>
-  <nextRelease rdf:resource="#L_Uomo_Valzer_Dei_Fiori_release"/>
+  <nextRelease rdf:resource="#Preludio_Tema_Variazioni_Canzona_release"/>
   <rdfs:label xml:lang="en">L'Uomo studio release</rdfs:label>
   <rdfs:comment xml:lang="en">L'Uomo studio release is the first release of Osanna, published in 1971</rdfs:comment>
   <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1971</releaseYear>
@@ -2232,21 +1875,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">L'Uomo</rdfs:label>
   <rdfs:comment xml:lang="en">L'Uomo is the first album of Osanna released in 1971</rdfs:comment>
-</Album>
-
-<Release rdf:about="#L_Uomo_Valzer_Dei_Fiori_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#L_Uomo_Valzer_Dei_Fiori_album"/>
-  <nextRelease rdf:resource="#Preludio_Tema_Variazioni_Canzona_release"/>
-  <rdfs:label xml:lang="en">L'Uomo / Valzer Dei Fiori studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">L'Uomo / Valzer Dei Fiori studio release is the second release of Osanna, published in 1972</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</releaseYear>
-</Release>
-
-<Album rdf:about="#L_Uomo_Valzer_Dei_Fiori_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">L'Uomo / Valzer Dei Fiori</rdfs:label>
-  <rdfs:comment xml:lang="en">L'Uomo / Valzer Dei Fiori is the second album of Osanna released in 1972</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1029</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">102023</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/rJ_FkRIImLiUxtRJ6vF8GjIUo6XTVrg3d1Fk1RQ-XM0/rs:fit/g:sm/q:90/h:596/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMwNDYy/ODYtMTM4NDE3MjA5/Ni05MzA1LmpwZWc.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#Preludio_Tema_Variazioni_Canzona_release">
@@ -2254,14 +1885,17 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <ofAlbum rdf:resource="#Preludio_Tema_Variazioni_Canzona_album"/>
   <nextRelease rdf:resource="#Palepoli_release"/>
   <rdfs:label xml:lang="en">Preludio Tema Variazioni Canzona studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Preludio Tema Variazioni Canzona studio release is the third release of Osanna, published in 1972</rdfs:comment>
+  <rdfs:comment xml:lang="en">Preludio Tema Variazioni Canzona studio release is the second release of Osanna, published in 1972</rdfs:comment>
   <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</releaseYear>
 </Release>
 
 <Album rdf:about="#Preludio_Tema_Variazioni_Canzona_album">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Preludio Tema Variazioni Canzona</rdfs:label>
-  <rdfs:comment xml:lang="en">Preludio Tema Variazioni Canzona is the third album of Osanna released in 1972</rdfs:comment>
+  <rdfs:comment xml:lang="en">Preludio Tema Variazioni Canzona is the second album of Osanna released in 1972</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1031</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">194156</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/XlBGn4a8xy1eyFoipdFOYlPuS5Khx5v6ZzDE-eTqwsA/rs:fit/g:sm/q:90/h:507/w:501/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIwMjc1/MTctMTI1OTQxNTY2/OC5qcGVn.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#Palepoli_release">
@@ -2269,33 +1903,40 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <ofAlbum rdf:resource="#Palepoli_album"/>
   <nextRelease rdf:resource="#Landscape_Of_Life_release"/>
   <rdfs:label xml:lang="en">Palepoli studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Palepoli studio release is the fourth release of Osanna, published in 1972</rdfs:comment>
+  <rdfs:comment xml:lang="en">Palepoli studio release is the third release of Osanna, published in 1972</rdfs:comment>
   <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</releaseYear>
 </Release>
 
 <Album rdf:about="#Palepoli_album">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Palepoli</rdfs:label>
-  <rdfs:comment xml:lang="en">Palepoli is the fourth album of Osanna released in 1972</rdfs:comment>
+  <rdfs:comment xml:lang="en">Palepoli is the third album of Osanna released in 1972</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1030</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9070</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/Y7nq-LkDwBJzqHHoAf_4JwdhjAymU9sw0-exkqoTI5E/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI3NTgz/MDktMTM5NjUyOTUw/MS0zMTA5LmpwZWc.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#Landscape_Of_Life_release">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <ofAlbum rdf:resource="#Landscape_Of_Life_album"/>
   <rdfs:label xml:lang="en">Landscape Of Life studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Landscape Of Life studio release is the fifth release of Osanna, published in 1974</rdfs:comment>
+  <rdfs:comment xml:lang="en">Landscape Of Life studio release is the fourth release of Osanna, published in 1974</rdfs:comment>
   <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1974</releaseYear>
 </Release>
 
 <Album rdf:about="#Landscape_Of_Life_album">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Landscape Of Life</rdfs:label>
-  <rdfs:comment xml:lang="en">Landscape Of Life is the fifth album of Osanna released in 1974</rdfs:comment>
+  <rdfs:comment xml:lang="en">Landscape Of Life is the fourth album of Osanna released in 1974</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1032</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">194157</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/q-O_Rbo2d6cdpe0vMnO0pctA8lyxUy3ebqfL_KJnxro/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMzMjM2/NzgtMTQ4ODA0MzQy/OC00ODc3LmpwZWc.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#Pierrot_Lunaire_release">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <ofAlbum rdf:resource="#Pierrot_Lunaire_album"/>
+  <nextRelease rdf:resource="#Gudrun_release"/>
   <rdfs:label xml:lang="en">Pierrot Lunaire studio release</rdfs:label>
   <rdfs:comment xml:lang="en">Pierrot Lunaire studio release is the first release of Pierrot Lunaire, published in 1974</rdfs:comment>
   <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1974</releaseYear>
@@ -2305,12 +1946,32 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Pierrot Lunaire</rdfs:label>
   <rdfs:comment xml:lang="en">Pierrot Lunaire is the first album of Pierrot Lunaire released in 1974</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2906</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">167099</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/7Jgg0ELkF5M6SGPYgsgr87RrACkpLJ4yeLBwAVZUkNg/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTk4NjQ2/NjMtMTU1OTQ2Mzcz/Mi05NjA2LmpwZWc.jpeg</imageUrl>
+</Album>
+
+<Release rdf:about="#Gudrun_release">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <ofAlbum rdf:resource="#Gudrun_album"/>
+  <rdfs:label xml:lang="en">Gudrun studio release</rdfs:label>
+  <rdfs:comment xml:lang="en">Gudrun studio release is the second release of Pierrot Lunaire, published in 1976</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1976</releaseYear>
+</Release>
+
+<Album rdf:about="#Gudrun_album">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdfs:label xml:lang="en">Gudrun</rdfs:label>
+  <rdfs:comment xml:lang="en">Gudrun is the second album of Pierrot Lunaire released in 1976</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2907</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">167095</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></imageUrl>
 </Album>
 
 <Release rdf:about="#Brennero_66_Per_Quelli_Come_Noi_release">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <ofAlbum rdf:resource="#Brennero_66_Per_Quelli_Come_Noi_album"/>
-  <nextRelease rdf:resource="#Vieni_Fuori_Keep_On_Running_L_Uomo_Di_Ieri_release"/>
+  <nextRelease rdf:resource="#Memorie_release"/>
   <rdfs:label xml:lang="en">Brennero 66 / Per Quelli Come Noi studio release</rdfs:label>
   <rdfs:comment xml:lang="en">Brennero 66 / Per Quelli Come Noi studio release is the first release of Pooh, published in 1966</rdfs:comment>
   <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1966</releaseYear>
@@ -2320,530 +1981,170 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Brennero 66 / Per Quelli Come Noi</rdfs:label>
   <rdfs:comment xml:lang="en">Brennero 66 / Per Quelli Come Noi is the first album of Pooh released in 1966</rdfs:comment>
-</Album>
-
-<Release rdf:about="#Vieni_Fuori_Keep_On_Running_L_Uomo_Di_Ieri_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#Vieni_Fuori_Keep_On_Running_L_Uomo_Di_Ieri_album"/>
-  <nextRelease rdf:resource="#Per_Quelli_Come_Noi_release"/>
-  <rdfs:label xml:lang="en">Vieni Fuori (Keep On Running) / L'Uomo Di Ieri studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Vieni Fuori (Keep On Running) / L'Uomo Di Ieri studio release is the second release of Pooh, published in 1966</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1966</releaseYear>
-</Release>
-
-<Album rdf:about="#Vieni_Fuori_Keep_On_Running_L_Uomo_Di_Ieri_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">Vieni Fuori (Keep On Running) / L'Uomo Di Ieri</rdfs:label>
-  <rdfs:comment xml:lang="en">Vieni Fuori (Keep On Running) / L'Uomo Di Ieri is the second album of Pooh released in 1966</rdfs:comment>
-</Album>
-
-<Release rdf:about="#Per_Quelli_Come_Noi_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#Per_Quelli_Come_Noi_album"/>
-  <nextRelease rdf:resource="#Bikini_Beat_Quello_Che_Non_Sai_release"/>
-  <rdfs:label xml:lang="en">Per Quelli Come Noi studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Per Quelli Come Noi studio release is the third release of Pooh, published in 1966</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1966</releaseYear>
-</Release>
-
-<Album rdf:about="#Per_Quelli_Come_Noi_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">Per Quelli Come Noi</rdfs:label>
-  <rdfs:comment xml:lang="en">Per Quelli Come Noi is the third album of Pooh released in 1966</rdfs:comment>
-</Album>
-
-<Release rdf:about="#Bikini_Beat_Quello_Che_Non_Sai_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#Bikini_Beat_Quello_Che_Non_Sai_album"/>
-  <nextRelease rdf:resource="#Nel_Buio_Cose_Di_Questo_Mondo_release"/>
-  <rdfs:label xml:lang="en">Bikini Beat / Quello Che Non Sai studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Bikini Beat / Quello Che Non Sai studio release is the fourth release of Pooh, published in 1966</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1966</releaseYear>
-</Release>
-
-<Album rdf:about="#Bikini_Beat_Quello_Che_Non_Sai_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">Bikini Beat / Quello Che Non Sai</rdfs:label>
-  <rdfs:comment xml:lang="en">Bikini Beat / Quello Che Non Sai is the fourth album of Pooh released in 1966</rdfs:comment>
-</Album>
-
-<Release rdf:about="#Nel_Buio_Cose_Di_Questo_Mondo_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#Nel_Buio_Cose_Di_Questo_Mondo_album"/>
-  <nextRelease rdf:resource="#In_Silenzio_Piccola_Katy_release"/>
-  <rdfs:label xml:lang="en">Nel Buio / Cose Di Questo Mondo studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Nel Buio / Cose Di Questo Mondo studio release is the fifth release of Pooh, published in 1967</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1967</releaseYear>
-</Release>
-
-<Album rdf:about="#Nel_Buio_Cose_Di_Questo_Mondo_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">Nel Buio / Cose Di Questo Mondo</rdfs:label>
-  <rdfs:comment xml:lang="en">Nel Buio / Cose Di Questo Mondo is the fifth album of Pooh released in 1967</rdfs:comment>
-</Album>
-
-<Release rdf:about="#In_Silenzio_Piccola_Katy_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#In_Silenzio_Piccola_Katy_album"/>
-  <nextRelease rdf:resource="#Contrasto_release"/>
-  <rdfs:label xml:lang="en">In Silenzio / Piccola Katy studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">In Silenzio / Piccola Katy studio release is the sixth release of Pooh, published in 1968</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1968</releaseYear>
-</Release>
-
-<Album rdf:about="#In_Silenzio_Piccola_Katy_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">In Silenzio / Piccola Katy</rdfs:label>
-  <rdfs:comment xml:lang="en">In Silenzio / Piccola Katy is the sixth album of Pooh released in 1968</rdfs:comment>
-</Album>
-
-<Release rdf:about="#Contrasto_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#Contrasto_album"/>
-  <nextRelease rdf:resource="#Mary_Ann_release"/>
-  <rdfs:label xml:lang="en">Contrasto studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Contrasto studio release is the seventh release of Pooh, published in 1968</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1968</releaseYear>
-</Release>
-
-<Album rdf:about="#Contrasto_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">Contrasto</rdfs:label>
-  <rdfs:comment xml:lang="en">Contrasto is the seventh album of Pooh released in 1968</rdfs:comment>
-</Album>
-
-<Release rdf:about="#Mary_Ann_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#Mary_Ann_album"/>
-  <nextRelease rdf:resource="#Memorie_release"/>
-  <rdfs:label xml:lang="en">Mary Ann studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Mary Ann studio release is the eighth release of Pooh, published in 1969</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1969</releaseYear>
-</Release>
-
-<Album rdf:about="#Mary_Ann_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">Mary Ann</rdfs:label>
-  <rdfs:comment xml:lang="en">Mary Ann is the eighth album of Pooh released in 1969</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20978</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">574505</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/CmMIpZGXEszvw76wqYitDYBdb00L2-al8-_zUUcxULs/rs:fit/g:sm/q:90/h:510/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTExMTIw/MzkyLTE1MTAyMjc4/NDktMzkyOS5qcGVn.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#Memorie_release">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <ofAlbum rdf:resource="#Memorie_album"/>
-  <nextRelease rdf:resource="#Good_Bye_Madama_Buttefly_release"/>
+  <nextRelease rdf:resource="#Contrasto_release"/>
   <rdfs:label xml:lang="en">Memorie studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Memorie studio release is the ninth release of Pooh, published in 1969</rdfs:comment>
+  <rdfs:comment xml:lang="en">Memorie studio release is the second release of Pooh, published in 1969</rdfs:comment>
   <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1969</releaseYear>
 </Release>
 
 <Album rdf:about="#Memorie_album">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Memorie</rdfs:label>
-  <rdfs:comment xml:lang="en">Memorie is the ninth album of Pooh released in 1969</rdfs:comment>
+  <rdfs:comment xml:lang="en">Memorie is the second album of Pooh released in 1969</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20979</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">584373</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/fa4EZVfem46If4oOs4Q1ZD4_wgvGSz3GSp7_xNG8trc/rs:fit/g:sm/q:90/h:600/w:583/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTU4NjY4/MTEtMTQwNDg4ODE5/NS0zMTIxLmpwZWc.jpeg</imageUrl>
 </Album>
 
-<Release rdf:about="#Good_Bye_Madama_Buttefly_release">
+<Release rdf:about="#Contrasto_release">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#Good_Bye_Madama_Buttefly_album"/>
-  <nextRelease rdf:resource="#Tanta_Voglia_Di_Lei_Tutto_Alle_Tre_release"/>
-  <rdfs:label xml:lang="en">Good Bye Madama Buttefly studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Good Bye Madama Buttefly studio release is the tenth release of Pooh, published in 1969</rdfs:comment>
+  <ofAlbum rdf:resource="#Contrasto_album"/>
+  <nextRelease rdf:resource="#Opera_Prima_release"/>
+  <rdfs:label xml:lang="en">Contrasto studio release</rdfs:label>
+  <rdfs:comment xml:lang="en">Contrasto studio release is the third release of Pooh, published in 1969</rdfs:comment>
   <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1969</releaseYear>
 </Release>
 
-<Album rdf:about="#Good_Bye_Madama_Buttefly_album">
+<Album rdf:about="#Contrasto_album">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">Good Bye Madama Buttefly</rdfs:label>
-  <rdfs:comment xml:lang="en">Good Bye Madama Buttefly is the tenth album of Pooh released in 1969</rdfs:comment>
-</Album>
-
-<Release rdf:about="#Tanta_Voglia_Di_Lei_Tutto_Alle_Tre_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#Tanta_Voglia_Di_Lei_Tutto_Alle_Tre_album"/>
-  <nextRelease rdf:resource="#Opera_Prima_release"/>
-  <rdfs:label xml:lang="en">Tanta Voglia Di Lei / Tutto Alle Tre studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Tanta Voglia Di Lei / Tutto Alle Tre studio release is the eleventh release of Pooh, published in 1971</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1971</releaseYear>
-</Release>
-
-<Album rdf:about="#Tanta_Voglia_Di_Lei_Tutto_Alle_Tre_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">Tanta Voglia Di Lei / Tutto Alle Tre</rdfs:label>
-  <rdfs:comment xml:lang="en">Tanta Voglia Di Lei / Tutto Alle Tre is the eleventh album of Pooh released in 1971</rdfs:comment>
+  <rdfs:label xml:lang="en">Contrasto</rdfs:label>
+  <rdfs:comment xml:lang="en">Contrasto is the third album of Pooh released in 1969</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21919</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">232536</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/OCo0vyBHjjW2LW_epBUEyWZ9VuQ1v2G72rzG322qUHc/rs:fit/g:sm/q:90/h:293/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIxNzk2/ODQtMTI2ODMxNjMw/NC5qcGVn.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#Opera_Prima_release">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <ofAlbum rdf:resource="#Opera_Prima_album"/>
-  <nextRelease rdf:resource="#Pensiero_A_Un_Minuto_Dall_Amore_release"/>
+  <nextRelease rdf:resource="#Alessandra_release"/>
   <rdfs:label xml:lang="en">Opera Prima studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Opera Prima studio release is the twelfth release of Pooh, published in 1971</rdfs:comment>
+  <rdfs:comment xml:lang="en">Opera Prima studio release is the fourth release of Pooh, published in 1971</rdfs:comment>
   <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1971</releaseYear>
 </Release>
 
 <Album rdf:about="#Opera_Prima_album">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Opera Prima</rdfs:label>
-  <rdfs:comment xml:lang="en">Opera Prima is the twelfth album of Pooh released in 1971</rdfs:comment>
-</Album>
-
-<Release rdf:about="#Pensiero_A_Un_Minuto_Dall_Amore_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#Pensiero_A_Un_Minuto_Dall_Amore_album"/>
-  <nextRelease rdf:resource="#Noi_Due_Nel_Mondo_E_Nell_Anima_Nascero_Con_Te_release"/>
-  <rdfs:label xml:lang="en">Pensiero / A Un Minuto Dall'Amore studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Pensiero / A Un Minuto Dall'Amore studio release is the thirteenth release of Pooh, published in 1971</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1971</releaseYear>
-</Release>
-
-<Album rdf:about="#Pensiero_A_Un_Minuto_Dall_Amore_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">Pensiero / A Un Minuto Dall'Amore</rdfs:label>
-  <rdfs:comment xml:lang="en">Pensiero / A Un Minuto Dall'Amore is the thirteenth album of Pooh released in 1971</rdfs:comment>
-</Album>
-
-<Release rdf:about="#Noi_Due_Nel_Mondo_E_Nell_Anima_Nascero_Con_Te_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#Noi_Due_Nel_Mondo_E_Nell_Anima_Nascero_Con_Te_album"/>
-  <nextRelease rdf:resource="#Alessandra_release"/>
-  <rdfs:label xml:lang="en">Noi Due Nel Mondo E Nell'Anima / Nascerò Con Te studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Noi Due Nel Mondo E Nell'Anima / Nascerò Con Te studio release is the fourteenth release of Pooh, published in 1972</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</releaseYear>
-</Release>
-
-<Album rdf:about="#Noi_Due_Nel_Mondo_E_Nell_Anima_Nascero_Con_Te_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">Noi Due Nel Mondo E Nell'Anima / Nascerò Con Te</rdfs:label>
-  <rdfs:comment xml:lang="en">Noi Due Nel Mondo E Nell'Anima / Nascerò Con Te is the fourteenth album of Pooh released in 1972</rdfs:comment>
+  <rdfs:comment xml:lang="en">Opera Prima is the fourth album of Pooh released in 1971</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">31403</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">246329</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/z1DWWHL1KojVKW-QNAgwMcIeH-QecUYjokOEToOhfBI/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTQ3Njgw/ODMtMTQwNDg5NDM5/Mi0zOTQzLmpwZWc.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#Alessandra_release">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <ofAlbum rdf:resource="#Alessandra_album"/>
-  <nextRelease rdf:resource="#Cosa_Si_Puo_Dire_Di_Te_release"/>
+  <nextRelease rdf:resource="#Parsifal_release"/>
   <rdfs:label xml:lang="en">Alessandra studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Alessandra studio release is the fifteenth release of Pooh, published in 1972</rdfs:comment>
+  <rdfs:comment xml:lang="en">Alessandra studio release is the fifth release of Pooh, published in 1972</rdfs:comment>
   <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</releaseYear>
 </Release>
 
 <Album rdf:about="#Alessandra_album">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Alessandra</rdfs:label>
-  <rdfs:comment xml:lang="en">Alessandra is the fifteenth album of Pooh released in 1972</rdfs:comment>
-</Album>
-
-<Release rdf:about="#Cosa_Si_Puo_Dire_Di_Te_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#Cosa_Si_Puo_Dire_Di_Te_album"/>
-  <nextRelease rdf:resource="#Tu_Y_Yo_En_El_Mas_Alla_release"/>
-  <rdfs:label xml:lang="en">Cosa Si Può Dire Di Te? studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Cosa Si Può Dire Di Te? studio release is the sixteenth release of Pooh, published in 1972</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</releaseYear>
-</Release>
-
-<Album rdf:about="#Cosa_Si_Puo_Dire_Di_Te_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">Cosa Si Può Dire Di Te?</rdfs:label>
-  <rdfs:comment xml:lang="en">Cosa Si Può Dire Di Te? is the sixteenth album of Pooh released in 1972</rdfs:comment>
-</Album>
-
-<Release rdf:about="#Tu_Y_Yo_En_El_Mas_Alla_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#Tu_Y_Yo_En_El_Mas_Alla_album"/>
-  <nextRelease rdf:resource="#Tantos_Deseos_De_Ti_release"/>
-  <rdfs:label xml:lang="en">Tu Y Yo En El Mas Alla studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Tu Y Yo En El Mas Alla studio release is the seventeenth release of Pooh, published in 1972</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</releaseYear>
-</Release>
-
-<Album rdf:about="#Tu_Y_Yo_En_El_Mas_Alla_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">Tu Y Yo En El Mas Alla</rdfs:label>
-  <rdfs:comment xml:lang="en">Tu Y Yo En El Mas Alla is the seventeenth album of Pooh released in 1972</rdfs:comment>
-</Album>
-
-<Release rdf:about="#Tantos_Deseos_De_Ti_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#Tantos_Deseos_De_Ti_album"/>
-  <nextRelease rdf:resource="#I_ll_Close_The_Door_Behind_Me_release"/>
-  <rdfs:label xml:lang="en">Tantos Deseos De Ti studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Tantos Deseos De Ti studio release is the eighteenth release of Pooh, published in 1972</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</releaseYear>
-</Release>
-
-<Album rdf:about="#Tantos_Deseos_De_Ti_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">Tantos Deseos De Ti</rdfs:label>
-  <rdfs:comment xml:lang="en">Tantos Deseos De Ti is the eighteenth album of Pooh released in 1972</rdfs:comment>
-</Album>
-
-<Release rdf:about="#I_ll_Close_The_Door_Behind_Me_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#I_ll_Close_The_Door_Behind_Me_album"/>
-  <nextRelease rdf:resource="#Pensamiento_Tantos_Deseos_De_Ti_Tutto_Alle_Tre_Terra_Desolata_Che_Favola_Sei_release"/>
-  <rdfs:label xml:lang="en">I'll Close The Door Behind Me studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">I'll Close The Door Behind Me studio release is the nineteenth release of Pooh, published in 1972</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</releaseYear>
-</Release>
-
-<Album rdf:about="#I_ll_Close_The_Door_Behind_Me_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">I'll Close The Door Behind Me</rdfs:label>
-  <rdfs:comment xml:lang="en">I'll Close The Door Behind Me is the nineteenth album of Pooh released in 1972</rdfs:comment>
-</Album>
-
-<Release rdf:about="#Pensamiento_Tantos_Deseos_De_Ti_Tutto_Alle_Tre_Terra_Desolata_Che_Favola_Sei_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#Pensamiento_Tantos_Deseos_De_Ti_Tutto_Alle_Tre_Terra_Desolata_Che_Favola_Sei_album"/>
-  <nextRelease rdf:resource="#Pensiero_Quando_Una_Lei_Va_Via_release"/>
-  <rdfs:label xml:lang="en">Pensamiento / Tantos Deseos De Ti / Tutto Alle Tre / Terra Desolata / Che Favola Sei studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Pensamiento / Tantos Deseos De Ti / Tutto Alle Tre / Terra Desolata / Che Favola Sei studio release is the twentieth release of Pooh, published in 1973</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</releaseYear>
-</Release>
-
-<Album rdf:about="#Pensamiento_Tantos_Deseos_De_Ti_Tutto_Alle_Tre_Terra_Desolata_Che_Favola_Sei_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">Pensamiento / Tantos Deseos De Ti / Tutto Alle Tre / Terra Desolata / Che Favola Sei</rdfs:label>
-  <rdfs:comment xml:lang="en">Pensamiento / Tantos Deseos De Ti / Tutto Alle Tre / Terra Desolata / Che Favola Sei is the twentieth album of Pooh released in 1973</rdfs:comment>
-</Album>
-
-<Release rdf:about="#Pensiero_Quando_Una_Lei_Va_Via_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#Pensiero_Quando_Una_Lei_Va_Via_album"/>
-  <nextRelease rdf:resource="#Io_E_Te_Per_Altri_Giorni_release"/>
-  <rdfs:label xml:lang="en">Pensiero / Quando Una Lei Va Via studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Pensiero / Quando Una Lei Va Via studio release is the twenty-first release of Pooh, published in 1973</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</releaseYear>
-</Release>
-
-<Album rdf:about="#Pensiero_Quando_Una_Lei_Va_Via_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">Pensiero / Quando Una Lei Va Via</rdfs:label>
-  <rdfs:comment xml:lang="en">Pensiero / Quando Una Lei Va Via is the twenty-first album of Pooh released in 1973</rdfs:comment>
-</Album>
-
-<Release rdf:about="#Io_E_Te_Per_Altri_Giorni_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#Io_E_Te_Per_Altri_Giorni_album"/>
-  <nextRelease rdf:resource="#I_Pooh_release"/>
-  <rdfs:label xml:lang="en">Io E Te Per Altri Giorni studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Io E Te Per Altri Giorni studio release is the twenty-second release of Pooh, published in 1973</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</releaseYear>
-</Release>
-
-<Album rdf:about="#Io_E_Te_Per_Altri_Giorni_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">Io E Te Per Altri Giorni</rdfs:label>
-  <rdfs:comment xml:lang="en">Io E Te Per Altri Giorni is the twenty-second album of Pooh released in 1973</rdfs:comment>
-</Album>
-
-<Release rdf:about="#I_Pooh_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#I_Pooh_album"/>
-  <nextRelease rdf:resource="#Revised_release"/>
-  <rdfs:label xml:lang="en">I Pooh studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">I Pooh studio release is the twenty-third release of Pooh, published in 1973</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</releaseYear>
-</Release>
-
-<Album rdf:about="#I_Pooh_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">I Pooh</rdfs:label>
-  <rdfs:comment xml:lang="en">I Pooh is the twenty-third album of Pooh released in 1973</rdfs:comment>
-</Album>
-
-<Release rdf:about="#Revised_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#Revised_album"/>
-  <nextRelease rdf:resource="#Parsifal_release"/>
-  <rdfs:label xml:lang="en">Revised studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Revised studio release is the twenty-fourth release of Pooh, published in 1973</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</releaseYear>
-</Release>
-
-<Album rdf:about="#Revised_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">Revised</rdfs:label>
-  <rdfs:comment xml:lang="en">Revised is the twenty-fourth album of Pooh released in 1973</rdfs:comment>
+  <rdfs:comment xml:lang="en">Alessandra is the fifth album of Pooh released in 1972</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">27915</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">318794</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/ObQUCiwhjrwEuZrwuVS-FF7FltneCF--4nyruzlwm9k/rs:fit/g:sm/q:90/h:607/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMxNjg2/NDYtMTUxMjc2MTA4/MC04MTE3LmpwZWc.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#Parsifal_release">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <ofAlbum rdf:resource="#Parsifal_album"/>
-  <nextRelease rdf:resource="#1971_1974_release"/>
+  <nextRelease rdf:resource="#Un_Po_Del_Nostro_Tempo_Migliore_release"/>
   <rdfs:label xml:lang="en">Parsifal studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Parsifal studio release is the twenty-fifth release of Pooh, published in 1973</rdfs:comment>
+  <rdfs:comment xml:lang="en">Parsifal studio release is the sixth release of Pooh, published in 1973</rdfs:comment>
   <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</releaseYear>
 </Release>
 
 <Album rdf:about="#Parsifal_album">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Parsifal</rdfs:label>
-  <rdfs:comment xml:lang="en">Parsifal is the twenty-fifth album of Pooh released in 1973</rdfs:comment>
-</Album>
-
-<Release rdf:about="#1971_1974_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#1971_1974_album"/>
-  <nextRelease rdf:resource="#Per_Te_Qualcosa_Ancora_release"/>
-  <rdfs:label xml:lang="en">1971-1974 studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">1971-1974 studio release is the twenty-sixth release of Pooh, published in 1974</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1974</releaseYear>
-</Release>
-
-<Album rdf:about="#1971_1974_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">1971-1974</rdfs:label>
-  <rdfs:comment xml:lang="en">1971-1974 is the twenty-sixth album of Pooh released in 1974</rdfs:comment>
-</Album>
-
-<Release rdf:about="#Per_Te_Qualcosa_Ancora_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#Per_Te_Qualcosa_Ancora_album"/>
-  <nextRelease rdf:resource="#Se_Sai_Se_Puoi_Se_Vuoi_release"/>
-  <rdfs:label xml:lang="en">Per Te Qualcosa Ancora studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Per Te Qualcosa Ancora studio release is the twenty-seventh release of Pooh, published in 1974</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1974</releaseYear>
-</Release>
-
-<Album rdf:about="#Per_Te_Qualcosa_Ancora_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">Per Te Qualcosa Ancora</rdfs:label>
-  <rdfs:comment xml:lang="en">Per Te Qualcosa Ancora is the twenty-seventh album of Pooh released in 1974</rdfs:comment>
-</Album>
-
-<Release rdf:about="#Se_Sai_Se_Puoi_Se_Vuoi_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#Se_Sai_Se_Puoi_Se_Vuoi_album"/>
-  <nextRelease rdf:resource="#Forse_Ancora_Poesia_release"/>
-  <rdfs:label xml:lang="en">Se Sai Se Puoi Se Vuoi studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Se Sai Se Puoi Se Vuoi studio release is the twenty-eighth release of Pooh, published in 1974</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1974</releaseYear>
-</Release>
-
-<Album rdf:about="#Se_Sai_Se_Puoi_Se_Vuoi_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">Se Sai Se Puoi Se Vuoi</rdfs:label>
-  <rdfs:comment xml:lang="en">Se Sai Se Puoi Se Vuoi is the twenty-eighth album of Pooh released in 1974</rdfs:comment>
-</Album>
-
-<Release rdf:about="#Forse_Ancora_Poesia_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#Forse_Ancora_Poesia_album"/>
-  <nextRelease rdf:resource="#Ninna_Nanna_release"/>
-  <rdfs:label xml:lang="en">Forse Ancora Poesia studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Forse Ancora Poesia studio release is the twenty-ninth release of Pooh, published in 1975</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1975</releaseYear>
-</Release>
-
-<Album rdf:about="#Forse_Ancora_Poesia_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">Forse Ancora Poesia</rdfs:label>
-  <rdfs:comment xml:lang="en">Forse Ancora Poesia is the twenty-ninth album of Pooh released in 1975</rdfs:comment>
-</Album>
-
-<Release rdf:about="#Ninna_Nanna_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#Ninna_Nanna_album"/>
-  <nextRelease rdf:resource="#Un_Po_Del_Nostro_Tempo_Migliore_release"/>
-  <rdfs:label xml:lang="en">Ninna Nanna studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Ninna Nanna studio release is the thirtieth release of Pooh, published in 1975</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1975</releaseYear>
-</Release>
-
-<Album rdf:about="#Ninna_Nanna_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">Ninna Nanna</rdfs:label>
-  <rdfs:comment xml:lang="en">Ninna Nanna is the thirtieth album of Pooh released in 1975</rdfs:comment>
+  <rdfs:comment xml:lang="en">Parsifal is the sixth album of Pooh released in 1973</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18988</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">241503</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/xbWt2J39UZLSbDaviRlGy4tuKviFQpN2Cm0UI-daDI0/rs:fit/g:sm/q:90/h:597/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyMzY3/NjItMTQ4MzAzMzA5/Ny0xMTU0LmpwZWc.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#Un_Po_Del_Nostro_Tempo_Migliore_release">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <ofAlbum rdf:resource="#Un_Po_Del_Nostro_Tempo_Migliore_album"/>
-  <nextRelease rdf:resource="#Mediterraneo_release"/>
+  <nextRelease rdf:resource="#Forse_Ancora_Poesia_release"/>
   <rdfs:label xml:lang="en">Un Po' Del Nostro Tempo Migliore studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Un Po' Del Nostro Tempo Migliore studio release is the thirty-first release of Pooh, published in 1975</rdfs:comment>
+  <rdfs:comment xml:lang="en">Un Po' Del Nostro Tempo Migliore studio release is the seventh release of Pooh, published in 1975</rdfs:comment>
   <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1975</releaseYear>
 </Release>
 
 <Album rdf:about="#Un_Po_Del_Nostro_Tempo_Migliore_album">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Un Po' Del Nostro Tempo Migliore</rdfs:label>
-  <rdfs:comment xml:lang="en">Un Po' Del Nostro Tempo Migliore is the thirty-first album of Pooh released in 1975</rdfs:comment>
+  <rdfs:comment xml:lang="en">Un Po' Del Nostro Tempo Migliore is the seventh album of Pooh released in 1975</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18990</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">240361</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/MQhHC1Wanf0wsRnDoMsN3JKhlTACpV1hLLSS6EQIy68/rs:fit/g:sm/q:90/h:597/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTc3ODM3/OTAtMTQ0ODcwNDA1/OS0zNDAyLmpwZWc.jpeg</imageUrl>
 </Album>
 
-<Release rdf:about="#Mediterraneo_release">
+<Release rdf:about="#Forse_Ancora_Poesia_release">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#Mediterraneo_album"/>
-  <nextRelease rdf:resource="#La_Solita_Storia_release"/>
-  <rdfs:label xml:lang="en">Mediterraneo studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Mediterraneo studio release is the thirty-second release of Pooh, published in 1975</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1975</releaseYear>
-</Release>
-
-<Album rdf:about="#Mediterraneo_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">Mediterraneo</rdfs:label>
-  <rdfs:comment xml:lang="en">Mediterraneo is the thirty-second album of Pooh released in 1975</rdfs:comment>
-</Album>
-
-<Release rdf:about="#La_Solita_Storia_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#La_Solita_Storia_album"/>
-  <nextRelease rdf:resource="#Linda_release"/>
-  <rdfs:label xml:lang="en">La Solita Storia studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">La Solita Storia studio release is the thirty-third release of Pooh, published in 1975</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1975</releaseYear>
-</Release>
-
-<Album rdf:about="#La_Solita_Storia_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">La Solita Storia</rdfs:label>
-  <rdfs:comment xml:lang="en">La Solita Storia is the thirty-third album of Pooh released in 1975</rdfs:comment>
-</Album>
-
-<Release rdf:about="#Linda_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#Linda_album"/>
+  <ofAlbum rdf:resource="#Forse_Ancora_Poesia_album"/>
   <nextRelease rdf:resource="#Poohlover_release"/>
-  <rdfs:label xml:lang="en">Linda studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Linda studio release is the thirty-fourth release of Pooh, published in 1976</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1976</releaseYear>
+  <rdfs:label xml:lang="en">Forse Ancora Poesia studio release</rdfs:label>
+  <rdfs:comment xml:lang="en">Forse Ancora Poesia studio release is the eighth release of Pooh, published in 1975</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1975</releaseYear>
 </Release>
 
-<Album rdf:about="#Linda_album">
+<Album rdf:about="#Forse_Ancora_Poesia_album">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">Linda</rdfs:label>
-  <rdfs:comment xml:lang="en">Linda is the thirty-fourth album of Pooh released in 1976</rdfs:comment>
+  <rdfs:label xml:lang="en">Forse Ancora Poesia</rdfs:label>
+  <rdfs:comment xml:lang="en">Forse Ancora Poesia is the eighth album of Pooh released in 1975</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19102</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">419845</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/QeeBqWDFvNtW7tmYtQI4TdndywHz1fVPceF9IVO9A3E/rs:fit/g:sm/q:90/h:328/w:340/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMxNjkz/MzktMTMzNTIyNTc0/Mi5qcGVn.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#Poohlover_release">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <ofAlbum rdf:resource="#Poohlover_album"/>
   <rdfs:label xml:lang="en">Poohlover studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Poohlover studio release is the thirty-fifth release of Pooh, published in 1976</rdfs:comment>
+  <rdfs:comment xml:lang="en">Poohlover studio release is the ninth release of Pooh, published in 1976</rdfs:comment>
   <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1976</releaseYear>
 </Release>
 
 <Album rdf:about="#Poohlover_album">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Poohlover</rdfs:label>
-  <rdfs:comment xml:lang="en">Poohlover is the thirty-fifth album of Pooh released in 1976</rdfs:comment>
+  <rdfs:comment xml:lang="en">Poohlover is the ninth album of Pooh released in 1976</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19131</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">297823</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></imageUrl>
 </Album>
 
-<Release rdf:about="#La_Carrozza_Di_Hans_Impressioni_Di_Settembre_release">
+<Release rdf:about="#Quelli_release">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#La_Carrozza_Di_Hans_Impressioni_Di_Settembre_album"/>
+  <ofAlbum rdf:resource="#Quelli_album"/>
   <nextRelease rdf:resource="#Storia_Di_Un_Minuto_release"/>
-  <rdfs:label xml:lang="en">La Carrozza Di Hans / Impressioni Di Settembre studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">La Carrozza Di Hans / Impressioni Di Settembre studio release is the first release of Premiata Forneria Marconi, published in 1971</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1971</releaseYear>
+  <rdfs:label xml:lang="en">Quelli studio release</rdfs:label>
+  <rdfs:comment xml:lang="en">Quelli studio release is the first release of Premiata Forneria Marconi, published in 1969</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1969</releaseYear>
 </Release>
 
-<Album rdf:about="#La_Carrozza_Di_Hans_Impressioni_Di_Settembre_album">
+<Album rdf:about="#Quelli_album">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">La Carrozza Di Hans / Impressioni Di Settembre</rdfs:label>
-  <rdfs:comment xml:lang="en">La Carrozza Di Hans / Impressioni Di Settembre is the first album of Premiata Forneria Marconi released in 1971</rdfs:comment>
+  <rdfs:label xml:lang="en">Quelli</rdfs:label>
+  <rdfs:comment xml:lang="en">Quelli is the first album of Premiata Forneria Marconi released in 1969</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10819</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">390578</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></imageUrl>
 </Album>
 
 <Release rdf:about="#Storia_Di_Un_Minuto_release">
@@ -2859,12 +2160,15 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Storia Di Un Minuto</rdfs:label>
   <rdfs:comment xml:lang="en">Storia Di Un Minuto is the second album of Premiata Forneria Marconi released in 1972</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1984</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1284</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/7L53NdSQFaCdNjEjQutvYP2Wgqjjw7ZIvNnLo1YQlHg/rs:fit/g:sm/q:90/h:450/w:450/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTQwOTg5/NC0xMjA1MDc4MDg0/LmpwZWc.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#Per_Un_Amico_release">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <ofAlbum rdf:resource="#Per_Un_Amico_album"/>
-  <nextRelease rdf:resource="#Celebration_release"/>
+  <nextRelease rdf:resource="#Photos_Of_Ghosts_release"/>
   <rdfs:label xml:lang="en">Per Un Amico studio release</rdfs:label>
   <rdfs:comment xml:lang="en">Per Un Amico studio release is the third release of Premiata Forneria Marconi, published in 1972</rdfs:comment>
   <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</releaseYear>
@@ -2874,51 +2178,27 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Per Un Amico</rdfs:label>
   <rdfs:comment xml:lang="en">Per Un Amico is the third album of Premiata Forneria Marconi released in 1972</rdfs:comment>
-</Album>
-
-<Release rdf:about="#Celebration_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#Celebration_album"/>
-  <nextRelease rdf:resource="#Photos_Of_Ghosts_release"/>
-  <rdfs:label xml:lang="en">Celebration studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Celebration studio release is the fourth release of Premiata Forneria Marconi, published in 1973</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</releaseYear>
-</Release>
-
-<Album rdf:about="#Celebration_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">Celebration</rdfs:label>
-  <rdfs:comment xml:lang="en">Celebration is the fourth album of Premiata Forneria Marconi released in 1973</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1985</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1355</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/xQaAAsoPd8YBKP8DadpXmnDpz07E3BZwv42-vT9FNlU/rs:fit/g:sm/q:90/h:594/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE0NTAx/OTUtMTUzMzEzMDUz/OS0zMzk0LmpwZWc.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#Photos_Of_Ghosts_release">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <ofAlbum rdf:resource="#Photos_Of_Ghosts_album"/>
-  <nextRelease rdf:resource="#Dolcissima_Maria_Via_Lumiere_release"/>
+  <nextRelease rdf:resource="#L_Isola_Di_Niente_release"/>
   <rdfs:label xml:lang="en">Photos Of Ghosts studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Photos Of Ghosts studio release is the fifth release of Premiata Forneria Marconi, published in 1973</rdfs:comment>
+  <rdfs:comment xml:lang="en">Photos Of Ghosts studio release is the fourth release of Premiata Forneria Marconi, published in 1973</rdfs:comment>
   <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</releaseYear>
 </Release>
 
 <Album rdf:about="#Photos_Of_Ghosts_album">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Photos Of Ghosts</rdfs:label>
-  <rdfs:comment xml:lang="en">Photos Of Ghosts is the fifth album of Premiata Forneria Marconi released in 1973</rdfs:comment>
-</Album>
-
-<Release rdf:about="#Dolcissima_Maria_Via_Lumiere_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#Dolcissima_Maria_Via_Lumiere_album"/>
-  <nextRelease rdf:resource="#L_Isola_Di_Niente_release"/>
-  <rdfs:label xml:lang="en">Dolcissima Maria / Via Lumière studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Dolcissima Maria / Via Lumière studio release is the sixth release of Premiata Forneria Marconi, published in 1974</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1974</releaseYear>
-</Release>
-
-<Album rdf:about="#Dolcissima_Maria_Via_Lumiere_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">Dolcissima Maria / Via Lumière</rdfs:label>
-  <rdfs:comment xml:lang="en">Dolcissima Maria / Via Lumière is the sixth album of Premiata Forneria Marconi released in 1974</rdfs:comment>
+  <rdfs:comment xml:lang="en">Photos Of Ghosts is the fourth album of Premiata Forneria Marconi released in 1973</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1986</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1451</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/BHNe-l27QK-qf9z6wFX7hrV_MIZT2f3cMq7q4ZeSvdk/rs:fit/g:sm/q:90/h:450/w:450/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEyNjgw/NjgtMTIwNTA3Nzcw/NC5qcGVn.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#L_Isola_Di_Niente_release">
@@ -2926,14 +2206,17 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <ofAlbum rdf:resource="#L_Isola_Di_Niente_album"/>
   <nextRelease rdf:resource="#The_World_Became_The_World_release"/>
   <rdfs:label xml:lang="en">L'Isola Di Niente studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">L'Isola Di Niente studio release is the seventh release of Premiata Forneria Marconi, published in 1974</rdfs:comment>
+  <rdfs:comment xml:lang="en">L'Isola Di Niente studio release is the fifth release of Premiata Forneria Marconi, published in 1974</rdfs:comment>
   <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1974</releaseYear>
 </Release>
 
 <Album rdf:about="#L_Isola_Di_Niente_album">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">L'Isola Di Niente</rdfs:label>
-  <rdfs:comment xml:lang="en">L'Isola Di Niente is the seventh album of Premiata Forneria Marconi released in 1974</rdfs:comment>
+  <rdfs:comment xml:lang="en">L'Isola Di Niente is the fifth album of Premiata Forneria Marconi released in 1974</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2060</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1496</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/4gYyoRbLlo1l-bzXrudpAu60ksNXtm3B7hjOIzHpIHQ/rs:fit/g:sm/q:90/h:450/w:451/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTQwOTkw/Ny0xMjA1MDc3OTc3/LmpwZWc.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#The_World_Became_The_World_release">
@@ -2941,43 +2224,34 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <ofAlbum rdf:resource="#The_World_Became_The_World_album"/>
   <nextRelease rdf:resource="#Chocolate_Kings_release"/>
   <rdfs:label xml:lang="en">The World Became The World studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">The World Became The World studio release is the eighth release of Premiata Forneria Marconi, published in 1974</rdfs:comment>
+  <rdfs:comment xml:lang="en">The World Became The World studio release is the sixth release of Premiata Forneria Marconi, published in 1974</rdfs:comment>
   <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1974</releaseYear>
 </Release>
 
 <Album rdf:about="#The_World_Became_The_World_album">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">The World Became The World</rdfs:label>
-  <rdfs:comment xml:lang="en">The World Became The World is the eighth album of Premiata Forneria Marconi released in 1974</rdfs:comment>
+  <rdfs:comment xml:lang="en">The World Became The World is the sixth album of Premiata Forneria Marconi released in 1974</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2061</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1509</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/d-qAHpoi7z723TQn2hNMQmDwYbdce40KDREkxf53q4w/rs:fit/g:sm/q:90/h:477/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTMxNzI1/MTctMTMxOTAzNDEy/My5qcGVn.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#Chocolate_Kings_release">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <ofAlbum rdf:resource="#Chocolate_Kings_album"/>
-  <nextRelease rdf:resource="#Prime_Impressioni_release"/>
   <rdfs:label xml:lang="en">Chocolate Kings studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Chocolate Kings studio release is the ninth release of Premiata Forneria Marconi, published in 1975</rdfs:comment>
+  <rdfs:comment xml:lang="en">Chocolate Kings studio release is the seventh release of Premiata Forneria Marconi, published in 1975</rdfs:comment>
   <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1975</releaseYear>
 </Release>
 
 <Album rdf:about="#Chocolate_Kings_album">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Chocolate Kings</rdfs:label>
-  <rdfs:comment xml:lang="en">Chocolate Kings is the ninth album of Premiata Forneria Marconi released in 1975</rdfs:comment>
-</Album>
-
-<Release rdf:about="#Prime_Impressioni_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#Prime_Impressioni_album"/>
-  <rdfs:label xml:lang="en">Prime Impressioni studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Prime Impressioni studio release is the tenth release of Premiata Forneria Marconi, published in 1976</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1976</releaseYear>
-</Release>
-
-<Album rdf:about="#Prime_Impressioni_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">Prime Impressioni</rdfs:label>
-  <rdfs:comment xml:lang="en">Prime Impressioni is the tenth album of Premiata Forneria Marconi released in 1976</rdfs:comment>
+  <rdfs:comment xml:lang="en">Chocolate Kings is the seventh album of Premiata Forneria Marconi released in 1975</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2064</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">32860</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/KrLXuT55PaCYq0kasw8fEPFZotUUMZftYtICjmLQJPc/rs:fit/g:sm/q:90/h:500/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIzMDg3/MzAtMTM1MDMzODUz/Mi0zNjA1LmpwZWc.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#Quella_Vecchia_Locanda_release">
@@ -2993,6 +2267,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Quella Vecchia Locanda</rdfs:label>
   <rdfs:comment xml:lang="en">Quella Vecchia Locanda is the first album of Quella Vecchia Locanda released in 1972</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1137</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25441</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/Xbwio_nFK1JeCIcIaL410DZj7wZzwUH9_So-xkt53Ec/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE0NTQ1/MDEtMTU2MDIxMzMw/Ny00ODczLmpwZWc.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#Il_Tempo_Della_Gioia_release">
@@ -3007,6 +2284,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Il Tempo Della Gioia</rdfs:label>
   <rdfs:comment xml:lang="en">Il Tempo Della Gioia is the second album of Quella Vecchia Locanda released in 1974</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1138</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">163394</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/XliZeytsOnUI9jYdJETMbKnfNjbszRdWAVPXc6pKNiU/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE5NjA2/NDktMTU2MDIxMzc5/MS0xNTQ5LmpwZWc.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#PerUn_Mondo_Di_Cristallo_release">
@@ -3021,6 +2301,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Per....Un Mondo Di Cristallo</rdfs:label>
   <rdfs:comment xml:lang="en">Per....Un Mondo Di Cristallo is the first album of Raccomandata Ricevuta Ritorno released in 1972</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2701</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">98716</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/mKIjFMIlTqgkYnbbmcafd-6oB8gWu3dDwg3o1Kidf-U/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI5MTc2/NTctMTMwNzIyMDA3/NS5qcGVn.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#Saint_Just_release">
@@ -3028,28 +2311,34 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <ofAlbum rdf:resource="#Saint_Just_album"/>
   <nextRelease rdf:resource="#La_Casa_Del_Lago_release"/>
   <rdfs:label xml:lang="en">Saint Just studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Saint Just studio release is the first release of Saint Just, published in 1973</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</releaseYear>
+  <rdfs:comment xml:lang="en">Saint Just studio release is the first release of Saint Just, published in 1972</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</releaseYear>
 </Release>
 
 <Album rdf:about="#Saint_Just_album">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Saint Just</rdfs:label>
-  <rdfs:comment xml:lang="en">Saint Just is the first album of Saint Just released in 1973</rdfs:comment>
+  <rdfs:comment xml:lang="en">Saint Just is the first album of Saint Just released in 1972</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5162</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">183230</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/C2OIH0i_mWQKDjx6lUTsvQzqXwps5NtLrlQBf16CZi0/rs:fit/g:sm/q:90/h:429/w:431/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI1MzQz/ODktMTI4OTI0MTY2/MC5qcGVn.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#La_Casa_Del_Lago_release">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <ofAlbum rdf:resource="#La_Casa_Del_Lago_album"/>
   <rdfs:label xml:lang="en">La Casa Del Lago studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">La Casa Del Lago studio release is the second release of Saint Just, published in 1974</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1974</releaseYear>
+  <rdfs:comment xml:lang="en">La Casa Del Lago studio release is the second release of Saint Just, published in 1973</rdfs:comment>
+  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</releaseYear>
 </Release>
 
 <Album rdf:about="#La_Casa_Del_Lago_album">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">La Casa Del Lago</rdfs:label>
-  <rdfs:comment xml:lang="en">La Casa Del Lago is the second album of Saint Just released in 1974</rdfs:comment>
+  <rdfs:comment xml:lang="en">La Casa Del Lago is the second album of Saint Just released in 1973</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5163</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">346117</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/sM7Q8J6DUdjlAVHkIGESca4P5UxVnuzOEvccq5-vmw4/rs:fit/g:sm/q:90/h:510/w:510/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI5NDky/NjEtMTMwODY5MjU1/OS5qcGVn.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#Dedicato_A_Frazz_release">
@@ -3064,6 +2353,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Dedicato A Frazz</rdfs:label>
   <rdfs:comment xml:lang="en">Dedicato A Frazz is the first album of Semiramis (2) released in 1973</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1214</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">24992</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/t08kNIE5Lv94ENdhmjkYCar-Su1YRVrZYheBFqPwzJQ/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI5NjYy/MTEtMTQ4MzU0MTM5/MC0zOTM1LmpwZWc.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#Sensation_s_Fix_release">
@@ -3079,6 +2371,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Sensation's Fix</rdfs:label>
   <rdfs:comment xml:lang="en">Sensation's Fix is the first album of Sensations' Fix released in 1974</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6935</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">960235</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/4dthdmP2Enju3i2y1hHPUx2SaJQyqsX3wIUM1hg1YRk/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM3MzQ5/ODMtMTQ4NDcyMDEx/MS02NDM4LmpwZWc.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#Fragments_Of_Light_release">
@@ -3094,6 +2389,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Fragments Of Light</rdfs:label>
   <rdfs:comment xml:lang="en">Fragments Of Light is the second album of Sensations' Fix released in 1974</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5219</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">240882</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/nVlPY8L8saSEYzCOvTAayoSdJ-yNqJAmqL9M0sQWgew/rs:fit/g:sm/q:90/h:595/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyNDI0/OTMtMTQ2NzU1OTcw/MS04MDE0LmpwZWc.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#Portable_Madness_release">
@@ -3109,6 +2407,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Portable Madness</rdfs:label>
   <rdfs:comment xml:lang="en">Portable Madness is the third album of Sensations' Fix released in 1974</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5220</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">332414</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/6asXsNrnY8wRSk3t0G-n-AXKtZfttxPwkbtkIcJW-IE/rs:fit/g:sm/q:90/h:603/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTg0NzE3/MTItMTU0ODg0MzA1/Mi03NDYwLmpwZWc.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#Finest_Finger_release">
@@ -3123,12 +2424,15 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Finest Finger</rdfs:label>
   <rdfs:comment xml:lang="en">Finest Finger is the fourth album of Sensations' Fix released in 1976</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5221</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1597859</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></imageUrl>
 </Album>
 
 <Release rdf:about="#Le_Idee_Di_Oggi_Per_La_Musica_Di_Domani_release">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <ofAlbum rdf:resource="#Le_Idee_Di_Oggi_Per_La_Musica_Di_Domani_album"/>
-  <nextRelease rdf:resource="#Alice_Nel_Vento_release"/>
+  <nextRelease rdf:resource="#L_Unita_release"/>
   <rdfs:label xml:lang="en">Le Idee Di Oggi Per La Musica Di Domani studio release</rdfs:label>
   <rdfs:comment xml:lang="en">Le Idee Di Oggi Per La Musica Di Domani studio release is the first release of Stormy Six, published in 1969</rdfs:comment>
   <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1969</releaseYear>
@@ -3138,36 +2442,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Le Idee Di Oggi Per La Musica Di Domani</rdfs:label>
   <rdfs:comment xml:lang="en">Le Idee Di Oggi Per La Musica Di Domani is the first album of Stormy Six released in 1969</rdfs:comment>
-</Album>
-
-<Release rdf:about="#Alice_Nel_Vento_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#Alice_Nel_Vento_album"/>
-  <nextRelease rdf:resource="#Sotto_Il_Bam_bu_release"/>
-  <rdfs:label xml:lang="en">Alice Nel Vento studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Alice Nel Vento studio release is the second release of Stormy Six, published in 1970</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1970</releaseYear>
-</Release>
-
-<Album rdf:about="#Alice_Nel_Vento_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">Alice Nel Vento</rdfs:label>
-  <rdfs:comment xml:lang="en">Alice Nel Vento is the second album of Stormy Six released in 1970</rdfs:comment>
-</Album>
-
-<Release rdf:about="#Sotto_Il_Bam_bu_release">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <ofAlbum rdf:resource="#Sotto_Il_Bam_bu_album"/>
-  <nextRelease rdf:resource="#L_Unita_release"/>
-  <rdfs:label xml:lang="en">Sotto Il Bam-bù studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Sotto Il Bam-bù studio release is the third release of Stormy Six, published in 1972</rdfs:comment>
-  <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</releaseYear>
-</Release>
-
-<Album rdf:about="#Sotto_Il_Bam_bu_album">
-  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <rdfs:label xml:lang="en">Sotto Il Bam-bù</rdfs:label>
-  <rdfs:comment xml:lang="en">Sotto Il Bam-bù is the third album of Stormy Six released in 1972</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12413</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">247968</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/CQXItiOhJo2wAmRgDUv5oeuNhBkg_w6rAZPImbCqEuw/rs:fit/g:sm/q:90/h:505/w:502/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyNzgw/NzQtMTI3NDAxNjM5/OS5qcGVn.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#L_Unita_release">
@@ -3175,14 +2452,17 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <ofAlbum rdf:resource="#L_Unita_album"/>
   <nextRelease rdf:resource="#Guarda_Giu_Dalla_Pianura_release"/>
   <rdfs:label xml:lang="en">L'Unità studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">L'Unità studio release is the fourth release of Stormy Six, published in 1972</rdfs:comment>
+  <rdfs:comment xml:lang="en">L'Unità studio release is the second release of Stormy Six, published in 1972</rdfs:comment>
   <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1972</releaseYear>
 </Release>
 
 <Album rdf:about="#L_Unita_album">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">L'Unità</rdfs:label>
-  <rdfs:comment xml:lang="en">L'Unità is the fourth album of Stormy Six released in 1972</rdfs:comment>
+  <rdfs:comment xml:lang="en">L'Unità is the second album of Stormy Six released in 1972</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12414</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">248116</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/pB9DlWYtFTUiMCalXGYe_Jp7lcG1NDOAn0gFfs-njJ4/rs:fit/g:sm/q:90/h:397/w:400/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyNzg3/NjgtMTI3NDAzOTc0/MS5qcGVn.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#Guarda_Giu_Dalla_Pianura_release">
@@ -3190,14 +2470,17 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <ofAlbum rdf:resource="#Guarda_Giu_Dalla_Pianura_album"/>
   <nextRelease rdf:resource="#Un_Biglietto_Del_Tram_release"/>
   <rdfs:label xml:lang="en">Guarda Giù Dalla Pianura studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Guarda Giù Dalla Pianura studio release is the fifth release of Stormy Six, published in 1974</rdfs:comment>
+  <rdfs:comment xml:lang="en">Guarda Giù Dalla Pianura studio release is the third release of Stormy Six, published in 1974</rdfs:comment>
   <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1974</releaseYear>
 </Release>
 
 <Album rdf:about="#Guarda_Giu_Dalla_Pianura_album">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Guarda Giù Dalla Pianura</rdfs:label>
-  <rdfs:comment xml:lang="en">Guarda Giù Dalla Pianura is the fifth album of Stormy Six released in 1974</rdfs:comment>
+  <rdfs:comment xml:lang="en">Guarda Giù Dalla Pianura is the third album of Stormy Six released in 1974</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12415</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">248128</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/gxOwkSpASl0kx2HtTxXeudY8Y4S7162BwerEe17UxBY/rs:fit/g:sm/q:90/h:350/w:350/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIyNzg4/MDYtMTI3NDA0MTIw/Ni5qcGVn.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#Un_Biglietto_Del_Tram_release">
@@ -3205,28 +2488,34 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <ofAlbum rdf:resource="#Un_Biglietto_Del_Tram_album"/>
   <nextRelease rdf:resource="#Cliche_release"/>
   <rdfs:label xml:lang="en">Un Biglietto Del Tram studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Un Biglietto Del Tram studio release is the sixth release of Stormy Six, published in 1975</rdfs:comment>
+  <rdfs:comment xml:lang="en">Un Biglietto Del Tram studio release is the fourth release of Stormy Six, published in 1975</rdfs:comment>
   <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1975</releaseYear>
 </Release>
 
 <Album rdf:about="#Un_Biglietto_Del_Tram_album">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Un Biglietto Del Tram</rdfs:label>
-  <rdfs:comment xml:lang="en">Un Biglietto Del Tram is the sixth album of Stormy Six released in 1975</rdfs:comment>
+  <rdfs:comment xml:lang="en">Un Biglietto Del Tram is the fourth album of Stormy Six released in 1975</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12416</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">293193</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/PUEHs__sz-tzCGUBqpX9rM4WA3s1OBerwZtsBR4w2bE/rs:fit/g:sm/q:90/h:596/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEyNTI3/MjM2LTE1MzcwMTgy/NzYtNTkzMy5qcGVn.jpeg</imageUrl>
 </Album>
 
 <Release rdf:about="#Cliche_release">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <ofAlbum rdf:resource="#Cliche_album"/>
   <rdfs:label xml:lang="en">Cliché studio release</rdfs:label>
-  <rdfs:comment xml:lang="en">Cliché studio release is the seventh release of Stormy Six, published in 1976</rdfs:comment>
+  <rdfs:comment xml:lang="en">Cliché studio release is the fifth release of Stormy Six, published in 1976</rdfs:comment>
   <releaseYear rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1976</releaseYear>
 </Release>
 
 <Album rdf:about="#Cliche_album">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <rdfs:label xml:lang="en">Cliché</rdfs:label>
-  <rdfs:comment xml:lang="en">Cliché is the seventh album of Stormy Six released in 1976</rdfs:comment>
+  <rdfs:comment xml:lang="en">Cliché is the fifth album of Stormy Six released in 1976</rdfs:comment>
+  <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12417</progarchivesId>
+  <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">443338</discogsId>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></imageUrl>
 </Album>
 
 
