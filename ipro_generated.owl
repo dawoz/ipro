@@ -1463,7 +1463,6 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <rdfs:comment xml:lang="en">Maledetti (Maudits) is the fourth album of Area released in 1976</rdfs:comment>
   <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">107</progarchivesId>
   <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2569</discogsId>
-  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></imageUrl>
 </Album>
 
 <Release rdf:about="#Tilt_Immagini_Per_Un_Orecchio_release">
@@ -1586,7 +1585,6 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <rdfs:comment xml:lang="en">Garofano Rosso (Colonna Sonora Originale Del Film) is the fifth album of Banco Del Mutuo Soccorso released in 1976</rdfs:comment>
   <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1804</progarchivesId>
   <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">35148</discogsId>
-  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></imageUrl>
 </Album>
 
 <Release rdf:about="#Come_In_Un_Ultima_Cena_release">
@@ -1606,7 +1604,6 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <rdfs:comment xml:lang="en">Come In Un'Ultima Cena is the sixth album of Banco Del Mutuo Soccorso released in 1976</rdfs:comment>
   <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1799</progarchivesId>
   <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">35174</discogsId>
-  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></imageUrl>
 </Album>
 
 <Release rdf:about="#As_In_A_Last_Supper_release">
@@ -1625,7 +1622,6 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <rdfs:comment xml:lang="en">As In A Last Supper is the seventh album of Banco Del Mutuo Soccorso released in 1976</rdfs:comment>
   <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11442</progarchivesId>
   <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1854966</discogsId>
-  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></imageUrl>
 </Album>
 
 <Release rdf:about="#Poa_release">
@@ -1847,7 +1843,6 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <rdfs:comment xml:lang="en">Roller is the second album of Goblin released in 1976</rdfs:comment>
   <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">455</progarchivesId>
   <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14165</discogsId>
-  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></imageUrl>
 </Album>
 
 <Release rdf:about="#I_Teoremi_release">
@@ -1988,7 +1983,6 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <rdfs:comment xml:lang="en">Contamination is the fourth album of Il Rovescio Della Medaglia released in 1975</rdfs:comment>
   <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1182</progarchivesId>
   <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4020875</discogsId>
-  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></imageUrl>
 </Album>
 
 <Release rdf:about="#Tardo_Pede_In_Magiam_Versus_release">
@@ -2068,7 +2062,6 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <rdfs:comment xml:lang="en">Aquile E Scoiattoli is the third album of Latte E Miele released in 1976</rdfs:comment>
   <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">789</progarchivesId>
   <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">357960</discogsId>
-  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></imageUrl>
 </Album>
 
 <Release rdf:about="#Ad_Gloriam_release">
@@ -2145,10 +2138,10 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <hasGenre rdf:resource="#Rock"/>
   <hasGenre rdf:resource="#Prog_Rock"/>
   <rdfs:label xml:lang="en">Felona E Sorona</rdfs:label>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/m3SnGMwR5QFEReztL7N9-Q7qKb8W5O5e8-8wngN_RdE/rs:fit/g:sm/q:90/h:610/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTIxNTQ4/MjItMTUzMTY3NDEy/OS0xMTQ3LmpwZWc.jpeg</imageUrl>
   <rdfs:comment xml:lang="en">Felona E Sorona is the fifth album of Le Orme released in 1973</rdfs:comment>
   <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12203</progarchivesId>
   <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7528365</discogsId>
-  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></imageUrl>
 </Album>
 
 <Release rdf:about="#Contrappunti_release">
@@ -2211,7 +2204,6 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <rdfs:comment xml:lang="en">Verità Nascoste is the eighth album of Le Orme released in 1976</rdfs:comment>
   <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2305</progarchivesId>
   <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">184941</discogsId>
-  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></imageUrl>
 </Album>
 
 <Release rdf:about="#Maxophone_release">
@@ -2229,10 +2221,10 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <hasGenre rdf:resource="#Prog_Rock"/>
   <hasGenre rdf:resource="#Symphonic_Rock"/>
   <rdfs:label xml:lang="en">Maxophone</rdfs:label>
+  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://i.discogs.com/p6_qSnKbDh8O50XXf25Q2o5EHG34xJmYcyOA6AVFcp8/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTM3NzYx/NTktMTU1OTkxMDcy/NC01NDU4LmpwZWc.jpeg</imageUrl>
   <rdfs:comment xml:lang="en">Maxophone is the second album of Maxophone released in 1975</rdfs:comment>
   <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">923</progarchivesId>
   <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1872143</discogsId>
-  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></imageUrl>
 </Album>
 
 <Release rdf:about="#Io_Sono_Murple_release">
@@ -2440,7 +2432,6 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <rdfs:comment xml:lang="en">Gudrun is the second album of Pierrot Lunaire released in 1976</rdfs:comment>
   <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2907</progarchivesId>
   <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">167095</discogsId>
-  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></imageUrl>
 </Album>
 
 <Release rdf:about="#Brennero_66_Per_Quelli_Come_Noi_release">
@@ -2632,7 +2623,6 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <rdfs:comment xml:lang="en">Poohlover is the ninth album of Pooh released in 1976</rdfs:comment>
   <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19131</progarchivesId>
   <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">297823</discogsId>
-  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></imageUrl>
 </Album>
 
 <Release rdf:about="#Quelli_release">
@@ -2652,7 +2642,6 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <rdfs:comment xml:lang="en">Quelli is the first album of Premiata Forneria Marconi released in 1969</rdfs:comment>
   <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10819</progarchivesId>
   <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">390578</discogsId>
-  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></imageUrl>
 </Album>
 
 <Release rdf:about="#Storia_Di_Un_Minuto_release">
@@ -2984,7 +2973,6 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <rdfs:comment xml:lang="en">Finest Finger is the fourth album of Sensations' Fix released in 1976</rdfs:comment>
   <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5221</progarchivesId>
   <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1597859</discogsId>
-  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></imageUrl>
 </Album>
 
 <Release rdf:about="#Le_Idee_Di_Oggi_Per_La_Musica_Di_Domani_release">
@@ -3093,7 +3081,6 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <rdfs:comment xml:lang="en">Cliché is the fifth album of Stormy Six released in 1976</rdfs:comment>
   <progarchivesId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12417</progarchivesId>
   <discogsId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">443338</discogsId>
-  <imageUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></imageUrl>
 </Album>
 
 
