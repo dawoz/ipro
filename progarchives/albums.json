@@ -40,6 +40,11 @@
             "title": "Crac !",
             "progarchivesId": "103",
             "year": 1975
+        },
+        {
+            "title": "Maledetti",
+            "progarchivesId": "107",
+            "year": 1976
         }
     ],
     "29": [
@@ -74,6 +79,21 @@
             "title": "Banco",
             "progarchivesId": "1803",
             "year": 1975
+        },
+        {
+            "title": "Garofano Rosso",
+            "progarchivesId": "1804",
+            "year": 1976
+        },
+        {
+            "title": "Come In Un'Ultima Cena",
+            "progarchivesId": "1799",
+            "year": 1976
+        },
+        {
+            "title": "As In A Last Supper",
+            "progarchivesId": "11442",
+            "year": 1976
         }
     ],
     "43": [
@@ -136,6 +156,16 @@
             "title": "Profondo Rosso [Aka: Deep Red]  (OST)",
             "progarchivesId": "454",
             "year": 1975
+        },
+        {
+            "title": "Roller",
+            "progarchivesId": "455",
+            "year": 1976
+        },
+        {
+            "title": "Il Reale Impero Britannico: Perch\u00e9 Si Uccidono (OST)",
+            "progarchivesId": "13621",
+            "year": 1976
         }
     ],
     "1474": [
@@ -198,6 +228,11 @@
             "title": "Papillon",
             "progarchivesId": "788",
             "year": 1973
+        },
+        {
+            "title": "Aquile E Scoiattoli",
+            "progarchivesId": "789",
+            "year": 1976
         }
     ],
     "278": [
@@ -235,6 +270,11 @@
             "title": "Smogmagica",
             "progarchivesId": "2313",
             "year": 1975
+        },
+        {
+            "title": "Verit\u0155 Nascoste",
+            "progarchivesId": "2305",
+            "year": 1976
         }
     ],
     "239": [
@@ -302,6 +342,11 @@
             "title": "Pierrot Lunaire",
             "progarchivesId": "2906",
             "year": 1974
+        },
+        {
+            "title": "Gudrun",
+            "progarchivesId": "2907",
+            "year": 1976
         }
     ],
     "3832": [
@@ -344,6 +389,11 @@
             "title": "Forse Ancora Poesia",
             "progarchivesId": "19102",
             "year": 1975
+        },
+        {
+            "title": "Poohlover",
+            "progarchivesId": "19131",
+            "year": 1976
         }
     ],
     "289": [
@@ -436,6 +486,11 @@
             "title": "Portable Madness",
             "progarchivesId": "5220",
             "year": 1974
+        },
+        {
+            "title": "Finest Finger",
+            "progarchivesId": "5221",
+            "year": 1976
         }
     ],
     "2561": [
@@ -458,6 +513,11 @@
             "title": "Un Biglietto Del Tram",
             "progarchivesId": "12416",
             "year": 1975
+        },
+        {
+            "title": "Clich\u00e9",
+            "progarchivesId": "12417",
+            "year": 1976
         }
     ]
 }
