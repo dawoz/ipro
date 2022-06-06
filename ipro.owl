@@ -51,6 +51,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/ipro#Album">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/list.owl#List"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ipro#TimeEvent"/>
     </owl:Class>
     
 
@@ -197,10 +198,17 @@
     
 
 
+    <!-- http://www.semanticweb.org/ipro#TimeEvent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ipro#TimeEvent"/>
+    
+
+
     <!-- http://www.semanticweb.org/ipro#Track -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ipro#Track">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/list.owl#ListItem"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ipro#TimeEvent"/>
     </owl:Class>
     
 

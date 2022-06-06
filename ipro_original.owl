@@ -4,6 +4,7 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cpannotationschema: <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#> .
 @base <http://www.semanticweb.org/ipro> .
 
 <http://www.semanticweb.org/ipro> rdf:type owl:Ontology ;
@@ -28,7 +29,8 @@
 
 ###  http://www.semanticweb.org/ipro#Album
 :Album rdf:type owl:Class ;
-       rdfs:subClassOf <http://www.ontologydesignpatterns.org/cp/owl/list.owl#List> .
+       rdfs:subClassOf <http://www.ontologydesignpatterns.org/cp/owl/list.owl#List> ,
+                       :TimeEvent .
 
 
 ###  http://www.semanticweb.org/ipro#Band
@@ -121,9 +123,14 @@
              rdfs:subClassOf :Keyboard .
 
 
+###  http://www.semanticweb.org/ipro#TimeEvent
+:TimeEvent rdf:type owl:Class .
+
+
 ###  http://www.semanticweb.org/ipro#Track
 :Track rdf:type owl:Class ;
-       rdfs:subClassOf <http://www.ontologydesignpatterns.org/cp/owl/list.owl#ListItem> .
+       rdfs:subClassOf <http://www.ontologydesignpatterns.org/cp/owl/list.owl#ListItem> ,
+                       :TimeEvent .
 
 
 ###  http://www.semanticweb.org/ipro#Vocals
