@@ -189,18 +189,18 @@
     
 
 
-    <!-- http://www.semanticweb.org/ipro#Song -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/ipro#Song">
-        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/list.owl#ListItem"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/ipro#Synthesizer -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ipro#Synthesizer">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ipro#Keyboard"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ipro#Track -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ipro#Track">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/list.owl#ListItem"/>
     </owl:Class>
     
 

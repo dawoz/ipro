@@ -116,14 +116,14 @@
         rdfs:subClassOf :Musician .
 
 
-###  http://www.semanticweb.org/ipro#Song
-:Song rdf:type owl:Class ;
-      rdfs:subClassOf <http://www.ontologydesignpatterns.org/cp/owl/list.owl#ListItem> .
-
-
 ###  http://www.semanticweb.org/ipro#Synthesizer
 :Synthesizer rdf:type owl:Class ;
              rdfs:subClassOf :Keyboard .
+
+
+###  http://www.semanticweb.org/ipro#Track
+:Track rdf:type owl:Class ;
+       rdfs:subClassOf <http://www.ontologydesignpatterns.org/cp/owl/list.owl#ListItem> .
 
 
 ###  http://www.semanticweb.org/ipro#Vocals
