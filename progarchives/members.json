@@ -111,7 +111,7 @@
             ],
             "Patrizio Fariselli": [
                 "electric piano",
-                "acoustic piano",
+                "piano",
                 "bass clarinet",
                 "percussions",
                 "synthesizer"
@@ -148,7 +148,7 @@
                 "co-producer"
             ],
             "Beppe Crovella": [
-                "acoustic piano",
+                "piano",
                 "electric piano",
                 "ARP 2600 synthesizer",
                 "Eminent synthesizer",
@@ -173,7 +173,7 @@
                 "vocals"
             ],
             "Beppe Crovella": [
-                "acoustic piano",
+                "piano",
                 "electric piano",
                 "synthesizer",
                 "spinet",
@@ -202,7 +202,7 @@
                 "baritone saxophone",
                 "clarinet",
                 "bass clarinet",
-                "vibes",
+                "vibraphone",
                 "clavinet",
                 "melodica",
                 "vocals"
@@ -273,7 +273,7 @@
             ],
             "Gianni Nocenzi": [
                 "electric piano",
-                "acoustic piano"
+                "piano"
             ],
             "Pier Luigi Calderoni": [
                 "drums",
@@ -303,7 +303,7 @@
                 "vocals"
             ],
             "Giulio D'Ambrosio": [
-                "constralto electric saxophone",
+                "contralto electric saxophone",
                 "tenor electric saxophone",
                 "flute",
                 "vocals"
@@ -528,7 +528,7 @@
     "172": {
         "641": {
             "Charles Tiring": [
-                "church organ",
+                "pipe organ",
                 "harpsichord",
                 "Moog synthesizer",
                 "vocals"
@@ -704,7 +704,7 @@
                 "organ",
                 "synthesizer",
                 "piano",
-                "electric clavichord",
+                "clavinet",
                 "Mellotron",
                 "celesta"
             ]
@@ -1383,7 +1383,7 @@
             ],
             "Maurizio Zarrillo": [
                 "grand piano",
-                "Eminent organ",
+                "Eminent synthesizer",
                 "electric piano",
                 "synthesizer",
                 "harpsichord",
@@ -1404,7 +1404,7 @@
                 "drums",
                 "percussions",
                 "vibraphone",
-                "Fx"
+                "effects"
             ]
         }
     },
@@ -1418,7 +1418,7 @@
             ],
             "Richard Ursillo": [
                 "bass",
-                "effects (devices)"
+                "effects"
             ],
             "Keith Edwards": [
                 "drums",
