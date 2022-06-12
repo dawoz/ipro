@@ -78,6 +78,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/ipro#BrassInstrument -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ipro#BrassInstrument">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ipro#MusicalInstrument"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/ipro#Discography -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ipro#Discography">
@@ -90,6 +98,22 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/ipro#Drummer">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ipro#Musician"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ipro#Drums -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ipro#Drums">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ipro#PercussionInstrument"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ipro#Effects -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ipro#Effects">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ipro#MusicalInstrument"/>
     </owl:Class>
     
 
@@ -158,10 +182,18 @@
     
 
 
+    <!-- http://www.semanticweb.org/ipro#PercussionInstrument -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ipro#PercussionInstrument">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ipro#MusicalInstrument"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/ipro#Percussions -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ipro#Percussions">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ipro#MusicalInstrument"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ipro#PercussionInstrument"/>
     </owl:Class>
     
 
@@ -171,6 +203,12 @@
     <owl:Class rdf:about="http://www.semanticweb.org/ipro#Piano">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ipro#Keyboard"/>
     </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ipro#ProductionRole -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ipro#ProductionRole"/>
     
 
 
@@ -186,6 +224,30 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/ipro#Singer">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ipro#Musician"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ipro#Strings -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ipro#Strings">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ipro#MusicalInstrument"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ipro#StringsDrawn -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ipro#StringsDrawn">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ipro#Strings"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ipro#StringsPlucked -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ipro#StringsPlucked">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ipro#Strings"/>
     </owl:Class>
     
 
@@ -216,6 +278,14 @@
     <!-- http://www.semanticweb.org/ipro#Vocals -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ipro#Vocals">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ipro#MusicalInstrument"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ipro#WindInstrument -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ipro#WindInstrument">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ipro#MusicalInstrument"/>
     </owl:Class>
 </rdf:RDF>
