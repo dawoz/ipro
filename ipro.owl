@@ -11,7 +11,7 @@
      xmlns:time="http://www.w3.org/2006/time#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/ipro">
+    <owl:Ontology rdf:about="http://ipro-semantic.com">
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/list.owl"/>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Davide Zago</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2022</dc:date>
@@ -82,14 +82,14 @@
     
 
 
-    <!-- http://www.semanticweb.org/ipro#ofAlbum -->
+    <!-- http://ipro-semantic.com#ofAlbum -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ipro#ofAlbum">
+    <owl:ObjectProperty rdf:about="http://ipro-semantic.com#ofAlbum">
         <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#itemContent"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/ipro#Release"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/ipro#Album"/>
+        <rdfs:domain rdf:resource="http://ipro-semantic.com#Release"/>
+        <rdfs:range rdf:resource="http://ipro-semantic.com#Album"/>
         <rdfs:comment xml:lang="en">link from a release to the corresponding album</rdfs:comment>
         <rdfs:label xml:lang="en">of album</rdfs:label>
     </owl:ObjectProperty>
@@ -144,9 +144,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/ipro#Album -->
+    <!-- http://ipro-semantic.com#Album -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ipro#Album">
+    <owl:Class rdf:about="http://ipro-semantic.com#Album">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/list.owl#List"/>
         <rdfs:comment xml:lang="en">An album is a list of tracks composed by an artist or a band. An album typically contains 2 to 10-15 tracks. The typical total duration of an album is from 25 to 40 minutes, which has been limited to the writable surface of a vinyl record.</rdfs:comment>
         <rdfs:label xml:lang="en">Album</rdfs:label>
@@ -154,48 +154,48 @@
     
 
 
-    <!-- http://www.semanticweb.org/ipro#Band -->
+    <!-- http://ipro-semantic.com#Band -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ipro#Band">
+    <owl:Class rdf:about="http://ipro-semantic.com#Band">
         <rdfs:comment xml:lang="en">Group of musicians who play music. A band is typically composed of 2 to 10 members. A band of more than 10 members is more frequently considered an orchestra, or a complex. The term band is often referred to popular music genres such as pop, rock, punk, metal, country and many more.</rdfs:comment>
         <rdfs:label xml:lang="en">Band</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ipro#Bass -->
+    <!-- http://ipro-semantic.com#Bass -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ipro#Bass">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ipro#StringsPlucked"/>
+    <owl:Class rdf:about="http://ipro-semantic.com#Bass">
+        <rdfs:subClassOf rdf:resource="http://ipro-semantic.com#StringsPlucked"/>
         <rdfs:comment xml:lang="en">A bass is a stringed musical instrument similar to a guitar but with lower notes. This category includes many variants of the bass.</rdfs:comment>
         <rdfs:label xml:lang="en">Bass</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ipro#Bassist -->
+    <!-- http://ipro-semantic.com#Bassist -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ipro#Bassist">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ipro#Musician"/>
+    <owl:Class rdf:about="http://ipro-semantic.com#Bassist">
+        <rdfs:subClassOf rdf:resource="http://ipro-semantic.com#Musician"/>
         <rdfs:comment xml:lang="en">Musician that plays the bass instrument.</rdfs:comment>
         <rdfs:label xml:lang="en">Bassist</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ipro#BrassInstrument -->
+    <!-- http://ipro-semantic.com#BrassInstrument -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ipro#BrassInstrument">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ipro#MusicalInstrument"/>
+    <owl:Class rdf:about="http://ipro-semantic.com#BrassInstrument">
+        <rdfs:subClassOf rdf:resource="http://ipro-semantic.com#MusicalInstrument"/>
         <rdfs:comment xml:lang="en">A brass instrument is a musical instrument, typically a wind instrument, which is made out of brass.</rdfs:comment>
         <rdfs:label xml:lang="en">Brass instrument</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ipro#Discography -->
+    <!-- http://ipro-semantic.com#Discography -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ipro#Discography">
+    <owl:Class rdf:about="http://ipro-semantic.com#Discography">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/list.owl#List"/>
         <rdfs:comment xml:lang="en">A discography is a list of releases published by an artist or a band. It is usually composed of studio albums, live albums and singles.</rdfs:comment>
         <rdfs:label xml:lang="en">Discography</rdfs:label>
@@ -203,10 +203,10 @@
     
 
 
-    <!-- http://www.semanticweb.org/ipro#Drummer -->
+    <!-- http://ipro-semantic.com#Drummer -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ipro#Drummer">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ipro#Musician"/>
+    <owl:Class rdf:about="http://ipro-semantic.com#Drummer">
+        <rdfs:subClassOf rdf:resource="http://ipro-semantic.com#Musician"/>
         <rdfs:comment xml:lang="en">Musician that plays drums or percussion instruments</rdfs:comment>
         <rdfs:label xml:lang="en">Drummer</rdfs:label>
         <rdfs:label xml:lang="en">Percussionist</rdfs:label>
@@ -214,154 +214,154 @@
     
 
 
-    <!-- http://www.semanticweb.org/ipro#Drums -->
+    <!-- http://ipro-semantic.com#Drums -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ipro#Drums">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ipro#PercussionInstrument"/>
+    <owl:Class rdf:about="http://ipro-semantic.com#Drums">
+        <rdfs:subClassOf rdf:resource="http://ipro-semantic.com#PercussionInstrument"/>
         <rdfs:comment xml:lang="en">Drums (or drum kit) are one of the most common percussion instruments and it is a collection of different drums. The drum kit is very popular in genres such as rock, pop, punk, metal, and many more.</rdfs:comment>
         <rdfs:label xml:lang="en">Drums / drum kit</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ipro#Effects -->
+    <!-- http://ipro-semantic.com#Effects -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ipro#Effects">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ipro#MusicalInstrument"/>
+    <owl:Class rdf:about="http://ipro-semantic.com#Effects">
+        <rdfs:subClassOf rdf:resource="http://ipro-semantic.com#MusicalInstrument"/>
         <rdfs:comment xml:lang="en">General effect used to play music</rdfs:comment>
         <rdfs:label xml:lang="en">Effects</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ipro#Genre -->
+    <!-- http://ipro-semantic.com#Genre -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ipro#Genre">
+    <owl:Class rdf:about="http://ipro-semantic.com#Genre">
         <rdfs:comment xml:lang="en">A genre is a term used to describe music with similarities, such as: similar or same instruments, similar rhythm, tempo, harmonies and melodies, and so on. A genre typically derive from one or more genres and it is strongly related to the place it originated from.</rdfs:comment>
         <rdfs:label xml:lang="en">Genre</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ipro#Guitar -->
+    <!-- http://ipro-semantic.com#Guitar -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ipro#Guitar">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ipro#StringsPlucked"/>
+    <owl:Class rdf:about="http://ipro-semantic.com#Guitar">
+        <rdfs:subClassOf rdf:resource="http://ipro-semantic.com#StringsPlucked"/>
         <rdfs:comment xml:lang="en">A guitar is a stringed musical instrument with many variants. It is typically played by plucking the strings</rdfs:comment>
         <rdfs:label xml:lang="en">Guitar</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ipro#Guitarist -->
+    <!-- http://ipro-semantic.com#Guitarist -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ipro#Guitarist">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ipro#Musician"/>
+    <owl:Class rdf:about="http://ipro-semantic.com#Guitarist">
+        <rdfs:subClassOf rdf:resource="http://ipro-semantic.com#Musician"/>
         <rdfs:comment xml:lang="en">Musician that plays the guitar.</rdfs:comment>
         <rdfs:label xml:lang="en">Guitarist</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ipro#Keyboard -->
+    <!-- http://ipro-semantic.com#Keyboard -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ipro#Keyboard">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ipro#MusicalInstrument"/>
+    <owl:Class rdf:about="http://ipro-semantic.com#Keyboard">
+        <rdfs:subClassOf rdf:resource="http://ipro-semantic.com#MusicalInstrument"/>
         <rdfs:comment xml:lang="en">A keyboard is a musical instrument with keys. A keyboard player presses the keys to play  sound an music.</rdfs:comment>
         <rdfs:label xml:lang="en">Keyboard</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ipro#Keyboardist -->
+    <!-- http://ipro-semantic.com#Keyboardist -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ipro#Keyboardist">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ipro#Musician"/>
+    <owl:Class rdf:about="http://ipro-semantic.com#Keyboardist">
+        <rdfs:subClassOf rdf:resource="http://ipro-semantic.com#Musician"/>
         <rdfs:comment xml:lang="en">Musician that plays the keyboards.</rdfs:comment>
         <rdfs:label xml:lang="en">Keyboardist</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ipro#MusicalInstrument -->
+    <!-- http://ipro-semantic.com#MusicalInstrument -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ipro#MusicalInstrument">
+    <owl:Class rdf:about="http://ipro-semantic.com#MusicalInstrument">
         <rdfs:comment xml:lang="en">A musical instrument is an instrument used to play music</rdfs:comment>
         <rdfs:label xml:lang="en">Musical instrument</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ipro#Musician -->
+    <!-- http://ipro-semantic.com#Musician -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ipro#Musician">
+    <owl:Class rdf:about="http://ipro-semantic.com#Musician">
         <rdfs:comment xml:lang="en">A person who plays a musical instrument, especially as a profession, or is musically talented.</rdfs:comment>
         <rdfs:label xml:lang="en">Musician</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ipro#Organ -->
+    <!-- http://ipro-semantic.com#Organ -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ipro#Organ">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ipro#Keyboard"/>
+    <owl:Class rdf:about="http://ipro-semantic.com#Organ">
+        <rdfs:subClassOf rdf:resource="http://ipro-semantic.com#Keyboard"/>
         <rdfs:comment xml:lang="en">An organ is a keyboard with an unique sound. The main categories of organs are pipe organs and electric organs, which have very different sounds.</rdfs:comment>
         <rdfs:label xml:lang="en">Organ</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ipro#Participation -->
+    <!-- http://ipro-semantic.com#Participation -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ipro#Participation">
+    <owl:Class rdf:about="http://ipro-semantic.com#Participation">
         <rdfs:comment xml:lang="en">Participation of a musician to an album. The participation can be with a list of instruments or with roles in the production of the piece of music.</rdfs:comment>
         <rdfs:label xml:lang="en">Participation</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ipro#PercussionInstrument -->
+    <!-- http://ipro-semantic.com#PercussionInstrument -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ipro#PercussionInstrument">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ipro#MusicalInstrument"/>
+    <owl:Class rdf:about="http://ipro-semantic.com#PercussionInstrument">
+        <rdfs:subClassOf rdf:resource="http://ipro-semantic.com#MusicalInstrument"/>
         <rdfs:comment xml:lang="en">A percussion instrument is a musical instrument which produces sound by being hit or struck.</rdfs:comment>
         <rdfs:label xml:lang="en">Percussion instrument</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ipro#Percussions -->
+    <!-- http://ipro-semantic.com#Percussions -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ipro#Percussions">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ipro#PercussionInstrument"/>
+    <owl:Class rdf:about="http://ipro-semantic.com#Percussions">
+        <rdfs:subClassOf rdf:resource="http://ipro-semantic.com#PercussionInstrument"/>
         <rdfs:comment xml:lang="en">Percussions include a set of various percussion instruments that are not commonly identified as a drum kit.</rdfs:comment>
         <rdfs:label xml:lang="en">Percussions</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ipro#Piano -->
+    <!-- http://ipro-semantic.com#Piano -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ipro#Piano">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ipro#Keyboard"/>
+    <owl:Class rdf:about="http://ipro-semantic.com#Piano">
+        <rdfs:subClassOf rdf:resource="http://ipro-semantic.com#Keyboard"/>
         <rdfs:comment xml:lang="en">A piano is a keyboard where the key press triggers a hammer that strikes a string. Every key has one hammer. The piano is one of the most known musical instruments.</rdfs:comment>
         <rdfs:label xml:lang="en">Piano</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ipro#ProductionRole -->
+    <!-- http://ipro-semantic.com#ProductionRole -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ipro#ProductionRole">
+    <owl:Class rdf:about="http://ipro-semantic.com#ProductionRole">
         <rdfs:comment xml:lang="en">Generic role of a musician in a piece of music that is not strictly playing an instrument.</rdfs:comment>
         <rdfs:label xml:lang="en">Production role</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ipro#Release -->
+    <!-- http://ipro-semantic.com#Release -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ipro#Release">
+    <owl:Class rdf:about="http://ipro-semantic.com#Release">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/list.owl#ListItem"/>
         <rdfs:comment xml:lang="en">A release is a publication of an album (or single) by a band. A release is part of a discography.</rdfs:comment>
         <rdfs:label xml:lang="en">Release</rdfs:label>
@@ -369,59 +369,59 @@
     
 
 
-    <!-- http://www.semanticweb.org/ipro#Singer -->
+    <!-- http://ipro-semantic.com#Singer -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ipro#Singer">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ipro#Musician"/>
+    <owl:Class rdf:about="http://ipro-semantic.com#Singer">
+        <rdfs:subClassOf rdf:resource="http://ipro-semantic.com#Musician"/>
         <rdfs:comment xml:lang="en">Musician that sings / has vocal parts in a piece of music.</rdfs:comment>
         <rdfs:label xml:lang="en">Singer</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ipro#Strings -->
+    <!-- http://ipro-semantic.com#Strings -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ipro#Strings">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ipro#MusicalInstrument"/>
+    <owl:Class rdf:about="http://ipro-semantic.com#Strings">
+        <rdfs:subClassOf rdf:resource="http://ipro-semantic.com#MusicalInstrument"/>
         <rdfs:comment xml:lang="en">Strings include a set of musical instruments with strings. A stringed instrument can be played by plucking or drawing the strings, which makes them vibrate and produce sound.</rdfs:comment>
         <rdfs:label xml:lang="en">Strings</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ipro#StringsDrawn -->
+    <!-- http://ipro-semantic.com#StringsDrawn -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ipro#StringsDrawn">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ipro#Strings"/>
+    <owl:Class rdf:about="http://ipro-semantic.com#StringsDrawn">
+        <rdfs:subClassOf rdf:resource="http://ipro-semantic.com#Strings"/>
         <rdfs:comment xml:lang="en">Stringed instrument that are played by drawing the strings.</rdfs:comment>
         <rdfs:label xml:lang="en">Strings drawn</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ipro#StringsPlucked -->
+    <!-- http://ipro-semantic.com#StringsPlucked -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ipro#StringsPlucked">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ipro#Strings"/>
+    <owl:Class rdf:about="http://ipro-semantic.com#StringsPlucked">
+        <rdfs:subClassOf rdf:resource="http://ipro-semantic.com#Strings"/>
         <rdfs:comment xml:lang="en">Stringed instruments played by plucking the strings.</rdfs:comment>
         <rdfs:label xml:lang="en">Strings plucked</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ipro#Synthesizer -->
+    <!-- http://ipro-semantic.com#Synthesizer -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ipro#Synthesizer">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ipro#Keyboard"/>
+    <owl:Class rdf:about="http://ipro-semantic.com#Synthesizer">
+        <rdfs:subClassOf rdf:resource="http://ipro-semantic.com#Keyboard"/>
         <rdfs:comment xml:lang="en">A synthesizer is an electronic musical instruments that plays sound through electric signals. The sound of a synthesizer comes from an oscillator with audible frequency; the sound can be filtered and modulated.</rdfs:comment>
         <rdfs:label xml:lang="en">Synthesizer</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ipro#Track -->
+    <!-- http://ipro-semantic.com#Track -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ipro#Track">
+    <owl:Class rdf:about="http://ipro-semantic.com#Track">
         <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/list.owl#ListItem"/>
         <rdfs:comment xml:lang="en">A track (or song) is a piece of music and element of an album. A track have a duration from 2 minutes or less to 30 minutes, or even fill the whole album.</rdfs:comment>
         <rdfs:label xml:lang="en">Track</rdfs:label>
@@ -429,20 +429,20 @@
     
 
 
-    <!-- http://www.semanticweb.org/ipro#Vocals -->
+    <!-- http://ipro-semantic.com#Vocals -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ipro#Vocals">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ipro#MusicalInstrument"/>
+    <owl:Class rdf:about="http://ipro-semantic.com#Vocals">
+        <rdfs:subClassOf rdf:resource="http://ipro-semantic.com#MusicalInstrument"/>
         <rdfs:comment xml:lang="en">Part of a piece of music that is sung. Vocals are an ubuquitous element of modern music.</rdfs:comment>
         <rdfs:label xml:lang="en">Vocals</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ipro#WindInstrument -->
+    <!-- http://ipro-semantic.com#WindInstrument -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ipro#WindInstrument">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ipro#MusicalInstrument"/>
+    <owl:Class rdf:about="http://ipro-semantic.com#WindInstrument">
+        <rdfs:subClassOf rdf:resource="http://ipro-semantic.com#MusicalInstrument"/>
         <rdfs:comment xml:lang="en">A musical instrument in which sound is produced by the vibration of air, typically by the player blowing into the instrument.</rdfs:comment>
         <rdfs:label xml:lang="en">Wind instrument</rdfs:label>
     </owl:Class>
