@@ -321,6 +321,13 @@
 <owl:Class rdf:about="http://www.w3.org/2006/time#DurationDescription"/>
 
 <owl:Class rdf:about="#Band">
+  <owl:equivalentClass>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#discography"/>
+      <owl:onClass rdf:resource="#Discography"/>
+      <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    </owl:Restriction>
+  </owl:equivalentClass>
   <rdfs:comment xml:lang="en">Group of musicians who play music. A band is typically composed of 2 to 10 members. A band of more than 10 members is more frequently considered an orchestra, or a complex. The term band is often referred to popular music genres such as pop, rock, punk, metal, country and many more.</rdfs:comment>
   <rdfs:label xml:lang="en">Band</rdfs:label>
 </owl:Class>
@@ -339,6 +346,17 @@
 
 <owl:Class rdf:about="#Bassist">
   <rdfs:subClassOf rdf:resource="#Musician"/>
+  <owl:equivalentClass>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#participatedIn"/>
+      <owl:someValuesFrom>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#withInstrument"/>
+          <owl:someValuesFrom rdf:resource="#Bass"/>
+        </owl:Restriction>
+      </owl:someValuesFrom>
+    </owl:Restriction>
+  </owl:equivalentClass>
   <rdfs:comment xml:lang="en">Musician that plays the bass instrument.</rdfs:comment>
   <rdfs:label xml:lang="en">Bassist</rdfs:label>
 </owl:Class>
@@ -373,6 +391,17 @@
 
 <owl:Class rdf:about="#Drummer">
   <rdfs:subClassOf rdf:resource="#Musician"/>
+  <owl:equivalentClass>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#participatedIn"/>
+      <owl:someValuesFrom>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#withInstrument"/>
+          <owl:someValuesFrom rdf:resource="#PercussionInstrument"/>
+        </owl:Restriction>
+      </owl:someValuesFrom>
+    </owl:Restriction>
+  </owl:equivalentClass>
   <rdfs:comment xml:lang="en">Musician that plays drums or percussion instruments</rdfs:comment>
   <rdfs:label xml:lang="en">Drummer</rdfs:label>
   <rdfs:label xml:lang="en">Percussionist</rdfs:label>
@@ -409,6 +438,17 @@
 
 <owl:Class rdf:about="#Guitarist">
   <rdfs:subClassOf rdf:resource="#Musician"/>
+  <owl:equivalentClass>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#participatedIn"/>
+      <owl:someValuesFrom>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#withInstrument"/>
+          <owl:someValuesFrom rdf:resource="#Guitar"/>
+        </owl:Restriction>
+      </owl:someValuesFrom>
+    </owl:Restriction>
+  </owl:equivalentClass>
   <rdfs:comment xml:lang="en">Musician that plays the guitar.</rdfs:comment>
   <rdfs:label xml:lang="en">Guitarist</rdfs:label>
 </owl:Class>
@@ -421,6 +461,17 @@
 
 <owl:Class rdf:about="#Keyboardist">
   <rdfs:subClassOf rdf:resource="#Musician"/>
+  <owl:equivalentClass>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#participatedIn"/>
+      <owl:someValuesFrom>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#withInstrument"/>
+          <owl:someValuesFrom rdf:resource="#Keyboard"/>
+        </owl:Restriction>
+      </owl:someValuesFrom>
+    </owl:Restriction>
+  </owl:equivalentClass>
   <rdfs:comment xml:lang="en">Musician that plays the keyboards.</rdfs:comment>
   <rdfs:label xml:lang="en">Keyboardist</rdfs:label>
 </owl:Class>
@@ -455,6 +506,17 @@
 
 <owl:Class rdf:about="#Singer">
   <rdfs:subClassOf rdf:resource="#Musician"/>
+  <owl:equivalentClass>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#participatedIn"/>
+      <owl:someValuesFrom>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#withInstrument"/>
+          <owl:someValuesFrom rdf:resource="#Vocal"/>
+        </owl:Restriction>
+      </owl:someValuesFrom>
+    </owl:Restriction>
+  </owl:equivalentClass>
   <rdfs:comment xml:lang="en">Musician that sings / has vocal parts in a piece of music.</rdfs:comment>
   <rdfs:label xml:lang="en">Singer</rdfs:label>
 </owl:Class>
@@ -2807,9 +2869,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Gino_Campanini_Acqua_Fragile_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <withInstrument rdf:resource="#Electric_Guitar_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
   <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
-  <withInstrument rdf:resource="#Electric_Guitar_instrument"/>
   <inAlbum rdf:resource="#Acqua_Fragile_album"/>
   <rdfs:label xml:lang="en">Gino Campanini's participation to Acqua Fragile</rdfs:label>
   <rdfs:comment xml:lang="en">Gino Campanini's participation to the album Acqua Fragile of the band Acqua Fragile</rdfs:comment>
@@ -2826,8 +2888,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 <Participation rdf:about="#Piero_Canavera_Acqua_Fragile_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
-  <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
   <withInstrument rdf:resource="#Drums_instrument"/>
+  <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
   <withProductionRole rdf:resource="#Composer_role"/>
   <inAlbum rdf:resource="#Acqua_Fragile_album"/>
   <rdfs:label xml:lang="en">Piero Canavera's participation to Acqua Fragile</rdfs:label>
@@ -3040,10 +3102,10 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Bernardo_Lanzetti_Mass_Media_Stars_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <withInstrument rdf:resource="#Electric_Guitar_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
   <withInstrument rdf:resource="#8_String_Guitar_instrument"/>
   <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
-  <withInstrument rdf:resource="#Electric_Guitar_instrument"/>
   <inAlbum rdf:resource="#Mass_Media_Stars_album"/>
   <rdfs:label xml:lang="en">Bernardo Lanzetti's participation to Mass-Media Stars</rdfs:label>
   <rdfs:comment xml:lang="en">Bernardo Lanzetti's participation to the album Mass-Media Stars of the band Acqua Fragile</rdfs:comment>
@@ -3059,10 +3121,10 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Piero_Canavera_Mass_Media_Stars_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Percussions_instrument"/>
-  <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
   <withInstrument rdf:resource="#Drums_instrument"/>
+  <withInstrument rdf:resource="#Percussions_instrument"/>
+  <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
   <withProductionRole rdf:resource="#Composer_role"/>
   <inAlbum rdf:resource="#Mass_Media_Stars_album"/>
   <rdfs:label xml:lang="en">Piero Canavera's participation to Mass-Media Stars</rdfs:label>
@@ -3071,8 +3133,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Gino_Campanini_Mass_Media_Stars_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Mandolin_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
+  <withInstrument rdf:resource="#Mandolin_instrument"/>
   <withInstrument rdf:resource="#Guitar_instrument"/>
   <inAlbum rdf:resource="#Mass_Media_Stars_album"/>
   <rdfs:label xml:lang="en">Gino Campanini's participation to Mass-Media Stars</rdfs:label>
@@ -3265,10 +3327,10 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 <Participation rdf:about="#Pietro_Pellegrini_Alphataurus_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <withInstrument rdf:resource="#Piano_instrument"/>
-  <withInstrument rdf:resource="#Hammond_Organ_instrument"/>
-  <withInstrument rdf:resource="#Spinet_instrument"/>
-  <withInstrument rdf:resource="#Moog_Synthesizer_instrument"/>
   <withInstrument rdf:resource="#Vibraphone_instrument"/>
+  <withInstrument rdf:resource="#Hammond_Organ_instrument"/>
+  <withInstrument rdf:resource="#Moog_Synthesizer_instrument"/>
+  <withInstrument rdf:resource="#Spinet_instrument"/>
   <inAlbum rdf:resource="#Alphataurus_album"/>
   <rdfs:label xml:lang="en">Pietro Pellegrini's participation to Alphataurus</rdfs:label>
   <rdfs:comment xml:lang="en">Pietro Pellegrini's participation to the album Alphataurus of the band Alphataurus</rdfs:comment>
@@ -3479,8 +3541,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 <Participation rdf:about="#Martin_Thurn_Analogy_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <withInstrument rdf:resource="#12_String_Acoustic_Guitar_instrument"/>
-  <withInstrument rdf:resource="#Flute_instrument"/>
   <withInstrument rdf:resource="#Electric_Guitar_instrument"/>
+  <withInstrument rdf:resource="#Flute_instrument"/>
   <withInstrument rdf:resource="#Bongos_instrument"/>
   <inAlbum rdf:resource="#Analogy_album"/>
   <rdfs:label xml:lang="en">Martin Thurn's participation to Analogy</rdfs:label>
@@ -3666,8 +3728,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Gianpaolo_Tofani_Arbeit_Macht_Frei_Il_Lavoro_Rende_Liberi_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Guitar_instrument"/>
   <withInstrument rdf:resource="#Vcs_Synthesizer_instrument"/>
+  <withInstrument rdf:resource="#Guitar_instrument"/>
   <inAlbum rdf:resource="#Arbeit_Macht_Frei_Il_Lavoro_Rende_Liberi_album"/>
   <rdfs:label xml:lang="en">Gianpaolo Tofani's participation to Arbeit Macht Frei (Il Lavoro Rende Liberi)</rdfs:label>
   <rdfs:comment xml:lang="en">Gianpaolo Tofani's participation to the album Arbeit Macht Frei (Il Lavoro Rende Liberi) of the band Area</rdfs:comment>
@@ -3722,8 +3784,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 <Participation rdf:about="#Demetrio_Stratos_Arbeit_Macht_Frei_Il_Lavoro_Rende_Liberi_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
-  <withInstrument rdf:resource="#Organ_instrument"/>
   <withInstrument rdf:resource="#Steel_Drums_instrument"/>
+  <withInstrument rdf:resource="#Organ_instrument"/>
   <inAlbum rdf:resource="#Arbeit_Macht_Frei_Il_Lavoro_Rende_Liberi_album"/>
   <rdfs:label xml:lang="en">Demetrio Stratos's participation to Arbeit Macht Frei (Il Lavoro Rende Liberi)</rdfs:label>
   <rdfs:comment xml:lang="en">Demetrio Stratos's participation to the album Arbeit Macht Frei (Il Lavoro Rende Liberi) of the band Area</rdfs:comment>
@@ -3741,8 +3803,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Giulio_Capiozzo_Arbeit_Macht_Frei_Il_Lavoro_Rende_Liberi_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Percussions_instrument"/>
   <withInstrument rdf:resource="#Drums_instrument"/>
+  <withInstrument rdf:resource="#Percussions_instrument"/>
   <inAlbum rdf:resource="#Arbeit_Macht_Frei_Il_Lavoro_Rende_Liberi_album"/>
   <rdfs:label xml:lang="en">Giulio Capiozzo's participation to Arbeit Macht Frei (Il Lavoro Rende Liberi)</rdfs:label>
   <rdfs:comment xml:lang="en">Giulio Capiozzo's participation to the album Arbeit Macht Frei (Il Lavoro Rende Liberi) of the band Area</rdfs:comment>
@@ -3760,8 +3822,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Jan_Patrick_Djivas_Arbeit_Macht_Frei_Il_Lavoro_Rende_Liberi_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Bass_instrument"/>
   <withInstrument rdf:resource="#Double_Bass_instrument"/>
+  <withInstrument rdf:resource="#Bass_instrument"/>
   <inAlbum rdf:resource="#Arbeit_Macht_Frei_Il_Lavoro_Rende_Liberi_album"/>
   <rdfs:label xml:lang="en">Jan Patrick Djivas's participation to Arbeit Macht Frei (Il Lavoro Rende Liberi)</rdfs:label>
   <rdfs:comment xml:lang="en">Jan Patrick Djivas's participation to the album Arbeit Macht Frei (Il Lavoro Rende Liberi) of the band Area</rdfs:comment>
@@ -3916,9 +3978,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Ares_Tavolazzi_Caution_Radiation_Area_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Bass_instrument"/>
-  <withInstrument rdf:resource="#Double_Bass_instrument"/>
   <withInstrument rdf:resource="#Trombone_instrument"/>
+  <withInstrument rdf:resource="#Double_Bass_instrument"/>
+  <withInstrument rdf:resource="#Bass_instrument"/>
   <inAlbum rdf:resource="#Caution_Radiation_Area_album"/>
   <rdfs:label xml:lang="en">Ares Tavolazzi's participation to Caution Radiation Area</rdfs:label>
   <rdfs:comment xml:lang="en">Ares Tavolazzi's participation to the album Caution Radiation Area of the band Area</rdfs:comment>
@@ -3933,8 +3995,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Paolo_Tofani_Caution_Radiation_Area_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Flute_instrument"/>
   <withInstrument rdf:resource="#Ems_Synthesizer_instrument"/>
+  <withInstrument rdf:resource="#Flute_instrument"/>
   <withInstrument rdf:resource="#Guitar_instrument"/>
   <inAlbum rdf:resource="#Caution_Radiation_Area_album"/>
   <rdfs:label xml:lang="en">Paolo Tofani's participation to Caution Radiation Area</rdfs:label>
@@ -3943,8 +4005,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Giulio_Capiozzo_Caution_Radiation_Area_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Percussions_instrument"/>
   <withInstrument rdf:resource="#Drums_instrument"/>
+  <withInstrument rdf:resource="#Percussions_instrument"/>
   <inAlbum rdf:resource="#Caution_Radiation_Area_album"/>
   <rdfs:label xml:lang="en">Giulio Capiozzo's participation to Caution Radiation Area</rdfs:label>
   <rdfs:comment xml:lang="en">Giulio Capiozzo's participation to the album Caution Radiation Area of the band Area</rdfs:comment>
@@ -3953,9 +4015,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 <Participation rdf:about="#Patrizio_Fariselli_Caution_Radiation_Area_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <withInstrument rdf:resource="#Electric_Piano_instrument"/>
-  <withInstrument rdf:resource="#Bass_Clarinet_instrument"/>
   <withInstrument rdf:resource="#Piano_instrument"/>
   <withInstrument rdf:resource="#Arp_Synthesizer_instrument"/>
+  <withInstrument rdf:resource="#Bass_Clarinet_instrument"/>
   <inAlbum rdf:resource="#Caution_Radiation_Area_album"/>
   <rdfs:label xml:lang="en">Patrizio Fariselli's participation to Caution Radiation Area</rdfs:label>
   <rdfs:comment xml:lang="en">Patrizio Fariselli's participation to the album Caution Radiation Area of the band Area</rdfs:comment>
@@ -3963,11 +4025,11 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Demetrio_Stratos_Caution_Radiation_Area_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Percussions_instrument"/>
-  <withInstrument rdf:resource="#Steel_Drums_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
-  <withInstrument rdf:resource="#Organ_instrument"/>
   <withInstrument rdf:resource="#Harpsichord_instrument"/>
+  <withInstrument rdf:resource="#Organ_instrument"/>
+  <withInstrument rdf:resource="#Steel_Drums_instrument"/>
+  <withInstrument rdf:resource="#Percussions_instrument"/>
   <inAlbum rdf:resource="#Caution_Radiation_Area_album"/>
   <rdfs:label xml:lang="en">Demetrio Stratos's participation to Caution Radiation Area</rdfs:label>
   <rdfs:comment xml:lang="en">Demetrio Stratos's participation to the album Caution Radiation Area of the band Area</rdfs:comment>
@@ -4098,10 +4160,10 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 <Participation rdf:about="#Patrizio_Fariselli_Crac_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <withInstrument rdf:resource="#Electric_Piano_instrument"/>
-  <withInstrument rdf:resource="#Percussions_instrument"/>
   <withInstrument rdf:resource="#Piano_instrument"/>
   <withInstrument rdf:resource="#Bass_Clarinet_instrument"/>
   <withInstrument rdf:resource="#Arp_Synthesizer_instrument"/>
+  <withInstrument rdf:resource="#Percussions_instrument"/>
   <inAlbum rdf:resource="#Crac_album"/>
   <rdfs:label xml:lang="en">Patrizio Fariselli's participation to Crac!</rdfs:label>
   <rdfs:comment xml:lang="en">Patrizio Fariselli's participation to the album Crac! of the band Area</rdfs:comment>
@@ -4117,9 +4179,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Giampaolo_Tofani_Crac_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <withInstrument rdf:resource="#Electric_Guitar_instrument"/>
   <withInstrument rdf:resource="#Flute_instrument"/>
   <withInstrument rdf:resource="#Ems_Synthesizer_instrument"/>
-  <withInstrument rdf:resource="#Electric_Guitar_instrument"/>
   <inAlbum rdf:resource="#Crac_album"/>
   <rdfs:label xml:lang="en">Giampaolo Tofani's participation to Crac!</rdfs:label>
   <rdfs:comment xml:lang="en">Giampaolo Tofani's participation to the album Crac! of the band Area</rdfs:comment>
@@ -4127,11 +4189,11 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Demetrio_Stratos_Crac_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Percussions_instrument"/>
-  <withInstrument rdf:resource="#Steel_Drums_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
-  <withInstrument rdf:resource="#Organ_instrument"/>
   <withInstrument rdf:resource="#Harpsichord_instrument"/>
+  <withInstrument rdf:resource="#Organ_instrument"/>
+  <withInstrument rdf:resource="#Steel_Drums_instrument"/>
+  <withInstrument rdf:resource="#Percussions_instrument"/>
   <inAlbum rdf:resource="#Crac_album"/>
   <rdfs:label xml:lang="en">Demetrio Stratos's participation to Crac!</rdfs:label>
   <rdfs:comment xml:lang="en">Demetrio Stratos's participation to the album Crac! of the band Area</rdfs:comment>
@@ -4139,8 +4201,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Giulio_Capiozzo_Crac_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Percussions_instrument"/>
   <withInstrument rdf:resource="#Drums_instrument"/>
+  <withInstrument rdf:resource="#Percussions_instrument"/>
   <inAlbum rdf:resource="#Crac_album"/>
   <rdfs:label xml:lang="en">Giulio Capiozzo's participation to Crac!</rdfs:label>
   <rdfs:comment xml:lang="en">Giulio Capiozzo's participation to the album Crac! of the band Area</rdfs:comment>
@@ -4148,9 +4210,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Ares_Tavolazzi_Crac_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <withInstrument rdf:resource="#Trombone_instrument"/>
   <withInstrument rdf:resource="#Electric_Bass_instrument"/>
   <withInstrument rdf:resource="#Acoustic_Bass_instrument"/>
-  <withInstrument rdf:resource="#Trombone_instrument"/>
   <inAlbum rdf:resource="#Crac_album"/>
   <rdfs:label xml:lang="en">Ares Tavolazzi's participation to Crac!</rdfs:label>
   <rdfs:comment xml:lang="en">Ares Tavolazzi's participation to the album Crac! of the band Area</rdfs:comment>
@@ -4315,9 +4377,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Patrizio_Fariselli_Maledetti_Maudits_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <withInstrument rdf:resource="#Arp_Odyssey_Synthesizer_instrument"/>
   <withInstrument rdf:resource="#Electric_Piano_instrument"/>
   <withInstrument rdf:resource="#Piano_instrument"/>
-  <withInstrument rdf:resource="#Arp_Odyssey_Synthesizer_instrument"/>
   <withInstrument rdf:resource="#Prepared_Piano_instrument"/>
   <inAlbum rdf:resource="#Maledetti_Maudits_album"/>
   <rdfs:label xml:lang="en">Patrizio Fariselli's participation to Maledetti (Maudits)</rdfs:label>
@@ -4326,8 +4388,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Giampaolo_Tofani_Maledetti_Maudits_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Serve_Tcherepnin_Synthesizer_instrument"/>
   <withInstrument rdf:resource="#Electric_Guitar_instrument"/>
+  <withInstrument rdf:resource="#Serve_Tcherepnin_Synthesizer_instrument"/>
   <inAlbum rdf:resource="#Maledetti_Maudits_album"/>
   <rdfs:label xml:lang="en">Giampaolo Tofani's participation to Maledetti (Maudits)</rdfs:label>
   <rdfs:comment xml:lang="en">Giampaolo Tofani's participation to the album Maledetti (Maudits) of the band Area</rdfs:comment>
@@ -4343,10 +4405,10 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Demetrio_Stratos_Maledetti_Maudits_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Bells_instrument"/>
-  <withInstrument rdf:resource="#Piano_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
+  <withInstrument rdf:resource="#Piano_instrument"/>
   <withInstrument rdf:resource="#Hammond_Organ_instrument"/>
+  <withInstrument rdf:resource="#Bells_instrument"/>
   <withInstrument rdf:resource="#Effects_instrument"/>
   <inAlbum rdf:resource="#Maledetti_Maudits_album"/>
   <rdfs:label xml:lang="en">Demetrio Stratos's participation to Maledetti (Maudits)</rdfs:label>
@@ -4543,8 +4605,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Furio_Chirico_Tilt_Immagini_Per_Un_Orecchio_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Percussions_instrument"/>
   <withInstrument rdf:resource="#Drums_instrument"/>
+  <withInstrument rdf:resource="#Percussions_instrument"/>
   <inAlbum rdf:resource="#Tilt_Immagini_Per_Un_Orecchio_album"/>
   <rdfs:label xml:lang="en">Furio Chirico's participation to Tilt - Immagini Per Un Orecchio</rdfs:label>
   <rdfs:comment xml:lang="en">Furio Chirico's participation to the album Tilt - Immagini Per Un Orecchio of the band Arti &amp; Mestieri</rdfs:comment>
@@ -4581,10 +4643,10 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <withInstrument rdf:resource="#Electric_Piano_instrument"/>
   <withInstrument rdf:resource="#Piano_instrument"/>
-  <withInstrument rdf:resource="#Arp_2600_Synthesizer_instrument"/>
-  <withInstrument rdf:resource="#Mellotron_instrument"/>
-  <withInstrument rdf:resource="#Hammond_Organ_instrument"/>
   <withInstrument rdf:resource="#Eminent_Synthesizer_instrument"/>
+  <withInstrument rdf:resource="#Hammond_Organ_instrument"/>
+  <withInstrument rdf:resource="#Mellotron_instrument"/>
+  <withInstrument rdf:resource="#Arp_2600_Synthesizer_instrument"/>
   <inAlbum rdf:resource="#Tilt_Immagini_Per_Un_Orecchio_album"/>
   <rdfs:label xml:lang="en">Beppe Crovella's participation to Tilt - Immagini Per Un Orecchio</rdfs:label>
   <rdfs:comment xml:lang="en">Beppe Crovella's participation to the album Tilt - Immagini Per Un Orecchio of the band Arti &amp; Mestieri</rdfs:comment>
@@ -4600,9 +4662,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Giovanni_Vigliar_Tilt_Immagini_Per_Un_Orecchio_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Percussions_instrument"/>
   <withInstrument rdf:resource="#Violin_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
+  <withInstrument rdf:resource="#Percussions_instrument"/>
   <inAlbum rdf:resource="#Tilt_Immagini_Per_Un_Orecchio_album"/>
   <rdfs:label xml:lang="en">Giovanni Vigliar's participation to Tilt - Immagini Per Un Orecchio</rdfs:label>
   <rdfs:comment xml:lang="en">Giovanni Vigliar's participation to the album Tilt - Immagini Per Un Orecchio of the band Arti &amp; Mestieri</rdfs:comment>
@@ -4618,11 +4680,11 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Arturo_Vitale_Tilt_Immagini_Per_Un_Orecchio_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <withInstrument rdf:resource="#Clarinet_instrument"/>
   <withInstrument rdf:resource="#Bass_Clarinet_instrument"/>
   <withInstrument rdf:resource="#Baritone_Saxophone_instrument"/>
-  <withInstrument rdf:resource="#Clarinet_instrument"/>
-  <withInstrument rdf:resource="#Soprano_Saxophone_instrument"/>
   <withInstrument rdf:resource="#Vibraphone_instrument"/>
+  <withInstrument rdf:resource="#Soprano_Saxophone_instrument"/>
   <inAlbum rdf:resource="#Tilt_Immagini_Per_Un_Orecchio_album"/>
   <rdfs:label xml:lang="en">Arturo Vitale's participation to Tilt - Immagini Per Un Orecchio</rdfs:label>
   <rdfs:comment xml:lang="en">Arturo Vitale's participation to the album Tilt - Immagini Per Un Orecchio of the band Arti &amp; Mestieri</rdfs:comment>
@@ -4826,12 +4888,12 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 <Participation rdf:about="#Beppe_Crovella_Giro_Di_Valzer_Per_Domani_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <withInstrument rdf:resource="#Electric_Piano_instrument"/>
-  <withInstrument rdf:resource="#Clavinet_instrument"/>
-  <withInstrument rdf:resource="#Piano_instrument"/>
   <withInstrument rdf:resource="#Synthesizer_instrument"/>
-  <withInstrument rdf:resource="#Spinet_instrument"/>
-  <withInstrument rdf:resource="#Celesta_instrument"/>
+  <withInstrument rdf:resource="#Piano_instrument"/>
   <withInstrument rdf:resource="#Hammond_Organ_instrument"/>
+  <withInstrument rdf:resource="#Celesta_instrument"/>
+  <withInstrument rdf:resource="#Clavinet_instrument"/>
+  <withInstrument rdf:resource="#Spinet_instrument"/>
   <inAlbum rdf:resource="#Giro_Di_Valzer_Per_Domani_album"/>
   <rdfs:label xml:lang="en">Beppe Crovella's participation to Giro Di Valzer Per Domani</rdfs:label>
   <rdfs:comment xml:lang="en">Beppe Crovella's participation to the album Giro Di Valzer Per Domani of the band Arti &amp; Mestieri</rdfs:comment>
@@ -4856,8 +4918,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Furio_Chirico_Giro_Di_Valzer_Per_Domani_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Percussions_instrument"/>
   <withInstrument rdf:resource="#Drums_instrument"/>
+  <withInstrument rdf:resource="#Percussions_instrument"/>
   <inAlbum rdf:resource="#Giro_Di_Valzer_Per_Domani_album"/>
   <rdfs:label xml:lang="en">Furio Chirico's participation to Giro Di Valzer Per Domani</rdfs:label>
   <rdfs:comment xml:lang="en">Furio Chirico's participation to the album Giro Di Valzer Per Domani of the band Arti &amp; Mestieri</rdfs:comment>
@@ -4865,9 +4927,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Giovanni_Vigliar_Giro_Di_Valzer_Per_Domani_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Percussions_instrument"/>
   <withInstrument rdf:resource="#Violin_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
+  <withInstrument rdf:resource="#Percussions_instrument"/>
   <inAlbum rdf:resource="#Giro_Di_Valzer_Per_Domani_album"/>
   <rdfs:label xml:lang="en">Giovanni Vigliar's participation to Giro Di Valzer Per Domani</rdfs:label>
   <rdfs:comment xml:lang="en">Giovanni Vigliar's participation to the album Giro Di Valzer Per Domani of the band Arti &amp; Mestieri</rdfs:comment>
@@ -4875,14 +4937,14 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Arturo_Vitale_Giro_Di_Valzer_Per_Domani_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Clavinet_instrument"/>
-  <withInstrument rdf:resource="#Bass_Clarinet_instrument"/>
-  <withInstrument rdf:resource="#Clarinet_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
-  <withInstrument rdf:resource="#Vibraphone_instrument"/>
   <withInstrument rdf:resource="#Melodica_instrument"/>
+  <withInstrument rdf:resource="#Bass_Clarinet_instrument"/>
   <withInstrument rdf:resource="#Baritone_Saxophone_instrument"/>
+  <withInstrument rdf:resource="#Vibraphone_instrument"/>
+  <withInstrument rdf:resource="#Clavinet_instrument"/>
   <withInstrument rdf:resource="#Soprano_Saxophone_instrument"/>
+  <withInstrument rdf:resource="#Clarinet_instrument"/>
   <inAlbum rdf:resource="#Giro_Di_Valzer_Per_Domani_album"/>
   <rdfs:label xml:lang="en">Arturo Vitale's participation to Giro Di Valzer Per Domani</rdfs:label>
   <rdfs:comment xml:lang="en">Arturo Vitale's participation to the album Giro Di Valzer Per Domani of the band Arti &amp; Mestieri</rdfs:comment>
@@ -5201,8 +5263,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 <Participation rdf:about="#Vittorio_Nocenzi_Banco_Del_Mutuo_Soccorso_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <withInstrument rdf:resource="#Organ_instrument"/>
-  <withInstrument rdf:resource="#Mellotron_instrument"/>
   <withInstrument rdf:resource="#Synthesizer_instrument"/>
+  <withInstrument rdf:resource="#Mellotron_instrument"/>
   <withProductionRole rdf:resource="#Producer_role"/>
   <inAlbum rdf:resource="#Banco_Del_Mutuo_Soccorso_album"/>
   <rdfs:label xml:lang="en">Vittorio Nocenzi's participation to Banco Del Mutuo Soccorso</rdfs:label>
@@ -5238,9 +5300,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Marcello_Todaro_Banco_Del_Mutuo_Soccorso_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <withInstrument rdf:resource="#Electric_Guitar_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
   <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
-  <withInstrument rdf:resource="#Electric_Guitar_instrument"/>
   <inAlbum rdf:resource="#Banco_Del_Mutuo_Soccorso_album"/>
   <rdfs:label xml:lang="en">Marcello Todaro's participation to Banco Del Mutuo Soccorso</rdfs:label>
   <rdfs:comment xml:lang="en">Marcello Todaro's participation to the album Banco Del Mutuo Soccorso of the band Banco Del Mutuo Soccorso</rdfs:comment>
@@ -5260,8 +5322,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Gianni_Nocenzi_Banco_Del_Mutuo_Soccorso_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Clarinet_instrument"/>
   <withInstrument rdf:resource="#Synthesizer_instrument"/>
+  <withInstrument rdf:resource="#Clarinet_instrument"/>
   <withInstrument rdf:resource="#Grand_Piano_instrument"/>
   <inAlbum rdf:resource="#Banco_Del_Mutuo_Soccorso_album"/>
   <rdfs:label xml:lang="en">Gianni Nocenzi's participation to Banco Del Mutuo Soccorso</rdfs:label>
@@ -5444,8 +5506,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Renato_D_Angelo_Darwin_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Bass_instrument"/>
   <withInstrument rdf:resource="#Double_Bass_instrument"/>
+  <withInstrument rdf:resource="#Bass_instrument"/>
   <inAlbum rdf:resource="#Darwin_album"/>
   <rdfs:label xml:lang="en">Renato D'Angelo's participation to Darwin!</rdfs:label>
   <rdfs:comment xml:lang="en">Renato D'Angelo's participation to the album Darwin! of the band Banco Del Mutuo Soccorso</rdfs:comment>
@@ -5471,8 +5533,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Marcello_Todaro_Darwin_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
   <withInstrument rdf:resource="#Electric_Guitar_instrument"/>
+  <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
   <inAlbum rdf:resource="#Darwin_album"/>
   <rdfs:label xml:lang="en">Marcello Todaro's participation to Darwin!</rdfs:label>
   <rdfs:comment xml:lang="en">Marcello Todaro's participation to the album Darwin! of the band Banco Del Mutuo Soccorso</rdfs:comment>
@@ -5488,9 +5550,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Vittorio_Nocenzi_Darwin_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <withInstrument rdf:resource="#Harpsichord_instrument"/>
   <withInstrument rdf:resource="#Hammond_Organ_instrument"/>
   <withInstrument rdf:resource="#Moog_Synthesizer_instrument"/>
-  <withInstrument rdf:resource="#Harpsichord_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
   <inAlbum rdf:resource="#Darwin_album"/>
   <rdfs:label xml:lang="en">Vittorio Nocenzi's participation to Darwin!</rdfs:label>
@@ -5669,8 +5731,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Pier_Luigi_Calderoni_Io_Sono_Nato_Libero_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Percussions_instrument"/>
   <withInstrument rdf:resource="#Drums_instrument"/>
+  <withInstrument rdf:resource="#Percussions_instrument"/>
   <inAlbum rdf:resource="#Io_Sono_Nato_Libero_album"/>
   <rdfs:label xml:lang="en">Pier Luigi Calderoni's participation to Io Sono Nato Libero</rdfs:label>
   <rdfs:comment xml:lang="en">Pier Luigi Calderoni's participation to the album Io Sono Nato Libero of the band Banco Del Mutuo Soccorso</rdfs:comment>
@@ -5678,8 +5740,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Marcello_Todaro_Io_Sono_Nato_Libero_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
   <withInstrument rdf:resource="#Electric_Guitar_instrument"/>
+  <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
   <inAlbum rdf:resource="#Io_Sono_Nato_Libero_album"/>
   <rdfs:label xml:lang="en">Marcello Todaro's participation to Io Sono Nato Libero</rdfs:label>
   <rdfs:comment xml:lang="en">Marcello Todaro's participation to the album Io Sono Nato Libero of the band Banco Del Mutuo Soccorso</rdfs:comment>
@@ -5801,9 +5863,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 <Participation rdf:about="#Rodolfo_Maltese_Banco_Del_Mutuo_Soccorso_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <withInstrument rdf:resource="#Backing_Vocals_instrument"/>
-  <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
   <withInstrument rdf:resource="#Electric_Guitar_instrument"/>
   <withInstrument rdf:resource="#Trumpet_instrument"/>
+  <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
   <inAlbum rdf:resource="#Banco_Del_Mutuo_Soccorso_album"/>
   <rdfs:label xml:lang="en">Rodolfo Maltese's participation to Banco Del Mutuo Soccorso</rdfs:label>
   <rdfs:comment xml:lang="en">Rodolfo Maltese's participation to the album Banco Del Mutuo Soccorso of the band Banco Del Mutuo Soccorso</rdfs:comment>
@@ -5979,10 +6041,10 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Rodolfo_Maltese_Garofano_Rosso_Colonna_Sonora_Originale_Del_Film_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#French_Horn_instrument"/>
-  <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
   <withInstrument rdf:resource="#Electric_Guitar_instrument"/>
+  <withInstrument rdf:resource="#French_Horn_instrument"/>
   <withInstrument rdf:resource="#Trumpet_instrument"/>
+  <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
   <inAlbum rdf:resource="#Garofano_Rosso_Colonna_Sonora_Originale_Del_Film_album"/>
   <rdfs:label xml:lang="en">Rodolfo Maltese's participation to Garofano Rosso (Colonna Sonora Originale Del Film)</rdfs:label>
   <rdfs:comment xml:lang="en">Rodolfo Maltese's participation to the album Garofano Rosso (Colonna Sonora Originale Del Film) of the band Banco Del Mutuo Soccorso</rdfs:comment>
@@ -5990,10 +6052,10 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Vittorio_Nocenzi_Garofano_Rosso_Colonna_Sonora_Originale_Del_Film_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Synthesizer_instrument"/>
-  <withInstrument rdf:resource="#Violin_instrument"/>
-  <withInstrument rdf:resource="#Organ_instrument"/>
   <withInstrument rdf:resource="#Vibraphone_instrument"/>
+  <withInstrument rdf:resource="#Violin_instrument"/>
+  <withInstrument rdf:resource="#Synthesizer_instrument"/>
+  <withInstrument rdf:resource="#Organ_instrument"/>
   <inAlbum rdf:resource="#Garofano_Rosso_Colonna_Sonora_Originale_Del_Film_album"/>
   <rdfs:label xml:lang="en">Vittorio Nocenzi's participation to Garofano Rosso (Colonna Sonora Originale Del Film)</rdfs:label>
   <rdfs:comment xml:lang="en">Vittorio Nocenzi's participation to the album Garofano Rosso (Colonna Sonora Originale Del Film) of the band Banco Del Mutuo Soccorso</rdfs:comment>
@@ -6018,9 +6080,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#PierLuigi_Calderoni_Garofano_Rosso_Colonna_Sonora_Originale_Del_Film_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Percussions_instrument"/>
-  <withInstrument rdf:resource="#Drums_instrument"/>
   <withInstrument rdf:resource="#Timpani_instrument"/>
+  <withInstrument rdf:resource="#Drums_instrument"/>
+  <withInstrument rdf:resource="#Percussions_instrument"/>
   <inAlbum rdf:resource="#Garofano_Rosso_Colonna_Sonora_Originale_Del_Film_album"/>
   <rdfs:label xml:lang="en">PierLuigi Calderoni's participation to Garofano Rosso (Colonna Sonora Originale Del Film)</rdfs:label>
   <rdfs:comment xml:lang="en">PierLuigi Calderoni's participation to the album Garofano Rosso (Colonna Sonora Originale Del Film) of the band Banco Del Mutuo Soccorso</rdfs:comment>
@@ -6300,11 +6362,11 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Vittorio_Nocenzi_Come_In_Un_Ultima_Cena_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Harpsichord_instrument"/>
-  <withInstrument rdf:resource="#Synthesizer_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
-  <withInstrument rdf:resource="#Hammond_Organ_instrument"/>
+  <withInstrument rdf:resource="#Synthesizer_instrument"/>
+  <withInstrument rdf:resource="#Harpsichord_instrument"/>
   <withInstrument rdf:resource="#Arp_Solina_Synth_instrument"/>
+  <withInstrument rdf:resource="#Hammond_Organ_instrument"/>
   <inAlbum rdf:resource="#Come_In_Un_Ultima_Cena_album"/>
   <rdfs:label xml:lang="en">Vittorio Nocenzi's participation to Come In Un'Ultima Cena</rdfs:label>
   <rdfs:comment xml:lang="en">Vittorio Nocenzi's participation to the album Come In Un'Ultima Cena of the band Banco Del Mutuo Soccorso</rdfs:comment>
@@ -6320,8 +6382,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Pierluigi_Calderoni_Come_In_Un_Ultima_Cena_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Percussions_instrument"/>
   <withInstrument rdf:resource="#Drums_instrument"/>
+  <withInstrument rdf:resource="#Percussions_instrument"/>
   <inAlbum rdf:resource="#Come_In_Un_Ultima_Cena_album"/>
   <rdfs:label xml:lang="en">Pierluigi Calderoni's participation to Come In Un'Ultima Cena</rdfs:label>
   <rdfs:comment xml:lang="en">Pierluigi Calderoni's participation to the album Come In Un'Ultima Cena of the band Banco Del Mutuo Soccorso</rdfs:comment>
@@ -6345,11 +6407,11 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Rodolfo_Maltese_Come_In_Un_Ultima_Cena_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
-  <withInstrument rdf:resource="#Trumpet_instrument"/>
-  <withInstrument rdf:resource="#Electric_Guitar_instrument"/>
-  <withInstrument rdf:resource="#French_Horn_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
+  <withInstrument rdf:resource="#French_Horn_instrument"/>
+  <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
+  <withInstrument rdf:resource="#Electric_Guitar_instrument"/>
+  <withInstrument rdf:resource="#Trumpet_instrument"/>
   <inAlbum rdf:resource="#Come_In_Un_Ultima_Cena_album"/>
   <rdfs:label xml:lang="en">Rodolfo Maltese's participation to Come In Un'Ultima Cena</rdfs:label>
   <rdfs:comment xml:lang="en">Rodolfo Maltese's participation to the album Come In Un'Ultima Cena of the band Banco Del Mutuo Soccorso</rdfs:comment>
@@ -6546,12 +6608,12 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Vittorio_Nocenzi_As_In_A_Last_Supper_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Harpsichord_instrument"/>
-  <withInstrument rdf:resource="#Mellotron_instrument"/>
-  <withInstrument rdf:resource="#Synthesizer_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
-  <withInstrument rdf:resource="#Hammond_Organ_instrument"/>
+  <withInstrument rdf:resource="#Synthesizer_instrument"/>
+  <withInstrument rdf:resource="#Harpsichord_instrument"/>
   <withInstrument rdf:resource="#Arp_Solina_Synth_instrument"/>
+  <withInstrument rdf:resource="#Hammond_Organ_instrument"/>
+  <withInstrument rdf:resource="#Mellotron_instrument"/>
   <inAlbum rdf:resource="#As_In_A_Last_Supper_album"/>
   <rdfs:label xml:lang="en">Vittorio Nocenzi's participation to As In A Last Supper</rdfs:label>
   <rdfs:comment xml:lang="en">Vittorio Nocenzi's participation to the album As In A Last Supper of the band Banco Del Mutuo Soccorso</rdfs:comment>
@@ -6580,8 +6642,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Pierluigi_Calderoni_As_In_A_Last_Supper_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Percussions_instrument"/>
   <withInstrument rdf:resource="#Drums_instrument"/>
+  <withInstrument rdf:resource="#Percussions_instrument"/>
   <inAlbum rdf:resource="#As_In_A_Last_Supper_album"/>
   <rdfs:label xml:lang="en">Pierluigi Calderoni's participation to As In A Last Supper</rdfs:label>
   <rdfs:comment xml:lang="en">Pierluigi Calderoni's participation to the album As In A Last Supper of the band Banco Del Mutuo Soccorso</rdfs:comment>
@@ -6597,11 +6659,11 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Rodolfo_Maltese_As_In_A_Last_Supper_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
-  <withInstrument rdf:resource="#Trumpet_instrument"/>
-  <withInstrument rdf:resource="#Electric_Guitar_instrument"/>
-  <withInstrument rdf:resource="#French_Horn_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
+  <withInstrument rdf:resource="#French_Horn_instrument"/>
+  <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
+  <withInstrument rdf:resource="#Electric_Guitar_instrument"/>
+  <withInstrument rdf:resource="#Trumpet_instrument"/>
   <inAlbum rdf:resource="#As_In_A_Last_Supper_album"/>
   <rdfs:label xml:lang="en">Rodolfo Maltese's participation to As In A Last Supper</rdfs:label>
   <rdfs:comment xml:lang="en">Rodolfo Maltese's participation to the album As In A Last Supper of the band Banco Del Mutuo Soccorso</rdfs:comment>
@@ -6860,9 +6922,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Filippo_Lazzari_Poa_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <withInstrument rdf:resource="#Harmonica_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
   <withInstrument rdf:resource="#Keyboards_instrument"/>
-  <withInstrument rdf:resource="#Harmonica_instrument"/>
   <inAlbum rdf:resource="#Poa_album"/>
   <rdfs:label xml:lang="en">Filippo Lazzari's participation to Ποα</rdfs:label>
   <rdfs:comment xml:lang="en">Filippo Lazzari's participation to the album Ποα of the band Blocco Mentale</rdfs:comment>
@@ -7033,9 +7095,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 <Participation rdf:about="#Antonio_Spagnolo_Melos_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <withInstrument rdf:resource="#12_String_Acoustic_Guitar_instrument"/>
+  <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
   <withInstrument rdf:resource="#Bass_instrument"/>
-  <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
   <withProductionRole rdf:resource="#Recorder_role"/>
   <inAlbum rdf:resource="#Melos_album"/>
   <rdfs:label xml:lang="en">Antonio Spagnolo's participation to Melos</rdfs:label>
@@ -7052,8 +7114,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 <Participation rdf:about="#Giulio_D_Ambrosio_Melos_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <withInstrument rdf:resource="#Flute_instrument"/>
-  <withInstrument rdf:resource="#Contralto_Electric_Saxophone_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
+  <withInstrument rdf:resource="#Contralto_Electric_Saxophone_instrument"/>
   <withInstrument rdf:resource="#Tenor_Electric_Saxophone_instrument"/>
   <inAlbum rdf:resource="#Melos_album"/>
   <rdfs:label xml:lang="en">Giulio D'Ambrosio's participation to Melos</rdfs:label>
@@ -7069,9 +7131,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Corrado_Rustici_Melos_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <withInstrument rdf:resource="#Vibraphone_instrument"/>
   <withInstrument rdf:resource="#Flute_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
-  <withInstrument rdf:resource="#Vibraphone_instrument"/>
   <withInstrument rdf:resource="#Guitar_instrument"/>
   <withProductionRole rdf:resource="#Recorder_role"/>
   <inAlbum rdf:resource="#Melos_album"/>
@@ -7088,9 +7150,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Gianluigi_Di_Franco_Melos_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Small_Percussion_instrument"/>
   <withInstrument rdf:resource="#Flute_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
+  <withInstrument rdf:resource="#Small_Percussion_instrument"/>
   <inAlbum rdf:resource="#Melos_album"/>
   <rdfs:label xml:lang="en">Gianluigi Di Franco's participation to Melos</rdfs:label>
   <rdfs:comment xml:lang="en">Gianluigi Di Franco's participation to the album Melos of the band Cervello</rdfs:comment>
@@ -7105,8 +7167,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Remigio_Esposito_Melos_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Drums_instrument"/>
   <withInstrument rdf:resource="#Vibraphone_instrument"/>
+  <withInstrument rdf:resource="#Drums_instrument"/>
   <inAlbum rdf:resource="#Melos_album"/>
   <rdfs:label xml:lang="en">Remigio Esposito's participation to Melos</rdfs:label>
   <rdfs:comment xml:lang="en">Remigio Esposito's participation to the album Melos of the band Cervello</rdfs:comment>
@@ -7291,11 +7353,11 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Matteo_Vitolli_Io_Non_So_Da_Dove_Vengo_E_Non_So_Dove_Mai_Andro_Uomo_E_Il_Nome_Che_Mi_Han_Dato_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Flute_instrument"/>
-  <withInstrument rdf:resource="#Percussions_instrument"/>
+  <withInstrument rdf:resource="#Prepared_Piano_instrument"/>
   <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
   <withInstrument rdf:resource="#Electric_Guitar_instrument"/>
-  <withInstrument rdf:resource="#Prepared_Piano_instrument"/>
+  <withInstrument rdf:resource="#Flute_instrument"/>
+  <withInstrument rdf:resource="#Percussions_instrument"/>
   <inAlbum rdf:resource="#Io_Non_So_Da_Dove_Vengo_E_Non_So_Dove_Mai_Andro_Uomo_E_Il_Nome_Che_Mi_Han_Dato_album"/>
   <rdfs:label xml:lang="en">Matteo Vitolli's participation to Io Non So Da Dove Vengo E Non So Dove Mai Andrò. Uomo È Il Nome Che Mi Han Dato</rdfs:label>
   <rdfs:comment xml:lang="en">Matteo Vitolli's participation to the album Io Non So Da Dove Vengo E Non So Dove Mai Andrò. Uomo È Il Nome Che Mi Han Dato of the band De De Lind</rdfs:comment>
@@ -7326,12 +7388,12 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Gilberto_Trama_Io_Non_So_Da_Dove_Vengo_E_Non_So_Dove_Mai_Andro_Uomo_E_Il_Nome_Che_Mi_Han_Dato_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Flute_instrument"/>
-  <withInstrument rdf:resource="#Tenor_Saxophone_instrument"/>
   <withInstrument rdf:resource="#Piano_instrument"/>
   <withInstrument rdf:resource="#Prepared_Piano_instrument"/>
+  <withInstrument rdf:resource="#Tenor_Saxophone_instrument"/>
   <withInstrument rdf:resource="#Organ_instrument"/>
   <withInstrument rdf:resource="#Flugelhorn_instrument"/>
+  <withInstrument rdf:resource="#Flute_instrument"/>
   <inAlbum rdf:resource="#Io_Non_So_Da_Dove_Vengo_E_Non_So_Dove_Mai_Andro_Uomo_E_Il_Nome_Che_Mi_Han_Dato_album"/>
   <rdfs:label xml:lang="en">Gilberto Trama's participation to Io Non So Da Dove Vengo E Non So Dove Mai Andrò. Uomo È Il Nome Che Mi Han Dato</rdfs:label>
   <rdfs:comment xml:lang="en">Gilberto Trama's participation to the album Io Non So Da Dove Vengo E Non So Dove Mai Andrò. Uomo È Il Nome Che Mi Han Dato of the band De De Lind</rdfs:comment>
@@ -7346,9 +7408,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Ricky_Rebajoli_Io_Non_So_Da_Dove_Vengo_E_Non_So_Dove_Mai_Andro_Uomo_E_Il_Nome_Che_Mi_Han_Dato_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Percussions_instrument"/>
-  <withInstrument rdf:resource="#Drums_instrument"/>
   <withInstrument rdf:resource="#Timpani_instrument"/>
+  <withInstrument rdf:resource="#Drums_instrument"/>
+  <withInstrument rdf:resource="#Percussions_instrument"/>
   <inAlbum rdf:resource="#Io_Non_So_Da_Dove_Vengo_E_Non_So_Dove_Mai_Andro_Uomo_E_Il_Nome_Che_Mi_Han_Dato_album"/>
   <rdfs:label xml:lang="en">Ricky Rebajoli's participation to Io Non So Da Dove Vengo E Non So Dove Mai Andrò. Uomo È Il Nome Che Mi Han Dato</rdfs:label>
   <rdfs:comment xml:lang="en">Ricky Rebajoli's participation to the album Io Non So Da Dove Vengo E Non So Dove Mai Andrò. Uomo È Il Nome Che Mi Han Dato of the band De De Lind</rdfs:comment>
@@ -7524,8 +7586,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 <Participation rdf:about="#Alberto_Radius_Dies_Irae_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
-  <withInstrument rdf:resource="#Bass_instrument"/>
   <withInstrument rdf:resource="#Guitar_instrument"/>
+  <withInstrument rdf:resource="#Bass_instrument"/>
   <inAlbum rdf:resource="#Dies_Irae_album"/>
   <rdfs:label xml:lang="en">Alberto Radius's participation to Dies Irae</rdfs:label>
   <rdfs:comment xml:lang="en">Alberto Radius's participation to the album Dies Irae of the band Formula 3</rdfs:comment>
@@ -7543,9 +7605,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Tony_Cicco_Dies_Irae_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Percussions_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
   <withInstrument rdf:resource="#Drums_instrument"/>
+  <withInstrument rdf:resource="#Percussions_instrument"/>
   <inAlbum rdf:resource="#Dies_Irae_album"/>
   <rdfs:label xml:lang="en">Tony Cicco's participation to Dies Irae</rdfs:label>
   <rdfs:comment xml:lang="en">Tony Cicco's participation to the album Dies Irae of the band Formula 3</rdfs:comment>
@@ -7564,8 +7626,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 <Participation rdf:about="#Gabriele_Lorenzi_Dies_Irae_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
-  <withInstrument rdf:resource="#Bass_instrument"/>
   <withInstrument rdf:resource="#Keyboards_instrument"/>
+  <withInstrument rdf:resource="#Bass_instrument"/>
   <inAlbum rdf:resource="#Dies_Irae_album"/>
   <rdfs:label xml:lang="en">Gabriele Lorenzi's participation to Dies Irae</rdfs:label>
   <rdfs:comment xml:lang="en">Gabriele Lorenzi's participation to the album Dies Irae of the band Formula 3</rdfs:comment>
@@ -7745,9 +7807,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Tony_Cicco_Formula_3_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Percussions_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
   <withInstrument rdf:resource="#Drums_instrument"/>
+  <withInstrument rdf:resource="#Percussions_instrument"/>
   <inAlbum rdf:resource="#Formula_3_album"/>
   <rdfs:label xml:lang="en">Tony Cicco's participation to Formula 3</rdfs:label>
   <rdfs:comment xml:lang="en">Tony Cicco's participation to the album Formula 3 of the band Formula 3</rdfs:comment>
@@ -7756,8 +7818,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 <Participation rdf:about="#Alberto_Radius_Formula_3_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
-  <withInstrument rdf:resource="#Bass_instrument"/>
   <withInstrument rdf:resource="#Guitar_instrument"/>
+  <withInstrument rdf:resource="#Bass_instrument"/>
   <inAlbum rdf:resource="#Formula_3_album"/>
   <rdfs:label xml:lang="en">Alberto Radius's participation to Formula 3</rdfs:label>
   <rdfs:comment xml:lang="en">Alberto Radius's participation to the album Formula 3 of the band Formula 3</rdfs:comment>
@@ -7766,8 +7828,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 <Participation rdf:about="#Gabriele_Lorenzi_Formula_3_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
-  <withInstrument rdf:resource="#Bass_instrument"/>
   <withInstrument rdf:resource="#Keyboards_instrument"/>
+  <withInstrument rdf:resource="#Bass_instrument"/>
   <inAlbum rdf:resource="#Formula_3_album"/>
   <rdfs:label xml:lang="en">Gabriele Lorenzi's participation to Formula 3</rdfs:label>
   <rdfs:comment xml:lang="en">Gabriele Lorenzi's participation to the album Formula 3 of the band Formula 3</rdfs:comment>
@@ -7934,11 +7996,11 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Gabriele_Lorenzi_Sognando_E_Risognando_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Bass_instrument"/>
-  <withInstrument rdf:resource="#Piano_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
-  <withInstrument rdf:resource="#Minimoog_Synthesizer_instrument"/>
+  <withInstrument rdf:resource="#Piano_instrument"/>
   <withInstrument rdf:resource="#Hammond_Organ_instrument"/>
+  <withInstrument rdf:resource="#Minimoog_Synthesizer_instrument"/>
+  <withInstrument rdf:resource="#Bass_instrument"/>
   <inAlbum rdf:resource="#Sognando_E_Risognando_album"/>
   <rdfs:label xml:lang="en">Gabriele Lorenzi's participation to Sognando E Risognando</rdfs:label>
   <rdfs:comment xml:lang="en">Gabriele Lorenzi's participation to the album Sognando E Risognando of the band Formula 3</rdfs:comment>
@@ -7946,9 +8008,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Tony_Cicco_Sognando_E_Risognando_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Percussions_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
   <withInstrument rdf:resource="#Drums_instrument"/>
+  <withInstrument rdf:resource="#Percussions_instrument"/>
   <inAlbum rdf:resource="#Sognando_E_Risognando_album"/>
   <rdfs:label xml:lang="en">Tony Cicco's participation to Sognando E Risognando</rdfs:label>
   <rdfs:comment xml:lang="en">Tony Cicco's participation to the album Sognando E Risognando of the band Formula 3</rdfs:comment>
@@ -7956,10 +8018,10 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Alberto_Radius_Sognando_E_Risognando_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Vocals_instrument"/>
-  <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
   <withInstrument rdf:resource="#Electric_Guitar_instrument"/>
+  <withInstrument rdf:resource="#Vocals_instrument"/>
   <withInstrument rdf:resource="#Bass_instrument"/>
+  <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
   <inAlbum rdf:resource="#Sognando_E_Risognando_album"/>
   <rdfs:label xml:lang="en">Alberto Radius's participation to Sognando E Risognando</rdfs:label>
   <rdfs:comment xml:lang="en">Alberto Radius's participation to the album Sognando E Risognando of the band Formula 3</rdfs:comment>
@@ -8202,8 +8264,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 <Participation rdf:about="#Alberto_Radius_La_Grande_Casa_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
-  <withInstrument rdf:resource="#Bass_instrument"/>
   <withInstrument rdf:resource="#Guitar_instrument"/>
+  <withInstrument rdf:resource="#Bass_instrument"/>
   <inAlbum rdf:resource="#La_Grande_Casa_album"/>
   <rdfs:label xml:lang="en">Alberto Radius's participation to La Grande Casa</rdfs:label>
   <rdfs:comment xml:lang="en">Alberto Radius's participation to the album La Grande Casa of the band Formula 3</rdfs:comment>
@@ -8211,9 +8273,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Tony_Cicco_La_Grande_Casa_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Percussions_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
   <withInstrument rdf:resource="#Drums_instrument"/>
+  <withInstrument rdf:resource="#Percussions_instrument"/>
   <inAlbum rdf:resource="#La_Grande_Casa_album"/>
   <rdfs:label xml:lang="en">Tony Cicco's participation to La Grande Casa</rdfs:label>
   <rdfs:comment xml:lang="en">Tony Cicco's participation to the album La Grande Casa of the band Formula 3</rdfs:comment>
@@ -8222,8 +8284,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 <Participation rdf:about="#Gabriele_Lorenzi_La_Grande_Casa_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
-  <withInstrument rdf:resource="#Bass_instrument"/>
   <withInstrument rdf:resource="#Keyboards_instrument"/>
+  <withInstrument rdf:resource="#Bass_instrument"/>
   <inAlbum rdf:resource="#La_Grande_Casa_album"/>
   <rdfs:label xml:lang="en">Gabriele Lorenzi's participation to La Grande Casa</rdfs:label>
   <rdfs:comment xml:lang="en">Gabriele Lorenzi's participation to the album La Grande Casa of the band Formula 3</rdfs:comment>
@@ -8570,8 +8632,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 <Participation rdf:about="#Maurizio_Cassinelli_Astrolabio_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
-  <withInstrument rdf:resource="#Drums_instrument"/>
   <withInstrument rdf:resource="#Effects_instrument"/>
+  <withInstrument rdf:resource="#Drums_instrument"/>
   <inAlbum rdf:resource="#Astrolabio_album"/>
   <rdfs:label xml:lang="en">Maurizio Cassinelli's participation to Astrolabio</rdfs:label>
   <rdfs:comment xml:lang="en">Maurizio Cassinelli's participation to the album Astrolabio of the band Garybaldi</rdfs:comment>
@@ -8873,9 +8935,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 <Participation rdf:about="#Maurizio_Guarini_Roller_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <withInstrument rdf:resource="#Hohner_Pianet_instrument"/>
-  <withInstrument rdf:resource="#Moog_Synthesizer_instrument"/>
   <withInstrument rdf:resource="#Piano_instrument"/>
   <withInstrument rdf:resource="#Clarinet_instrument"/>
+  <withInstrument rdf:resource="#Moog_Synthesizer_instrument"/>
   <withInstrument rdf:resource="#Fender_Rhodes_instrument"/>
   <inAlbum rdf:resource="#Roller_album"/>
   <rdfs:label xml:lang="en">Maurizio Guarini's participation to Roller</rdfs:label>
@@ -8892,8 +8954,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Massimo_Morante_Roller_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
   <withInstrument rdf:resource="#Electric_Guitar_instrument"/>
+  <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
   <inAlbum rdf:resource="#Roller_album"/>
   <rdfs:label xml:lang="en">Massimo Morante's participation to Roller</rdfs:label>
   <rdfs:comment xml:lang="en">Massimo Morante's participation to the album Roller of the band Goblin</rdfs:comment>
@@ -8901,13 +8963,13 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Claudio_Simonetti_Roller_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Elka_Synthesizer_instrument"/>
-  <withInstrument rdf:resource="#Pipe_Organ_instrument"/>
-  <withInstrument rdf:resource="#Piano_instrument"/>
   <withInstrument rdf:resource="#Hohner_Clavinet_instrument"/>
-  <withInstrument rdf:resource="#Logan_String_Synthesizer_instrument"/>
-  <withInstrument rdf:resource="#Minimoog_Synthesizer_instrument"/>
+  <withInstrument rdf:resource="#Piano_instrument"/>
   <withInstrument rdf:resource="#Organ_instrument"/>
+  <withInstrument rdf:resource="#Pipe_Organ_instrument"/>
+  <withInstrument rdf:resource="#Minimoog_Synthesizer_instrument"/>
+  <withInstrument rdf:resource="#Elka_Synthesizer_instrument"/>
+  <withInstrument rdf:resource="#Logan_String_Synthesizer_instrument"/>
   <inAlbum rdf:resource="#Roller_album"/>
   <rdfs:label xml:lang="en">Claudio Simonetti's participation to Roller</rdfs:label>
   <rdfs:comment xml:lang="en">Claudio Simonetti's participation to the album Roller of the band Goblin</rdfs:comment>
@@ -8922,8 +8984,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Agostino_Marangolo_Roller_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Percussions_instrument"/>
   <withInstrument rdf:resource="#Drums_instrument"/>
+  <withInstrument rdf:resource="#Percussions_instrument"/>
   <inAlbum rdf:resource="#Roller_album"/>
   <rdfs:label xml:lang="en">Agostino Marangolo's participation to Roller</rdfs:label>
   <rdfs:comment xml:lang="en">Agostino Marangolo's participation to the album Roller of the band Goblin</rdfs:comment>
@@ -9576,13 +9638,13 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Gianni_Leone_Ys_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Moog_Synthesizer_instrument"/>
-  <withInstrument rdf:resource="#Piano_instrument"/>
-  <withInstrument rdf:resource="#Mellotron_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
-  <withInstrument rdf:resource="#Spinet_instrument"/>
+  <withInstrument rdf:resource="#Piano_instrument"/>
   <withInstrument rdf:resource="#Celesta_instrument"/>
   <withInstrument rdf:resource="#Hammond_Organ_instrument"/>
+  <withInstrument rdf:resource="#Moog_Synthesizer_instrument"/>
+  <withInstrument rdf:resource="#Spinet_instrument"/>
+  <withInstrument rdf:resource="#Mellotron_instrument"/>
   <inAlbum rdf:resource="#Ys_album"/>
   <rdfs:label xml:lang="en">Gianni Leone's participation to Ys</rdfs:label>
   <rdfs:comment xml:lang="en">Gianni Leone's participation to the album Ys of the band Il Balletto Di Bronzo</rdfs:comment>
@@ -10074,13 +10136,13 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Franco_Di_Sabbatino_Contaminazione_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <withInstrument rdf:resource="#Harmonium_instrument"/>
+  <withInstrument rdf:resource="#Vcs_Synthesizer_instrument"/>
+  <withInstrument rdf:resource="#Keyboards_instrument"/>
+  <withInstrument rdf:resource="#Eminent_Synthesizer_instrument"/>
+  <withInstrument rdf:resource="#Hammond_Organ_instrument"/>
   <withInstrument rdf:resource="#Moog_Synthesizer_instrument"/>
   <withInstrument rdf:resource="#Arp_Synthesizer_instrument"/>
-  <withInstrument rdf:resource="#Harmonium_instrument"/>
-  <withInstrument rdf:resource="#Hammond_Organ_instrument"/>
-  <withInstrument rdf:resource="#Eminent_Synthesizer_instrument"/>
-  <withInstrument rdf:resource="#Keyboards_instrument"/>
-  <withInstrument rdf:resource="#Vcs_Synthesizer_instrument"/>
   <inAlbum rdf:resource="#Contaminazione_album"/>
   <rdfs:label xml:lang="en">Franco Di Sabbatino's participation to Contaminazione</rdfs:label>
   <rdfs:comment xml:lang="en">Franco Di Sabbatino's participation to the album Contaminazione of the band Il Rovescio Della Medaglia</rdfs:comment>
@@ -10088,8 +10150,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Pino_Ballarini_Contaminazione_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Percussions_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
+  <withInstrument rdf:resource="#Percussions_instrument"/>
   <inAlbum rdf:resource="#Contaminazione_album"/>
   <rdfs:label xml:lang="en">Pino Ballarini's participation to Contaminazione</rdfs:label>
   <rdfs:comment xml:lang="en">Pino Ballarini's participation to the album Contaminazione of the band Il Rovescio Della Medaglia</rdfs:comment>
@@ -10113,8 +10175,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Luis_Enriquez_Bacalov_Contaminazione_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withProductionRole rdf:resource="#Producer_role"/>
   <withProductionRole rdf:resource="#Arrangements_role"/>
+  <withProductionRole rdf:resource="#Producer_role"/>
   <withProductionRole rdf:resource="#Director_role"/>
   <inAlbum rdf:resource="#Contaminazione_album"/>
   <rdfs:label xml:lang="en">Luis Enriquez Bacalov's participation to Contaminazione</rdfs:label>
@@ -10394,8 +10456,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Luis_Enriquez_Bacalov_Contamination_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withProductionRole rdf:resource="#Producer_role"/>
   <withProductionRole rdf:resource="#Arrangements_role"/>
+  <withProductionRole rdf:resource="#Producer_role"/>
   <withProductionRole rdf:resource="#Director_role"/>
   <inAlbum rdf:resource="#Contamination_album"/>
   <rdfs:label xml:lang="en">Luis Enriquez Bacalov's participation to Contamination</rdfs:label>
@@ -10404,13 +10466,13 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Franco_Di_Sabbatino_Contamination_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <withInstrument rdf:resource="#Harmonium_instrument"/>
+  <withInstrument rdf:resource="#Vcs_Synthesizer_instrument"/>
+  <withInstrument rdf:resource="#Keyboards_instrument"/>
+  <withInstrument rdf:resource="#Eminent_Synthesizer_instrument"/>
+  <withInstrument rdf:resource="#Hammond_Organ_instrument"/>
   <withInstrument rdf:resource="#Moog_Synthesizer_instrument"/>
   <withInstrument rdf:resource="#Arp_Synthesizer_instrument"/>
-  <withInstrument rdf:resource="#Harmonium_instrument"/>
-  <withInstrument rdf:resource="#Hammond_Organ_instrument"/>
-  <withInstrument rdf:resource="#Eminent_Synthesizer_instrument"/>
-  <withInstrument rdf:resource="#Keyboards_instrument"/>
-  <withInstrument rdf:resource="#Vcs_Synthesizer_instrument"/>
   <inAlbum rdf:resource="#Contamination_album"/>
   <rdfs:label xml:lang="en">Franco Di Sabbatino's participation to Contamination</rdfs:label>
   <rdfs:comment xml:lang="en">Franco Di Sabbatino's participation to the album Contamination of the band Il Rovescio Della Medaglia</rdfs:comment>
@@ -10434,8 +10496,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Pino_Ballarini_Contamination_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Percussions_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
+  <withInstrument rdf:resource="#Percussions_instrument"/>
   <inAlbum rdf:resource="#Contamination_album"/>
   <rdfs:label xml:lang="en">Pino Ballarini's participation to Contamination</rdfs:label>
   <rdfs:comment xml:lang="en">Pino Ballarini's participation to the album Contamination of the band Il Rovescio Della Medaglia</rdfs:comment>
@@ -10704,10 +10766,10 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Charles_Tiring_Tardo_Pede_In_Magiam_Versus_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Vocals_instrument"/>
   <withInstrument rdf:resource="#Pipe_Organ_instrument"/>
   <withInstrument rdf:resource="#Moog_Synthesizer_instrument"/>
   <withInstrument rdf:resource="#Harpsichord_instrument"/>
+  <withInstrument rdf:resource="#Vocals_instrument"/>
   <inAlbum rdf:resource="#Tardo_Pede_In_Magiam_Versus_album"/>
   <rdfs:label xml:lang="en">Charles Tiring's participation to Tardo Pede In Magiam Versus</rdfs:label>
   <rdfs:comment xml:lang="en">Charles Tiring's participation to the album Tardo Pede In Magiam Versus of the band Jacula</rdfs:comment>
@@ -10723,8 +10785,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 <Participation rdf:about="#Antonio_Bartoccetti_Tardo_Pede_In_Magiam_Versus_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
-  <withInstrument rdf:resource="#Bass_instrument"/>
   <withInstrument rdf:resource="#Guitar_instrument"/>
+  <withInstrument rdf:resource="#Bass_instrument"/>
   <withProductionRole rdf:resource="#Producer_role"/>
   <inAlbum rdf:resource="#Tardo_Pede_In_Magiam_Versus_album"/>
   <rdfs:label xml:lang="en">Antonio Bartoccetti's participation to Tardo Pede In Magiam Versus</rdfs:label>
@@ -10740,8 +10802,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Vittoria_Lo_Turco_Tardo_Pede_In_Magiam_Versus_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Flute_instrument"/>
   <withInstrument rdf:resource="#Violin_instrument"/>
+  <withInstrument rdf:resource="#Flute_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
   <inAlbum rdf:resource="#Tardo_Pede_In_Magiam_Versus_album"/>
   <rdfs:label xml:lang="en">Vittoria Lo Turco's participation to Tardo Pede In Magiam Versus</rdfs:label>
@@ -10875,12 +10937,12 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Marcello_Giancarlo_Dellacasa_Passio_Secundum_Mattheum_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Violin_instrument"/>
-  <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
-  <withInstrument rdf:resource="#Electric_Guitar_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
-  <withInstrument rdf:resource="#Bass_instrument"/>
   <withInstrument rdf:resource="#Classical_Guitar_instrument"/>
+  <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
+  <withInstrument rdf:resource="#Violin_instrument"/>
+  <withInstrument rdf:resource="#Electric_Guitar_instrument"/>
+  <withInstrument rdf:resource="#Bass_instrument"/>
   <inAlbum rdf:resource="#Passio_Secundum_Mattheum_album"/>
   <rdfs:label xml:lang="en">Marcello Giancarlo Dellacasa's participation to Passio Secundum Mattheum</rdfs:label>
   <rdfs:comment xml:lang="en">Marcello Giancarlo Dellacasa's participation to the album Passio Secundum Mattheum of the band Latte E Miele</rdfs:comment>
@@ -10897,14 +10959,14 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Alfio_Vitanza_Passio_Secundum_Mattheum_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Bells_instrument"/>
+  <withInstrument rdf:resource="#Whip_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
-  <withInstrument rdf:resource="#Bongos_instrument"/>
   <withInstrument rdf:resource="#Congas_instrument"/>
   <withInstrument rdf:resource="#Flute_instrument"/>
-  <withInstrument rdf:resource="#Timpani_instrument"/>
   <withInstrument rdf:resource="#Drums_instrument"/>
-  <withInstrument rdf:resource="#Whip_instrument"/>
+  <withInstrument rdf:resource="#Bongos_instrument"/>
+  <withInstrument rdf:resource="#Timpani_instrument"/>
+  <withInstrument rdf:resource="#Bells_instrument"/>
   <inAlbum rdf:resource="#Passio_Secundum_Mattheum_album"/>
   <rdfs:label xml:lang="en">Alfio Vitanza's participation to Passio Secundum Mattheum</rdfs:label>
   <rdfs:comment xml:lang="en">Alfio Vitanza's participation to the album Passio Secundum Mattheum of the band Latte E Miele</rdfs:comment>
@@ -10920,14 +10982,14 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Oliviero_Lacagnina_Passio_Secundum_Mattheum_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Piano_instrument"/>
-  <withInstrument rdf:resource="#Mellotron_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
   <withInstrument rdf:resource="#Arp_Solina_Synth_instrument"/>
+  <withInstrument rdf:resource="#Celesta_instrument"/>
   <withInstrument rdf:resource="#Moog_Synthesizer_instrument"/>
+  <withInstrument rdf:resource="#Mellotron_instrument"/>
+  <withInstrument rdf:resource="#Piano_instrument"/>
   <withInstrument rdf:resource="#Crumar_Harpsichord_instrument"/>
   <withInstrument rdf:resource="#Hammond_Organ_instrument"/>
-  <withInstrument rdf:resource="#Celesta_instrument"/>
   <inAlbum rdf:resource="#Passio_Secundum_Mattheum_album"/>
   <rdfs:label xml:lang="en">Oliviero Lacagnina's participation to Passio Secundum Mattheum</rdfs:label>
   <rdfs:comment xml:lang="en">Oliviero Lacagnina's participation to the album Passio Secundum Mattheum of the band Latte E Miele</rdfs:comment>
@@ -11189,9 +11251,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 <Participation rdf:about="#Marcello_Giancarlo_Dellacasa_Papillon_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <withInstrument rdf:resource="#Violin_instrument"/>
-  <withInstrument rdf:resource="#Bass_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
   <withInstrument rdf:resource="#Guitar_instrument"/>
+  <withInstrument rdf:resource="#Bass_instrument"/>
   <inAlbum rdf:resource="#Papillon_album"/>
   <rdfs:label xml:lang="en">Marcello Giancarlo Dellacasa's participation to Papillon</rdfs:label>
   <rdfs:comment xml:lang="en">Marcello Giancarlo Dellacasa's participation to the album Papillon of the band Latte E Miele</rdfs:comment>
@@ -11306,11 +11368,11 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Mimmo_Damiani_Aquile_E_Scoiattoli_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Guitar_instrument"/>
-  <withInstrument rdf:resource="#Fender_Rhodes_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
-  <withInstrument rdf:resource="#Eminent_Synthesizer_instrument"/>
   <withInstrument rdf:resource="#Arp_Solina_Synth_instrument"/>
+  <withInstrument rdf:resource="#Guitar_instrument"/>
+  <withInstrument rdf:resource="#Eminent_Synthesizer_instrument"/>
+  <withInstrument rdf:resource="#Fender_Rhodes_instrument"/>
   <inAlbum rdf:resource="#Aquile_E_Scoiattoli_album"/>
   <rdfs:label xml:lang="en">Mimmo Damiani's participation to Aquile E Scoiattoli</rdfs:label>
   <rdfs:comment xml:lang="en">Mimmo Damiani's participation to the album Aquile E Scoiattoli of the band Latte E Miele</rdfs:comment>
@@ -11325,10 +11387,10 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Massimo_Gori_Aquile_E_Scoiattoli_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
-  <withInstrument rdf:resource="#Electric_Guitar_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
   <withInstrument rdf:resource="#Slide_Guitar_instrument"/>
+  <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
+  <withInstrument rdf:resource="#Electric_Guitar_instrument"/>
   <withInstrument rdf:resource="#Bass_instrument"/>
   <inAlbum rdf:resource="#Aquile_E_Scoiattoli_album"/>
   <rdfs:label xml:lang="en">Massimo Gori's participation to Aquile E Scoiattoli</rdfs:label>
@@ -11338,9 +11400,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 <Participation rdf:about="#Alfio_Vitanza_Aquile_E_Scoiattoli_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <withInstrument rdf:resource="#12_String_Acoustic_Guitar_instrument"/>
-  <withInstrument rdf:resource="#Percussions_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
   <withInstrument rdf:resource="#Drums_instrument"/>
+  <withInstrument rdf:resource="#Percussions_instrument"/>
   <withProductionRole rdf:resource="#Co_Producer_role"/>
   <inAlbum rdf:resource="#Aquile_E_Scoiattoli_album"/>
   <rdfs:label xml:lang="en">Alfio Vitanza's participation to Aquile E Scoiattoli</rdfs:label>
@@ -11356,11 +11418,11 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Luciano_Poltini_Aquile_E_Scoiattoli_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Clavinet_instrument"/>
-  <withInstrument rdf:resource="#Piano_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
-  <withInstrument rdf:resource="#Moog_Synthesizer_instrument"/>
+  <withInstrument rdf:resource="#Piano_instrument"/>
   <withInstrument rdf:resource="#Hammond_Organ_instrument"/>
+  <withInstrument rdf:resource="#Clavinet_instrument"/>
+  <withInstrument rdf:resource="#Moog_Synthesizer_instrument"/>
   <inAlbum rdf:resource="#Aquile_E_Scoiattoli_album"/>
   <rdfs:label xml:lang="en">Luciano Poltini's participation to Aquile E Scoiattoli</rdfs:label>
   <rdfs:comment xml:lang="en">Luciano Poltini's participation to the album Aquile E Scoiattoli of the band Latte E Miele</rdfs:comment>
@@ -11497,10 +11559,10 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Aldo_Tagliapietra_Ad_Gloriam_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <withInstrument rdf:resource="#Celesta_instrument"/>
   <withInstrument rdf:resource="#Flute_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
   <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
-  <withInstrument rdf:resource="#Celesta_instrument"/>
   <inAlbum rdf:resource="#Ad_Gloriam_album"/>
   <rdfs:label xml:lang="en">Aldo Tagliapietra's participation to Ad Gloriam</rdfs:label>
   <rdfs:comment xml:lang="en">Aldo Tagliapietra's participation to the album Ad Gloriam of the band Le Orme</rdfs:comment>
@@ -11521,10 +11583,10 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Michi_Dei_Rossi_Ad_Gloriam_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <withInstrument rdf:resource="#Bongos_instrument"/>
   <withInstrument rdf:resource="#Timpani_instrument"/>
   <withInstrument rdf:resource="#Tambourine_instrument"/>
   <withInstrument rdf:resource="#Drums_instrument"/>
-  <withInstrument rdf:resource="#Bongos_instrument"/>
   <inAlbum rdf:resource="#Ad_Gloriam_album"/>
   <rdfs:label xml:lang="en">Michi Dei Rossi's participation to Ad Gloriam</rdfs:label>
   <rdfs:comment xml:lang="en">Michi Dei Rossi's participation to the album Ad Gloriam of the band Le Orme</rdfs:comment>
@@ -11546,8 +11608,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 <Participation rdf:about="#Antonio_Pagliuca_Ad_Gloriam_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <withInstrument rdf:resource="#Electric_Piano_instrument"/>
-  <withInstrument rdf:resource="#Organ_instrument"/>
   <withInstrument rdf:resource="#Harpsichord_instrument"/>
+  <withInstrument rdf:resource="#Organ_instrument"/>
   <inAlbum rdf:resource="#Ad_Gloriam_album"/>
   <rdfs:label xml:lang="en">Antonio Pagliuca's participation to Ad Gloriam</rdfs:label>
   <rdfs:comment xml:lang="en">Antonio Pagliuca's participation to the album Ad Gloriam of the band Le Orme</rdfs:comment>
@@ -11562,9 +11624,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Claudio_Galieti_Ad_Gloriam_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <withInstrument rdf:resource="#Backing_Vocals_instrument"/>
   <withInstrument rdf:resource="#Cello_instrument"/>
   <withInstrument rdf:resource="#Bass_instrument"/>
-  <withInstrument rdf:resource="#Backing_Vocals_instrument"/>
   <inAlbum rdf:resource="#Ad_Gloriam_album"/>
   <rdfs:label xml:lang="en">Claudio Galieti's participation to Ad Gloriam</rdfs:label>
   <rdfs:comment xml:lang="en">Claudio Galieti's participation to the album Ad Gloriam of the band Le Orme</rdfs:comment>
@@ -11580,8 +11642,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 <Participation rdf:about="#Nino_Smeraldi_Ad_Gloriam_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <withInstrument rdf:resource="#Backing_Vocals_instrument"/>
-  <withInstrument rdf:resource="#Guitar_instrument"/>
   <withInstrument rdf:resource="#Sarangi_instrument"/>
+  <withInstrument rdf:resource="#Guitar_instrument"/>
   <withProductionRole rdf:resource="#Arrangements_role"/>
   <inAlbum rdf:resource="#Ad_Gloriam_album"/>
   <rdfs:label xml:lang="en">Nino Smeraldi's participation to Ad Gloriam</rdfs:label>
@@ -11812,9 +11874,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Antonio_Pagliuca_Collage_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <withInstrument rdf:resource="#Electric_Piano_instrument"/>
   <withInstrument rdf:resource="#Hammond_Organ_instrument"/>
   <withInstrument rdf:resource="#Audio_Generator_instrument"/>
-  <withInstrument rdf:resource="#Electric_Piano_instrument"/>
   <inAlbum rdf:resource="#Collage_album"/>
   <rdfs:label xml:lang="en">Antonio Pagliuca's participation to Collage</rdfs:label>
   <rdfs:comment xml:lang="en">Antonio Pagliuca's participation to the album Collage of the band Le Orme</rdfs:comment>
@@ -11832,8 +11894,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Michi_Dei_Rossi_Collage_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Percussions_instrument"/>
   <withInstrument rdf:resource="#Drums_instrument"/>
+  <withInstrument rdf:resource="#Percussions_instrument"/>
   <inAlbum rdf:resource="#Collage_album"/>
   <rdfs:label xml:lang="en">Michi Dei Rossi's participation to Collage</rdfs:label>
   <rdfs:comment xml:lang="en">Michi Dei Rossi's participation to the album Collage of the band Le Orme</rdfs:comment>
@@ -11996,9 +12058,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 <Participation rdf:about="#Aldo_Tagliapietra_Uomo_Di_Pezza_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <withInstrument rdf:resource="#12_String_Acoustic_Guitar_instrument"/>
+  <withInstrument rdf:resource="#Electric_Guitar_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
   <withInstrument rdf:resource="#Bass_instrument"/>
-  <withInstrument rdf:resource="#Electric_Guitar_instrument"/>
   <inAlbum rdf:resource="#Uomo_Di_Pezza_album"/>
   <rdfs:label xml:lang="en">Aldo Tagliapietra's participation to Uomo Di Pezza</rdfs:label>
   <rdfs:comment xml:lang="en">Aldo Tagliapietra's participation to the album Uomo Di Pezza of the band Le Orme</rdfs:comment>
@@ -12007,8 +12069,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 <Participation rdf:about="#Michi_Dei_Rossi_Uomo_Di_Pezza_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <withInstrument rdf:resource="#Bells_instrument"/>
-  <withInstrument rdf:resource="#Percussions_instrument"/>
   <withInstrument rdf:resource="#Drums_instrument"/>
+  <withInstrument rdf:resource="#Percussions_instrument"/>
   <inAlbum rdf:resource="#Uomo_Di_Pezza_album"/>
   <rdfs:label xml:lang="en">Michi Dei Rossi's participation to Uomo Di Pezza</rdfs:label>
   <rdfs:comment xml:lang="en">Michi Dei Rossi's participation to the album Uomo Di Pezza of the band Le Orme</rdfs:comment>
@@ -12016,12 +12078,12 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Antonio_Pagliuca_Uomo_Di_Pezza_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Clavinet_instrument"/>
-  <withInstrument rdf:resource="#Piano_instrument"/>
-  <withInstrument rdf:resource="#Mellotron_instrument"/>
   <withInstrument rdf:resource="#Synthesizer_instrument"/>
+  <withInstrument rdf:resource="#Piano_instrument"/>
   <withInstrument rdf:resource="#Organ_instrument"/>
   <withInstrument rdf:resource="#Celesta_instrument"/>
+  <withInstrument rdf:resource="#Clavinet_instrument"/>
+  <withInstrument rdf:resource="#Mellotron_instrument"/>
   <inAlbum rdf:resource="#Uomo_Di_Pezza_album"/>
   <rdfs:label xml:lang="en">Antonio Pagliuca's participation to Uomo Di Pezza</rdfs:label>
   <rdfs:comment xml:lang="en">Antonio Pagliuca's participation to the album Uomo Di Pezza of the band Le Orme</rdfs:comment>
@@ -12195,8 +12257,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Michi_Dei_Rossi_Felona_E_Sorona_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Percussions_instrument"/>
   <withInstrument rdf:resource="#Drums_instrument"/>
+  <withInstrument rdf:resource="#Percussions_instrument"/>
   <inAlbum rdf:resource="#Felona_E_Sorona_album"/>
   <rdfs:label xml:lang="en">Michi Dei Rossi's participation to Felona E Sorona</rdfs:label>
   <rdfs:comment xml:lang="en">Michi Dei Rossi's participation to the album Felona E Sorona of the band Le Orme</rdfs:comment>
@@ -12205,8 +12267,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 <Participation rdf:about="#Aldo_Tagliapietra_Felona_E_Sorona_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
-  <withInstrument rdf:resource="#Bass_instrument"/>
   <withInstrument rdf:resource="#Guitar_instrument"/>
+  <withInstrument rdf:resource="#Bass_instrument"/>
   <inAlbum rdf:resource="#Felona_E_Sorona_album"/>
   <rdfs:label xml:lang="en">Aldo Tagliapietra's participation to Felona E Sorona</rdfs:label>
   <rdfs:comment xml:lang="en">Aldo Tagliapietra's participation to the album Felona E Sorona of the band Le Orme</rdfs:comment>
@@ -12549,8 +12611,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 <Participation rdf:about="#Aldo_Tagliapietra_Contrappunti_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
-  <withInstrument rdf:resource="#Bass_instrument"/>
   <withInstrument rdf:resource="#Guitar_instrument"/>
+  <withInstrument rdf:resource="#Bass_instrument"/>
   <inAlbum rdf:resource="#Contrappunti_album"/>
   <rdfs:label xml:lang="en">Aldo Tagliapietra's participation to Contrappunti</rdfs:label>
   <rdfs:comment xml:lang="en">Aldo Tagliapietra's participation to the album Contrappunti of the band Le Orme</rdfs:comment>
@@ -12558,8 +12620,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Michi_Dei_Rossi_Contrappunti_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Percussions_instrument"/>
   <withInstrument rdf:resource="#Drums_instrument"/>
+  <withInstrument rdf:resource="#Percussions_instrument"/>
   <inAlbum rdf:resource="#Contrappunti_album"/>
   <rdfs:label xml:lang="en">Michi Dei Rossi's participation to Contrappunti</rdfs:label>
   <rdfs:comment xml:lang="en">Michi Dei Rossi's participation to the album Contrappunti of the band Le Orme</rdfs:comment>
@@ -12741,8 +12803,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Michi_Dei_Rossi_Smogmagica_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Percussions_instrument"/>
   <withInstrument rdf:resource="#Drums_instrument"/>
+  <withInstrument rdf:resource="#Percussions_instrument"/>
   <inAlbum rdf:resource="#Smogmagica_album"/>
   <rdfs:label xml:lang="en">Michi Dei Rossi's participation to Smogmagica</rdfs:label>
   <rdfs:comment xml:lang="en">Michi Dei Rossi's participation to the album Smogmagica of the band Le Orme</rdfs:comment>
@@ -12757,8 +12819,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Tolo_Marton_Smogmagica_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Vocals_instrument"/>
   <withInstrument rdf:resource="#Electric_Guitar_instrument"/>
+  <withInstrument rdf:resource="#Vocals_instrument"/>
   <withInstrument rdf:resource="#Harmonica_instrument"/>
   <inAlbum rdf:resource="#Smogmagica_album"/>
   <rdfs:label xml:lang="en">Tolo Marton's participation to Smogmagica</rdfs:label>
@@ -12963,12 +13025,12 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Michi_Dei_Rossi_Verita_Nascoste_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Glockenspiel_instrument"/>
-  <withInstrument rdf:resource="#Percussions_instrument"/>
-  <withInstrument rdf:resource="#Gong_instrument"/>
   <withInstrument rdf:resource="#Tubular_Bells_instrument"/>
   <withInstrument rdf:resource="#Timpani_instrument"/>
+  <withInstrument rdf:resource="#Glockenspiel_instrument"/>
+  <withInstrument rdf:resource="#Gong_instrument"/>
   <withInstrument rdf:resource="#Drums_instrument"/>
+  <withInstrument rdf:resource="#Percussions_instrument"/>
   <inAlbum rdf:resource="#Verita_Nascoste_album"/>
   <rdfs:label xml:lang="en">Michi Dei Rossi's participation to Verità Nascoste</rdfs:label>
   <rdfs:comment xml:lang="en">Michi Dei Rossi's participation to the album Verità Nascoste of the band Le Orme</rdfs:comment>
@@ -12976,13 +13038,13 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Antonio_Pagliuca_Verita_Nascoste_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Elka_Synthesizer_instrument"/>
-  <withInstrument rdf:resource="#Clavinet_instrument"/>
   <withInstrument rdf:resource="#Piano_instrument"/>
-  <withInstrument rdf:resource="#Mellotron_instrument"/>
   <withInstrument rdf:resource="#Hammond_Organ_instrument"/>
-  <withInstrument rdf:resource="#Minimoog_Synthesizer_instrument"/>
   <withInstrument rdf:resource="#Hohner_Synthesizer_instrument"/>
+  <withInstrument rdf:resource="#Elka_Synthesizer_instrument"/>
+  <withInstrument rdf:resource="#Minimoog_Synthesizer_instrument"/>
+  <withInstrument rdf:resource="#Clavinet_instrument"/>
+  <withInstrument rdf:resource="#Mellotron_instrument"/>
   <inAlbum rdf:resource="#Verita_Nascoste_album"/>
   <rdfs:label xml:lang="en">Antonio Pagliuca's participation to Verità Nascoste</rdfs:label>
   <rdfs:comment xml:lang="en">Antonio Pagliuca's participation to the album Verità Nascoste of the band Le Orme</rdfs:comment>
@@ -13202,9 +13264,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 <Participation rdf:about="#Leonardo_Schiavone_Maxophone_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <withInstrument rdf:resource="#Flute_instrument"/>
-  <withInstrument rdf:resource="#Clarinet_instrument"/>
   <withInstrument rdf:resource="#Alto_Saxophone_instrument"/>
   <withInstrument rdf:resource="#Tenor_Saxophone_instrument"/>
+  <withInstrument rdf:resource="#Clarinet_instrument"/>
   <inAlbum rdf:resource="#Maxophone_album"/>
   <rdfs:label xml:lang="en">Leonardo Schiavone's participation to Maxophone</rdfs:label>
   <rdfs:comment xml:lang="en">Leonardo Schiavone's participation to the album Maxophone of the band Maxophone</rdfs:comment>
@@ -13219,9 +13281,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Alberto_Ravasini_Maxophone_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
   <withInstrument rdf:resource="#Bass_instrument"/>
-  <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
   <withProductionRole rdf:resource="#Recorder_role"/>
   <inAlbum rdf:resource="#Maxophone_album"/>
   <rdfs:label xml:lang="en">Alberto Ravasini's participation to Maxophone</rdfs:label>
@@ -13238,9 +13300,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 <Participation rdf:about="#Sergio_Lattuada_Maxophone_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <withInstrument rdf:resource="#Electric_Piano_instrument"/>
-  <withInstrument rdf:resource="#Backing_Vocals_instrument"/>
   <withInstrument rdf:resource="#Piano_instrument"/>
   <withInstrument rdf:resource="#Organ_instrument"/>
+  <withInstrument rdf:resource="#Backing_Vocals_instrument"/>
   <inAlbum rdf:resource="#Maxophone_album"/>
   <rdfs:label xml:lang="en">Sergio Lattuada's participation to Maxophone</rdfs:label>
   <rdfs:comment xml:lang="en">Sergio Lattuada's participation to the album Maxophone of the band Maxophone</rdfs:comment>
@@ -13255,9 +13317,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Maurizio_Bianchini_Maxophone_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Percussions_instrument"/>
-  <withInstrument rdf:resource="#Horn_instrument"/>
   <withInstrument rdf:resource="#Vibraphone_instrument"/>
+  <withInstrument rdf:resource="#Horn_instrument"/>
+  <withInstrument rdf:resource="#Percussions_instrument"/>
   <withInstrument rdf:resource="#Trumpet_instrument"/>
   <withInstrument rdf:resource="#Backing_Vocals_instrument"/>
   <inAlbum rdf:resource="#Maxophone_album"/>
@@ -13275,8 +13337,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 <Participation rdf:about="#Roberto_Giuliani_Maxophone_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <withInstrument rdf:resource="#Backing_Vocals_instrument"/>
-  <withInstrument rdf:resource="#Piano_instrument"/>
   <withInstrument rdf:resource="#Electric_Guitar_instrument"/>
+  <withInstrument rdf:resource="#Piano_instrument"/>
   <inAlbum rdf:resource="#Maxophone_album"/>
   <rdfs:label xml:lang="en">Roberto Giuliani's participation to Maxophone</rdfs:label>
   <rdfs:comment xml:lang="en">Roberto Giuliani's participation to the album Maxophone of the band Maxophone</rdfs:comment>
@@ -13533,9 +13595,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 <Participation rdf:about="#Duilio_Sorrenti_Io_Sono_Murple_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <withInstrument rdf:resource="#Congas_instrument"/>
-  <withInstrument rdf:resource="#Timbales_instrument"/>
   <withInstrument rdf:resource="#Gong_instrument"/>
   <withInstrument rdf:resource="#Drums_instrument"/>
+  <withInstrument rdf:resource="#Timbales_instrument"/>
   <inAlbum rdf:resource="#Io_Sono_Murple_album"/>
   <rdfs:label xml:lang="en">Duilio Sorrenti's participation to Io Sono Murple</rdfs:label>
   <rdfs:comment xml:lang="en">Duilio Sorrenti's participation to the album Io Sono Murple of the band Murple</rdfs:comment>
@@ -13550,13 +13612,13 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Pier_Carlo_Zanco_Io_Sono_Murple_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Backing_Vocals_instrument"/>
-  <withInstrument rdf:resource="#Piano_instrument"/>
-  <withInstrument rdf:resource="#Eminent_Synthesizer_instrument"/>
-  <withInstrument rdf:resource="#Bowed_Contrabass_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
-  <withInstrument rdf:resource="#Organ_instrument"/>
   <withInstrument rdf:resource="#Synthesizer_instrument"/>
+  <withInstrument rdf:resource="#Bowed_Contrabass_instrument"/>
+  <withInstrument rdf:resource="#Piano_instrument"/>
+  <withInstrument rdf:resource="#Organ_instrument"/>
+  <withInstrument rdf:resource="#Eminent_Synthesizer_instrument"/>
+  <withInstrument rdf:resource="#Backing_Vocals_instrument"/>
   <inAlbum rdf:resource="#Io_Sono_Murple_album"/>
   <rdfs:label xml:lang="en">Pier Carlo Zanco's participation to Io Sono Murple</rdfs:label>
   <rdfs:comment xml:lang="en">Pier Carlo Zanco's participation to the album Io Sono Murple of the band Murple</rdfs:comment>
@@ -13588,11 +13650,11 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Giuseppe_Pino_Santamaria_Io_Sono_Murple_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Backing_Vocals_instrument"/>
-  <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
-  <withInstrument rdf:resource="#Electric_Guitar_instrument"/>
   <withInstrument rdf:resource="#12_String_Acoustic_Guitar_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
+  <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
+  <withInstrument rdf:resource="#Backing_Vocals_instrument"/>
+  <withInstrument rdf:resource="#Electric_Guitar_instrument"/>
   <inAlbum rdf:resource="#Io_Sono_Murple_album"/>
   <rdfs:label xml:lang="en">Giuseppe "Pino" Santamaria's participation to Io Sono Murple</rdfs:label>
   <rdfs:comment xml:lang="en">Giuseppe "Pino" Santamaria's participation to the album Io Sono Murple of the band Murple</rdfs:comment>
@@ -13673,10 +13735,10 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Pit_Corradi_Zarathustra_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Mellotron_instrument"/>
+  <withInstrument rdf:resource="#Vibraphone_instrument"/>
   <withInstrument rdf:resource="#Hammond_Organ_instrument"/>
   <withInstrument rdf:resource="#Farfisa_Electric_Piano_instrument"/>
-  <withInstrument rdf:resource="#Vibraphone_instrument"/>
+  <withInstrument rdf:resource="#Mellotron_instrument"/>
   <inAlbum rdf:resource="#Zarathustra_album"/>
   <rdfs:label xml:lang="en">Pit Corradi's participation to Zarathustra</rdfs:label>
   <rdfs:comment xml:lang="en">Pit Corradi's participation to the album Zarathustra of the band Museo Rosenbach</rdfs:comment>
@@ -13691,8 +13753,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Alberto_Moreno_Zarathustra_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Bass_instrument"/>
   <withInstrument rdf:resource="#Piano_instrument"/>
+  <withInstrument rdf:resource="#Bass_instrument"/>
   <inAlbum rdf:resource="#Zarathustra_album"/>
   <rdfs:label xml:lang="en">Alberto Moreno's participation to Zarathustra</rdfs:label>
   <rdfs:comment xml:lang="en">Alberto Moreno's participation to the album Zarathustra of the band Museo Rosenbach</rdfs:comment>
@@ -13707,10 +13769,10 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Giancarlo_Golzi_Zarathustra_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Bells_instrument"/>
   <withInstrument rdf:resource="#Timpani_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
   <withInstrument rdf:resource="#Drums_instrument"/>
+  <withInstrument rdf:resource="#Bells_instrument"/>
   <inAlbum rdf:resource="#Zarathustra_album"/>
   <rdfs:label xml:lang="en">Giancarlo Golzi's participation to Zarathustra</rdfs:label>
   <rdfs:comment xml:lang="en">Giancarlo Golzi's participation to the album Zarathustra of the band Museo Rosenbach</rdfs:comment>
@@ -13942,8 +14004,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Tony_Esposito_Opus_Avantra_Donella_Del_Monaco_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Percussions_instrument"/>
   <withInstrument rdf:resource="#Effects_instrument"/>
+  <withInstrument rdf:resource="#Percussions_instrument"/>
   <inAlbum rdf:resource="#Opus_Avantra_Donella_Del_Monaco_album"/>
   <rdfs:label xml:lang="en">Tony Esposito's participation to Opus Avantra Donella Del Monaco</rdfs:label>
   <rdfs:comment xml:lang="en">Tony Esposito's participation to the album Opus Avantra Donella Del Monaco of the band Opus Avantra</rdfs:comment>
@@ -14203,8 +14265,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Paulo_Siani_Lord_Cromwell_Plays_Suite_For_Seven_Vices_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Percussions_instrument"/>
   <withInstrument rdf:resource="#Drums_instrument"/>
+  <withInstrument rdf:resource="#Percussions_instrument"/>
   <inAlbum rdf:resource="#Lord_Cromwell_Plays_Suite_For_Seven_Vices_album"/>
   <rdfs:label xml:lang="en">Paulo Siani's participation to Lord Cromwell Plays Suite For Seven Vices</rdfs:label>
   <rdfs:comment xml:lang="en">Paulo Siani's participation to the album Lord Cromwell Plays Suite For Seven Vices of the band Opus Avantra</rdfs:comment>
@@ -14243,10 +14305,10 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 <Participation rdf:about="#Alfredo_Tisotto_Lord_Cromwell_Plays_Suite_For_Seven_Vices_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <withInstrument rdf:resource="#Steinway_Piano_instrument"/>
-  <withInstrument rdf:resource="#Pipe_Organ_instrument"/>
   <withInstrument rdf:resource="#Synthesizer_instrument"/>
-  <withInstrument rdf:resource="#Fender_Rhodes_instrument"/>
+  <withInstrument rdf:resource="#Pipe_Organ_instrument"/>
   <withInstrument rdf:resource="#Hammond_Organ_instrument"/>
+  <withInstrument rdf:resource="#Fender_Rhodes_instrument"/>
   <inAlbum rdf:resource="#Lord_Cromwell_Plays_Suite_For_Seven_Vices_album"/>
   <rdfs:label xml:lang="en">Alfredo Tisotto's participation to Lord Cromwell Plays Suite For Seven Vices</rdfs:label>
   <rdfs:comment xml:lang="en">Alfredo Tisotto's participation to the album Lord Cromwell Plays Suite For Seven Vices of the band Opus Avantra</rdfs:comment>
@@ -14527,10 +14589,10 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Elio_D_anna_L_Uomo_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Tenor_Saxophone_instrument"/>
-  <withInstrument rdf:resource="#Flute_instrument"/>
   <withInstrument rdf:resource="#Piccolo_instrument"/>
   <withInstrument rdf:resource="#Baritone_Saxophone_instrument"/>
+  <withInstrument rdf:resource="#Flute_instrument"/>
+  <withInstrument rdf:resource="#Tenor_Saxophone_instrument"/>
   <inAlbum rdf:resource="#L_Uomo_album"/>
   <rdfs:label xml:lang="en">Elio D'anna's participation to L'Uomo</rdfs:label>
   <rdfs:comment xml:lang="en">Elio D'anna's participation to the album L'Uomo of the band Osanna</rdfs:comment>
@@ -14550,8 +14612,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <withInstrument rdf:resource="#12_String_Acoustic_Guitar_instrument"/>
   <withInstrument rdf:resource="#Pipe_Organ_instrument"/>
-  <withInstrument rdf:resource="#Audio_Oscillator_instrument"/>
   <withInstrument rdf:resource="#Guitar_instrument"/>
+  <withInstrument rdf:resource="#Audio_Oscillator_instrument"/>
   <inAlbum rdf:resource="#L_Uomo_album"/>
   <rdfs:label xml:lang="en">Danilo Rustici's participation to L'Uomo</rdfs:label>
   <rdfs:comment xml:lang="en">Danilo Rustici's participation to the album L'Uomo of the band Osanna</rdfs:comment>
@@ -14588,10 +14650,10 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 <Participation rdf:about="#Lino_Vairetti_L_Uomo_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <withInstrument rdf:resource="#12_String_Acoustic_Guitar_instrument"/>
+  <withInstrument rdf:resource="#Harmonica_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
   <withInstrument rdf:resource="#Synthesizer_instrument"/>
   <withInstrument rdf:resource="#Hammond_Organ_instrument"/>
-  <withInstrument rdf:resource="#Harmonica_instrument"/>
   <inAlbum rdf:resource="#L_Uomo_album"/>
   <rdfs:label xml:lang="en">Lino Vairetti's participation to L'Uomo</rdfs:label>
   <rdfs:comment xml:lang="en">Lino Vairetti's participation to the album L'Uomo of the band Osanna</rdfs:comment>
@@ -14609,8 +14671,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Massimo_Guarino_L_Uomo_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Percussions_instrument"/>
   <withInstrument rdf:resource="#Drums_instrument"/>
+  <withInstrument rdf:resource="#Percussions_instrument"/>
   <inAlbum rdf:resource="#L_Uomo_album"/>
   <rdfs:label xml:lang="en">Massimo Guarino's participation to L'Uomo</rdfs:label>
   <rdfs:comment xml:lang="en">Massimo Guarino's participation to the album L'Uomo of the band Osanna</rdfs:comment>
@@ -14830,9 +14892,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Elio_D_Anna_Preludio_Tema_Variazioni_Canzona_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Baritone_Electric_Saxophone_instrument"/>
   <withInstrument rdf:resource="#Flute_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
+  <withInstrument rdf:resource="#Baritone_Electric_Saxophone_instrument"/>
   <withInstrument rdf:resource="#Tenor_Electric_Saxophone_instrument"/>
   <inAlbum rdf:resource="#Preludio_Tema_Variazioni_Canzona_album"/>
   <rdfs:label xml:lang="en">Elio D'Anna's participation to Preludio Tema Variazioni Canzona</rdfs:label>
@@ -14849,10 +14911,10 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Massimo_Guarino_Preludio_Tema_Variazioni_Canzona_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Percussions_instrument"/>
   <withInstrument rdf:resource="#Vibraphone_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
   <withInstrument rdf:resource="#Drums_instrument"/>
+  <withInstrument rdf:resource="#Percussions_instrument"/>
   <inAlbum rdf:resource="#Preludio_Tema_Variazioni_Canzona_album"/>
   <rdfs:label xml:lang="en">Massimo Guarino's participation to Preludio Tema Variazioni Canzona</rdfs:label>
   <rdfs:comment xml:lang="en">Massimo Guarino's participation to the album Preludio Tema Variazioni Canzona of the band Osanna</rdfs:comment>
@@ -14860,9 +14922,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Danilo_Rustici_Preludio_Tema_Variazioni_Canzona_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <withInstrument rdf:resource="#Electric_Guitar_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
   <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
-  <withInstrument rdf:resource="#Electric_Guitar_instrument"/>
   <inAlbum rdf:resource="#Preludio_Tema_Variazioni_Canzona_album"/>
   <rdfs:label xml:lang="en">Danilo Rustici's participation to Preludio Tema Variazioni Canzona</rdfs:label>
   <rdfs:comment xml:lang="en">Danilo Rustici's participation to the album Preludio Tema Variazioni Canzona of the band Osanna</rdfs:comment>
@@ -15063,8 +15125,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Lello_Brandi_Palepoli_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Bass_instrument"/>
   <withInstrument rdf:resource="#Guitar_instrument"/>
+  <withInstrument rdf:resource="#Bass_instrument"/>
   <inAlbum rdf:resource="#Palepoli_album"/>
   <rdfs:label xml:lang="en">Lello Brandi's participation to Palepoli</rdfs:label>
   <rdfs:comment xml:lang="en">Lello Brandi's participation to the album Palepoli of the band Osanna</rdfs:comment>
@@ -15084,10 +15146,10 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 <Participation rdf:about="#Massimo_Guarino_Palepoli_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <withInstrument rdf:resource="#Bells_instrument"/>
-  <withInstrument rdf:resource="#Percussions_instrument"/>
   <withInstrument rdf:resource="#Backing_Vocals_instrument"/>
-  <withInstrument rdf:resource="#Drums_instrument"/>
   <withInstrument rdf:resource="#Vibraphone_instrument"/>
+  <withInstrument rdf:resource="#Drums_instrument"/>
+  <withInstrument rdf:resource="#Percussions_instrument"/>
   <inAlbum rdf:resource="#Palepoli_album"/>
   <rdfs:label xml:lang="en">Massimo Guarino's participation to Palepoli</rdfs:label>
   <rdfs:comment xml:lang="en">Massimo Guarino's participation to the album Palepoli of the band Osanna</rdfs:comment>
@@ -15095,13 +15157,13 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Elio_D_Anna_Palepoli_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <withInstrument rdf:resource="#Piccolo_instrument"/>
   <withInstrument rdf:resource="#Backing_Vocals_instrument"/>
-  <withInstrument rdf:resource="#Contralto_Electric_Saxophone_instrument"/>
   <withInstrument rdf:resource="#Tenor_Electric_Saxophone_instrument"/>
   <withInstrument rdf:resource="#Baritone_Saxophone_instrument"/>
   <withInstrument rdf:resource="#Flute_instrument"/>
+  <withInstrument rdf:resource="#Contralto_Electric_Saxophone_instrument"/>
   <withInstrument rdf:resource="#Soprano_Saxophone_instrument"/>
-  <withInstrument rdf:resource="#Piccolo_instrument"/>
   <inAlbum rdf:resource="#Palepoli_album"/>
   <rdfs:label xml:lang="en">Elio D'Anna's participation to Palepoli</rdfs:label>
   <rdfs:comment xml:lang="en">Elio D'Anna's participation to the album Palepoli of the band Osanna</rdfs:comment>
@@ -15109,12 +15171,12 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Danilo_Rustici_Palepoli_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Backing_Vocals_instrument"/>
-  <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
-  <withInstrument rdf:resource="#Electric_Guitar_instrument"/>
   <withInstrument rdf:resource="#12_String_Acoustic_Guitar_instrument"/>
-  <withInstrument rdf:resource="#Vox_Organ_instrument"/>
   <withInstrument rdf:resource="#Steel_Guitar_instrument"/>
+  <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
+  <withInstrument rdf:resource="#Backing_Vocals_instrument"/>
+  <withInstrument rdf:resource="#Electric_Guitar_instrument"/>
+  <withInstrument rdf:resource="#Vox_Organ_instrument"/>
   <inAlbum rdf:resource="#Palepoli_album"/>
   <rdfs:label xml:lang="en">Danilo Rustici's participation to Palepoli</rdfs:label>
   <rdfs:comment xml:lang="en">Danilo Rustici's participation to the album Palepoli of the band Osanna</rdfs:comment>
@@ -15207,12 +15269,12 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Danilo_Rustici_Landscape_Of_Life_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Electric_Guitar_instrument"/>
-  <withInstrument rdf:resource="#Arp_Synthesizer_instrument"/>
   <withInstrument rdf:resource="#12_String_Acoustic_Guitar_instrument"/>
-  <withInstrument rdf:resource="#Mellotron_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
   <withInstrument rdf:resource="#Organ_instrument"/>
+  <withInstrument rdf:resource="#Electric_Guitar_instrument"/>
+  <withInstrument rdf:resource="#Mellotron_instrument"/>
+  <withInstrument rdf:resource="#Arp_Synthesizer_instrument"/>
   <inAlbum rdf:resource="#Landscape_Of_Life_album"/>
   <rdfs:label xml:lang="en">Danilo Rustici's participation to Landscape Of Life</rdfs:label>
   <rdfs:comment xml:lang="en">Danilo Rustici's participation to the album Landscape Of Life of the band Osanna</rdfs:comment>
@@ -15228,10 +15290,10 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 <Participation rdf:about="#Elio_d_Anna_Landscape_Of_Life_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <withInstrument rdf:resource="#Tenor_Saxophone_instrument"/>
-  <withInstrument rdf:resource="#Alto_Saxophone_instrument"/>
   <withInstrument rdf:resource="#Baritone_Saxophone_instrument"/>
   <withInstrument rdf:resource="#Flute_instrument"/>
   <withInstrument rdf:resource="#Electric_Flute_instrument"/>
+  <withInstrument rdf:resource="#Alto_Saxophone_instrument"/>
   <inAlbum rdf:resource="#Landscape_Of_Life_album"/>
   <rdfs:label xml:lang="en">Elio d'Anna's participation to Landscape Of Life</rdfs:label>
   <rdfs:comment xml:lang="en">Elio d'Anna's participation to the album Landscape Of Life of the band Osanna</rdfs:comment>
@@ -15239,11 +15301,11 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Massimo_Guarino_Landscape_Of_Life_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Percussions_instrument"/>
-  <withInstrument rdf:resource="#Tambourine_instrument"/>
   <withInstrument rdf:resource="#Timpani_instrument"/>
-  <withInstrument rdf:resource="#Drums_instrument"/>
   <withInstrument rdf:resource="#Vibraphone_instrument"/>
+  <withInstrument rdf:resource="#Tambourine_instrument"/>
+  <withInstrument rdf:resource="#Drums_instrument"/>
+  <withInstrument rdf:resource="#Percussions_instrument"/>
   <inAlbum rdf:resource="#Landscape_Of_Life_album"/>
   <rdfs:label xml:lang="en">Massimo Guarino's participation to Landscape Of Life</rdfs:label>
   <rdfs:comment xml:lang="en">Massimo Guarino's participation to the album Landscape Of Life of the band Osanna</rdfs:comment>
@@ -15251,14 +15313,14 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Lino_Vairetti_Landscape_Of_Life_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
-  <withInstrument rdf:resource="#Arp_Synthesizer_instrument"/>
-  <withInstrument rdf:resource="#Mellotron_instrument"/>
+  <withInstrument rdf:resource="#12_String_Acoustic_Guitar_instrument"/>
+  <withInstrument rdf:resource="#Harmonium_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
   <withInstrument rdf:resource="#Organ_instrument"/>
-  <withInstrument rdf:resource="#Harmonium_instrument"/>
   <withInstrument rdf:resource="#Electric_Guitar_instrument"/>
-  <withInstrument rdf:resource="#12_String_Acoustic_Guitar_instrument"/>
+  <withInstrument rdf:resource="#Mellotron_instrument"/>
+  <withInstrument rdf:resource="#Arp_Synthesizer_instrument"/>
+  <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
   <withInstrument rdf:resource="#Slide_Guitar_instrument"/>
   <inAlbum rdf:resource="#Landscape_Of_Life_album"/>
   <rdfs:label xml:lang="en">Lino Vairetti's participation to Landscape Of Life</rdfs:label>
@@ -15267,8 +15329,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Lello_Brandi_Landscape_Of_Life_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Bass_instrument"/>
   <withInstrument rdf:resource="#Effects_instrument"/>
+  <withInstrument rdf:resource="#Bass_instrument"/>
   <inAlbum rdf:resource="#Landscape_Of_Life_album"/>
   <rdfs:label xml:lang="en">Lello Brandi's participation to Landscape Of Life</rdfs:label>
   <rdfs:comment xml:lang="en">Lello Brandi's participation to the album Landscape Of Life of the band Osanna</rdfs:comment>
@@ -15447,13 +15509,13 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Arturo_Stalteri_Pierrot_Lunaire_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Percussions_instrument"/>
-  <withInstrument rdf:resource="#Piano_instrument"/>
-  <withInstrument rdf:resource="#Celesta_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
-  <withInstrument rdf:resource="#Spinet_instrument"/>
+  <withInstrument rdf:resource="#Piano_instrument"/>
   <withInstrument rdf:resource="#Organ_instrument"/>
   <withInstrument rdf:resource="#Eminent_Synthesizer_instrument"/>
+  <withInstrument rdf:resource="#Celesta_instrument"/>
+  <withInstrument rdf:resource="#Spinet_instrument"/>
+  <withInstrument rdf:resource="#Percussions_instrument"/>
   <inAlbum rdf:resource="#Pierrot_Lunaire_album"/>
   <rdfs:label xml:lang="en">Arturo Stalteri's participation to Pierrot Lunaire</rdfs:label>
   <rdfs:comment xml:lang="en">Arturo Stalteri's participation to the album Pierrot Lunaire of the band Pierrot Lunaire</rdfs:comment>
@@ -15468,13 +15530,13 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Vincenzo_Caporaletti_Pierrot_Lunaire_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <withInstrument rdf:resource="#12_String_Acoustic_Guitar_instrument"/>
+  <withInstrument rdf:resource="#Classical_Guitar_instrument"/>
   <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
   <withInstrument rdf:resource="#Electric_Guitar_instrument"/>
-  <withInstrument rdf:resource="#12_String_Acoustic_Guitar_instrument"/>
   <withInstrument rdf:resource="#Flute_instrument"/>
-  <withInstrument rdf:resource="#Bass_instrument"/>
   <withInstrument rdf:resource="#Drums_instrument"/>
-  <withInstrument rdf:resource="#Classical_Guitar_instrument"/>
+  <withInstrument rdf:resource="#Bass_instrument"/>
   <inAlbum rdf:resource="#Pierrot_Lunaire_album"/>
   <rdfs:label xml:lang="en">Vincenzo Caporaletti's participation to Pierrot Lunaire</rdfs:label>
   <rdfs:comment xml:lang="en">Vincenzo Caporaletti's participation to the album Pierrot Lunaire of the band Pierrot Lunaire</rdfs:comment>
@@ -15490,13 +15552,13 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Gaio_Chiocchio_Pierrot_Lunaire_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Mandolin_instrument"/>
-  <withInstrument rdf:resource="#Sitar_instrument"/>
-  <withInstrument rdf:resource="#Cymbals_instrument"/>
   <withInstrument rdf:resource="#Timpani_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
-  <withInstrument rdf:resource="#Hammond_Organ_instrument"/>
+  <withInstrument rdf:resource="#Sitar_instrument"/>
   <withInstrument rdf:resource="#Guitar_instrument"/>
+  <withInstrument rdf:resource="#Hammond_Organ_instrument"/>
+  <withInstrument rdf:resource="#Mandolin_instrument"/>
+  <withInstrument rdf:resource="#Cymbals_instrument"/>
   <inAlbum rdf:resource="#Pierrot_Lunaire_album"/>
   <rdfs:label xml:lang="en">Gaio Chiocchio's participation to Pierrot Lunaire</rdfs:label>
   <rdfs:comment xml:lang="en">Gaio Chiocchio's participation to the album Pierrot Lunaire of the band Pierrot Lunaire</rdfs:comment>
@@ -15760,15 +15822,15 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Gaio_Chiocchio_Gudrun_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Bells_instrument"/>
-  <withInstrument rdf:resource="#Zither_Tirolese_instrument"/>
-  <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
-  <withInstrument rdf:resource="#Sitar_instrument"/>
-  <withInstrument rdf:resource="#Synthesizer_instrument"/>
-  <withInstrument rdf:resource="#Harpsichord_instrument"/>
-  <withInstrument rdf:resource="#Mandolin_instrument"/>
-  <withInstrument rdf:resource="#Electric_Guitar_instrument"/>
   <withInstrument rdf:resource="#Shaj_Baja_instrument"/>
+  <withInstrument rdf:resource="#Synthesizer_instrument"/>
+  <withInstrument rdf:resource="#Zither_Tirolese_instrument"/>
+  <withInstrument rdf:resource="#Electric_Guitar_instrument"/>
+  <withInstrument rdf:resource="#Mandolin_instrument"/>
+  <withInstrument rdf:resource="#Sitar_instrument"/>
+  <withInstrument rdf:resource="#Harpsichord_instrument"/>
+  <withInstrument rdf:resource="#Bells_instrument"/>
+  <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
   <inAlbum rdf:resource="#Gudrun_album"/>
   <rdfs:label xml:lang="en">Gaio Chiocchio's participation to Gudrun</rdfs:label>
   <rdfs:comment xml:lang="en">Gaio Chiocchio's participation to the album Gudrun of the band Pierrot Lunaire</rdfs:comment>
@@ -15776,15 +15838,15 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Arturo_Stalteri_Gudrun_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Glockenspiel_instrument"/>
-  <withInstrument rdf:resource="#Tambourine_instrument"/>
-  <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
-  <withInstrument rdf:resource="#Piano_instrument"/>
   <withInstrument rdf:resource="#Synthesizer_instrument"/>
   <withInstrument rdf:resource="#Organ_instrument"/>
-  <withInstrument rdf:resource="#Harpsichord_instrument"/>
   <withInstrument rdf:resource="#Violin_instrument"/>
   <withInstrument rdf:resource="#Spinet_instrument"/>
+  <withInstrument rdf:resource="#Glockenspiel_instrument"/>
+  <withInstrument rdf:resource="#Harpsichord_instrument"/>
+  <withInstrument rdf:resource="#Piano_instrument"/>
+  <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
+  <withInstrument rdf:resource="#Tambourine_instrument"/>
   <withProductionRole rdf:resource="#Recorder_role"/>
   <inAlbum rdf:resource="#Gudrun_album"/>
   <rdfs:label xml:lang="en">Arturo Stalteri's participation to Gudrun</rdfs:label>
@@ -15997,9 +16059,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Valerio_Negrini_Brennero_66_Per_Quelli_Come_Noi_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Percussions_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
   <withInstrument rdf:resource="#Drums_instrument"/>
+  <withInstrument rdf:resource="#Percussions_instrument"/>
   <inAlbum rdf:resource="#Brennero_66_Per_Quelli_Come_Noi_album"/>
   <rdfs:label xml:lang="en">Valerio Negrini's participation to Brennero 66 / Per Quelli Come Noi</rdfs:label>
   <rdfs:comment xml:lang="en">Valerio Negrini's participation to the album Brennero 66 / Per Quelli Come Noi of the band Pooh</rdfs:comment>
@@ -16051,8 +16113,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Mauro_Bertoli_Brennero_66_Per_Quelli_Come_Noi_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Vocals_instrument"/>
   <withInstrument rdf:resource="#Balalaika_instrument"/>
+  <withInstrument rdf:resource="#Vocals_instrument"/>
   <withInstrument rdf:resource="#Guitar_instrument"/>
   <inAlbum rdf:resource="#Brennero_66_Per_Quelli_Come_Noi_album"/>
   <rdfs:label xml:lang="en">Mauro Bertoli's participation to Brennero 66 / Per Quelli Come Noi</rdfs:label>
@@ -16628,9 +16690,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Valerio_Negrini_Contrasto_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Percussions_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
   <withInstrument rdf:resource="#Drums_instrument"/>
+  <withInstrument rdf:resource="#Percussions_instrument"/>
   <inAlbum rdf:resource="#Contrasto_album"/>
   <rdfs:label xml:lang="en">Valerio Negrini's participation to Contrasto</rdfs:label>
   <rdfs:comment xml:lang="en">Valerio Negrini's participation to the album Contrasto of the band Pooh</rdfs:comment>
@@ -16922,9 +16984,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Valerio_Negrini_Opera_Prima_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Percussions_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
   <withInstrument rdf:resource="#Drums_instrument"/>
+  <withInstrument rdf:resource="#Percussions_instrument"/>
   <inAlbum rdf:resource="#Opera_Prima_album"/>
   <rdfs:label xml:lang="en">Valerio Negrini's participation to Opera Prima</rdfs:label>
   <rdfs:comment xml:lang="en">Valerio Negrini's participation to the album Opera Prima of the band Pooh</rdfs:comment>
@@ -17154,9 +17216,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Stefano_D_Orazio_Alessandra_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Percussions_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
   <withInstrument rdf:resource="#Drums_instrument"/>
+  <withInstrument rdf:resource="#Percussions_instrument"/>
   <inAlbum rdf:resource="#Alessandra_album"/>
   <rdfs:label xml:lang="en">Stefano D'Orazio's participation to Alessandra</rdfs:label>
   <rdfs:comment xml:lang="en">Stefano D'Orazio's participation to the album Alessandra of the band Pooh</rdfs:comment>
@@ -17947,8 +18009,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Stefano_D_Orazio_Forse_Ancora_Poesia_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Percussions_instrument"/>
   <withInstrument rdf:resource="#Drums_instrument"/>
+  <withInstrument rdf:resource="#Percussions_instrument"/>
   <inAlbum rdf:resource="#Forse_Ancora_Poesia_album"/>
   <rdfs:label xml:lang="en">Stefano D'Orazio's participation to Forse Ancora Poesia</rdfs:label>
   <rdfs:comment xml:lang="en">Stefano D'Orazio's participation to the album Forse Ancora Poesia of the band Pooh</rdfs:comment>
@@ -18192,8 +18254,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Stefano_D_Orazio_Poohlover_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Percussions_instrument"/>
   <withInstrument rdf:resource="#Drums_instrument"/>
+  <withInstrument rdf:resource="#Percussions_instrument"/>
   <inAlbum rdf:resource="#Poohlover_album"/>
   <rdfs:label xml:lang="en">Stefano D'Orazio's participation to Poohlover</rdfs:label>
   <rdfs:comment xml:lang="en">Stefano D'Orazio's participation to the album Poohlover of the band Pooh</rdfs:comment>
@@ -18742,10 +18804,10 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Franz_Di_Cioccio_Storia_Di_Un_Minuto_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Percussions_instrument"/>
+  <withInstrument rdf:resource="#Vocals_instrument"/>
   <withInstrument rdf:resource="#Moog_Synthesizer_instrument"/>
   <withInstrument rdf:resource="#Drums_instrument"/>
-  <withInstrument rdf:resource="#Vocals_instrument"/>
+  <withInstrument rdf:resource="#Percussions_instrument"/>
   <inAlbum rdf:resource="#Storia_Di_Un_Minuto_album"/>
   <rdfs:label xml:lang="en">Franz Di Cioccio's participation to Storia Di Un Minuto</rdfs:label>
   <rdfs:comment xml:lang="en">Franz Di Cioccio's participation to the album Storia Di Un Minuto of the band Premiata Forneria Marconi</rdfs:comment>
@@ -18753,11 +18815,11 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Franco_Mussida_Storia_Di_Un_Minuto_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <withInstrument rdf:resource="#12_String_Acoustic_Guitar_instrument"/>
   <withInstrument rdf:resource="#Mandocello_instrument"/>
+  <withInstrument rdf:resource="#Vocals_instrument"/>
   <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
   <withInstrument rdf:resource="#Electric_Guitar_instrument"/>
-  <withInstrument rdf:resource="#12_String_Acoustic_Guitar_instrument"/>
-  <withInstrument rdf:resource="#Vocals_instrument"/>
   <inAlbum rdf:resource="#Storia_Di_Un_Minuto_album"/>
   <rdfs:label xml:lang="en">Franco Mussida's participation to Storia Di Un Minuto</rdfs:label>
   <rdfs:comment xml:lang="en">Franco Mussida's participation to the album Storia Di Un Minuto of the band Premiata Forneria Marconi</rdfs:comment>
@@ -18765,12 +18827,12 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Flavio_Premoli_Storia_Di_Un_Minuto_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <withInstrument rdf:resource="#Vocals_instrument"/>
+  <withInstrument rdf:resource="#Harpsichord_instrument"/>
   <withInstrument rdf:resource="#Piano_instrument"/>
+  <withInstrument rdf:resource="#Organ_instrument"/>
   <withInstrument rdf:resource="#Minimoog_Synthesizer_instrument"/>
   <withInstrument rdf:resource="#Mellotron_instrument"/>
-  <withInstrument rdf:resource="#Vocals_instrument"/>
-  <withInstrument rdf:resource="#Organ_instrument"/>
-  <withInstrument rdf:resource="#Harpsichord_instrument"/>
   <inAlbum rdf:resource="#Storia_Di_Un_Minuto_album"/>
   <rdfs:label xml:lang="en">Flavio Premoli's participation to Storia Di Un Minuto</rdfs:label>
   <rdfs:comment xml:lang="en">Flavio Premoli's participation to the album Storia Di Un Minuto of the band Premiata Forneria Marconi</rdfs:comment>
@@ -18790,10 +18852,10 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Mauro_Pagani_Storia_Di_Un_Minuto_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Flute_instrument"/>
-  <withInstrument rdf:resource="#Violin_instrument"/>
-  <withInstrument rdf:resource="#Vocals_instrument"/>
   <withInstrument rdf:resource="#Piccolo_instrument"/>
+  <withInstrument rdf:resource="#Violin_instrument"/>
+  <withInstrument rdf:resource="#Flute_instrument"/>
+  <withInstrument rdf:resource="#Vocals_instrument"/>
   <inAlbum rdf:resource="#Storia_Di_Un_Minuto_album"/>
   <rdfs:label xml:lang="en">Mauro Pagani's participation to Storia Di Un Minuto</rdfs:label>
   <rdfs:comment xml:lang="en">Mauro Pagani's participation to the album Storia Di Un Minuto of the band Premiata Forneria Marconi</rdfs:comment>
@@ -18963,15 +19025,15 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Flavio_Premoli_Per_Un_Amico_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Piano_instrument"/>
   <withInstrument rdf:resource="#Tubular_Bells_instrument"/>
-  <withInstrument rdf:resource="#Mellotron_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
   <withInstrument rdf:resource="#Minimoog_Synthesizer_instrument"/>
-  <withInstrument rdf:resource="#Harpsichord_instrument"/>
-  <withInstrument rdf:resource="#Pari_Organ_instrument"/>
-  <withInstrument rdf:resource="#Hammond_Organ_instrument"/>
   <withInstrument rdf:resource="#Spinet_instrument"/>
+  <withInstrument rdf:resource="#Mellotron_instrument"/>
+  <withInstrument rdf:resource="#Harpsichord_instrument"/>
+  <withInstrument rdf:resource="#Piano_instrument"/>
+  <withInstrument rdf:resource="#Hammond_Organ_instrument"/>
+  <withInstrument rdf:resource="#Pari_Organ_instrument"/>
   <inAlbum rdf:resource="#Per_Un_Amico_album"/>
   <rdfs:label xml:lang="en">Flavio Premoli's participation to Per Un Amico</rdfs:label>
   <rdfs:comment xml:lang="en">Flavio Premoli's participation to the album Per Un Amico of the band Premiata Forneria Marconi</rdfs:comment>
@@ -18979,10 +19041,10 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Mauro_Pagani_Per_Un_Amico_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Contralto_Flute_instrument"/>
-  <withInstrument rdf:resource="#Violin_instrument"/>
-  <withInstrument rdf:resource="#Backing_Vocals_instrument"/>
   <withInstrument rdf:resource="#Piccolo_instrument"/>
+  <withInstrument rdf:resource="#Contralto_Flute_instrument"/>
+  <withInstrument rdf:resource="#Backing_Vocals_instrument"/>
+  <withInstrument rdf:resource="#Violin_instrument"/>
   <inAlbum rdf:resource="#Per_Un_Amico_album"/>
   <rdfs:label xml:lang="en">Mauro Pagani's participation to Per Un Amico</rdfs:label>
   <rdfs:comment xml:lang="en">Mauro Pagani's participation to the album Per Un Amico of the band Premiata Forneria Marconi</rdfs:comment>
@@ -18990,12 +19052,12 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Franco_Mussida_Per_Un_Amico_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Mandocello_instrument"/>
-  <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
-  <withInstrument rdf:resource="#Theorbo_instrument"/>
-  <withInstrument rdf:resource="#Electric_Guitar_instrument"/>
   <withInstrument rdf:resource="#12_String_Acoustic_Guitar_instrument"/>
+  <withInstrument rdf:resource="#Mandocello_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
+  <withInstrument rdf:resource="#Theorbo_instrument"/>
+  <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
+  <withInstrument rdf:resource="#Electric_Guitar_instrument"/>
   <inAlbum rdf:resource="#Per_Un_Amico_album"/>
   <rdfs:label xml:lang="en">Franco Mussida's participation to Per Un Amico</rdfs:label>
   <rdfs:comment xml:lang="en">Franco Mussida's participation to the album Per Un Amico of the band Premiata Forneria Marconi</rdfs:comment>
@@ -19003,9 +19065,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Franz_Di_Cioccio_Per_Un_Amico_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Percussions_instrument"/>
   <withInstrument rdf:resource="#Backing_Vocals_instrument"/>
   <withInstrument rdf:resource="#Drums_instrument"/>
+  <withInstrument rdf:resource="#Percussions_instrument"/>
   <inAlbum rdf:resource="#Per_Un_Amico_album"/>
   <rdfs:label xml:lang="en">Franz Di Cioccio's participation to Per Un Amico</rdfs:label>
   <rdfs:comment xml:lang="en">Franz Di Cioccio's participation to the album Per Un Amico of the band Premiata Forneria Marconi</rdfs:comment>
@@ -19142,15 +19204,15 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Flavio_Premoli_Photos_Of_Ghosts_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Piano_instrument"/>
   <withInstrument rdf:resource="#Tubular_Bells_instrument"/>
-  <withInstrument rdf:resource="#Mellotron_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
   <withInstrument rdf:resource="#Minimoog_Synthesizer_instrument"/>
-  <withInstrument rdf:resource="#Harpsichord_instrument"/>
-  <withInstrument rdf:resource="#Pari_Organ_instrument"/>
-  <withInstrument rdf:resource="#Hammond_Organ_instrument"/>
   <withInstrument rdf:resource="#Spinet_instrument"/>
+  <withInstrument rdf:resource="#Mellotron_instrument"/>
+  <withInstrument rdf:resource="#Harpsichord_instrument"/>
+  <withInstrument rdf:resource="#Piano_instrument"/>
+  <withInstrument rdf:resource="#Hammond_Organ_instrument"/>
+  <withInstrument rdf:resource="#Pari_Organ_instrument"/>
   <inAlbum rdf:resource="#Photos_Of_Ghosts_album"/>
   <rdfs:label xml:lang="en">Flavio Premoli's participation to Photos Of Ghosts</rdfs:label>
   <rdfs:comment xml:lang="en">Flavio Premoli's participation to the album Photos Of Ghosts of the band Premiata Forneria Marconi</rdfs:comment>
@@ -19158,10 +19220,10 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Mauro_Pagani_Photos_Of_Ghosts_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Contralto_Flute_instrument"/>
-  <withInstrument rdf:resource="#Violin_instrument"/>
-  <withInstrument rdf:resource="#Backing_Vocals_instrument"/>
   <withInstrument rdf:resource="#Piccolo_instrument"/>
+  <withInstrument rdf:resource="#Contralto_Flute_instrument"/>
+  <withInstrument rdf:resource="#Backing_Vocals_instrument"/>
+  <withInstrument rdf:resource="#Violin_instrument"/>
   <inAlbum rdf:resource="#Photos_Of_Ghosts_album"/>
   <rdfs:label xml:lang="en">Mauro Pagani's participation to Photos Of Ghosts</rdfs:label>
   <rdfs:comment xml:lang="en">Mauro Pagani's participation to the album Photos Of Ghosts of the band Premiata Forneria Marconi</rdfs:comment>
@@ -19169,12 +19231,12 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Franco_Mussida_Photos_Of_Ghosts_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Mandocello_instrument"/>
-  <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
-  <withInstrument rdf:resource="#Theorbo_instrument"/>
-  <withInstrument rdf:resource="#Electric_Guitar_instrument"/>
   <withInstrument rdf:resource="#12_String_Acoustic_Guitar_instrument"/>
+  <withInstrument rdf:resource="#Mandocello_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
+  <withInstrument rdf:resource="#Theorbo_instrument"/>
+  <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
+  <withInstrument rdf:resource="#Electric_Guitar_instrument"/>
   <inAlbum rdf:resource="#Photos_Of_Ghosts_album"/>
   <rdfs:label xml:lang="en">Franco Mussida's participation to Photos Of Ghosts</rdfs:label>
   <rdfs:comment xml:lang="en">Franco Mussida's participation to the album Photos Of Ghosts of the band Premiata Forneria Marconi</rdfs:comment>
@@ -19182,9 +19244,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Franz_Di_Cioccio_Photos_Of_Ghosts_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Percussions_instrument"/>
   <withInstrument rdf:resource="#Backing_Vocals_instrument"/>
   <withInstrument rdf:resource="#Drums_instrument"/>
+  <withInstrument rdf:resource="#Percussions_instrument"/>
   <inAlbum rdf:resource="#Photos_Of_Ghosts_album"/>
   <rdfs:label xml:lang="en">Franz Di Cioccio's participation to Photos Of Ghosts</rdfs:label>
   <rdfs:comment xml:lang="en">Franz Di Cioccio's participation to the album Photos Of Ghosts of the band Premiata Forneria Marconi</rdfs:comment>
@@ -19346,8 +19408,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Mauro_Pagani_L_Isola_Di_Niente_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Flute_instrument"/>
   <withInstrument rdf:resource="#Violin_instrument"/>
+  <withInstrument rdf:resource="#Flute_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
   <inAlbum rdf:resource="#L_Isola_Di_Niente_album"/>
   <rdfs:label xml:lang="en">Mauro Pagani's participation to L'Isola Di Niente</rdfs:label>
@@ -19356,9 +19418,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Franz_Di_Cioccio_L_Isola_Di_Niente_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Percussions_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
   <withInstrument rdf:resource="#Drums_instrument"/>
+  <withInstrument rdf:resource="#Percussions_instrument"/>
   <inAlbum rdf:resource="#L_Isola_Di_Niente_album"/>
   <rdfs:label xml:lang="en">Franz Di Cioccio's participation to L'Isola Di Niente</rdfs:label>
   <rdfs:comment xml:lang="en">Franz Di Cioccio's participation to the album L'Isola Di Niente of the band Premiata Forneria Marconi</rdfs:comment>
@@ -19542,8 +19604,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Mauro_Pagani_The_World_Became_The_World_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Flute_instrument"/>
   <withInstrument rdf:resource="#Violin_instrument"/>
+  <withInstrument rdf:resource="#Flute_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
   <inAlbum rdf:resource="#The_World_Became_The_World_album"/>
   <rdfs:label xml:lang="en">Mauro Pagani's participation to The World Became The World</rdfs:label>
@@ -19552,9 +19614,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Franz_Di_Cioccio_The_World_Became_The_World_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Percussions_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
   <withInstrument rdf:resource="#Drums_instrument"/>
+  <withInstrument rdf:resource="#Percussions_instrument"/>
   <inAlbum rdf:resource="#The_World_Became_The_World_album"/>
   <rdfs:label xml:lang="en">Franz Di Cioccio's participation to The World Became The World</rdfs:label>
   <rdfs:comment xml:lang="en">Franz Di Cioccio's participation to the album The World Became The World of the band Premiata Forneria Marconi</rdfs:comment>
@@ -19705,8 +19767,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Mauro_Pagani_Chocolate_Kings_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Flute_instrument"/>
   <withInstrument rdf:resource="#Violin_instrument"/>
+  <withInstrument rdf:resource="#Flute_instrument"/>
   <inAlbum rdf:resource="#Chocolate_Kings_album"/>
   <rdfs:label xml:lang="en">Mauro Pagani's participation to Chocolate Kings</rdfs:label>
   <rdfs:comment xml:lang="en">Mauro Pagani's participation to the album Chocolate Kings of the band Premiata Forneria Marconi</rdfs:comment>
@@ -19731,9 +19793,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Franz_Di_Cioccio_Chocolate_Kings_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Percussions_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
   <withInstrument rdf:resource="#Drums_instrument"/>
+  <withInstrument rdf:resource="#Percussions_instrument"/>
   <inAlbum rdf:resource="#Chocolate_Kings_album"/>
   <rdfs:label xml:lang="en">Franz Di Cioccio's participation to Chocolate Kings</rdfs:label>
   <rdfs:comment xml:lang="en">Franz Di Cioccio's participation to the album Chocolate Kings of the band Premiata Forneria Marconi</rdfs:comment>
@@ -19894,8 +19956,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Romualdo_Coletta_Quella_Vecchia_Locanda_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Bass_instrument"/>
   <withInstrument rdf:resource="#Frequency_Generator_instrument"/>
+  <withInstrument rdf:resource="#Bass_instrument"/>
   <inAlbum rdf:resource="#Quella_Vecchia_Locanda_album"/>
   <rdfs:label xml:lang="en">Romualdo Coletta's participation to Quella Vecchia Locanda</rdfs:label>
   <rdfs:comment xml:lang="en">Romualdo Coletta's participation to the album Quella Vecchia Locanda of the band Quella Vecchia Locanda</rdfs:comment>
@@ -19911,8 +19973,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Patrick_Traina_Quella_Vecchia_Locanda_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Percussions_instrument"/>
   <withInstrument rdf:resource="#Drums_instrument"/>
+  <withInstrument rdf:resource="#Percussions_instrument"/>
   <inAlbum rdf:resource="#Quella_Vecchia_Locanda_album"/>
   <rdfs:label xml:lang="en">Patrick Traina's participation to Quella Vecchia Locanda</rdfs:label>
   <rdfs:comment xml:lang="en">Patrick Traina's participation to the album Quella Vecchia Locanda of the band Quella Vecchia Locanda</rdfs:comment>
@@ -19928,9 +19990,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Giorgio_Giorgi_Quella_Vecchia_Locanda_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <withInstrument rdf:resource="#Piccolo_instrument"/>
   <withInstrument rdf:resource="#Flute_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
-  <withInstrument rdf:resource="#Piccolo_instrument"/>
   <inAlbum rdf:resource="#Quella_Vecchia_Locanda_album"/>
   <rdfs:label xml:lang="en">Giorgio Giorgi's participation to Quella Vecchia Locanda</rdfs:label>
   <rdfs:comment xml:lang="en">Giorgio Giorgi's participation to the album Quella Vecchia Locanda of the band Quella Vecchia Locanda</rdfs:comment>
@@ -19946,13 +20008,13 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Massimo_Roselli_Quella_Vecchia_Locanda_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Moog_Synthesizer_instrument"/>
-  <withInstrument rdf:resource="#Piano_instrument"/>
-  <withInstrument rdf:resource="#Mellotron_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
-  <withInstrument rdf:resource="#Spinet_instrument"/>
+  <withInstrument rdf:resource="#Piano_instrument"/>
   <withInstrument rdf:resource="#Organ_instrument"/>
   <withInstrument rdf:resource="#Electronic_Zither_instrument"/>
+  <withInstrument rdf:resource="#Moog_Synthesizer_instrument"/>
+  <withInstrument rdf:resource="#Spinet_instrument"/>
+  <withInstrument rdf:resource="#Mellotron_instrument"/>
   <inAlbum rdf:resource="#Quella_Vecchia_Locanda_album"/>
   <rdfs:label xml:lang="en">Massimo Roselli's participation to Quella Vecchia Locanda</rdfs:label>
   <rdfs:comment xml:lang="en">Massimo Roselli's participation to the album Quella Vecchia Locanda of the band Quella Vecchia Locanda</rdfs:comment>
@@ -19969,9 +20031,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 <Participation rdf:about="#Raimondo_Maria_Cocco_Quella_Vecchia_Locanda_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <withInstrument rdf:resource="#12_String_Acoustic_Guitar_instrument"/>
+  <withInstrument rdf:resource="#Electric_Guitar_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
   <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
-  <withInstrument rdf:resource="#Electric_Guitar_instrument"/>
   <inAlbum rdf:resource="#Quella_Vecchia_Locanda_album"/>
   <rdfs:label xml:lang="en">Raimondo Maria Cocco's participation to Quella Vecchia Locanda</rdfs:label>
   <rdfs:comment xml:lang="en">Raimondo Maria Cocco's participation to the album Quella Vecchia Locanda of the band Quella Vecchia Locanda</rdfs:comment>
@@ -20156,9 +20218,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Giorgio_Giorgi_Il_Tempo_Della_Gioia_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <withInstrument rdf:resource="#Piccolo_instrument"/>
   <withInstrument rdf:resource="#Flute_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
-  <withInstrument rdf:resource="#Piccolo_instrument"/>
   <inAlbum rdf:resource="#Il_Tempo_Della_Gioia_album"/>
   <rdfs:label xml:lang="en">Giorgio Giorgi's participation to Il Tempo Della Gioia</rdfs:label>
   <rdfs:comment xml:lang="en">Giorgio Giorgi's participation to the album Il Tempo Della Gioia of the band Quella Vecchia Locanda</rdfs:comment>
@@ -20166,9 +20228,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Raimondo_Maria_Cocco_Il_Tempo_Della_Gioia_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Clarinet_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
   <withInstrument rdf:resource="#Guitar_instrument"/>
+  <withInstrument rdf:resource="#Clarinet_instrument"/>
   <inAlbum rdf:resource="#Il_Tempo_Della_Gioia_album"/>
   <rdfs:label xml:lang="en">Raimondo Maria Cocco's participation to Il Tempo Della Gioia</rdfs:label>
   <rdfs:comment xml:lang="en">Raimondo Maria Cocco's participation to the album Il Tempo Della Gioia of the band Quella Vecchia Locanda</rdfs:comment>
@@ -20191,8 +20253,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Patrick_Traina_Il_Tempo_Della_Gioia_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Percussions_instrument"/>
   <withInstrument rdf:resource="#Drums_instrument"/>
+  <withInstrument rdf:resource="#Percussions_instrument"/>
   <inAlbum rdf:resource="#Il_Tempo_Della_Gioia_album"/>
   <rdfs:label xml:lang="en">Patrick Traina's participation to Il Tempo Della Gioia</rdfs:label>
   <rdfs:comment xml:lang="en">Patrick Traina's participation to the album Il Tempo Della Gioia of the band Quella Vecchia Locanda</rdfs:comment>
@@ -20612,8 +20674,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Antonio_Verde_Saint_Just_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Bass_instrument"/>
   <withInstrument rdf:resource="#Classical_Guitar_instrument"/>
+  <withInstrument rdf:resource="#Bass_instrument"/>
   <inAlbum rdf:resource="#Saint_Just_album"/>
   <rdfs:label xml:lang="en">Antonio Verde's participation to Saint Just</rdfs:label>
   <rdfs:comment xml:lang="en">Antonio Verde's participation to the album Saint Just of the band Saint Just</rdfs:comment>
@@ -20643,8 +20705,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Mario_D_Amora_Saint_Just_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Organ_instrument"/>
   <withInstrument rdf:resource="#Piano_instrument"/>
+  <withInstrument rdf:resource="#Organ_instrument"/>
   <inAlbum rdf:resource="#Saint_Just_album"/>
   <rdfs:label xml:lang="en">Mario D'Amora's participation to Saint Just</rdfs:label>
   <rdfs:comment xml:lang="en">Mario D'Amora's participation to the album Saint Just of the band Saint Just</rdfs:comment>
@@ -20811,11 +20873,11 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Tito_Rinesi_La_Casa_Del_Lago_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Percussions_instrument"/>
-  <withInstrument rdf:resource="#Guitar_instrument"/>
-  <withInstrument rdf:resource="#Vocals_instrument"/>
   <withInstrument rdf:resource="#Harmonica_instrument"/>
+  <withInstrument rdf:resource="#Vocals_instrument"/>
+  <withInstrument rdf:resource="#Guitar_instrument"/>
   <withInstrument rdf:resource="#Autoharp_instrument"/>
+  <withInstrument rdf:resource="#Percussions_instrument"/>
   <inAlbum rdf:resource="#La_Casa_Del_Lago_album"/>
   <rdfs:label xml:lang="en">Tito Rinesi's participation to La Casa Del Lago</rdfs:label>
   <rdfs:comment xml:lang="en">Tito Rinesi's participation to the album La Casa Del Lago of the band Saint Just</rdfs:comment>
@@ -20845,10 +20907,10 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Andrea_Faccenda_La_Casa_Del_Lago_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Organ_instrument"/>
-  <withInstrument rdf:resource="#Piano_instrument"/>
   <withInstrument rdf:resource="#Harmonica_instrument"/>
+  <withInstrument rdf:resource="#Piano_instrument"/>
   <withInstrument rdf:resource="#Guitar_instrument"/>
+  <withInstrument rdf:resource="#Organ_instrument"/>
   <inAlbum rdf:resource="#La_Casa_Del_Lago_album"/>
   <rdfs:label xml:lang="en">Andrea Faccenda's participation to La Casa Del Lago</rdfs:label>
   <rdfs:comment xml:lang="en">Andrea Faccenda's participation to the album La Casa Del Lago of the band Saint Just</rdfs:comment>
@@ -20880,8 +20942,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Fulvio_Maras_La_Casa_Del_Lago_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Percussions_instrument"/>
   <withInstrument rdf:resource="#Drums_instrument"/>
+  <withInstrument rdf:resource="#Percussions_instrument"/>
   <inAlbum rdf:resource="#La_Casa_Del_Lago_album"/>
   <rdfs:label xml:lang="en">Fulvio Maras's participation to La Casa Del Lago</rdfs:label>
   <rdfs:comment xml:lang="en">Fulvio Maras's participation to the album La Casa Del Lago of the band Saint Just</rdfs:comment>
@@ -21049,11 +21111,11 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 <Participation rdf:about="#Maurizio_Zarrillo_Dedicato_A_Frazz_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <withInstrument rdf:resource="#Electric_Piano_instrument"/>
+  <withInstrument rdf:resource="#Synthesizer_instrument"/>
   <withInstrument rdf:resource="#Harpsichord_instrument"/>
+  <withInstrument rdf:resource="#Eminent_Synthesizer_instrument"/>
   <withInstrument rdf:resource="#Grand_Piano_instrument"/>
   <withInstrument rdf:resource="#Sistro_instrument"/>
-  <withInstrument rdf:resource="#Synthesizer_instrument"/>
-  <withInstrument rdf:resource="#Eminent_Synthesizer_instrument"/>
   <inAlbum rdf:resource="#Dedicato_A_Frazz_album"/>
   <rdfs:label xml:lang="en">Maurizio Zarrillo's participation to Dedicato A Frazz</rdfs:label>
   <rdfs:comment xml:lang="en">Maurizio Zarrillo's participation to the album Dedicato A Frazz of the band Semiramis (2)</rdfs:comment>
@@ -21068,9 +21130,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Michele_Zarrillo_Dedicato_A_Frazz_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <withInstrument rdf:resource="#Electric_Guitar_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
   <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
-  <withInstrument rdf:resource="#Electric_Guitar_instrument"/>
   <withProductionRole rdf:resource="#Composer_role"/>
   <inAlbum rdf:resource="#Dedicato_A_Frazz_album"/>
   <rdfs:label xml:lang="en">Michele Zarrillo's participation to Dedicato A Frazz</rdfs:label>
@@ -21103,10 +21165,10 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Paolo_Faenza_Dedicato_A_Frazz_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Percussions_instrument"/>
   <withInstrument rdf:resource="#Vibraphone_instrument"/>
-  <withInstrument rdf:resource="#Drums_instrument"/>
   <withInstrument rdf:resource="#Effects_instrument"/>
+  <withInstrument rdf:resource="#Drums_instrument"/>
+  <withInstrument rdf:resource="#Percussions_instrument"/>
   <inAlbum rdf:resource="#Dedicato_A_Frazz_album"/>
   <rdfs:label xml:lang="en">Paolo Faenza's participation to Dedicato A Frazz</rdfs:label>
   <rdfs:comment xml:lang="en">Paolo Faenza's participation to the album Dedicato A Frazz of the band Semiramis (2)</rdfs:comment>
@@ -21549,8 +21611,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Keith_Edwards_Fragments_Of_Light_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Percussions_instrument"/>
   <withInstrument rdf:resource="#Drums_instrument"/>
+  <withInstrument rdf:resource="#Percussions_instrument"/>
   <inAlbum rdf:resource="#Fragments_Of_Light_album"/>
   <rdfs:label xml:lang="en">Keith Edwards's participation to Fragments Of Light</rdfs:label>
   <rdfs:comment xml:lang="en">Keith Edwards's participation to the album Fragments Of Light of the band Sensations' Fix</rdfs:comment>
@@ -21558,11 +21620,11 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Franco_Falsini_Fragments_Of_Light_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Synthesizer_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
+  <withInstrument rdf:resource="#Synthesizer_instrument"/>
   <withInstrument rdf:resource="#Guitar_instrument"/>
-  <withProductionRole rdf:resource="#Composer_role"/>
   <withProductionRole rdf:resource="#Producer_role"/>
+  <withProductionRole rdf:resource="#Composer_role"/>
   <inAlbum rdf:resource="#Fragments_Of_Light_album"/>
   <rdfs:label xml:lang="en">Franco Falsini's participation to Fragments Of Light</rdfs:label>
   <rdfs:comment xml:lang="en">Franco Falsini's participation to the album Fragments Of Light of the band Sensations' Fix</rdfs:comment>
@@ -21822,8 +21884,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Richard_Ursillo_Portable_Madness_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Bass_instrument"/>
   <withInstrument rdf:resource="#Effects_instrument"/>
+  <withInstrument rdf:resource="#Bass_instrument"/>
   <inAlbum rdf:resource="#Portable_Madness_album"/>
   <rdfs:label xml:lang="en">Richard Ursillo's participation to Portable Madness</rdfs:label>
   <rdfs:comment xml:lang="en">Richard Ursillo's participation to the album Portable Madness of the band Sensations' Fix</rdfs:comment>
@@ -21831,8 +21893,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Keith_Edwards_Portable_Madness_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Drums_instrument"/>
   <withInstrument rdf:resource="#Vibraphone_instrument"/>
+  <withInstrument rdf:resource="#Drums_instrument"/>
   <inAlbum rdf:resource="#Portable_Madness_album"/>
   <rdfs:label xml:lang="en">Keith Edwards's participation to Portable Madness</rdfs:label>
   <rdfs:comment xml:lang="en">Keith Edwards's participation to the album Portable Madness of the band Sensations' Fix</rdfs:comment>
@@ -22035,11 +22097,11 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Franco_Falsini_Finest_Finger_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <withInstrument rdf:resource="#Vocals_instrument"/>
+  <withInstrument rdf:resource="#Synthesizer_instrument"/>
+  <withInstrument rdf:resource="#Keyboards_instrument"/>
   <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
   <withInstrument rdf:resource="#Electric_Guitar_instrument"/>
-  <withInstrument rdf:resource="#Synthesizer_instrument"/>
-  <withInstrument rdf:resource="#Vocals_instrument"/>
-  <withInstrument rdf:resource="#Keyboards_instrument"/>
   <inAlbum rdf:resource="#Finest_Finger_album"/>
   <rdfs:label xml:lang="en">Franco Falsini's participation to Finest Finger</rdfs:label>
   <rdfs:comment xml:lang="en">Franco Falsini's participation to the album Finest Finger of the band Sensations' Fix</rdfs:comment>
@@ -22063,8 +22125,8 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Richard_Ursillo_Finest_Finger_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Bass_instrument"/>
   <withInstrument rdf:resource="#Electric_Guitar_instrument"/>
+  <withInstrument rdf:resource="#Bass_instrument"/>
   <inAlbum rdf:resource="#Finest_Finger_album"/>
   <rdfs:label xml:lang="en">Richard Ursillo's participation to Finest Finger</rdfs:label>
   <rdfs:comment xml:lang="en">Richard Ursillo's participation to the album Finest Finger of the band Sensations' Fix</rdfs:comment>
@@ -22258,11 +22320,11 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Claudio_Rocchi_Le_Idee_Di_Oggi_Per_La_Musica_Di_Domani_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Clavichord_instrument"/>
-  <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
-  <withInstrument rdf:resource="#Bass_instrument"/>
+  <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
+  <withInstrument rdf:resource="#Clavichord_instrument"/>
   <withInstrument rdf:resource="#Hammond_Organ_instrument"/>
+  <withInstrument rdf:resource="#Bass_instrument"/>
   <inAlbum rdf:resource="#Le_Idee_Di_Oggi_Per_La_Musica_Di_Domani_album"/>
   <rdfs:label xml:lang="en">Claudio Rocchi's participation to Le Idee Di Oggi Per La Musica Di Domani</rdfs:label>
   <rdfs:comment xml:lang="en">Claudio Rocchi's participation to the album Le Idee Di Oggi Per La Musica Di Domani of the band Stormy Six</rdfs:comment>
@@ -22279,9 +22341,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 <Participation rdf:about="#Antonio_Toto_Zanuso_Le_Idee_Di_Oggi_Per_La_Musica_Di_Domani_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
-  <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
   <withInstrument rdf:resource="#Tabla_instrument"/>
   <withInstrument rdf:resource="#Drums_instrument"/>
+  <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
   <inAlbum rdf:resource="#Le_Idee_Di_Oggi_Per_La_Musica_Di_Domani_album"/>
   <rdfs:label xml:lang="en">Antonio "Toto" Zanuso's participation to Le Idee Di Oggi Per La Musica Di Domani</rdfs:label>
   <rdfs:comment xml:lang="en">Antonio "Toto" Zanuso's participation to the album Le Idee Di Oggi Per La Musica Di Domani of the band Stormy Six</rdfs:comment>
@@ -22300,16 +22362,16 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Franco_Fabbri_Le_Idee_Di_Oggi_Per_La_Musica_Di_Domani_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
-  <withInstrument rdf:resource="#Sitar_instrument"/>
-  <withInstrument rdf:resource="#Mellotron_instrument"/>
-  <withInstrument rdf:resource="#Vocals_instrument"/>
-  <withInstrument rdf:resource="#Harmonica_instrument"/>
-  <withInstrument rdf:resource="#9_String_Guitar_instrument"/>
-  <withInstrument rdf:resource="#Electric_Guitar_instrument"/>
-  <withInstrument rdf:resource="#Cymbals_instrument"/>
   <withInstrument rdf:resource="#12_String_Acoustic_Guitar_instrument"/>
+  <withInstrument rdf:resource="#Vocals_instrument"/>
+  <withInstrument rdf:resource="#Electric_Guitar_instrument"/>
   <withInstrument rdf:resource="#Flute_instrument"/>
+  <withInstrument rdf:resource="#Mellotron_instrument"/>
+  <withInstrument rdf:resource="#Harmonica_instrument"/>
+  <withInstrument rdf:resource="#Sitar_instrument"/>
+  <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
+  <withInstrument rdf:resource="#9_String_Guitar_instrument"/>
+  <withInstrument rdf:resource="#Cymbals_instrument"/>
   <inAlbum rdf:resource="#Le_Idee_Di_Oggi_Per_La_Musica_Di_Domani_album"/>
   <rdfs:label xml:lang="en">Franco Fabbri's participation to Le Idee Di Oggi Per La Musica Di Domani</rdfs:label>
   <rdfs:comment xml:lang="en">Franco Fabbri's participation to the album Le Idee Di Oggi Per La Musica Di Domani of the band Stormy Six</rdfs:comment>
@@ -22328,11 +22390,11 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Luca_Piscicelli_Le_Idee_Di_Oggi_Per_La_Musica_Di_Domani_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Tambourine_instrument"/>
-  <withInstrument rdf:resource="#9_String_Guitar_instrument"/>
-  <withInstrument rdf:resource="#Electric_Guitar_instrument"/>
-  <withInstrument rdf:resource="#Cymbals_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
+  <withInstrument rdf:resource="#Electric_Guitar_instrument"/>
+  <withInstrument rdf:resource="#9_String_Guitar_instrument"/>
+  <withInstrument rdf:resource="#Tambourine_instrument"/>
+  <withInstrument rdf:resource="#Cymbals_instrument"/>
   <inAlbum rdf:resource="#Le_Idee_Di_Oggi_Per_La_Musica_Di_Domani_album"/>
   <rdfs:label xml:lang="en">Luca Piscicelli's participation to Le Idee Di Oggi Per La Musica Di Domani</rdfs:label>
   <rdfs:comment xml:lang="en">Luca Piscicelli's participation to the album Le Idee Di Oggi Per La Musica Di Domani of the band Stormy Six</rdfs:comment>
@@ -22873,10 +22935,10 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Tommaso_Leddi_Guarda_Giu_Dalla_Pianura_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Violin_instrument"/>
   <withInstrument rdf:resource="#Balalaika_instrument"/>
-  <withInstrument rdf:resource="#Guitar_instrument"/>
+  <withInstrument rdf:resource="#Violin_instrument"/>
   <withInstrument rdf:resource="#Mandolin_instrument"/>
+  <withInstrument rdf:resource="#Guitar_instrument"/>
   <inAlbum rdf:resource="#Guarda_Giu_Dalla_Pianura_album"/>
   <rdfs:label xml:lang="en">Tommaso Leddi's participation to Guarda Giù Dalla Pianura</rdfs:label>
   <rdfs:comment xml:lang="en">Tommaso Leddi's participation to the album Guarda Giù Dalla Pianura of the band Stormy Six</rdfs:comment>
@@ -23094,9 +23156,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Luca_Piscicelli_Un_Biglietto_Del_Tram_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <withInstrument rdf:resource="#Mandola_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
   <withInstrument rdf:resource="#Bass_instrument"/>
-  <withInstrument rdf:resource="#Mandola_instrument"/>
   <inAlbum rdf:resource="#Un_Biglietto_Del_Tram_album"/>
   <rdfs:label xml:lang="en">Luca Piscicelli's participation to Un Biglietto Del Tram</rdfs:label>
   <rdfs:comment xml:lang="en">Luca Piscicelli's participation to the album Un Biglietto Del Tram of the band Stormy Six</rdfs:comment>
@@ -23114,12 +23176,12 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Tommaso_Leddi_Un_Biglietto_Del_Tram_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Flute_instrument"/>
-  <withInstrument rdf:resource="#Violin_instrument"/>
-  <withInstrument rdf:resource="#Mandolin_instrument"/>
-  <withInstrument rdf:resource="#Balalaika_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
   <withInstrument rdf:resource="#Guitar_instrument"/>
+  <withInstrument rdf:resource="#Balalaika_instrument"/>
+  <withInstrument rdf:resource="#Violin_instrument"/>
+  <withInstrument rdf:resource="#Flute_instrument"/>
+  <withInstrument rdf:resource="#Mandolin_instrument"/>
   <inAlbum rdf:resource="#Un_Biglietto_Del_Tram_album"/>
   <rdfs:label xml:lang="en">Tommaso Leddi's participation to Un Biglietto Del Tram</rdfs:label>
   <rdfs:comment xml:lang="en">Tommaso Leddi's participation to the album Un Biglietto Del Tram of the band Stormy Six</rdfs:comment>
@@ -23135,9 +23197,9 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Umberto_Fiori_Un_Biglietto_Del_Tram_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <withInstrument rdf:resource="#Harmonica_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
   <withInstrument rdf:resource="#Guitar_instrument"/>
-  <withInstrument rdf:resource="#Harmonica_instrument"/>
   <inAlbum rdf:resource="#Un_Biglietto_Del_Tram_album"/>
   <rdfs:label xml:lang="en">Umberto Fiori's participation to Un Biglietto Del Tram</rdfs:label>
   <rdfs:comment xml:lang="en">Umberto Fiori's participation to the album Un Biglietto Del Tram of the band Stormy Six</rdfs:comment>
@@ -23145,10 +23207,10 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Franco_Fabbri_Un_Biglietto_Del_Tram_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Mandolin_instrument"/>
-  <withInstrument rdf:resource="#Bass_instrument"/>
   <withInstrument rdf:resource="#Vocals_instrument"/>
+  <withInstrument rdf:resource="#Mandolin_instrument"/>
   <withInstrument rdf:resource="#Guitar_instrument"/>
+  <withInstrument rdf:resource="#Bass_instrument"/>
   <withProductionRole rdf:resource="#Recorder_role"/>
   <inAlbum rdf:resource="#Un_Biglietto_Del_Tram_album"/>
   <rdfs:label xml:lang="en">Franco Fabbri's participation to Un Biglietto Del Tram</rdfs:label>
@@ -23356,12 +23418,12 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Franco_Fabbri_Cliche_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Mandolin_instrument"/>
-  <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
-  <withInstrument rdf:resource="#Marimba_instrument"/>
-  <withInstrument rdf:resource="#Electric_Guitar_instrument"/>
-  <withInstrument rdf:resource="#Mandola_instrument"/>
   <withInstrument rdf:resource="#Vibraphone_instrument"/>
+  <withInstrument rdf:resource="#Mandola_instrument"/>
+  <withInstrument rdf:resource="#Marimba_instrument"/>
+  <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
+  <withInstrument rdf:resource="#Electric_Guitar_instrument"/>
+  <withInstrument rdf:resource="#Mandolin_instrument"/>
   <inAlbum rdf:resource="#Cliche_album"/>
   <rdfs:label xml:lang="en">Franco Fabbri's participation to Cliché</rdfs:label>
   <rdfs:comment xml:lang="en">Franco Fabbri's participation to the album Cliché of the band Stormy Six</rdfs:comment>
@@ -23370,10 +23432,10 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 <Participation rdf:about="#Tommaso_Leddi_Cliche_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <withInstrument rdf:resource="#Tenor_Saxophone_instrument"/>
-  <withInstrument rdf:resource="#Violin_instrument"/>
   <withInstrument rdf:resource="#Acoustic_Guitar_instrument"/>
-  <withInstrument rdf:resource="#Mandolin_instrument"/>
+  <withInstrument rdf:resource="#Violin_instrument"/>
   <withInstrument rdf:resource="#Alto_Saxophone_instrument"/>
+  <withInstrument rdf:resource="#Mandolin_instrument"/>
   <inAlbum rdf:resource="#Cliche_album"/>
   <rdfs:label xml:lang="en">Tommaso Leddi's participation to Cliché</rdfs:label>
   <rdfs:comment xml:lang="en">Tommaso Leddi's participation to the album Cliché of the band Stormy Six</rdfs:comment>
@@ -23398,12 +23460,12 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
 
 <Participation rdf:about="#Carlo_De_Martini_Cliche_participation">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-  <withInstrument rdf:resource="#Violin_instrument"/>
-  <withInstrument rdf:resource="#Mandolin_instrument"/>
-  <withInstrument rdf:resource="#Moog_Synthesizer_instrument"/>
   <withInstrument rdf:resource="#Piano_instrument"/>
-  <withInstrument rdf:resource="#Bass_instrument"/>
   <withInstrument rdf:resource="#Viola_instrument"/>
+  <withInstrument rdf:resource="#Violin_instrument"/>
+  <withInstrument rdf:resource="#Moog_Synthesizer_instrument"/>
+  <withInstrument rdf:resource="#Mandolin_instrument"/>
+  <withInstrument rdf:resource="#Bass_instrument"/>
   <inAlbum rdf:resource="#Cliche_album"/>
   <rdfs:label xml:lang="en">Carlo De Martini's participation to Cliché</rdfs:label>
   <rdfs:comment xml:lang="en">Carlo De Martini's participation to the album Cliché of the band Stormy Six</rdfs:comment>
