@@ -1,133 +1,132 @@
-psychedelic+rock hard+rock {}
-psychedelic+rock symphonic+rock {}
-psychedelic+rock glam {}
-psychedelic+rock art+rock {}
-psychedelic+rock krautrock {}
-psychedelic+rock space+rock {}
-psychedelic+rock acid+rock {}
-psychedelic+rock mod {}
-hard+rock glam {}
-blues+rock hard+rock {}
-garage+rock hard+rock {}
-garage+rock acid+rock {}
-symphonic+rock krautrock {}
-symphonic+rock space+rock {}
-folk+rock acid+rock {}
-folk+rock country+rock {}
-acid+rock krautrock {}
-glam disco {}
-pop disco {}
-pop pop+rock {}
-pop folk+rock {}
-pop country+rock {}
-rhythm+&+blues disco {}
-rhythm+&+blues beat {}
-rhythm+&+blues rock+&+roll {}
-rhythm+&+blues garage+rock {}
-rhythm+&+blues rock {}
-rhythm+&+blues mod {}
-rhythm+&+blues funk+/+soul {}
-rock+&+roll pop {}
-rock+&+roll beat {}
-rock+&+roll rock {}
-rock+&+roll hard+rock {}
-rock+&+roll glam {}
-rock+&+roll garage+rock {}
-art+rock glam {}
-blues contemporary+jazz {}
-blues rhythm+&+blues {}
-blues rock+&+roll {}
-blues psychedelic+rock {}
-blues garage+rock {}
-blues rock {}
-blues big+band {}
-blues classic+rock {}
-contemporary+jazz symphonic+rock {}
-contemporary+jazz psychedelic+rock {}
-contemporary+jazz free+jazz {}
-contemporary+jazz jazz-rock {}
-contemporary+jazz rock {}
-contemporary+jazz rhythm+&+blues {}
-contemporary+jazz rock+&+roll {}
-contemporary+jazz big+band {}
-beat garage+rock {}
-rock country+rock {}
-rock blues+rock {}
-rock folk+rock {}
-rock jazz-rock {}
-rock pop+rock {}
-rock symphonic+rock {}
-rock psychedelic+rock {}
-rock garage+rock {}
-rock acid+rock {}
-rock glam {}
-rock art+rock {}
-rock hard+rock {}
-rock beat {}
-rock soft+rock {}
-rock classic+rock {}
-electronic psychedelic {}
-electronic psychedelic+rock {}
-electronic krautrock {}
-psychedelic symphonic+rock {}
-psychedelic psychedelic+rock {}
-psychedelic jazz-rock {}
-psychedelic krautrock {}
-folk folk+rock {}
-folk symphonic+rock {}
-folk blues {}
-folk contemporary+jazz {}
-folk rock {}
-folk classic+rock {}
-classical symphonic+rock {}
-classical contemporary+jazz {}
-classical big+band {}
-classical romantic {}
-classical score {}
-classical soundtrack {}
-classical theme {}
-free+jazz free+improvisation {}
-free+jazz krautrock {}
-experimental free+jazz {}
-experimental free+improvisation {}
-avantgarde free+jazz {}
-avantgarde krautrock {}
-modern+classical electronic {}
-jazz mod {}
-jazz funk+/+soul {}
-soul mod {}
-soul funk+/+soul {}
-ballad pop {}
-ballad rhythm+&+blues {}
-ballad folk {}
-ballad soul {}
-ballad folk,+world,+&+country {}
-ballad rock {}
-ballad electronic {}
-chanson pop {}
-chanson folk {}
-chanson prog+rock {}
-chanson art+rock {}
-classic+rock rock {}
-classic+rock jazz-rock {}
-classic+rock blues+rock {}
-classic+rock folk+rock {}
-classic+rock folk,+world,+&+country {}
-funk+/+soul prog+rock {}
-vocal pop {}
-vocal prog+rock {}
-vocal art+rock {}
-romantic prog+rock {}
-romantic art+rock {}
-score prog+rock {}
-score art+rock {}
-soundtrack prog+rock {}
-soundtrack art+rock {}
-theme prog+rock {}
-theme art+rock {}
-political prog+rock {}
-political art+rock {}
-public+broadcast prog+rock {}
-public+broadcast art+rock {}
-stage+&+screen prog+rock {}
-stage+&+screen art+rock {}
+psychedelic+rock hard+rock {'property': 'influences'}
+psychedelic+rock symphonic+rock {'property': 'influences'}
+psychedelic+rock glam {'property': 'influences'}
+psychedelic+rock art+rock {'property': 'influences'}
+psychedelic+rock krautrock {'property': 'influences'}
+psychedelic+rock space+rock {'property': 'influences'}
+psychedelic+rock acid+rock {'property': 'hasSubgenre'}
+psychedelic+rock mod {'property': 'influences'}
+hard+rock glam {'property': 'influences'}
+blues+rock hard+rock {'property': 'influences'}
+garage+rock hard+rock {'property': 'influences'}
+garage+rock acid+rock {'property': 'influences'}
+symphonic+rock krautrock {'property': 'influences'}
+symphonic+rock space+rock {'property': 'influences'}
+folk+rock acid+rock {'property': 'influences'}
+folk+rock country+rock {'property': 'influences'}
+acid+rock krautrock {'property': 'influences'}
+glam disco {'property': 'influences'}
+pop disco {'property': 'influences'}
+pop pop+rock {'property': 'influences'}
+pop folk+rock {'property': 'influences'}
+pop glam {'property': 'influences'}
+rhythm+&+blues disco {'property': 'influences'}
+rhythm+&+blues beat {'property': 'influences'}
+rhythm+&+blues rock+&+roll {'property': 'influences'}
+rhythm+&+blues garage+rock {'property': 'influences'}
+rhythm+&+blues rock {'property': 'influences'}
+rhythm+&+blues mod {'property': 'influences'}
+rhythm+&+blues funk+/+soul {'property': 'influences'}
+rock+&+roll pop {'property': 'influences'}
+rock+&+roll beat {'property': 'influences'}
+rock+&+roll rock {'property': 'influences'}
+rock+&+roll garage+rock {'property': 'influences'}
+rock+&+roll glam {'property': 'influences'}
+rock+&+roll hard+rock {'property': 'influences'}
+art+rock glam {'property': 'influences'}
+blues contemporary+jazz {'property': 'influences'}
+blues rhythm+&+blues {'property': 'influences'}
+blues rock+&+roll {'property': 'influences'}
+blues garage+rock {'property': 'influences'}
+blues rock {'property': 'influences'}
+blues psychedelic+rock {'property': 'influences'}
+blues big+band {'property': 'influences'}
+blues classic+rock {'property': 'influences'}
+contemporary+jazz free+jazz {'property': 'influences'}
+contemporary+jazz rock {'property': 'influences'}
+contemporary+jazz symphonic+rock {'property': 'influences'}
+contemporary+jazz psychedelic+rock {'property': 'influences'}
+contemporary+jazz rhythm+&+blues {'property': 'influences'}
+contemporary+jazz rock+&+roll {'property': 'influences'}
+contemporary+jazz big+band {'property': 'influences'}
+contemporary+jazz jazz-rock {'property': 'influences'}
+beat garage+rock {'property': 'influences'}
+rock country+rock {'property': 'influences'}
+rock blues+rock {'property': 'influences'}
+rock folk+rock {'property': 'influences'}
+rock jazz-rock {'property': 'influences'}
+rock pop+rock {'property': 'influences'}
+rock symphonic+rock {'property': 'hasSubgenre'}
+rock psychedelic+rock {'property': 'hasSubgenre'}
+rock garage+rock {'property': 'hasSubgenre'}
+rock acid+rock {'property': 'hasSubgenre'}
+rock glam {'property': 'hasSubgenre'}
+rock art+rock {'property': 'hasSubgenre'}
+rock hard+rock {'property': 'hasSubgenre'}
+rock beat {'property': 'hasSubgenre'}
+rock soft+rock {'property': 'hasSubgenre'}
+rock classic+rock {'property': 'influences'}
+electronic psychedelic {'property': 'influences'}
+electronic krautrock {'property': 'influences'}
+electronic psychedelic+rock {'property': 'influences'}
+psychedelic krautrock {'property': 'influences'}
+psychedelic symphonic+rock {'property': 'influences'}
+psychedelic psychedelic+rock {'property': 'influences'}
+psychedelic jazz-rock {'property': 'influences'}
+folk folk+rock {'property': 'influences'}
+folk blues {'property': 'influences'}
+folk contemporary+jazz {'property': 'influences'}
+folk rock {'property': 'influences'}
+folk symphonic+rock {'property': 'influences'}
+folk classic+rock {'property': 'influences'}
+free+jazz krautrock {'property': 'influences'}
+free+jazz free+improvisation {'property': 'influences'}
+avantgarde krautrock {'property': 'influences'}
+avantgarde free+jazz {'property': 'influences'}
+classical contemporary+jazz {'property': 'influences'}
+classical symphonic+rock {'property': 'influences'}
+classical big+band {'property': 'influences'}
+classical romantic {'property': 'hasSubgenre'}
+classical score {'property': 'influences'}
+classical soundtrack {'property': 'influences'}
+classical theme {'property': 'influences'}
+modern+classical electronic {'property': 'influences'}
+experimental free+jazz {'property': 'influences'}
+experimental free+improvisation {'property': 'influences'}
+jazz mod {'property': 'influences'}
+jazz funk+/+soul {'property': 'influences'}
+soul mod {'property': 'influences'}
+soul funk+/+soul {'property': 'influences'}
+ballad pop {'property': 'influences'}
+ballad rhythm+&+blues {'property': 'influences'}
+ballad folk {'property': 'influences'}
+ballad soul {'property': 'influences'}
+ballad folk,+world,+&+country {'property': 'influences'}
+ballad rock {'property': 'influences'}
+ballad electronic {'property': 'influences'}
+chanson pop {'property': 'influences'}
+chanson folk {'property': 'influences'}
+chanson prog+rock {'property': 'influences'}
+chanson art+rock {'property': 'influences'}
+classic+rock jazz-rock {'property': 'influences'}
+classic+rock blues+rock {'property': 'influences'}
+classic+rock folk+rock {'property': 'influences'}
+classic+rock folk,+world,+&+country {'property': 'influences'}
+funk+/+soul prog+rock {'property': 'influences'}
+vocal pop {'property': 'influences'}
+vocal prog+rock {'property': 'influences'}
+vocal art+rock {'property': 'influences'}
+romantic prog+rock {'property': 'influences'}
+romantic art+rock {'property': 'influences'}
+score prog+rock {'property': 'influences'}
+score art+rock {'property': 'influences'}
+soundtrack prog+rock {'property': 'influences'}
+soundtrack art+rock {'property': 'influences'}
+theme prog+rock {'property': 'influences'}
+theme art+rock {'property': 'influences'}
+political prog+rock {'property': 'influences'}
+political art+rock {'property': 'influences'}
+public+broadcast prog+rock {'property': 'influences'}
+public+broadcast art+rock {'property': 'influences'}
+stage+&+screen prog+rock {'property': 'influences'}
+stage+&+screen art+rock {'property': 'influences'}
