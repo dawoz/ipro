@@ -9,17 +9,17 @@
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix cpannotationschema: <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#> .
-@base <http://ipro-semantic.com> .
+@base <http://www.semanticweb.org/ipro> .
 
-<http://ipro-semantic.com> rdf:type owl:Ontology ;
-                            owl:imports <http://www.ontologydesignpatterns.org/cp/owl/list.owl> ;
-                            dc:creator "Davide Zago"^^xsd:string ;
-                            dc:date 2022 ;
-                            dc:description "IPRO (Italian Progressive Rock Ontology) is a semantic resource that represents the genre of Progressive Rock in Italy from 1966 to 1976. Although it's not an exhaustive resource, in contains various information about bands, albums, tracks, musicians, instruments and genres."@en ;
-                            dc:title "IPRO"^^xsd:string ;
-                            vann:preferredNamespacePrefix "ipro" ;
-                            vann:preferredNamespaceUri "http://ipro-semantic.com" ;
-                            rdfs:label "Italian Progressive Rock Ontology"@en .
+<http://www.semanticweb.org/ipro> rdf:type owl:Ontology ;
+                                   owl:imports <http://www.ontologydesignpatterns.org/cp/owl/list.owl> ;
+                                   dc:creator "Davide Zago"^^xsd:string ;
+                                   dc:date 2022 ;
+                                   dc:description "IPRO (Italian Progressive Rock Ontology) is a semantic resource that represents the genre of Progressive Rock in Italy from 1966 to 1976. Although it's not an exhaustive resource, in contains various information about bands, albums, tracks, musicians, instruments and genres."@en ;
+                                   dc:title "IPRO"^^xsd:string ;
+                                   vann:preferredNamespacePrefix "ipro" ;
+                                   vann:preferredNamespaceUri "http://www.semanticweb.org/ipro#" ;
+                                   rdfs:label "Italian Progressive Rock Ontology"@en .
 
 #################################################################
 #    Annotation properties
@@ -53,7 +53,7 @@ vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-###  http://ipro-semantic.com#ofAlbum
+###  http://www.semanticweb.org/ipro#ofAlbum
 :ofAlbum rdf:type owl:ObjectProperty ;
          rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/cp/owl/bag.owl#itemContent> ;
          rdf:type owl:FunctionalProperty ,
@@ -89,48 +89,48 @@ time:seconds rdf:type owl:DatatypeProperty ;
 #    Classes
 #################################################################
 
-###  http://ipro-semantic.com#Album
+###  http://www.semanticweb.org/ipro#Album
 :Album rdf:type owl:Class ;
        rdfs:subClassOf <http://www.ontologydesignpatterns.org/cp/owl/list.owl#List> ;
        rdfs:comment "An album is a list of tracks composed by an artist or a band. An album typically contains 2 to 10-15 tracks. The typical total duration of an album is from 25 to 40 minutes, which has been limited to the writable surface of a vinyl record."@en ;
        rdfs:label "Album"@en .
 
 
-###  http://ipro-semantic.com#Band
+###  http://www.semanticweb.org/ipro#Band
 :Band rdf:type owl:Class ;
       rdfs:comment "Group of musicians who play music. A band is typically composed of 2 to 10 members. A band of more than 10 members is more frequently considered an orchestra, or a complex. The term band is often referred to popular music genres such as pop, rock, punk, metal, country and many more."@en ;
       rdfs:label "Band"@en .
 
 
-###  http://ipro-semantic.com#Bass
+###  http://www.semanticweb.org/ipro#Bass
 :Bass rdf:type owl:Class ;
       rdfs:subClassOf :StringsPlucked ;
       rdfs:comment "A bass is a stringed musical instrument similar to a guitar but with lower notes. This category includes many variants of the bass."@en ;
       rdfs:label "Bass"@en .
 
 
-###  http://ipro-semantic.com#Bassist
+###  http://www.semanticweb.org/ipro#Bassist
 :Bassist rdf:type owl:Class ;
          rdfs:subClassOf :Musician ;
          rdfs:comment "Musician that plays the bass instrument."@en ;
          rdfs:label "Bassist"@en .
 
 
-###  http://ipro-semantic.com#BrassInstrument
+###  http://www.semanticweb.org/ipro#BrassInstrument
 :BrassInstrument rdf:type owl:Class ;
                  rdfs:subClassOf :MusicalInstrument ;
                  rdfs:comment "A brass instrument is a musical instrument, typically a wind instrument, which is made out of brass."@en ;
                  rdfs:label "Brass instrument"@en .
 
 
-###  http://ipro-semantic.com#Discography
+###  http://www.semanticweb.org/ipro#Discography
 :Discography rdf:type owl:Class ;
              rdfs:subClassOf <http://www.ontologydesignpatterns.org/cp/owl/list.owl#List> ;
              rdfs:comment "A discography is a list of releases published by an artist or a band. It is usually composed of studio albums, live albums and singles."@en ;
              rdfs:label "Discography"@en .
 
 
-###  http://ipro-semantic.com#Drummer
+###  http://www.semanticweb.org/ipro#Drummer
 :Drummer rdf:type owl:Class ;
          rdfs:subClassOf :Musician ;
          rdfs:comment "Musician that plays drums or percussion instruments"@en ;
@@ -138,163 +138,163 @@ time:seconds rdf:type owl:DatatypeProperty ;
                     "Percussionist"@en .
 
 
-###  http://ipro-semantic.com#Drums
+###  http://www.semanticweb.org/ipro#Drums
 :Drums rdf:type owl:Class ;
        rdfs:subClassOf :PercussionInstrument ;
        rdfs:comment "Drums (or drum kit) are one of the most common percussion instruments and it is a collection of different drums. The drum kit is very popular in genres such as rock, pop, punk, metal, and many more."@en ;
        rdfs:label "Drums / drum kit"@en .
 
 
-###  http://ipro-semantic.com#Effects
+###  http://www.semanticweb.org/ipro#Effects
 :Effects rdf:type owl:Class ;
          rdfs:subClassOf :MusicalInstrument ;
          rdfs:comment "General effect used to play music"@en ;
          rdfs:label "Effects"@en .
 
 
-###  http://ipro-semantic.com#Genre
+###  http://www.semanticweb.org/ipro#Genre
 :Genre rdf:type owl:Class ;
        rdfs:comment "A genre is a term used to describe music with similarities, such as: similar or same instruments, similar rhythm, tempo, harmonies and melodies, and so on. A genre typically derive from one or more genres and it is strongly related to the place it originated from."@en ;
        rdfs:label "Genre"@en .
 
 
-###  http://ipro-semantic.com#Guitar
+###  http://www.semanticweb.org/ipro#Guitar
 :Guitar rdf:type owl:Class ;
         rdfs:subClassOf :StringsPlucked ;
         rdfs:comment "A guitar is a stringed musical instrument with many variants. It is typically played by plucking the strings"@en ;
         rdfs:label "Guitar"@en .
 
 
-###  http://ipro-semantic.com#Guitarist
+###  http://www.semanticweb.org/ipro#Guitarist
 :Guitarist rdf:type owl:Class ;
            rdfs:subClassOf :Musician ;
            rdfs:comment "Musician that plays the guitar."@en ;
            rdfs:label "Guitarist"@en .
 
 
-###  http://ipro-semantic.com#Keyboard
+###  http://www.semanticweb.org/ipro#Keyboard
 :Keyboard rdf:type owl:Class ;
           rdfs:subClassOf :MusicalInstrument ;
           rdfs:comment "A keyboard is a musical instrument with keys. A keyboard player presses the keys to play  sound an music."@en ;
           rdfs:label "Keyboard"@en .
 
 
-###  http://ipro-semantic.com#Keyboardist
+###  http://www.semanticweb.org/ipro#Keyboardist
 :Keyboardist rdf:type owl:Class ;
              rdfs:subClassOf :Musician ;
              rdfs:comment "Musician that plays the keyboards."@en ;
              rdfs:label "Keyboardist"@en .
 
 
-###  http://ipro-semantic.com#MusicalInstrument
+###  http://www.semanticweb.org/ipro#MusicalInstrument
 :MusicalInstrument rdf:type owl:Class ;
                    rdfs:comment "A musical instrument is an instrument used to play music"@en ;
                    rdfs:label "Musical instrument"@en .
 
 
-###  http://ipro-semantic.com#Musician
+###  http://www.semanticweb.org/ipro#Musician
 :Musician rdf:type owl:Class ;
           rdfs:comment "A person who plays a musical instrument, especially as a profession, or is musically talented."@en ;
           rdfs:label "Musician"@en .
 
 
-###  http://ipro-semantic.com#Organ
+###  http://www.semanticweb.org/ipro#Organ
 :Organ rdf:type owl:Class ;
        rdfs:subClassOf :Keyboard ;
        rdfs:comment "An organ is a keyboard with an unique sound. The main categories of organs are pipe organs and electric organs, which have very different sounds."@en ;
        rdfs:label "Organ"@en .
 
 
-###  http://ipro-semantic.com#Participation
+###  http://www.semanticweb.org/ipro#Participation
 :Participation rdf:type owl:Class ;
                rdfs:comment "Participation of a musician to an album. The participation can be with a list of instruments or with roles in the production of the piece of music."@en ;
                rdfs:label "Participation"@en .
 
 
-###  http://ipro-semantic.com#PercussionInstrument
+###  http://www.semanticweb.org/ipro#PercussionInstrument
 :PercussionInstrument rdf:type owl:Class ;
                       rdfs:subClassOf :MusicalInstrument ;
                       rdfs:comment "A percussion instrument is a musical instrument which produces sound by being hit or struck."@en ;
                       rdfs:label "Percussion instrument"@en .
 
 
-###  http://ipro-semantic.com#Percussions
+###  http://www.semanticweb.org/ipro#Percussions
 :Percussions rdf:type owl:Class ;
              rdfs:subClassOf :PercussionInstrument ;
              rdfs:comment "Percussions include a set of various percussion instruments that are not commonly identified as a drum kit."@en ;
              rdfs:label "Percussions"@en .
 
 
-###  http://ipro-semantic.com#Piano
+###  http://www.semanticweb.org/ipro#Piano
 :Piano rdf:type owl:Class ;
        rdfs:subClassOf :Keyboard ;
        rdfs:comment "A piano is a keyboard where the key press triggers a hammer that strikes a string. Every key has one hammer. The piano is one of the most known musical instruments."@en ;
        rdfs:label "Piano"@en .
 
 
-###  http://ipro-semantic.com#ProductionRole
+###  http://www.semanticweb.org/ipro#ProductionRole
 :ProductionRole rdf:type owl:Class ;
                 rdfs:comment "Generic role of a musician in a piece of music that is not strictly playing an instrument."@en ;
                 rdfs:label "Production role"@en .
 
 
-###  http://ipro-semantic.com#Release
+###  http://www.semanticweb.org/ipro#Release
 :Release rdf:type owl:Class ;
          rdfs:subClassOf <http://www.ontologydesignpatterns.org/cp/owl/list.owl#ListItem> ;
          rdfs:comment "A release is a publication of an album (or single) by a band. A release is part of a discography."@en ;
          rdfs:label "Release"@en .
 
 
-###  http://ipro-semantic.com#Singer
+###  http://www.semanticweb.org/ipro#Singer
 :Singer rdf:type owl:Class ;
         rdfs:subClassOf :Musician ;
         rdfs:comment "Musician that sings / has vocal parts in a piece of music."@en ;
         rdfs:label "Singer"@en .
 
 
-###  http://ipro-semantic.com#Strings
+###  http://www.semanticweb.org/ipro#Strings
 :Strings rdf:type owl:Class ;
          rdfs:subClassOf :MusicalInstrument ;
          rdfs:comment "Strings include a set of musical instruments with strings. A stringed instrument can be played by plucking or drawing the strings, which makes them vibrate and produce sound."@en ;
          rdfs:label "Strings"@en .
 
 
-###  http://ipro-semantic.com#StringsDrawn
+###  http://www.semanticweb.org/ipro#StringsDrawn
 :StringsDrawn rdf:type owl:Class ;
               rdfs:subClassOf :Strings ;
               rdfs:comment "Stringed instrument that are played by drawing the strings."@en ;
               rdfs:label "Strings drawn"@en .
 
 
-###  http://ipro-semantic.com#StringsPlucked
+###  http://www.semanticweb.org/ipro#StringsPlucked
 :StringsPlucked rdf:type owl:Class ;
                 rdfs:subClassOf :Strings ;
                 rdfs:comment "Stringed instruments played by plucking the strings."@en ;
                 rdfs:label "Strings plucked"@en .
 
 
-###  http://ipro-semantic.com#Synthesizer
+###  http://www.semanticweb.org/ipro#Synthesizer
 :Synthesizer rdf:type owl:Class ;
              rdfs:subClassOf :Keyboard ;
              rdfs:comment "A synthesizer is an electronic musical instruments that plays sound through electric signals. The sound of a synthesizer comes from an oscillator with audible frequency; the sound can be filtered and modulated."@en ;
              rdfs:label "Synthesizer"@en .
 
 
-###  http://ipro-semantic.com#Track
+###  http://www.semanticweb.org/ipro#Track
 :Track rdf:type owl:Class ;
        rdfs:subClassOf <http://www.ontologydesignpatterns.org/cp/owl/list.owl#ListItem> ;
        rdfs:comment "A track (or song) is a piece of music and element of an album. A track have a duration from 2 minutes or less to 30 minutes, or even fill the whole album."@en ;
        rdfs:label "Track"@en .
 
 
-###  http://ipro-semantic.com#Vocals
+###  http://www.semanticweb.org/ipro#Vocals
 :Vocals rdf:type owl:Class ;
         rdfs:subClassOf :MusicalInstrument ;
         rdfs:comment "Part of a piece of music that is sung. Vocals are an ubuquitous element of modern music."@en ;
         rdfs:label "Vocals"@en .
 
 
-###  http://ipro-semantic.com#WindInstrument
+###  http://www.semanticweb.org/ipro#WindInstrument
 :WindInstrument rdf:type owl:Class ;
                 rdfs:subClassOf :MusicalInstrument ;
                 rdfs:comment "A musical instrument in which sound is produced by the vibration of air, typically by the player blowing into the instrument."@en ;
