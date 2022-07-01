@@ -14,6 +14,7 @@
      xmlns:time="http://www.w3.org/2006/time#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:wikidata="https://www.wikidata.org/entity/"
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/ipro">
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/list.owl"/>
@@ -253,6 +254,7 @@
     <!-- http://www.semanticweb.org/ipro#Band -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ipro#Band">
+        <owl:equivalentClass rdf:resource="https://www.wikidata.org/entity/Q215380"/>
         <rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/AgentClass"/>
         <rdfs:comment xml:lang="en">Group of musicians who play music. A band is typically composed of 2 to 10 members. A band of more than 10 members is more frequently considered an orchestra, or a complex. The term band is often referred to popular music genres such as pop, rock, punk, metal, country and many more.</rdfs:comment>
         <rdfs:label xml:lang="en">Band</rdfs:label>
@@ -557,6 +559,14 @@
     <!-- http://xmlns.com/foaf/0.1/Person -->
 
     <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person"/>
+    
+
+
+    <!-- https://www.wikidata.org/entity/Q215380 -->
+
+    <owl:Class rdf:about="https://www.wikidata.org/entity/Q215380">
+        <rdfs:label>musical group</rdfs:label>
+    </owl:Class>
 </rdf:RDF>
 
 
