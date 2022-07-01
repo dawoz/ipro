@@ -7838,19 +7838,26 @@ Before forming De De Lind drummer Rebajoli had played with New Dada and I Nuovi 
                       <http://www.ontologydesignpatterns.org/cp/owl/list.owl#ListItem> ,
                       :Track ;
              :nextTrack :I_Heard_A_Butterfly_track ;
-             <http://www.w3.org/2006/time#hasDuration> :Fase_track_duration ;
+             <http://www.w3.org/2006/time#hasDuration> :Fase_track1_duration ;
              :trackNumber 4 ;
              rdfs:comment "Fase is the fourth track of Maxophone album"@en ;
              rdfs:label "Fase"@en .
 
 
+###  http://www.semanticweb.org/ipro#Fase_track1_duration
+:Fase_track1_duration rdf:type owl:NamedIndividual ,
+                               <http://www.w3.org/2006/time#DurationDescription> ;
+                      <http://www.w3.org/2006/time#minutes> 6 ;
+                      <http://www.w3.org/2006/time#seconds> 47 ;
+                      rdfs:comment "Duration of Fase track"@en ;
+                      rdfs:label "Fase track duration"@en .
+
+
 ###  http://www.semanticweb.org/ipro#Fase_track_duration
 :Fase_track_duration rdf:type owl:NamedIndividual ,
                               <http://www.w3.org/2006/time#DurationDescription> ;
-                     <http://www.w3.org/2006/time#minutes> 6 ,
-                                                           7 ;
-                     <http://www.w3.org/2006/time#seconds> 4 ,
-                                                           47 ;
+                     <http://www.w3.org/2006/time#minutes> 7 ;
+                     <http://www.w3.org/2006/time#seconds> 4 ;
                      rdfs:comment "Duration of Fase track"@en ;
                      rdfs:label "Fase track duration"@en .
 
@@ -7929,10 +7936,19 @@ Before forming De De Lind drummer Rebajoli had played with New Dada and I Nuovi 
                         <http://www.ontologydesignpatterns.org/cp/owl/list.owl#ListItem> ,
                         :Track ;
                :nextTrack :The_Maker_track ;
-               <http://www.w3.org/2006/time#hasDuration> :Felona_track_duration ;
+               <http://www.w3.org/2006/time#hasDuration> :Felona_track1_duration ;
                :trackNumber 2 ;
                rdfs:comment "Felona is the second track of Felona E Sorona album"@en ;
                rdfs:label "Felona"@en .
+
+
+###  http://www.semanticweb.org/ipro#Felona_track1_duration
+:Felona_track1_duration rdf:type owl:NamedIndividual ,
+                                 <http://www.w3.org/2006/time#DurationDescription> ;
+                        <http://www.w3.org/2006/time#minutes> 1 ;
+                        <http://www.w3.org/2006/time#seconds> 58 ;
+                        rdfs:comment "Duration of Felona track"@en ;
+                        rdfs:label "Felona track duration"@en .
 
 
 ###  http://www.semanticweb.org/ipro#Felona_track_duration
@@ -8054,19 +8070,26 @@ Before forming De De Lind drummer Rebajoli had played with New Dada and I Nuovi 
                         <http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Item> ,
                         <http://www.ontologydesignpatterns.org/cp/owl/list.owl#ListItem> ,
                         :Track ;
-               <http://www.w3.org/2006/time#hasDuration> :Finale_track_duration ;
+               <http://www.w3.org/2006/time#hasDuration> :Finale_track1_duration ;
                :trackNumber 12 ;
                rdfs:comment "Finale is the twelfth track of Sognando E Risognando album"@en ;
                rdfs:label "Finale"@en .
 
 
+###  http://www.semanticweb.org/ipro#Finale_track1_duration
+:Finale_track1_duration rdf:type owl:NamedIndividual ,
+                                 <http://www.w3.org/2006/time#DurationDescription> ;
+                        <http://www.w3.org/2006/time#minutes> 1 ;
+                        <http://www.w3.org/2006/time#seconds> 18 ;
+                        rdfs:comment "Duration of Finale track"@en ;
+                        rdfs:label "Finale track duration"@en .
+
+
 ###  http://www.semanticweb.org/ipro#Finale_track_duration
 :Finale_track_duration rdf:type owl:NamedIndividual ,
                                 <http://www.w3.org/2006/time#DurationDescription> ;
-                       <http://www.w3.org/2006/time#minutes> 1 ,
-                                                             2 ;
-                       <http://www.w3.org/2006/time#seconds> 12 ,
-                                                             18 ;
+                       <http://www.w3.org/2006/time#minutes> 2 ;
+                       <http://www.w3.org/2006/time#seconds> 12 ;
                        rdfs:comment "Duration of Finale track"@en ;
                        rdfs:label "Finale track duration"@en .
 
@@ -12445,19 +12468,26 @@ Italian seventies progressive rock band playing dynamic prog with many rhythm ch
                              <http://www.ontologydesignpatterns.org/cp/owl/list.owl#ListItem> ,
                              :Track ;
                     :nextTrack :Mare_Della_Tranquillitr_track ;
-                    <http://www.w3.org/2006/time#hasDuration> :Impressione_track_duration ;
+                    <http://www.w3.org/2006/time#hasDuration> :Impressione_track1_duration ;
                     :trackNumber 1 ;
                     rdfs:comment "Impressione is the first track of I Teoremi album"@en ;
                     rdfs:label "Impressione"@en .
 
 
+###  http://www.semanticweb.org/ipro#Impressione_track1_duration
+:Impressione_track1_duration rdf:type owl:NamedIndividual ,
+                                      <http://www.w3.org/2006/time#DurationDescription> ;
+                             <http://www.w3.org/2006/time#minutes> 7 ;
+                             <http://www.w3.org/2006/time#seconds> 25 ;
+                             rdfs:comment "Duration of Impressione track"@en ;
+                             rdfs:label "Impressione track duration"@en .
+
+
 ###  http://www.semanticweb.org/ipro#Impressione_track_duration
 :Impressione_track_duration rdf:type owl:NamedIndividual ,
                                      <http://www.w3.org/2006/time#DurationDescription> ;
-                            <http://www.w3.org/2006/time#minutes> 7 ,
-                                                                  8 ;
-                            <http://www.w3.org/2006/time#seconds> 25 ,
-                                                                  27 ;
+                            <http://www.w3.org/2006/time#minutes> 8 ;
+                            <http://www.w3.org/2006/time#seconds> 27 ;
                             rdfs:comment "Duration of Impressione track"@en ;
                             rdfs:label "Impressione track duration"@en .
 
@@ -12835,10 +12865,19 @@ Italian seventies progressive rock band playing dynamic prog with many rhythm ch
                               <http://www.ontologydesignpatterns.org/cp/owl/list.owl#ListItem> ,
                               :Track ;
                      :nextTrack :Il_Giornio_Degli_Azzimi_track ;
-                     <http://www.w3.org/2006/time#hasDuration> :Introduzione_track_duration ;
+                     <http://www.w3.org/2006/time#hasDuration> :Introduzione_track1_duration ;
                      :trackNumber 1 ;
                      rdfs:comment "Introduzione is the first track of Passio Secundum Mattheum album"@en ;
                      rdfs:label "Introduzione"@en .
+
+
+###  http://www.semanticweb.org/ipro#Introduzione_track1_duration
+:Introduzione_track1_duration rdf:type owl:NamedIndividual ,
+                                       <http://www.w3.org/2006/time#DurationDescription> ;
+                              <http://www.w3.org/2006/time#minutes> 2 ;
+                              <http://www.w3.org/2006/time#seconds> 16 ;
+                              rdfs:comment "Duration of Introduzione track"@en ;
+                              rdfs:label "Introduzione track duration"@en .
 
 
 ###  http://www.semanticweb.org/ipro#Introduzione_track2
@@ -12847,10 +12886,19 @@ Italian seventies progressive rock band playing dynamic prog with many rhythm ch
                               <http://www.ontologydesignpatterns.org/cp/owl/list.owl#ListItem> ,
                               :Track ;
                      :nextTrack :Ad_Gloriam_track ;
-                     <http://www.w3.org/2006/time#hasDuration> :Introduzione_track_duration ;
+                     <http://www.w3.org/2006/time#hasDuration> :Introduzione_track2_duration ;
                      :trackNumber 1 ;
                      rdfs:comment "Introduzione is the first track of Ad Gloriam album"@en ;
                      rdfs:label "Introduzione"@en .
+
+
+###  http://www.semanticweb.org/ipro#Introduzione_track2_duration
+:Introduzione_track2_duration rdf:type owl:NamedIndividual ,
+                                       <http://www.w3.org/2006/time#DurationDescription> ;
+                              <http://www.w3.org/2006/time#minutes> 1 ;
+                              <http://www.w3.org/2006/time#seconds> 45 ;
+                              rdfs:comment "Duration of Introduzione track"@en ;
+                              rdfs:label "Introduzione track duration"@en .
 
 
 ###  http://www.semanticweb.org/ipro#Introduzione_track3
@@ -12859,10 +12907,19 @@ Italian seventies progressive rock band playing dynamic prog with many rhythm ch
                               <http://www.ontologydesignpatterns.org/cp/owl/list.owl#ListItem> ,
                               :Track ;
                      :nextTrack :L_uomo_track ;
-                     <http://www.w3.org/2006/time#hasDuration> :Introduzione_track_duration ;
+                     <http://www.w3.org/2006/time#hasDuration> :Introduzione_track3_duration ;
                      :trackNumber 1 ;
                      rdfs:comment "Introduzione is the first track of L'Uomo album"@en ;
                      rdfs:label "Introduzione"@en .
+
+
+###  http://www.semanticweb.org/ipro#Introduzione_track3_duration
+:Introduzione_track3_duration rdf:type owl:NamedIndividual ,
+                                       <http://www.w3.org/2006/time#DurationDescription> ;
+                              <http://www.w3.org/2006/time#minutes> 3 ;
+                              <http://www.w3.org/2006/time#seconds> 26 ;
+                              rdfs:comment "Duration of Introduzione track"@en ;
+                              rdfs:label "Introduzione track duration"@en .
 
 
 ###  http://www.semanticweb.org/ipro#Introduzione_track4
@@ -12871,24 +12928,26 @@ Italian seventies progressive rock band playing dynamic prog with many rhythm ch
                               <http://www.ontologydesignpatterns.org/cp/owl/list.owl#ListItem> ,
                               :Track ;
                      :nextTrack :Impressioni_di_Settembre_track ;
-                     <http://www.w3.org/2006/time#hasDuration> :Introduzione_track_duration ;
+                     <http://www.w3.org/2006/time#hasDuration> :Introduzione_track4_duration ;
                      :trackNumber 1 ;
                      rdfs:comment "Introduzione is the first track of Storia Di Un Minuto album"@en ;
                      rdfs:label "Introduzione"@en .
 
 
+###  http://www.semanticweb.org/ipro#Introduzione_track4_duration
+:Introduzione_track4_duration rdf:type owl:NamedIndividual ,
+                                       <http://www.w3.org/2006/time#DurationDescription> ;
+                              <http://www.w3.org/2006/time#minutes> 1 ;
+                              <http://www.w3.org/2006/time#seconds> 10 ;
+                              rdfs:comment "Duration of Introduzione track"@en ;
+                              rdfs:label "Introduzione track duration"@en .
+
+
 ###  http://www.semanticweb.org/ipro#Introduzione_track_duration
 :Introduzione_track_duration rdf:type owl:NamedIndividual ,
                                       <http://www.w3.org/2006/time#DurationDescription> ;
-                             <http://www.w3.org/2006/time#minutes> 1 ,
-                                                                   15 ,
-                                                                   2 ,
-                                                                   3 ;
-                             <http://www.w3.org/2006/time#seconds> 10 ,
-                                                                   11 ,
-                                                                   16 ,
-                                                                   26 ,
-                                                                   45 ;
+                             <http://www.w3.org/2006/time#minutes> 15 ;
+                             <http://www.w3.org/2006/time#seconds> 11 ;
                              rdfs:comment "Duration of Introduzione track"@en ;
                              rdfs:label "Introduzione track duration"@en .
 
@@ -13547,18 +13606,26 @@ In Milan in 1968 the composer Antonio Bartoccetti founded the group JACULA, with
                         <http://www.ontologydesignpatterns.org/cp/owl/list.owl#ListItem> ,
                         :Track ;
                :nextTrack :Scotched_track ;
-               <http://www.w3.org/2006/time#hasDuration> :Johann_track_duration ;
+               <http://www.w3.org/2006/time#hasDuration> :Johann_track1_duration ;
                :trackNumber 7 ;
                rdfs:comment "Johann is the seventh track of Contamination album"@en ;
                rdfs:label "Johann"@en .
+
+
+###  http://www.semanticweb.org/ipro#Johann_track1_duration
+:Johann_track1_duration rdf:type owl:NamedIndividual ,
+                                 <http://www.w3.org/2006/time#DurationDescription> ;
+                        <http://www.w3.org/2006/time#minutes> 1 ;
+                        <http://www.w3.org/2006/time#seconds> 22 ;
+                        rdfs:comment "Duration of Johann track"@en ;
+                        rdfs:label "Johann track duration"@en .
 
 
 ###  http://www.semanticweb.org/ipro#Johann_track_duration
 :Johann_track_duration rdf:type owl:NamedIndividual ,
                                 <http://www.w3.org/2006/time#DurationDescription> ;
                        <http://www.w3.org/2006/time#minutes> 1 ;
-                       <http://www.w3.org/2006/time#seconds> 22 ,
-                                                             23 ;
+                       <http://www.w3.org/2006/time#seconds> 23 ;
                        rdfs:comment "Duration of Johann track"@en ;
                        rdfs:label "Johann track duration"@en .
 
@@ -21780,19 +21847,26 @@ accepted into PR. Pooh is not a prog act... but put out albums that are musts in
                           <http://www.ontologydesignpatterns.org/cp/owl/list.owl#ListItem> ,
                           :Track ;
                  :nextTrack :credo_track ;
-                 <http://www.w3.org/2006/time#hasDuration> :Preludio_track_duration ;
+                 <http://www.w3.org/2006/time#hasDuration> :Preludio_track1_duration ;
                  :trackNumber 1 ;
                  rdfs:comment "Preludio is the first track of Un Po' Del Nostro Tempo Migliore album"@en ;
                  rdfs:label "Preludio"@en .
 
 
+###  http://www.semanticweb.org/ipro#Preludio_track1_duration
+:Preludio_track1_duration rdf:type owl:NamedIndividual ,
+                                   <http://www.w3.org/2006/time#DurationDescription> ;
+                          <http://www.w3.org/2006/time#minutes> 3 ;
+                          <http://www.w3.org/2006/time#seconds> 50 ;
+                          rdfs:comment "Duration of Preludio track"@en ;
+                          rdfs:label "Preludio track duration"@en .
+
+
 ###  http://www.semanticweb.org/ipro#Preludio_track_duration
 :Preludio_track_duration rdf:type owl:NamedIndividual ,
                                   <http://www.w3.org/2006/time#DurationDescription> ;
-                         <http://www.w3.org/2006/time#minutes> 3 ,
-                                                               4 ;
-                         <http://www.w3.org/2006/time#seconds> 10 ,
-                                                               50 ;
+                         <http://www.w3.org/2006/time#minutes> 4 ;
+                         <http://www.w3.org/2006/time#seconds> 10 ;
                          rdfs:comment "Duration of Preludio track"@en ;
                          rdfs:label "Preludio track duration"@en .
 
@@ -24454,18 +24528,26 @@ The first four albums are highly recommended to fans of Krautrock and to RPI fan
                         <http://www.ontologydesignpatterns.org/cp/owl/list.owl#ListItem> ,
                         :Track ;
                :nextTrack :They_Say_Dolphins_Speak_track ;
-               <http://www.w3.org/2006/time#hasDuration> :Slogan_track_duration ;
+               <http://www.w3.org/2006/time#hasDuration> :Slogan_track1_duration ;
                :trackNumber 4 ;
                rdfs:comment "Slogan is the fourth track of As In A Last Supper album"@en ;
                rdfs:label "Slogan"@en .
+
+
+###  http://www.semanticweb.org/ipro#Slogan_track1_duration
+:Slogan_track1_duration rdf:type owl:NamedIndividual ,
+                                 <http://www.w3.org/2006/time#DurationDescription> ;
+                        <http://www.w3.org/2006/time#minutes> 7 ;
+                        <http://www.w3.org/2006/time#seconds> 25 ;
+                        rdfs:comment "Duration of Slogan track"@en ;
+                        rdfs:label "Slogan track duration"@en .
 
 
 ###  http://www.semanticweb.org/ipro#Slogan_track_duration
 :Slogan_track_duration rdf:type owl:NamedIndividual ,
                                 <http://www.w3.org/2006/time#DurationDescription> ;
                        <http://www.w3.org/2006/time#minutes> 7 ;
-                       <http://www.w3.org/2006/time#seconds> 23 ,
-                                                             25 ;
+                       <http://www.w3.org/2006/time#seconds> 23 ;
                        rdfs:comment "Duration of Slogan track"@en ;
                        rdfs:label "Slogan track duration"@en .
 
@@ -24919,10 +25001,19 @@ The first four albums are highly recommended to fans of Krautrock and to RPI fan
                         <http://www.ontologydesignpatterns.org/cp/owl/list.owl#ListItem> ,
                         :Track ;
                :nextTrack :The_Plan_track ;
-               <http://www.w3.org/2006/time#hasDuration> :Sorona_track_duration ;
+               <http://www.w3.org/2006/time#hasDuration> :Sorona_track1_duration ;
                :trackNumber 5 ;
                rdfs:comment "Sorona is the fifth track of Felona E Sorona album"@en ;
                rdfs:label "Sorona"@en .
+
+
+###  http://www.semanticweb.org/ipro#Sorona_track1_duration
+:Sorona_track1_duration rdf:type owl:NamedIndividual ,
+                                 <http://www.w3.org/2006/time#DurationDescription> ;
+                        <http://www.w3.org/2006/time#minutes> 2 ;
+                        <http://www.w3.org/2006/time#seconds> 28 ;
+                        rdfs:comment "Duration of Sorona track"@en ;
+                        rdfs:label "Sorona track duration"@en .
 
 
 ###  http://www.semanticweb.org/ipro#Sorona_track_duration
@@ -25816,19 +25907,26 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
                       <http://www.ontologydesignpatterns.org/cp/owl/list.owl#ListItem> ,
                       :Track ;
              :nextTrack :Variazione_I_To_Plinius_track ;
-             <http://www.w3.org/2006/time#hasDuration> :Tema_track_duration ;
+             <http://www.w3.org/2006/time#hasDuration> :Tema_track1_duration ;
              :trackNumber 2 ;
              rdfs:comment "Tema is the second track of Preludio Tema Variazioni Canzona album"@en ;
              rdfs:label "Tema"@en .
 
 
+###  http://www.semanticweb.org/ipro#Tema_track1_duration
+:Tema_track1_duration rdf:type owl:NamedIndividual ,
+                               <http://www.w3.org/2006/time#DurationDescription> ;
+                      <http://www.w3.org/2006/time#minutes> 4 ;
+                      <http://www.w3.org/2006/time#seconds> 50 ;
+                      rdfs:comment "Duration of Tema track"@en ;
+                      rdfs:label "Tema track duration"@en .
+
+
 ###  http://www.semanticweb.org/ipro#Tema_track_duration
 :Tema_track_duration rdf:type owl:NamedIndividual ,
                               <http://www.w3.org/2006/time#DurationDescription> ;
-                     <http://www.w3.org/2006/time#minutes> 2 ,
-                                                           4 ;
-                     <http://www.w3.org/2006/time#seconds> 32 ,
-                                                           50 ;
+                     <http://www.w3.org/2006/time#minutes> 2 ;
+                     <http://www.w3.org/2006/time#seconds> 32 ;
                      rdfs:comment "Duration of Tema track"@en ;
                      rdfs:label "Tema track duration"@en .
 
@@ -26714,18 +26812,26 @@ Stormy Six is one of the founders of RIO musical genre and on of the original fi
                             <http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Item> ,
                             <http://www.ontologydesignpatterns.org/cp/owl/list.owl#ListItem> ,
                             :Track ;
-                   <http://www.w3.org/2006/time#hasDuration> :Traccia_II_track_duration ;
+                   <http://www.w3.org/2006/time#hasDuration> :Traccia_II_track1_duration ;
                    :trackNumber 7 ;
                    rdfs:comment "Traccia II is the seventh track of Banco Del Mutuo Soccorso album"@en ;
                    rdfs:label "Traccia II"@en .
+
+
+###  http://www.semanticweb.org/ipro#Traccia_II_track1_duration
+:Traccia_II_track1_duration rdf:type owl:NamedIndividual ,
+                                     <http://www.w3.org/2006/time#DurationDescription> ;
+                            <http://www.w3.org/2006/time#minutes> 2 ;
+                            <http://www.w3.org/2006/time#seconds> 42 ;
+                            rdfs:comment "Duration of Traccia II track"@en ;
+                            rdfs:label "Traccia II track duration"@en .
 
 
 ###  http://www.semanticweb.org/ipro#Traccia_II_track_duration
 :Traccia_II_track_duration rdf:type owl:NamedIndividual ,
                                     <http://www.w3.org/2006/time#DurationDescription> ;
                            <http://www.w3.org/2006/time#minutes> 2 ;
-                           <http://www.w3.org/2006/time#seconds> 39 ,
-                                                                 42 ;
+                           <http://www.w3.org/2006/time#seconds> 39 ;
                            rdfs:comment "Duration of Traccia II track"@en ;
                            rdfs:label "Traccia II track duration"@en .
 
