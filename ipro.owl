@@ -14,7 +14,7 @@
      xmlns:time="http://www.w3.org/2006/time#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:dcterms="http://purl.org/dc/terms/"
-     xmlns:wikidata="https://www.wikidata.org/entity/"
+     xmlns:wikidata="http://www.wikidata.org/entity/"
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/ipro">
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/list.owl"/>
