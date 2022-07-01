@@ -2,14 +2,18 @@
 <rdf:RDF xmlns="http://www.semanticweb.org/ipro#"
      xml:base="http://www.semanticweb.org/ipro"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:mo="http://purl.org/ontology/mo/"
+     xmlns:dbo="http://dbpedia.org/ontology/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:list="http://www.ontologydesignpatterns.org/cp/owl/list.owl#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:time="http://www.w3.org/2006/time#"
      xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/ipro">
         <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/list.owl"/>
@@ -144,6 +148,98 @@
     
 
 
+    <!-- http://dbpedia.org/ontology/Album -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Album">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/ipro#Album"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/ArtistDiscography -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/ArtistDiscography">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/ipro#Discography"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Instrument -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Instrument">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/ipro#MusicalInstrument"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/MusicalArtist -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/MusicalArtist">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/ipro#Musician"/>
+    </owl:Class>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Song -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Song">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/ipro#Track"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/dc/terms/Agent -->
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/Agent"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/AgentClass -->
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/AgentClass"/>
+    
+
+
+    <!-- http://purl.org/ontology/mo/Genre -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/mo/Genre">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/ipro#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/mo/Instrument -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/mo/Instrument">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/ipro#MusicalInstrument"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/mo/MusicArtist -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/mo/MusicArtist">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/ipro#Musician"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/mo/MusicGroup -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/mo/MusicGroup">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/ipro#Band"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/mo/Release -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/mo/Release">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/ipro#Release"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/ipro#Album -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ipro#Album">
@@ -157,6 +253,7 @@
     <!-- http://www.semanticweb.org/ipro#Band -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ipro#Band">
+        <rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/AgentClass"/>
         <rdfs:comment xml:lang="en">Group of musicians who play music. A band is typically composed of 2 to 10 members. A band of more than 10 members is more frequently considered an orchestra, or a complex. The term band is often referred to popular music genres such as pop, rock, punk, metal, country and many more.</rdfs:comment>
         <rdfs:label xml:lang="en">Band</rdfs:label>
     </owl:Class>
@@ -295,6 +392,8 @@
     <!-- http://www.semanticweb.org/ipro#Musician -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ipro#Musician">
+        <rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/Agent"/>
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
         <rdfs:comment xml:lang="en">A person who plays a musical instrument, especially as a profession, or is musically talented.</rdfs:comment>
         <rdfs:label xml:lang="en">Musician</rdfs:label>
     </owl:Class>
@@ -452,6 +551,12 @@
     <!-- http://www.w3.org/2006/time#DurationDescription -->
 
     <owl:Class rdf:about="http://www.w3.org/2006/time#DurationDescription"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person"/>
 </rdf:RDF>
 
 

@@ -1,13 +1,17 @@
 @prefix : <http://www.semanticweb.org/ipro#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mo: <http://purl.org/ontology/mo/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix list: <http://www.ontologydesignpatterns.org/cp/owl/list.owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix cpannotationschema: <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#> .
 @base <http://www.semanticweb.org/ipro> .
 
@@ -89,15 +93,74 @@ time:seconds rdf:type owl:DatatypeProperty ;
 #    Classes
 #################################################################
 
+###  http://dbpedia.org/ontology/Album
+dbo:Album rdf:type owl:Class ;
+          owl:equivalentClass :Album .
+
+
+###  http://dbpedia.org/ontology/ArtistDiscography
+dbo:ArtistDiscography rdf:type owl:Class ;
+                      owl:equivalentClass :Discography .
+
+
+###  http://dbpedia.org/ontology/Instrument
+dbo:Instrument rdf:type owl:Class ;
+               owl:equivalentClass :MusicalInstrument .
+
+
+###  http://dbpedia.org/ontology/MusicalArtist
+dbo:MusicalArtist rdf:type owl:Class ;
+                  owl:equivalentClass :Musician .
+
+
+###  http://dbpedia.org/ontology/Song
+dbo:Song rdf:type owl:Class ;
+         owl:equivalentClass :Track .
+
+
+###  http://purl.org/dc/terms/Agent
+dcterms:Agent rdf:type owl:Class .
+
+
+###  http://purl.org/dc/terms/AgentClass
+dcterms:AgentClass rdf:type owl:Class .
+
+
+###  http://purl.org/ontology/mo/Genre
+mo:Genre rdf:type owl:Class ;
+         owl:equivalentClass :Genre .
+
+
+###  http://purl.org/ontology/mo/Instrument
+mo:Instrument rdf:type owl:Class ;
+              owl:equivalentClass :MusicalInstrument .
+
+
+###  http://purl.org/ontology/mo/MusicArtist
+mo:MusicArtist rdf:type owl:Class ;
+               owl:equivalentClass :Musician .
+
+
+###  http://purl.org/ontology/mo/MusicGroup
+mo:MusicGroup rdf:type owl:Class ;
+              owl:equivalentClass :Band .
+
+
+###  http://purl.org/ontology/mo/Release
+mo:Release rdf:type owl:Class ;
+           owl:equivalentClass :Release .
+
+
 ###  http://www.semanticweb.org/ipro#Album
 :Album rdf:type owl:Class ;
-       rdfs:subClassOf <http://www.ontologydesignpatterns.org/cp/owl/list.owl#List> ;
+       rdfs:subClassOf list:List ;
        rdfs:comment "An album is a list of tracks composed by an artist or a band. An album typically contains 2 to 10-15 tracks. The typical total duration of an album is from 25 to 40 minutes, which has been limited to the writable surface of a vinyl record."@en ;
        rdfs:label "Album"@en .
 
 
 ###  http://www.semanticweb.org/ipro#Band
 :Band rdf:type owl:Class ;
+      rdfs:subClassOf dcterms:AgentClass ;
       rdfs:comment "Group of musicians who play music. A band is typically composed of 2 to 10 members. A band of more than 10 members is more frequently considered an orchestra, or a complex. The term band is often referred to popular music genres such as pop, rock, punk, metal, country and many more."@en ;
       rdfs:label "Band"@en .
 
@@ -125,7 +188,7 @@ time:seconds rdf:type owl:DatatypeProperty ;
 
 ###  http://www.semanticweb.org/ipro#Discography
 :Discography rdf:type owl:Class ;
-             rdfs:subClassOf <http://www.ontologydesignpatterns.org/cp/owl/list.owl#List> ;
+             rdfs:subClassOf list:List ;
              rdfs:comment "A discography is a list of releases published by an artist or a band. It is usually composed of studio albums, live albums and singles."@en ;
              rdfs:label "Discography"@en .
 
@@ -194,6 +257,8 @@ time:seconds rdf:type owl:DatatypeProperty ;
 
 ###  http://www.semanticweb.org/ipro#Musician
 :Musician rdf:type owl:Class ;
+          rdfs:subClassOf dcterms:Agent ,
+                          foaf:Person ;
           rdfs:comment "A person who plays a musical instrument, especially as a profession, or is musically talented."@en ;
           rdfs:label "Musician"@en .
 
@@ -240,7 +305,7 @@ time:seconds rdf:type owl:DatatypeProperty ;
 
 ###  http://www.semanticweb.org/ipro#Release
 :Release rdf:type owl:Class ;
-         rdfs:subClassOf <http://www.ontologydesignpatterns.org/cp/owl/list.owl#ListItem> ;
+         rdfs:subClassOf list:ListItem ;
          rdfs:comment "A release is a publication of an album (or single) by a band. A release is part of a discography."@en ;
          rdfs:label "Release"@en .
 
@@ -282,7 +347,7 @@ time:seconds rdf:type owl:DatatypeProperty ;
 
 ###  http://www.semanticweb.org/ipro#Track
 :Track rdf:type owl:Class ;
-       rdfs:subClassOf <http://www.ontologydesignpatterns.org/cp/owl/list.owl#ListItem> ;
+       rdfs:subClassOf list:ListItem ;
        rdfs:comment "A track (or song) is a piece of music and element of an album. A track have a duration from 2 minutes or less to 30 minutes, or even fill the whole album."@en ;
        rdfs:label "Track"@en .
 
@@ -303,6 +368,10 @@ time:seconds rdf:type owl:DatatypeProperty ;
 
 ###  http://www.w3.org/2006/time#DurationDescription
 time:DurationDescription rdf:type owl:Class .
+
+
+###  http://xmlns.com/foaf/0.1/Person
+foaf:Person rdf:type owl:Class .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
