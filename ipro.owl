@@ -87,6 +87,14 @@
     
 
 
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/creator">
+        <rdfs:range rdf:resource="http://purl.org/dc/terms/Agent"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/ipro#ofAlbum -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ipro#ofAlbum">
@@ -153,6 +161,8 @@
 
     <owl:Class rdf:about="http://dbpedia.org/ontology/Album">
         <owl:equivalentClass rdf:resource="http://www.semanticweb.org/ipro#Album"/>
+        <rdfs:comment xml:lang="en">Album class imported from DBPedia</rdfs:comment>
+        <rdfs:label xml:lang="en">Album</rdfs:label>
     </owl:Class>
     
 
@@ -161,6 +171,8 @@
 
     <owl:Class rdf:about="http://dbpedia.org/ontology/ArtistDiscography">
         <owl:equivalentClass rdf:resource="http://www.semanticweb.org/ipro#Discography"/>
+        <rdfs:comment xml:lang="en">Artist discography class imported from DBPedia</rdfs:comment>
+        <rdfs:label xml:lang="en">Artist discrography</rdfs:label>
     </owl:Class>
     
 
@@ -169,6 +181,8 @@
 
     <owl:Class rdf:about="http://dbpedia.org/ontology/Instrument">
         <owl:equivalentClass rdf:resource="http://www.semanticweb.org/ipro#MusicalInstrument"/>
+        <rdfs:comment xml:lang="en">Instrument class imported from DBPedia</rdfs:comment>
+        <rdfs:label xml:lang="en">Instrument</rdfs:label>
     </owl:Class>
     
 
@@ -177,6 +191,8 @@
 
     <owl:Class rdf:about="http://dbpedia.org/ontology/MusicalArtist">
         <owl:equivalentClass rdf:resource="http://www.semanticweb.org/ipro#Musician"/>
+        <rdfs:comment xml:lang="en">Musical artist class imported from DBPedia</rdfs:comment>
+        <rdfs:label xml:lang="en">Musical artist</rdfs:label>
     </owl:Class>
     
 
@@ -185,19 +201,18 @@
 
     <owl:Class rdf:about="http://dbpedia.org/ontology/Song">
         <owl:equivalentClass rdf:resource="http://www.semanticweb.org/ipro#Track"/>
+        <rdfs:comment xml:lang="en">Song class imported from DBPedia</rdfs:comment>
+        <rdfs:label xml:lang="en">Song</rdfs:label>
     </owl:Class>
     
 
 
     <!-- http://purl.org/dc/terms/Agent -->
 
-    <owl:Class rdf:about="http://purl.org/dc/terms/Agent"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/AgentClass -->
-
-    <owl:Class rdf:about="http://purl.org/dc/terms/AgentClass"/>
+    <owl:Class rdf:about="http://purl.org/dc/terms/Agent">
+        <rdfs:comment xml:lang="en">Agent class imported from dcterms</rdfs:comment>
+        <rdfs:label xml:lang="en">Agent</rdfs:label>
+    </owl:Class>
     
 
 
@@ -205,6 +220,8 @@
 
     <owl:Class rdf:about="http://purl.org/ontology/mo/Genre">
         <owl:equivalentClass rdf:resource="http://www.semanticweb.org/ipro#Genre"/>
+        <rdfs:comment xml:lang="en">Genre class imported from the Music Ontology</rdfs:comment>
+        <rdfs:label xml:lang="en">Genre</rdfs:label>
     </owl:Class>
     
 
@@ -213,6 +230,8 @@
 
     <owl:Class rdf:about="http://purl.org/ontology/mo/Instrument">
         <owl:equivalentClass rdf:resource="http://www.semanticweb.org/ipro#MusicalInstrument"/>
+        <rdfs:comment xml:lang="en">Instrument class imported from the Music Ontology</rdfs:comment>
+        <rdfs:label xml:lang="en">Instrument</rdfs:label>
     </owl:Class>
     
 
@@ -221,6 +240,8 @@
 
     <owl:Class rdf:about="http://purl.org/ontology/mo/MusicArtist">
         <owl:equivalentClass rdf:resource="http://www.semanticweb.org/ipro#Musician"/>
+        <rdfs:comment xml:lang="en">Music artist class imported from the Music Ontology</rdfs:comment>
+        <rdfs:label xml:lang="en">Music artist</rdfs:label>
     </owl:Class>
     
 
@@ -229,6 +250,8 @@
 
     <owl:Class rdf:about="http://purl.org/ontology/mo/MusicGroup">
         <owl:equivalentClass rdf:resource="http://www.semanticweb.org/ipro#Band"/>
+        <rdfs:comment xml:lang="en">Music group class imported from the Music Ontology</rdfs:comment>
+        <rdfs:label xml:lang="en">Music group</rdfs:label>
     </owl:Class>
     
 
@@ -237,6 +260,8 @@
 
     <owl:Class rdf:about="http://purl.org/ontology/mo/Release">
         <owl:equivalentClass rdf:resource="http://www.semanticweb.org/ipro#Release"/>
+        <rdfs:comment xml:lang="en">Release class imported from the Music Ontology</rdfs:comment>
+        <rdfs:label xml:lang="en">Release</rdfs:label>
     </owl:Class>
     
 
@@ -254,8 +279,8 @@
     <!-- http://www.semanticweb.org/ipro#Band -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ipro#Band">
-        <owl:equivalentClass rdf:resource="https://www.wikidata.org/entity/Q215380"/>
-        <rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/AgentClass"/>
+        <owl:equivalentClass rdf:resource="http://www.wikidata.org/entity/Q215380"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/Agent"/>
         <rdfs:comment xml:lang="en">Group of musicians who play music. A band is typically composed of 2 to 10 members. A band of more than 10 members is more frequently considered an orchestra, or a complex. The term band is often referred to popular music genres such as pop, rock, punk, metal, country and many more.</rdfs:comment>
         <rdfs:label xml:lang="en">Band</rdfs:label>
     </owl:Class>
@@ -394,7 +419,6 @@
     <!-- http://www.semanticweb.org/ipro#Musician -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ipro#Musician">
-        <rdfs:subClassOf rdf:resource="http://purl.org/dc/terms/Agent"/>
         <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
         <rdfs:comment xml:lang="en">A person who plays a musical instrument, especially as a profession, or is musically talented.</rdfs:comment>
         <rdfs:label xml:lang="en">Musician</rdfs:label>
@@ -552,20 +576,27 @@
 
     <!-- http://www.w3.org/2006/time#DurationDescription -->
 
-    <owl:Class rdf:about="http://www.w3.org/2006/time#DurationDescription"/>
+    <owl:Class rdf:about="http://www.w3.org/2006/time#DurationDescription">
+        <rdfs:comment xml:lang="en">Duration description class imported from the Time Ontology</rdfs:comment>
+        <rdfs:label xml:lang="en">Duration description</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q215380 -->
+
+    <owl:Class rdf:about="http://www.wikidata.org/entity/Q215380">
+        <rdfs:comment xml:lang="en">music group resorce imported from wikidata</rdfs:comment>
+        <rdfs:label xml:lang="en">musical group</rdfs:label>
+    </owl:Class>
     
 
 
     <!-- http://xmlns.com/foaf/0.1/Person -->
 
-    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person"/>
-    
-
-
-    <!-- https://www.wikidata.org/entity/Q215380 -->
-
-    <owl:Class rdf:about="https://www.wikidata.org/entity/Q215380">
-        <rdfs:label>musical group</rdfs:label>
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person">
+        <rdfs:comment xml:lang="en">Person class imported from Friend Of A Friend</rdfs:comment>
+        <rdfs:label xml:lang="en">Person</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 

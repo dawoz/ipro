@@ -58,6 +58,11 @@ vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
+###  http://purl.org/dc/terms/creator
+dcterms:creator rdf:type owl:ObjectProperty ;
+                rdfs:range dcterms:Agent .
+
+
 ###  http://www.semanticweb.org/ipro#ofAlbum
 :ofAlbum rdf:type owl:ObjectProperty ;
          rdfs:subPropertyOf <http://www.ontologydesignpatterns.org/cp/owl/bag.owl#itemContent> ;
@@ -96,60 +101,78 @@ time:seconds rdf:type owl:DatatypeProperty ;
 
 ###  http://dbpedia.org/ontology/Album
 dbo:Album rdf:type owl:Class ;
-          owl:equivalentClass :Album .
+          owl:equivalentClass :Album ;
+          rdfs:comment "Album class imported from DBPedia"@en ;
+          rdfs:label "Album"@en .
 
 
 ###  http://dbpedia.org/ontology/ArtistDiscography
 dbo:ArtistDiscography rdf:type owl:Class ;
-                      owl:equivalentClass :Discography .
+                      owl:equivalentClass :Discography ;
+                      rdfs:comment "Artist discography class imported from DBPedia"@en ;
+                      rdfs:label "Artist discrography"@en .
 
 
 ###  http://dbpedia.org/ontology/Instrument
 dbo:Instrument rdf:type owl:Class ;
-               owl:equivalentClass :MusicalInstrument .
+               owl:equivalentClass :MusicalInstrument ;
+               rdfs:comment "Instrument class imported from DBPedia"@en ;
+               rdfs:label "Instrument"@en .
 
 
 ###  http://dbpedia.org/ontology/MusicalArtist
 dbo:MusicalArtist rdf:type owl:Class ;
-                  owl:equivalentClass :Musician .
+                  owl:equivalentClass :Musician ;
+                  rdfs:comment "Musical artist class imported from DBPedia"@en ;
+                  rdfs:label "Musical artist"@en .
 
 
 ###  http://dbpedia.org/ontology/Song
 dbo:Song rdf:type owl:Class ;
-         owl:equivalentClass :Track .
+         owl:equivalentClass :Track ;
+         rdfs:comment "Song class imported from DBPedia"@en ;
+         rdfs:label "Song"@en .
 
 
 ###  http://purl.org/dc/terms/Agent
-dcterms:Agent rdf:type owl:Class .
-
-
-###  http://purl.org/dc/terms/AgentClass
-dcterms:AgentClass rdf:type owl:Class .
+dcterms:Agent rdf:type owl:Class ;
+              rdfs:comment "Agent class imported from dcterms"@en ;
+              rdfs:label "Agent"@en .
 
 
 ###  http://purl.org/ontology/mo/Genre
 mo:Genre rdf:type owl:Class ;
-         owl:equivalentClass :Genre .
+         owl:equivalentClass :Genre ;
+         rdfs:comment "Genre class imported from the Music Ontology"@en ;
+         rdfs:label "Genre"@en .
 
 
 ###  http://purl.org/ontology/mo/Instrument
 mo:Instrument rdf:type owl:Class ;
-              owl:equivalentClass :MusicalInstrument .
+              owl:equivalentClass :MusicalInstrument ;
+              rdfs:comment "Instrument class imported from the Music Ontology"@en ;
+              rdfs:label "Instrument"@en .
 
 
 ###  http://purl.org/ontology/mo/MusicArtist
 mo:MusicArtist rdf:type owl:Class ;
-               owl:equivalentClass :Musician .
+               owl:equivalentClass :Musician ;
+               rdfs:comment "Music artist class imported from the Music Ontology"@en ;
+               rdfs:label "Music artist"@en .
 
 
 ###  http://purl.org/ontology/mo/MusicGroup
 mo:MusicGroup rdf:type owl:Class ;
-              owl:equivalentClass :Band .
+              owl:equivalentClass :Band ;
+              rdfs:comment "Music group class imported from the Music Ontology"@en ;
+              rdfs:label "Music group"@en .
 
 
 ###  http://purl.org/ontology/mo/Release
 mo:Release rdf:type owl:Class ;
-           owl:equivalentClass :Release .
+           owl:equivalentClass :Release ;
+           rdfs:comment "Release class imported from the Music Ontology"@en ;
+           rdfs:label "Release"@en .
 
 
 ###  http://www.semanticweb.org/ipro#Album
@@ -162,7 +185,7 @@ mo:Release rdf:type owl:Class ;
 ###  http://www.semanticweb.org/ipro#Band
 :Band rdf:type owl:Class ;
       owl:equivalentClass wikidata:Q215380 ;
-      rdfs:subClassOf dcterms:AgentClass ;
+      rdfs:subClassOf dcterms:Agent ;
       rdfs:comment "Group of musicians who play music. A band is typically composed of 2 to 10 members. A band of more than 10 members is more frequently considered an orchestra, or a complex. The term band is often referred to popular music genres such as pop, rock, punk, metal, country and many more."@en ;
       rdfs:label "Band"@en .
 
@@ -259,8 +282,7 @@ mo:Release rdf:type owl:Class ;
 
 ###  http://www.semanticweb.org/ipro#Musician
 :Musician rdf:type owl:Class ;
-          rdfs:subClassOf dcterms:Agent ,
-                          foaf:Person ;
+          rdfs:subClassOf foaf:Person ;
           rdfs:comment "A person who plays a musical instrument, especially as a profession, or is musically talented."@en ;
           rdfs:label "Musician"@en .
 
@@ -369,16 +391,21 @@ mo:Release rdf:type owl:Class ;
 
 
 ###  http://www.w3.org/2006/time#DurationDescription
-time:DurationDescription rdf:type owl:Class .
+time:DurationDescription rdf:type owl:Class ;
+                         rdfs:comment "Duration description class imported from the Time Ontology"@en ;
+                         rdfs:label "Duration description"@en .
+
+
+###  http://www.wikidata.org/entity/Q215380
+wikidata:Q215380 rdf:type owl:Class ;
+                 rdfs:comment "music group resorce imported from wikidata"@en ;
+                 rdfs:label "musical group"@en .
 
 
 ###  http://xmlns.com/foaf/0.1/Person
-foaf:Person rdf:type owl:Class .
-
-
-###  https://www.wikidata.org/entity/Q215380
-wikidata:Q215380 rdf:type owl:Class ;
-                 rdfs:label "musical group" .
+foaf:Person rdf:type owl:Class ;
+            rdfs:comment "Person class imported from Friend Of A Friend"@en ;
+            rdfs:label "Person"@en .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
