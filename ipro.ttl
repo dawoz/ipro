@@ -113,6 +113,13 @@ dbo:ArtistDiscography rdf:type owl:Class ;
                       rdfs:label "Artist discrography"@en .
 
 
+###  http://dbpedia.org/ontology/Genre
+dbo:Genre rdf:type owl:Class ;
+          owl:equivalentClass :Genre ;
+          rdfs:comment "Genre class imported from DBPedia"@en ;
+          rdfs:label "Genre"@en .
+
+
 ###  http://dbpedia.org/ontology/Instrument
 dbo:Instrument rdf:type owl:Class ;
                owl:equivalentClass :MusicalInstrument ;

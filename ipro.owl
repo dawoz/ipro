@@ -177,6 +177,16 @@
     
 
 
+    <!-- http://dbpedia.org/ontology/Genre -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Genre">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/ipro#Genre"/>
+        <rdfs:comment xml:lang="en">Genre class imported from DBPedia</rdfs:comment>
+        <rdfs:label xml:lang="en">Genre</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://dbpedia.org/ontology/Instrument -->
 
     <owl:Class rdf:about="http://dbpedia.org/ontology/Instrument">
