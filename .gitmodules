@@ -1,0 +1,3 @@
+[submodule "ipro-frontend"]
+	path = ipro-frontend
+	url = https://github.com/dawoz/ipro-frontend.git
